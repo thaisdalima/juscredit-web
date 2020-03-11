@@ -1,0 +1,27 @@
+.state-detail-container {
+  max-width: 247px;
+  .go-back {
+    text-decoration: underline;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .rank {
+    font-weight: bold;
+    color: #0695d9;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .statistics { 
+    font-weight: bold;
+    color: #2E8700;
+  }
+  .big-number {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+}

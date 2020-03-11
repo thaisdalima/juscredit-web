@@ -1,0 +1,53 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+.partner-popup {
+  cursor: default;
+  padding: 16px;
+  height: 131px;
+  background-color: #ffffff;
+  box-shadow: 2px -2px 35px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  opacity: 1;
+  animation: fadeIn ease 0.5s;
+  font-family: Kastelov;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 0;
+    height: 0;
+    border: 18px solid transparent;
+    border-top-color: #ffffff;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -9px;
+    margin-bottom: -18px;
+  }
+
+  h2{
+      margin: 0;
+      padding-bottom: 16px;
+      display: flex;
+      align-items: center;
+      img {
+          margin-left: 8px;
+      }
+  }
+
+  p {
+    margin:0;
+    margin-bottom: 8px;
+    font-size: 14px;
+    &:last-child{
+        margin-top: 16px
+    }
+  }
+  a {
+      font-size: 14px;
+      text-decoration: underline;
+  }
+}

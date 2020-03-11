@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+  color: #4e4e4e;
+}
+
+.map-container {
+  padding: 0 10em;
+  height: 337px;
+  display: flex;
+  padding-top: 0px;
+  position: relative;
+  flex-direction: column;
+
+  > h1 {
+    top: 1345px;
+left: 142px;
+width: 701px;
+height: 153px;
+text-align: left;
+font: Regular 55px/80px Overpass;
+letter-spacing: 0;
+color: #395E66;
+opacity: 1;
+  }
+  
+   >h2 {
+     top: 1522px;
+    left: 142px;
+    width: 946px;
+    height: 106px;
+    text-align: left;
+    font: Regular 35px/59px Muli;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 0.5;
+
+  }
+}
+
+.Button{
+  top: 763px;
+left: 142px;
+width: 274px;
+height: 80px;
+background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box;
+border-radius: 40px;
+opacity: 1;
+}
+.map {
+  position: absolute;
+  top: -120px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("/lawer.jpg");
+  opacity: 0.2;
+  z-index: -1;
+  left:50px;
+}
+ 
+
+.products-bg {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 500px;
+  right: 0;
+  background: url("/");
+  z-index: -1;
+  background-size: cover;
+}
+.who-we-are {
+  padding: 0 10em;
+
+  position: relative;
+  padding-bottom: 110px;
+  p {
+    font-size: 16px;
+    max-width: 400px;
+  }
+}
+.certified-container {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .certificates {
+    display: flex;
+    padding-bottom: 16px;
+    :first-child {
+      margin-right: 16px;
+    }
+  }
+  span {
+    font-weight: bold;
+  }
+  p {
+    margin: 0;
+  }
+}
+.mission-container {
+  background-image: url("/organis-bg.png");
+  padding-top: 55px;
+  background-blend-mode: screen;
+  background-color: #a04096;
+  padding-bottom: 80px;
+  flex: 1;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  flex-direction: column;
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    padding: 0 15em;
+  }
+}
+
+.traits-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 15em;
+}
+
+.trait {
+  display: flex;
+  flex-direction: column;
+  > span {
+    font-weight: 600;
+    padding-top: 16px;
+    max-width: 156px;
+    text-align: center;
+  }
+}
+.differentials-container {
+  padding: 70px 15em 50px 15em;
+  text-align: center;
+  > h1 {
+    color: #4a9abe;
+  }
+}
+
+.differential-container {
+  height: 290px;
+  display: flex;
+  > div {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      > img {
+        right: 0px;
+      }
+      > h1 {
+        flex: 1;
+        text-align: right;
+      }
+    }
+    > img {
+      position: absolute;
+      z-index: -1;
+    }
+    > h1 {
+      text-align: left;
+    }
+  }
+  > p {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+}
+.thumbs-up {
+  top: -30px;
+}
+.video-container {
+  padding-top: 100px;
+}
+
+.profile-choice-container {
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0 20em;
+  height: 512px;
+  align-items: center;
+
+  .bg-left {
+    position: absolute;
+    left: 0;
+  }
+  .bg-right {
+    position: absolute;
+    right: 0;
+  }
+  .services {
+    padding-right: 32px;
+    border-right: 1px solid;
+  }
+  .market {
+    margin-left: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .map-container {
+    padding: 0 24px;
+  }
+  .who-we-are {
+    padding: 50px 24px;
+  }
+  .mission-container {
+    p {
+      padding: 0 24px;
+    }
+  }
+  .traits-container {
+    flex-direction: column;
+    padding: 50px 24px;
+  }
+  .trait {
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .differentials-container {
+    padding: 70px 24px 50px 24px;
+  }
+  .differential-container {
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+  }
+  .profile-choice-container {
+    margin-top: 0px;
+    padding: 0 24px;
+    flex-direction: column;
+    .bg-left {
+      opacity: 0.15;
+    }
+    .bg-right {
+      display: none;
+    }
+    .services {
+      padding: 0;
+      border: none;
+    }
+    .market {
+      margin: 0;
+    }
+  }
+  iframe {
+    width: fit-content;
+  }
+}

@@ -1,0 +1,64 @@
+.interactive-map-container {
+  position: relative;
+}
+.find-partners-card {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  top: 30px;
+  left: 15em;
+  input {
+    margin: 0;
+    width: -webkit-fill-available;
+  }
+}
+.state-select {
+  height: 42px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  padding-left: 12px;
+}
+
+.radio {
+  input {
+    margin: 8px 16px 8px 0;
+  }
+  display: flex;
+  align-items: center;
+  &.ocs {
+    color: #ed1a3b;
+    font-weight: bold;
+    img {
+      width: 23px;
+      height: 23px;
+      margin-left: 8px;
+    }
+  }
+  &.opac {
+    color: #79ba44;
+    font-weight: bold;
+    img {
+      width: 23px;
+      height: 23px;
+      margin-left: 8px;
+    }
+  }
+  &.cert {
+    color: #00abe6;
+    font-weight: bold;
+    img {
+      width: 23px;
+      height: 23px;
+      margin-left: 8px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .find-partners-card {
+    display: none;
+  }
+}
