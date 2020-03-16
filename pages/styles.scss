@@ -1,69 +1,82 @@
 body {
   margin: 0;
-  color: #4e4e4e;
 }
 
 .map-container {
   padding: 0 10em;
   height: 337px;
   display: flex;
-  padding-top: 0px;
   position: relative;
   flex-direction: column;
 
-  > h1 {
-    top: 1345px;
-left: 142px;
-width: 701px;
-height: 153px;
-text-align: left;
-font: Regular 55px/80px Overpass;
+  h1 {
+  top: 0 ;
+  text-align: left;
+  font-family: "Overpass" 118px;
+  letter-spacing: 0;
+  color: #395E66;
+  opacity: 1;
+  font-size: 40px;
+
+  }
+
+  h2 {
+    top: 0;
+    font-family: "Muli" 42px, "Regular" 63px;
+    text-align: left;
+    letter-spacing: 0;
+    color: #9BADB1;
+    opacity: 1;
+  }
+  
+  h3{
+   
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1
+  }
+
+  h4 {
+    top: 6019px;
+    left: 593px;
+    width: 766px;
+    height: 38px;
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1
+    }
+
+} 
+.map {
+  position: absolute;
+top: -120px;
+bottom: 0;
+left: 0;
+right: 0;
+font-family: "Muli", "Regular";
 letter-spacing: 0;
 color: #395E66;
 opacity: 1;
-  }
-  
-   >h2 {
-     top: 1522px;
-    left: 142px;
-    width: 946px;
-    height: 106px;
-    text-align: left;
-    font: Regular 35px/59px Muli;
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 0.5;
-
-  }
-}
-
-.Button{
-  top: 763px;
-left: 142px;
-width: 274px;
-height: 80px;
-background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box;
-border-radius: 40px;
-opacity: 1;
-}
-.map {
-  position: absolute;
-  top: -120px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url("/lawer.jpg");
-  opacity: 0.2;
-  z-index: -1;
-  left:50px;
-}
  
-
+}
+.buttons-container {
+  flex: 0.5;
+  justify-content: space-between;
+  > .button {
+    margin-right: 24px;
+    min-width: 230px;
+    margin-bottom: 8px;
+  }
+}
 .products-bg {
   position: absolute;
   top: 50px;
   bottom: 0;
-  left: 500px;
+  left: 400px;
   right: 0;
   background: url("/");
   z-index: -1;
@@ -99,10 +112,10 @@ opacity: 1;
   }
 }
 .mission-container {
-  background-image: url("/organis-bg.png");
+ 
   padding-top: 55px;
   background-blend-mode: screen;
-  background-color: #a04096;
+ 
   padding-bottom: 80px;
   flex: 1;
   align-items: center;
@@ -136,11 +149,10 @@ opacity: 1;
   }
 }
 .differentials-container {
-  padding: 70px 15em 50px 15em;
-  text-align: center;
-  > h1 {
-    color: #4a9abe;
-  }
+top: 195px;
+left: 970px;
+width: 848px;
+height: 769px;
 }
 
 .differential-container {
@@ -156,16 +168,36 @@ opacity: 1;
         right: 0px;
       }
       > h1 {
-        flex: 1;
-        text-align: right;
+        top: 65px;
+        left: 1012px;
+        width: 174px;
+        height: 30px;
+    text-align: left;
+    font-family: "Muli", "Regular";
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
       }
     }
     > img {
       position: absolute;
       z-index: -1;
     }
+
+    .id1{
+      position: absolute;
+align-content: flex-start;    }
+
     > h1 {
+font: Regular 94px/118px Overpass;
+letter-spacing: 0;
+color: #395E66;
+opacity: 1;
       text-align: left;
+      top: 368px;
+left: 142px;
+width: 770px;
+height: 213px;
     }
   }
   > p {
@@ -177,9 +209,6 @@ opacity: 1;
 }
 .thumbs-up {
   top: -30px;
-}
-.video-container {
-  padding-top: 100px;
 }
 
 .profile-choice-container {
@@ -259,4 +288,25 @@ opacity: 1;
   iframe {
     width: fit-content;
   }
+
+  .poligono-container {
+  background: url("/poligono.svg");
+  
+  }
+  .anteceba-container{
+   
+  }
+
+  .cursor-container{
+  position: flex;
+  text-align: right;
+  padding: 0 50em;
+  }
+
+.lead-container{
+  padding: 0;
+  border: none ;
+
+}
+
 }

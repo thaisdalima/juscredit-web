@@ -1092,7 +1092,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   render() {
     return __jsx("html", {
       lang: "en",
-      className: "jsx-3645573610",
+      className: "jsx-3086836708",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 10
@@ -1104,48 +1104,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         lineNumber: 11
       },
       __self: this
-    }, __jsx("link", {
-      href: "https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap",
-      rel: "stylesheet",
-      className: "jsx-3645573610",
+    }), __jsx("body", {
+      className: "jsx-3086836708",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
-      },
-      __self: this
-    }), __jsx("script", {
-      async: true,
-      defer: true,
-      src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDF7nyLwL3gM8cNJAxeeaSIMO189krrERE",
-      className: "jsx-3645573610",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      },
-      __self: this
-    })), __jsx("body", {
-      className: "jsx-3645573610",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 15
       },
       __self: this
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 17
       },
       __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 18
       },
       __self: this
     })), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-      id: "3645573610",
+      id: "3086836708",
       __self: this
-    }, "@font-face{font-family:'Kastelov';src:url('/fonts/kastelov-intelo-bold.ttf');src:url('/fonts/kastelov-intelo-extra-bold.ttf');src:url('/fonts/Kastelov-Intelo-Medium.ttf');src:url('/fonts/Kastelov-Intelo-Regular.ttf');src:url('/fonts/Kastelov-Intelo-Thin.ttf');}html{font-family:'Kastelov';font-display:swap;}body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcVGhhaXMgTGluZGFcXGp1c2NyZWRpdC13ZWJcXHBhZ2VzXFxfZG9jdW1lbnQudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXNCbUMsQUFHNEMsQUFRQSxBQUtsQixTQUNiLGNBYm1ELEFBUXpCLGtCQUN0Qix5QkFScUQsaURBQ0osNkNBQ0MsOENBQ0gsMkNBQy9DIiwiZmlsZSI6IkM6XFxVc2Vyc1xcVGhhaXMgTGluZGFcXGp1c2NyZWRpdC13ZWJcXHBhZ2VzXFxfZG9jdW1lbnQudHN4Iiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IERvY3VtZW50LCB7IEhlYWQsIE1haW4sIE5leHRTY3JpcHQgfSBmcm9tICduZXh0L2RvY3VtZW50J1xyXG5pbXBvcnQgJy4vc3R5bGVzLnNjc3MnXHJcbmV4cG9ydCBkZWZhdWx0IGNsYXNzIGV4dGVuZHMgRG9jdW1lbnQge1xyXG4gICAgc3RhdGljIGFzeW5jIGdldEluaXRpYWxQcm9wcyhjdHgpIHtcclxuICAgICAgICBjb25zdCBpbml0aWFsUHJvcHMgPSBhd2FpdCBEb2N1bWVudC5nZXRJbml0aWFsUHJvcHMoY3R4KVxyXG4gICAgICAgIHJldHVybiB7IC4uLmluaXRpYWxQcm9wcyB9XHJcbiAgICB9XHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPGh0bWwgbGFuZz1cImVuXCI+XHJcbiAgICAgICAgICAgICAgICA8SGVhZD5cclxuICAgICAgICAgICAgICAgICAgICA8bGluayBocmVmPVwiaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVJvYm90bzozMDAsNDAwJmRpc3BsYXk9c3dhcFwiIHJlbD1cInN0eWxlc2hlZXRcIiAvPlxyXG4gICAgICAgICAgICAgICAgICAgIDxzY3JpcHQgYXN5bmMgZGVmZXJcclxuICAgICAgICAgICAgICAgICAgICAgICAgc3JjPVwiaHR0cHM6Ly9tYXBzLmdvb2dsZWFwaXMuY29tL21hcHMvYXBpL2pzP2tleT1BSXphU3lERjdueUx3TDNnTThjTkpBeGVlYVNJTU8xODlrcnJFUkVcIj5cclxuICAgICAgICAgICAgICAgICAgICA8L3NjcmlwdD5cclxuICAgICAgICAgICAgICAgIDwvSGVhZD5cclxuICAgICAgICAgICAgICAgIDxib2R5PlxyXG5cclxuICAgICAgICAgICAgICAgICAgICA8TWFpbiAvPlxyXG4gICAgICAgICAgICAgICAgICAgIDxOZXh0U2NyaXB0IC8+XHJcbiAgICAgICAgICAgICAgICA8L2JvZHk+XHJcblxyXG4gICAgICAgICAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcclxuICAgICAgICAgICAgICAgIEBmb250LWZhY2Uge1xyXG4gICAgICAgICAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnS2FzdGVsb3YnO1xyXG4gICAgICAgICAgICAgICAgICAgIHNyYzogdXJsKCcvZm9udHMva2FzdGVsb3YtaW50ZWxvLWJvbGQudHRmJyk7XHJcbiAgICAgICAgICAgICAgICAgICAgc3JjOiB1cmwoJy9mb250cy9rYXN0ZWxvdi1pbnRlbG8tZXh0cmEtYm9sZC50dGYnKTtcclxuICAgICAgICAgICAgICAgICAgICBzcmM6IHVybCgnL2ZvbnRzL0thc3RlbG92LUludGVsby1NZWRpdW0udHRmJyk7XHJcbiAgICAgICAgICAgICAgICAgICAgc3JjOiB1cmwoJy9mb250cy9LYXN0ZWxvdi1JbnRlbG8tUmVndWxhci50dGYnKTtcclxuICAgICAgICAgICAgICAgICAgICBzcmM6IHVybCgnL2ZvbnRzL0thc3RlbG92LUludGVsby1UaGluLnR0ZicpO1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgaHRtbCB7XHJcbiAgICAgICAgICAgICAgICAgICAgZm9udC1mYW1pbHk6ICdLYXN0ZWxvdic7XHJcbiAgICAgICAgICAgICAgICAgICAgZm9udC1kaXNwbGF5OiBzd2FwO1xyXG4gICAgICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgICAgIGJvZHkge1xyXG4gICAgICAgICAgICAgICAgbWFyZ2luOiAwO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgIGB9PC9zdHlsZT5cclxuICAgICAgICAgICAgPC9odG1sPlxyXG4gICAgICAgIClcclxuICAgIH1cclxufSJdfQ== */\n/*@ sourceURL=C:\\\\Users\\\\Thais Linda\\\\juscredit-web\\\\pages\\\\_document.tsx */"));
+    }, "font-family{font-family:'Regular','Overpass';}html{font-family:'Muli';font-family:'Regular';font-family:'Overpass';font-display:auto;}body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcVGhhaXMgTGluZGFcXGp1c2NyZWRpdC13ZWJcXHBhZ2VzXFxfZG9jdW1lbnQudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXNCbUMsQUFHdUQsQUFJZixBQVFkLFNBQ2IsVUFSOEIsY0FKMUIsUUFLMkIsdUJBRUwsa0JBQ3RCIiwiZmlsZSI6IkM6XFxVc2Vyc1xcVGhhaXMgTGluZGFcXGp1c2NyZWRpdC13ZWJcXHBhZ2VzXFxfZG9jdW1lbnQudHN4Iiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IERvY3VtZW50LCB7IEhlYWQsIE1haW4sIE5leHRTY3JpcHQgfSBmcm9tICduZXh0L2RvY3VtZW50J1xyXG5pbXBvcnQgJy4vc3R5bGVzLnNjc3MnXHJcbmV4cG9ydCBkZWZhdWx0IGNsYXNzIGV4dGVuZHMgRG9jdW1lbnQge1xyXG4gICAgc3RhdGljIGFzeW5jIGdldEluaXRpYWxQcm9wcyhjdHgpIHtcclxuICAgICAgICBjb25zdCBpbml0aWFsUHJvcHMgPSBhd2FpdCBEb2N1bWVudC5nZXRJbml0aWFsUHJvcHMoY3R4KVxyXG4gICAgICAgIHJldHVybiB7IC4uLmluaXRpYWxQcm9wcyB9XHJcbiAgICB9XHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPGh0bWwgbGFuZz1cImVuXCI+XHJcbiAgICAgICAgICAgICAgICA8SGVhZD5cclxuICAgICAgICAgICAgICAgICAgICBcclxuICAgICAgICAgICAgICAgIDwvSGVhZD5cclxuICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICA8Ym9keT5cclxuXHJcbiAgICAgICAgICAgICAgICA8TWFpbiAvPlxyXG4gICAgICAgICAgICAgICAgICAgIDxOZXh0U2NyaXB0IC8+XHJcblxyXG4gICAgICAgICAgICAgICAgICAgIDwvYm9keT5cclxuXHJcblxyXG4gICAgICAgICAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcclxuICAgICAgICAgICAgICAgIGZvbnQtZmFtaWx5IHtcclxuICAgICAgICAgICAgICAgICAgICBmb250LWZhbWlseTogJ1JlZ3VsYXInLCAnT3ZlcnBhc3MnOyBcclxuICAgICAgICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAgICAgICBodG1sIHtcclxuICAgICAgICAgICAgICAgICAgICBmb250LWZhbWlseTogJ011bGknO1xyXG4gICAgICAgICAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnUmVndWxhcic7XHJcbiAgICAgICAgICAgICAgICAgICAgZm9udC1mYW1pbHk6ICdPdmVycGFzcyc7XHJcblxyXG4gICAgICAgICAgICAgICAgICAgIGZvbnQtZGlzcGxheTogYXV0bztcclxuICAgICAgICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAgICAgICBib2R5IHtcclxuICAgICAgICAgICAgICAgIG1hcmdpbjogMDtcclxuICAgICAgICAgICAgfVxyXG4gICAgICBgfTwvc3R5bGU+XHJcbiAgICAgICAgICAgXHJcbiAgICAgICAgICAgIDwvaHRtbD5cclxuICAgICAgICApXHJcbiAgICB9XHJcbn0iXX0= */\n/*@ sourceURL=C:\\\\Users\\\\Thais Linda\\\\juscredit-web\\\\pages\\\\_document.tsx */"));
   }
 
 });

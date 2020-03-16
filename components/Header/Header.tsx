@@ -11,26 +11,28 @@ const Header = () => {
     }
     const toggleMenu = () => {
         setOpenedMenu(!openedMenu)
-    }
+    }                                                                  
     return (
         <>
-                      <nav className={"navbar " + themeClass}>
-                <img src="/Logo.png" className="header-logo" />
+                      <nav className={"nav" + themeClass}>
+                      <a className="navbar-brand" href="#home"> <img src="/logo.svg" className="header-logo" />
+</a>
                 <div className="link-container">
+            
                     <Link href="/">
-                        <a className="link">Como Funciona</a>
+                        <a className="link-container">Como Funciona</a>
                     </Link>
                     <Link href="/antecipar">
-                        <a className="link">Antecipar</a>
+                        <a className="link-container">Antecipar</a>
                     </Link>
                     <Link href="/duvidas">
-                        <a className="link">Dúvidas</a>
+                        <a className="link-container">Dúvidas</a>
                     </Link>
                     <Link href="/parceiros">
-                        <a className="link"> Parceiros </a>
+                        <a className="link-container"> Parceiros </a>
                     </Link>
                     <Link href="/Entrar"> 
-                        <a className="link"> <button id="entrar" className="entrar">Entrar</button>
+                        <a className="link-container"> <button id="entrar" className="entrar">Entrar</button>
 </a>
                     </Link>
                    
