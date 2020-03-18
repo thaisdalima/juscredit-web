@@ -215,109 +215,6 @@ const StyledInput = (_ref) => {
 
 /***/ }),
 
-/***/ "./containers/Home/Associates.tsx":
-/*!****************************************!*\
-  !*** ./containers/Home/Associates.tsx ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _home_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.scss */ "./containers/Home/home.scss");
-/* harmony import */ var _home_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\containers\\Home\\Associates.tsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-const Associates = () => __jsx("div", {
-  className: "associates-container",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 4
-  },
-  __self: undefined
-}, __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 5
-  },
-  __self: undefined
-}), __jsx("div", {
-  className: "image-container",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6
-  },
-  __self: undefined
-}));
-
-/* harmony default export */ __webpack_exports__["default"] = (Associates);
-
-/***/ }),
-
-/***/ "./containers/Home/Media.tsx":
-/*!***********************************!*\
-  !*** ./containers/Home/Media.tsx ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\containers\\Home\\Media.tsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-const Media = () => __jsx("div", {
-  className: "media-container",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 4
-  },
-  __self: undefined
-}, __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 5
-  },
-  __self: undefined
-}), __jsx("div", {
-  className: "news-container",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6
-  },
-  __self: undefined
-}, __jsx("div", {
-  className: "media",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7
-  },
-  __self: undefined
-})));
-
-/* harmony default export */ __webpack_exports__["default"] = (Media);
-
-/***/ }),
-
-/***/ "./containers/Home/home.scss":
-/*!***********************************!*\
-  !*** ./containers/Home/home.scss ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
 /***/ "./pages/index.tsx":
 /*!*************************!*\
   !*** ./pages/index.tsx ***!
@@ -332,18 +229,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.scss */ "./pages/styles.scss");
 /* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Button_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Button/Button */ "./components/Button/Button.tsx");
-/* harmony import */ var _containers_Home_Associates__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../containers/Home/Associates */ "./containers/Home/Associates.tsx");
-/* harmony import */ var _containers_Home_Media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../containers/Home/Media */ "./containers/Home/Media.tsx");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_Input_Input__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Input/Input */ "./components/Input/Input.tsx");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_Input_Input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Input/Input */ "./components/Input/Input.tsx");
 var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\pages\\index.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
 
 
 
@@ -358,7 +251,7 @@ const Index = () => {
       lineNumber: 14
     },
     __self: undefined
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -377,92 +270,113 @@ const Index = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "differentials-container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
-  }, __jsx("img", {
-    src: "/differentials/antecipe.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: undefined
-  })), __jsx("div", {
     className: "map-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx("div", {
     className: "map",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 21
     },
     __self: undefined
   }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 22
     },
     __self: undefined
   }, "Antecipe seu cr\xE9dito trabalhista"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 23
     },
     __self: undefined
   }, "T\xEAm um processo ganho? Receba agora"), __jsx("div", {
     className: "buttons-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push('/signup/user'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/user'),
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 25
     },
     __self: undefined
   }, "Quero participar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push('/be-part'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 26
     },
     __self: undefined
   }, "Quero investir"), __jsx("div", {
     className: "cursor-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 28
+    },
+    __self: undefined
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
+    color: "third",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
     },
     __self: undefined
   }, __jsx("img", {
-    className: "cursor-container",
     src: "/cursor.svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }), "Conhe\xE7a as vantagens")))), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: undefined
+  }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: undefined
-  }), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push('/be-part'),
-    color: "third",
+  }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: undefined
-  }, "Conhe\xE7a as vantagens")))), __jsx("br", {
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
@@ -480,293 +394,196 @@ const Index = () => {
       lineNumber: 41
     },
     __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: undefined
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
   }), __jsx("div", {
     className: "who-we-are",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 42
     },
     __self: undefined
   }, __jsx("div", {
     className: "products-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 43
     },
     __self: undefined
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 44
     },
     __self: undefined
   }, " ", __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 44
     },
     __self: undefined
   }, "Mais valor para quem vende."), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 45
     },
     __self: undefined
-  }, "R\xE1pido para quem antecipa", __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push('/signup/user'),
+  }, "R\xE1pido para quem antecipa  ", __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/user'),
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 45
     },
     __self: undefined
-  }, "Trabalhador"), " ", __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: undefined
-  }), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push('/be-part'),
+  }, "Trabalhador"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 46
     },
     __self: undefined
   }, "Investidor"))), __jsx("img", {
     src: "/agilidade.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 48
     },
     __self: undefined
   }), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push('/be-part'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 49
     },
     __self: undefined
   }, "Quero participar"), __jsx("div", {
     className: "certified-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx("div", {
     className: "certificates",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 53
     },
     __self: undefined
   }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 55
     },
     __self: undefined
-  }, "Como funciona a plataforma?"), __jsx("p", {
+  }, "Como funciona a plataforma?"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 56
     },
     __self: undefined
   }, "Conte com toda a seguran\xE7a, agilidade praticidade na libera\xE7\xE3o do seu processo ganho"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push('/be-part'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 59
     },
     __self: undefined
   }, "Quero participar")), __jsx("img", {
     src: "/trabalhador.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 61
     },
     __self: undefined
   }), __jsx("div", {
     className: "poligono-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 62
     },
     __self: undefined
   }, __jsx("img", {
     src: "/poligono.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 63
     },
     __self: undefined
   }))), __jsx("div", {
     className: "mission-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 67
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 68
     },
     __self: undefined
   }, "T\xEAm d\xFAvidas ?  "), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 69
     },
     __self: undefined
   }, "Est\xE1 na hora de san\xE1-las."), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 70
     },
     __self: undefined
   }), " ", __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 70
     },
     __self: undefined
   }, "Queremos te ajudar a resolv\xEA-las"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push('/be-part'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 71
     },
     __self: undefined
   }, "Quero participar"), __jsx("div", {
     className: "traits-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 73
     },
     __self: undefined
   }, __jsx("div", {
     className: "trait",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: undefined
-  }, __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 74
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 76
     },
     __self: undefined
-  }, "O que est\xE3o dizendo sobre n\xF3s")), __jsx("h2", {
+  }, "Seja um parceiro Juscredit"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 77
     },
     __self: undefined
-  }, "Investidores e tomadores falando sobre suas experi\xEAncias com a Juscredit                            "))), __jsx("div", {
-    className: "lead-container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: undefined
-  }, __jsx("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: undefined
-  }, "Seja parceiro Juscredit "), __jsx("h4", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 98
-    },
-    __self: undefined
-  }, " indique processos trabalhistas eleg\xEDveis"), __jsx(_components_Input_Input__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Indique cr\xE9ditos trabalhistas eleg\xEDveis e ganhe conosco."), __jsx(_components_Input_Input__WEBPACK_IMPORTED_MODULE_5__["default"], {
     mask: null,
     placeholder: "Insira aqui seu e-mail",
     tabIndex: -1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 78
     },
     __self: undefined
   }), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -774,22 +591,10 @@ const Index = () => {
     tabIndex: -1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 79
     },
     __self: undefined
-  }, "Enviar"))), __jsx(_containers_Home_Associates__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 104
-    },
-    __self: undefined
-  }), __jsx(_containers_Home_Media__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105
-    },
-    __self: undefined
-  })));
+  }, "Enviar"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);

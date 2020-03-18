@@ -8,7 +8,7 @@
   cursor: pointer;
   top: 563px;
   left: 142px;
-  width: 234px;
+  width: 190px;
   height: 70px;
   margin: 0 10px;
 
@@ -29,12 +29,13 @@
     border: solid 3px transparent;
     border-radius: 100rem;
     background-color: white;
+    align-content: center;
+
     
   }
     
-
   &.third {
-    text-align: center;
+    text-align: flex;
     font-family: "Muli", "Regular";
     letter-spacing: 0;
     color: #086C7B;
@@ -47,11 +48,11 @@
     background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box; 
     border-radius: 40px;
     opacity: 1;
-    align-content: left;
-    top: 8094px;
-left: 1731px;
-width: 268px;
-height: 112px;
+    top: 463px;
+    left: 0px;
+    width: 234px;
+    height: 70px;
+    margin: 0 10px;
     }
 
   &:hover {

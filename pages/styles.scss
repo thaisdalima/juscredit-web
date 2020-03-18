@@ -8,11 +8,13 @@ body {
   display: flex;
   position: relative;
   flex-direction: column;
-
+  font-family:"Overpass";
+  background-image: url("differentials/anteceba.svg");
+    
   h1 {
   top: 0 ;
   text-align: left;
-  font-family: "Overpass" 118px;
+  font-family: "Regular";
   letter-spacing: 0;
   color: #395E66;
   opacity: 1;
@@ -22,7 +24,61 @@ body {
 
   h2 {
     top: 0;
+    font-family: "Regular";
+    text-align: left;
+    letter-spacing: 0;
+    color: #9BADB1;
+    opacity: 1;
+  }
+  
+  h3 {
+    text-align: left;
     font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1
+  }
+
+  h4 {
+    top: 6019px;
+    left: 593px;
+    width: 766px;
+    height: 38px;
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1
+    
+} 
+
+}
+.map {
+position: absolute;
+top: -120px;
+bottom: 0;
+left: 0;
+right: 0;
+font-family: "Muli";
+letter-spacing: 0;
+color: #395E66;
+opacity: 1;
+
+
+h1 {
+  top: 0 ;
+  text-align: left;
+  font-family: "regular";
+  letter-spacing: 0;
+  color: #395E66;
+  opacity: 1;
+  font-size: 40px;
+
+  }
+
+  h2 {
+    top: 0;
+    font-family: "regular";
     text-align: left;
     letter-spacing: 0;
     color: #9BADB1;
@@ -47,29 +103,59 @@ body {
     font-family: "Muli" 42px, "Regular" 63px;
     letter-spacing: 0;
     color: #395E66;
-    opacity: 1
-    }
-
-} 
-.map {
-  position: absolute;
-top: -120px;
-bottom: 0;
-left: 0;
-right: 0;
-font-family: "Muli", "Regular";
-letter-spacing: 0;
-color: #395E66;
-opacity: 1;
+    opacity: 1;  
+}
  
 }
 .buttons-container {
   flex: 0.5;
   justify-content: space-between;
+
   > .button {
     margin-right: 24px;
     min-width: 230px;
     margin-bottom: 8px;
+    h1 {
+      top: 0 ;
+      text-align: left;
+      font-family: "regular";
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1;
+      font-size: 40px;
+    
+      }
+    
+      h2 {
+        top: 0;
+        font-family: "regular";
+        text-align: left;
+        letter-spacing: 0;
+        color: #9BADB1;
+        opacity: 1;
+      }
+      
+      h3{
+       
+        text-align: left;
+        font-family: "Muli" 42px, "Regular" 63px;
+        letter-spacing: 0;
+        color: #395E66;
+        opacity: 1
+      }
+    
+      h4 {
+        top: 6019px;
+        left: 593px;
+        width: 766px;
+        height: 38px;
+        text-align: left;
+        font-family: "Muli" 42px, "Regular" 63px;
+        letter-spacing: 0;
+        color: #395E66;
+        opacity: 1
+        
+    }
   }
 }
 .products-bg {
@@ -81,6 +167,48 @@ opacity: 1;
   background: url("/");
   z-index: -1;
   background-size: cover;
+
+  h1 {
+    top: 0 ;
+    text-align: left;
+    font-family: "regular";
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 40px;
+  
+    }
+  
+    h2 {
+      top: 0;
+      font-family: "regular";
+      text-align: left;
+      letter-spacing: 0;
+      color: #9BADB1;
+      opacity: 1;
+    }
+    
+    h3{
+     
+      text-align: left;
+      font-family: "Muli" 42px, "Regular" 63px;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1
+    }
+  
+    h4 {
+      top: 6019px;
+      left: 593px;
+      width: 766px;
+      height: 38px;
+      text-align: left;
+      font-family: "Muli" 42px, "Regular" 63px;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1
+      
+  }
 }
 .who-we-are {
   padding: 0 10em;
@@ -90,6 +218,48 @@ opacity: 1;
   p {
     font-size: 16px;
     max-width: 400px;
+  }
+
+  h1 {
+    top: 0 ;
+    text-align: left;
+    font-family: "regular";
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 40px;
+  
+    }
+  
+    h2 {
+      top: 0;
+      font-family: "regular";
+      text-align: left;
+      letter-spacing: 0;
+      color: #9BADB1;
+      opacity: 1;
+    }
+    
+    h3{
+     
+      text-align: left;
+      font-family: "Muli" 42px, "Regular" 63px;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1
+    }
+  
+    h4 {
+      top: 6019px;
+      left: 593px;
+      width: 766px;
+      height: 38px;
+      text-align: left;
+      font-family: "Muli" 42px, "Regular" 63px;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1
+      
   }
 }
 .certified-container {
@@ -134,8 +304,49 @@ opacity: 1;
 
 .traits-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 50px 15em;
+  h1 {
+    top: 0 ;
+    text-align: left;
+    font-family: "regular";
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 40px;
+  
+    }
+  
+    h2 {
+      top: 0;
+      font-family: "regular";
+      text-align: left;
+      letter-spacing: 0;
+      color: #9BADB1;
+      opacity: 1;
+    }
+    
+    h3{
+     
+      text-align: left;
+      font-family: "Muli" 42px, "Regular" 63px;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1
+    }
+  
+    h4 {
+      top: 6019px;
+      left: 593px;
+      width: 766px;
+      height: 38px;
+      text-align: left;
+      font-family: "Muli" 42px, "Regular" 63px;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1
+      
+  }
 }
 
 .trait {
@@ -150,8 +361,8 @@ opacity: 1;
 }
 .differentials-container {
 top: 195px;
-left: 970px;
-width: 848px;
+left: 670px;
+width: 548px;
 height: 769px;
 }
 
@@ -304,8 +515,34 @@ height: 213px;
   }
 
 .lead-container{
-  padding: 0;
-  border: none ;
+  top: 0 ;
+  text-align: left;
+  font-family: "regular";
+  letter-spacing: 0;
+  color: #395E66;
+  opacity: 1;
+  font-size: 40px;
+  
+   
+    h3{
+      text-align: left;
+      font-family: "Muli" 42px, "Regular" 63px;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1
+    }
+  
+    h4 {
+      top: 6019px;
+      left: 593px;
+      width: 766px;
+      height: 38px;
+      font-family: "Muli", "Regular";
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1
+      
+  }
 
 }
 

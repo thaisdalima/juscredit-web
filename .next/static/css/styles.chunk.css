@@ -150,18 +150,20 @@ body {
   height: 337px;
   display: flex;
   position: relative;
-  flex-direction: column; }
+  flex-direction: column;
+  font-family: "Overpass";
+  background-image: url "/antecipe.svg"; }
   .map-container h1 {
     top: 0;
     text-align: left;
-    font-family: "Overpass" 118px;
+    font-family: "Regular";
     letter-spacing: 0;
     color: #395E66;
     opacity: 1;
     font-size: 40px; }
   .map-container h2 {
     top: 0;
-    font-family: "Muli" 42px, "Regular" 63px;
+    font-family: "Regular";
     text-align: left;
     letter-spacing: 0;
     color: #9BADB1;
@@ -189,10 +191,41 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  font-family: "Muli", "Regular";
+  font-family: "Muli";
   letter-spacing: 0;
   color: #395E66;
   opacity: 1; }
+  .map h1 {
+    top: 0;
+    text-align: left;
+    font-family: "regular";
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 40px; }
+  .map h2 {
+    top: 0;
+    font-family: "regular";
+    text-align: left;
+    letter-spacing: 0;
+    color: #9BADB1;
+    opacity: 1; }
+  .map h3 {
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1; }
+  .map h4 {
+    top: 6019px;
+    left: 593px;
+    width: 766px;
+    height: 38px;
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1; }
 
 .buttons-container {
   flex: 0.5;
@@ -201,6 +234,37 @@ body {
     margin-right: 24px;
     min-width: 230px;
     margin-bottom: 8px; }
+    .buttons-container > .button h1 {
+      top: 0;
+      text-align: left;
+      font-family: "regular";
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1;
+      font-size: 40px; }
+    .buttons-container > .button h2 {
+      top: 0;
+      font-family: "regular";
+      text-align: left;
+      letter-spacing: 0;
+      color: #9BADB1;
+      opacity: 1; }
+    .buttons-container > .button h3 {
+      text-align: left;
+      font-family: "Muli" 42px, "Regular" 63px;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1; }
+    .buttons-container > .button h4 {
+      top: 6019px;
+      left: 593px;
+      width: 766px;
+      height: 38px;
+      text-align: left;
+      font-family: "Muli" 42px, "Regular" 63px;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1; }
 
 .products-bg {
   position: absolute;
@@ -211,6 +275,37 @@ body {
   background: url("/");
   z-index: -1;
   background-size: cover; }
+  .products-bg h1 {
+    top: 0;
+    text-align: left;
+    font-family: "regular";
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 40px; }
+  .products-bg h2 {
+    top: 0;
+    font-family: "regular";
+    text-align: left;
+    letter-spacing: 0;
+    color: #9BADB1;
+    opacity: 1; }
+  .products-bg h3 {
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1; }
+  .products-bg h4 {
+    top: 6019px;
+    left: 593px;
+    width: 766px;
+    height: 38px;
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1; }
 
 .who-we-are {
   padding: 0 10em;
@@ -219,6 +314,37 @@ body {
   .who-we-are p {
     font-size: 16px;
     max-width: 400px; }
+  .who-we-are h1 {
+    top: 0;
+    text-align: left;
+    font-family: "regular";
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 40px; }
+  .who-we-are h2 {
+    top: 0;
+    font-family: "regular";
+    text-align: left;
+    letter-spacing: 0;
+    color: #9BADB1;
+    opacity: 1; }
+  .who-we-are h3 {
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1; }
+  .who-we-are h4 {
+    top: 6019px;
+    left: 593px;
+    width: 766px;
+    height: 38px;
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1; }
 
 .certified-container {
   padding-top: 32px;
@@ -253,8 +379,39 @@ body {
 
 .traits-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 50px 15em; }
+  .traits-container h1 {
+    top: 0;
+    text-align: left;
+    font-family: "regular";
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 40px; }
+  .traits-container h2 {
+    top: 0;
+    font-family: "regular";
+    text-align: left;
+    letter-spacing: 0;
+    color: #9BADB1;
+    opacity: 1; }
+  .traits-container h3 {
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1; }
+  .traits-container h4 {
+    top: 6019px;
+    left: 593px;
+    width: 766px;
+    height: 38px;
+    text-align: left;
+    font-family: "Muli" 42px, "Regular" 63px;
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1; }
 
 .trait {
   display: flex;
@@ -267,8 +424,8 @@ body {
 
 .differentials-container {
   top: 195px;
-  left: 970px;
-  width: 848px;
+  left: 670px;
+  width: 548px;
   height: 769px; }
 
 .differential-container {
@@ -379,52 +536,28 @@ body {
     text-align: right;
     padding: 0 50em; }
   .lead-container {
-    padding: 0;
-    border: none; } }
-
-main.be-part-container {
-  padding: 85px 15em 0px 15em;
-  background-color: #97d65a;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  background-position-x: -500px; }
-  main.be-part-container div {
-    display: flex;
-    flex: 0.8;
-    flex-direction: column; }
-    main.be-part-container div h1 {
-      color: #2E8700; }
-  main.be-part-container .bg-left {
     top: 0;
-    position: absolute;
-    left: -35px; }
-  main.be-part-container .bg-right {
-    position: absolute;
-    right: 0;
-    top: 55px;
-    z-index: 0; }
-  main.be-part-container a {
-    color: #2E8700;
-    text-decoration: underline;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 16px; }
-  main.be-part-container .producer {
-    flex: 0.45;
-    display: flex;
-    z-index: 1;
-    padding-left: 100px; }
-
-.not-found {
-  color: indianred;
-  margin-bottom: 8px !important; }
-
-.user-not-found {
-  color: indianred;
-  margin-bottom: 8px !important;
-  font-weight: bold;
-  font-size: 14px; }
+    text-align: left;
+    font-family: "regular";
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 40px; }
+    .lead-container h3 {
+      text-align: left;
+      font-family: "Muli" 42px, "Regular" 63px;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1; }
+    .lead-container h4 {
+      top: 6019px;
+      left: 593px;
+      width: 766px;
+      height: 38px;
+      font-family: "Muli", "Regular";
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1; } }
 
 .button {
   border: none;
@@ -452,9 +585,10 @@ main.be-part-container {
     color: #086C7B;
     border: solid 3px transparent;
     border-radius: 100rem;
-    background-color: white; }
+    background-color: white;
+    align-content: center; }
   .button.third {
-    text-align: center;
+    text-align: flex;
     font-family: "Muli", "Regular";
     letter-spacing: 0;
     color: #086C7B;
@@ -464,11 +598,11 @@ main.be-part-container {
     background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box;
     border-radius: 40px;
     opacity: 1;
-    align-content: left;
-    top: 8094px;
-    left: 1731px;
-    width: 268px;
-    height: 112px; }
+    top: 463px;
+    left: 0px;
+    width: 234px;
+    height: 70px;
+    margin: 0 10px; }
   .button:hover {
     opacity: 0.7; }
 
@@ -476,63 +610,16 @@ button:disabled,
 .button[disabled] {
   background: #CCC; }
 
-.associates-container {
-  padding: 50px 10em 70px 10em;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column; }
-  .associates-container h1 {
-    text-align: center;
-    margin-bottom: 70px; }
-
-.media-container {
-  padding: 50px 10em 70px 10em;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column; }
-  .media-container h1 {
-    text-align: center;
-    margin-bottom: 70px; }
-
-.news-container {
-  display: flex;
-  justify-content: space-around;
-  flex: 1; }
-  .news-container .media {
-    display: flex;
-    flex-direction: column;
-    font-weight: bold; }
-    .news-container .media:not(:last-child) {
-      margin-right: 32px; }
-    .news-container .media a {
-      text-decoration: underline; }
-      .news-container .media a:hover {
-        opacity: 0.7;
-        cursor: pointer; }
-
-@media (max-width: 700px) {
-  .news-container {
-    overflow: scroll;
-    width: -webkit-fill-available;
-    padding-bottom: 8px; }
-  .media-container {
-    padding: 50px 8px; }
-  .associates-container {
-    padding: 50px 8px; }
-  .image-container {
-    width: -webkit-fill-available;
-    overflow: scroll; } }
-
 .juscredit-input {
-  top: 6094px;
-  left: 422px;
-  width: 1077px;
-  height: 118px;
+  top: 7px;
+  left: 122px;
+  width: 620px;
+  height: 62px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  border-radius: 61px;
-  opacity: 1; }
+  border-radius: 71px;
+  opacity: 1;
+  color: #030B6117;
+  text-align: center; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

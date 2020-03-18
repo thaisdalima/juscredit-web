@@ -1,5 +1,7 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import './styles.scss'
+import { setCustomText } from 'react-native-global-props';
+
 export default class extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx)
@@ -12,7 +14,7 @@ export default class extends Document {
                     
                 </Head>
             
-                <body>
+                <body>  
 
                 <Main />
                     <NextScript />
@@ -20,7 +22,7 @@ export default class extends Document {
                     </body>
 
 
-                <style jsx global>{`
+                <style> {`
                 font-family {
                     font-family: 'Regular', 'Overpass'; 
                 }
@@ -30,7 +32,6 @@ export default class extends Document {
                     font-family: 'Regular';
                     font-family: 'Overpass';
 
-                    font-display: auto;
                 }
 
                 body {
