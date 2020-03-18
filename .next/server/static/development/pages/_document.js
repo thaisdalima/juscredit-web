@@ -1126,13 +1126,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       __self: this
     }, " ", `
                 font-family {
-                    font-family: 'Regular', 'Overpass'; 
+                    font-family: "Regular", "Overpass"; 
                 }
 
                 html {
-                    font-family: 'Muli';
-                    font-family: 'Regular';
-                    font-family: 'Overpass';
+                    font-family: "Muli";
+                    font-family: "Regular";
+                    font-family: "Overpass";
 
                 }
 

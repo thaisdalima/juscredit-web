@@ -146,28 +146,30 @@ body {
   margin: 0; }
 
 .map-container {
-  padding: 0 10em;
-  height: 337px;
+  padding: 0 9em;
+  padding-top: 120px;
+  height: 437px;
   display: flex;
   position: relative;
   flex-direction: column;
-  font-family: "Overpass";
-  background-image: url "/antecipe.svg"; }
+  font-family: "Regular";
+  padding-bottom: 1px; }
   .map-container h1 {
-    top: 0;
+    top: 150px;
     text-align: left;
     font-family: "Regular";
-    letter-spacing: 0;
+    letter-spacing: 1;
     color: #395E66;
     opacity: 1;
     font-size: 40px; }
   .map-container h2 {
-    top: 0;
+    top: 150px;
     font-family: "Regular";
     text-align: left;
-    letter-spacing: 0;
+    letter-spacing: 1;
     color: #9BADB1;
-    opacity: 1; }
+    opacity: 1;
+    font-size: 20px; }
   .map-container h3 {
     text-align: left;
     font-family: "Muli" 42px, "Regular" 63px;
@@ -187,45 +189,13 @@ body {
 
 .map {
   position: absolute;
-  top: -120px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-family: "Muli";
-  letter-spacing: 0;
-  color: #395E66;
-  opacity: 1; }
-  .map h1 {
-    top: 0;
-    text-align: left;
-    font-family: "regular";
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1;
-    font-size: 40px; }
-  .map h2 {
-    top: 0;
-    font-family: "regular";
-    text-align: left;
-    letter-spacing: 0;
-    color: #9BADB1;
-    opacity: 1; }
-  .map h3 {
-    text-align: left;
-    font-family: "Muli" 42px, "Regular" 63px;
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1; }
-  .map h4 {
-    top: 6019px;
-    left: 593px;
-    width: 766px;
-    height: 38px;
-    text-align: left;
-    font-family: "Muli" 42px, "Regular" 63px;
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1; }
+  top: 0px;
+  bottom: 40px;
+  left: 0px;
+  right: 50px;
+  background: url("/anteceba.svg");
+  z-index: -1;
+  background-size: cover; }
 
 .buttons-container {
   flex: 0.5;
@@ -268,11 +238,11 @@ body {
 
 .products-bg {
   position: absolute;
-  top: 50px;
-  bottom: 0;
-  left: 400px;
-  right: 0;
-  background: url("/");
+  top: 0px;
+  bottom: 40px;
+  left: 0px;
+  right: -150px;
+  background: url("/poligono.svg");
   z-index: -1;
   background-size: cover; }
   .products-bg h1 {
@@ -514,23 +484,9 @@ body {
     display: flex; }
     .differential-container:nth-child(even) {
       flex-direction: column-reverse; }
-  .profile-choice-container {
-    margin-top: 0px;
-    padding: 0 24px;
-    flex-direction: column; }
-    .profile-choice-container .bg-left {
-      opacity: 0.15; }
-    .profile-choice-container .bg-right {
-      display: none; }
-    .profile-choice-container .services {
-      padding: 0;
-      border: none; }
-    .profile-choice-container .market {
-      margin: 0; }
-  iframe {
-    width: fit-content; }
   .poligono-container {
-    background: url("/poligono.svg"); }
+    background-image: url("/poligono.svg");
+    resize: 'cover'; }
   .cursor-container {
     position: flex;
     text-align: right;
@@ -557,26 +513,32 @@ body {
       font-family: "Muli", "Regular";
       letter-spacing: 0;
       color: #395E66;
-      opacity: 1; } }
+      opacity: 1; }
+  .poligono-container {
+    position: absolute;
+    top: 0px;
+    bottom: 40px;
+    left: 0px;
+    right: -150px;
+    background: url("/poligono.svg");
+    z-index: -1;
+    background-size: cover; } }
 
 .button {
   border: none;
   padding: 0 16px;
   color: white;
   font-size: 16px;
-  font-family: "Muli", "Regular";
-  font-weight: bold;
+  font-family: "Muli" 24px, "Regular" 63px;
   cursor: pointer;
-  top: 563px;
-  left: 142px;
-  width: 234px;
-  height: 70px;
-  margin: 0 10px; }
+  font-weight: bold;
+  height: 60px;
+  margin: 0 5px;
+  align-items: center; }
   .button.primary {
     background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box;
     border-radius: 40px;
-    opacity: 1;
-    align-content: space-between; }
+    opacity: 1; }
   .button.secondary {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53B67F, #086C7B);
     background-origin: border-box;
@@ -585,41 +547,27 @@ body {
     color: #086C7B;
     border: solid 3px transparent;
     border-radius: 100rem;
-    background-color: white;
-    align-content: center; }
+    background-color: white; }
   .button.third {
-    text-align: flex;
     font-family: "Muli", "Regular";
     letter-spacing: 0;
     color: #086C7B;
     opacity: 1;
-    background-color: white; }
-  .button.fourth {
-    background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box;
-    border-radius: 40px;
-    opacity: 1;
-    top: 463px;
-    left: 0px;
+    background-color: white;
+    top: 563px;
+    left: 142px;
     width: 234px;
     height: 70px;
     margin: 0 10px; }
+  .button.fourth {
+    background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box;
+    border-radius: 40px; }
   .button:hover {
     opacity: 0.7; }
 
 button:disabled,
 .button[disabled] {
   background: #CCC; }
-
-.juscredit-input {
-  top: 7px;
-  left: 122px;
-  width: 620px;
-  height: 62px;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border-radius: 71px;
-  opacity: 1;
-  color: #030B6117;
-  text-align: center; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

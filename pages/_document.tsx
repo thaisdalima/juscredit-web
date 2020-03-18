@@ -24,21 +24,22 @@ export default class extends Document {
 
                 <style> {`
                 font-family {
-                    font-family: 'Regular', 'Overpass'; 
+                    font-family: "Regular", "Overpass"; 
                 }
 
                 html {
-                    font-family: 'Muli';
-                    font-family: 'Regular';
-                    font-family: 'Overpass';
+                    font-family: "Muli";
+                    font-family: "Regular";
+                    font-family: "Overpass";
 
                 }
 
                 body {
                 margin: 0;
             }
-      `}</style>
-           
+      `}
+      </style>
+            
             </html>
         )
     }

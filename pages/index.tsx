@@ -16,7 +16,8 @@ const Index = () => {
                 <title>Juscredit - Home</title>
             </Head>
             <main>
-                    
+            <br/>
+     
                 <div className="map-container"> 
                     <div className="map" />
                      <h1>Antecipe seu crédito trabalhista</h1>
@@ -30,24 +31,19 @@ const Index = () => {
                         </div>
                 </div>
                 </div>
-                <br/>
-        <br/>        
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+
                 <div className="who-we-are">
                <div className="products-bg" /> 
                     <div> <h1>Mais valor para quem vende.</h1> 
-               <h2>Rápido para quem antecipa  <Button onClick={()=> Router.push('/signup/user')} color="primary">Trabalhador</Button>
-               <Button onClick={()=> Router.push('/be-part')} color="secondary">Investidor</Button></h2>
+               <h2>Rápido para quem antecipa</h2>
+                   <div className="buttons-container"> <Button onClick={()=> Router.push('/signup/user')} color="primary">Trabalhador</Button>
+               <Button onClick={()=> Router.push('/be-part')} color="secondary">Investidor</Button>
+               </div>
                </div>
                             <img src="/agilidade.svg"/>
+                            <div className="buttons-container">
                             <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero participar</Button>
-
+</div>
                      
                     <div className="certified-container">
                         <div className="certificates">
@@ -56,33 +52,20 @@ const Index = () => {
                         <h2>Conte com toda a segurança, agilidade 
                             praticidade na liberação do seu processo ganho
                         </h2>
+                        <div className="buttons-container">
                         <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero participar</Button>
-                    </div>
-                    <img src="/trabalhador.svg"/> 
-                    <div className= "poligono-container">  
-                        <img src="/poligono.svg"/> 
-                        </div>     
+                        </div>
+                    </div>  
+                    <img src="/trabalhador.svg"/>    
                 </div>
-
                 <div className="mission-container">
                     <h1>Têm dúvidas ?  </h1>
                     <p>Está na hora de saná-las.</p>
                     <br/> <p>Queremos te ajudar a resolvê-las</p> 
+                    <div className="buttons-container">
                     <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero participar</Button>
-                    
-                    <div className="traits-container">
-                        <div className="trait">
-                            
-                            <h1>Seja um parceiro Juscredit</h1>
-                            <h2>Indique créditos trabalhistas elegíveis e ganhe conosco.</h2>
-                            <StyledInput mask={null} placeholder="Insira aqui seu e-mail" tabIndex={-1} />
-            <Button color="fourth" tabIndex={-1}>Enviar</Button>
-                        </div>
-                        
-                    </div>
-        
-                </div> 
-
+                  </div>   
+                </div>
             </main>
         </Fragment >
 

@@ -3,32 +3,34 @@ body {
 }
 
 .map-container {
-  padding: 0 10em;
-  height: 337px;
+  padding: 0 9em;
+  padding-top: 120px;
+  height: 437px;
   display: flex;
   position: relative;
   flex-direction: column;
-  font-family:"Overpass";
-  background-image: url("differentials/anteceba.svg");
-    
+  font-family:"Regular";
+  padding-bottom:1px;
+
   h1 {
-  top: 0 ;
+  top: 150px; 
   text-align: left;
   font-family: "Regular";
-  letter-spacing: 0;
+  letter-spacing: 1;
   color: #395E66;
   opacity: 1;
   font-size: 40px;
-
   }
 
   h2 {
-    top: 0;
+    top: 150px;
     font-family: "Regular";
     text-align: left;
-    letter-spacing: 0;
+    letter-spacing: 1;
     color: #9BADB1;
     opacity: 1;
+   font-size: 20px;
+
   }
   
   h3 {
@@ -54,58 +56,14 @@ body {
 
 }
 .map {
-position: absolute;
-top: -120px;
-bottom: 0;
-left: 0;
-right: 0;
-font-family: "Muli";
-letter-spacing: 0;
-color: #395E66;
-opacity: 1;
-
-
-h1 {
-  top: 0 ;
-  text-align: left;
-  font-family: "regular";
-  letter-spacing: 0;
-  color: #395E66;
-  opacity: 1;
-  font-size: 40px;
-
-  }
-
-  h2 {
-    top: 0;
-    font-family: "regular";
-    text-align: left;
-    letter-spacing: 0;
-    color: #9BADB1;
-    opacity: 1;
-  }
-  
-  h3{
-   
-    text-align: left;
-    font-family: "Muli" 42px, "Regular" 63px;
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1
-  }
-
-  h4 {
-    top: 6019px;
-    left: 593px;
-    width: 766px;
-    height: 38px;
-    text-align: left;
-    font-family: "Muli" 42px, "Regular" 63px;
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1;  
-}
- 
+  position: absolute;
+  top: 0px;
+  bottom: 40px;
+  left: 0px;
+  right: 50px;
+  background: url("/anteceba.svg");
+  z-index: -1;
+  background-size: cover;
 }
 .buttons-container {
   flex: 0.5;
@@ -160,11 +118,11 @@ h1 {
 }
 .products-bg {
   position: absolute;
-  top: 50px;
-  bottom: 0;
-  left: 400px;
-  right: 0;
-  background: url("/");
+  top: 0px;
+  bottom: 40px;
+  left: 0px;
+  right: -150px;
+  background: url("/poligono.svg");
   z-index: -1;
   background-size: cover;
 
@@ -306,6 +264,7 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 50px 15em;
+
   h1 {
     top: 0 ;
     text-align: left;
@@ -476,33 +435,13 @@ height: 213px;
     display: flex;
     &:nth-child(even) {
       flex-direction: column-reverse;
-    }
-  }
-  .profile-choice-container {
-    margin-top: 0px;
-    padding: 0 24px;
-    flex-direction: column;
-    .bg-left {
-      opacity: 0.15;
-    }
-    .bg-right {
-      display: none;
-    }
-    .services {
-      padding: 0;
-      border: none;
-    }
-    .market {
-      margin: 0;
-    }
-  }
-  iframe {
-    width: fit-content;
-  }
 
-  .poligono-container {
-  background: url("/poligono.svg");
+    }
+  }
   
+  .poligono-container {
+    background-image: url("/poligono.svg");
+    resize: 'cover';
   }
   .anteceba-container{
    
@@ -546,4 +485,14 @@ height: 213px;
 
 }
 
+.poligono-container{  
+position: absolute;
+top: 0px;
+bottom: 40px;
+left: 0px;
+right: -150px;
+background: url("/poligono.svg");
+z-index: -1;
+background-size: cover;
+}
 }

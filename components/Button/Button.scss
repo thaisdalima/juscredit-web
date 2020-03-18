@@ -3,21 +3,18 @@
   padding: 0 16px;
   color: white;
   font-size: 16px;
-  font-family: "Muli", "Regular";
-  font-weight: bold;
+  font-family: "Muli" 24px, "Regular" 63px;
   cursor: pointer;
-  top: 563px;
-  left: 142px;
-  width: 190px;
-  height: 70px;
-  margin: 0 10px;
+  font-weight: bold;
+  height: 60px;
+  margin: 0 5px;
+  align-items: center;
 
   &.primary {
     background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box; 
     border-radius: 40px;
     opacity: 1;
-    align-content: space-between;
- 
+    
    }
 
   &.secondary {
@@ -29,30 +26,27 @@
     border: solid 3px transparent;
     border-radius: 100rem;
     background-color: white;
-    align-content: center;
-
     
   }
     
   &.third {
-    text-align: flex;
     font-family: "Muli", "Regular";
     letter-spacing: 0;
     color: #086C7B;
     opacity: 1;
     background-color: white;
+    top: 563px;
+  left: 142px;
+  width: 234px;
+  height: 70px;
+  margin: 0 10px;
+
     }
 
     
   &.fourth {
     background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box; 
     border-radius: 40px;
-    opacity: 1;
-    top: 463px;
-    left: 0px;
-    width: 234px;
-    height: 70px;
-    margin: 0 10px;
     }
 
   &:hover {
