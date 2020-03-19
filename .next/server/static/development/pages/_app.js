@@ -166,48 +166,86 @@ const Footer = () => __jsx("footer", {
     lineNumber: 12
   },
   __self: undefined
-}, "Entrar")), __jsx("div", {
-  className: "contact",
+}, "Entrar"), __jsx("div", {
+  className: "abfintech-container",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}, __jsx("br", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 14
   },
   __self: undefined
-}, __jsx("h3", {
+}), __jsx("br", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 15
   },
   __self: undefined
-}, "Contato"), __jsx("p", {
+}), __jsx("br", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 16
   },
   __self: undefined
+}), __jsx("br", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17
+  },
+  __self: undefined
+}), __jsx("img", {
+  src: "/ABFintechs.svg",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}))), __jsx("div", {
+  className: "contact",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 21
+  },
+  __self: undefined
+}, __jsx("h3", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 22
+  },
+  __self: undefined
+}, "Contato"), __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 23
+  },
+  __self: undefined
 }, "Indique cr\xE9ditos trabalhistas e ganhe conosco! ", __jsx("strong", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 16
+    lineNumber: 23
   },
   __self: undefined
 }, "contato@juscredit.com.br"))), __jsx("div", {
   className: "contact",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 26
   },
   __self: undefined
 }, __jsx("h3", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
+    lineNumber: 27
   },
   __self: undefined
 }, "Estamos online"), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21
+    lineNumber: 28
   },
   __self: undefined
 }, __jsx("img", {
@@ -215,13 +253,13 @@ const Footer = () => __jsx("footer", {
   className: "footer-logo",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21
+    lineNumber: 28
   },
   __self: undefined
 }), "Facebook "), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 22
+    lineNumber: 29
   },
   __self: undefined
 }, " ", __jsx("img", {
@@ -229,13 +267,13 @@ const Footer = () => __jsx("footer", {
   className: "footer-logo",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 22
+    lineNumber: 29
   },
   __self: undefined
 }), "Instagram "), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 23
+    lineNumber: 30
   },
   __self: undefined
 }, __jsx("img", {
@@ -243,13 +281,13 @@ const Footer = () => __jsx("footer", {
   className: "footer-logo",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 23
+    lineNumber: 30
   },
   __self: undefined
 }), "LinkedIn "), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 24
+    lineNumber: 31
   },
   __self: undefined
 }, " ", __jsx("img", {
@@ -257,10 +295,17 @@ const Footer = () => __jsx("footer", {
   className: "footer-logo",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 24
+    lineNumber: 31
   },
   __self: undefined
-}), "oi@juscredit.com.br")));
+}), "oi@juscredit.com.br"), __jsx("img", {
+  src: "/direitos.svg",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 32
+  },
+  __self: undefined
+})));
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
 

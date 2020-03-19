@@ -10,6 +10,7 @@ export default class extends Document {
     render() {
         return (
             <html lang="en">
+               <link href="https://fonts.googleapis.com/css?family=Muli|Overpass&display=swap" rel="stylesheet"/>
                 <Head>
                     
                 </Head>
@@ -22,15 +23,18 @@ export default class extends Document {
                     </body>
 
 
-                <style> {`
-                font-family {
-                    font-family: "Regular", "Overpass"; 
+                <style jsx global> {`
+                @font-face {
+                    font-family:'Overpass';
+                    src: url('/fonts/Overpass-Light.ttf');
+                    font-family:'Muli', sans-serif;
+                    src: url('/fonts/Muli-Light.ttf');
+             
                 }
 
                 html {
-                    font-family: "Muli";
-                    font-family: "Regular";
-                    font-family: "Overpass";
+                    font-family: 'Overpass', 'Muli';
+                    font-display: swap;
 
                 }
 

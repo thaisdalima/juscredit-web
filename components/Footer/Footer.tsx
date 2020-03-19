@@ -10,6 +10,13 @@ const Footer = () => (
             <a>Dúvidas</a>
             <a>Parceiros</a>
             <a>Entrar</a>
+            <div className="abfintech-container">
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+            <img src="/ABFintechs.svg"/> 
+            </div>
         </div>
         <div className="contact">
             <h3>Contato</h3>
@@ -22,6 +29,7 @@ const Footer = () => (
             <p> <img src="/Grupo de máscara -7@2x.png" className="footer-logo" />Instagram </p>
             <p><img src="/Grupo de máscara -19@2x.png" className="footer-logo" />LinkedIn </p>
             <p> <img src="/Grupo de máscara -9@2x.png" className="footer-logo" />oi@juscredit.com.br</p>
+            <img src="/direitos.svg"/>
           </div>
     
     </footer>

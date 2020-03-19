@@ -206,30 +206,42 @@ const Index = () => {
       lineNumber: 18
     },
     __self: undefined
-  }, __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: undefined
-  }), __jsx("div", {
+  }, __jsx("div", {
     className: "map-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 19
     },
     __self: undefined
   }, __jsx("div", {
     className: "map",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 22
+    },
+    __self: undefined
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
     },
     __self: undefined
   }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: undefined
   }, "Antecipe seu cr\xE9dito trabalhista"), __jsx("h2", {
@@ -238,11 +250,17 @@ const Index = () => {
       lineNumber: 24
     },
     __self: undefined
-  }, "T\xEAm um processo ganho? Receba agora"), __jsx("div", {
-    className: "buttons-container",
+  }, "T\xEAm um processo ganho? Receba agora"), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
+    },
+    __self: undefined
+  }), __jsx("div", {
+    className: "buttons-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
     },
     __self: undefined
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -250,7 +268,7 @@ const Index = () => {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: undefined
   }, "Quero participar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -258,14 +276,14 @@ const Index = () => {
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: undefined
   }, "Quero investir"), __jsx("div", {
     className: "cursor-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -273,53 +291,53 @@ const Index = () => {
     color: "third",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx("img", {
     src: "/cursor.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: undefined
   }), "Conhe\xE7a as vantagens")))), __jsx("div", {
     className: "who-we-are",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: undefined
   }, __jsx("div", {
     className: "products-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: undefined
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: undefined
   }, " ", __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: undefined
   }, "Mais valor para quem vende."), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: undefined
   }, "R\xE1pido para quem antecipa"), __jsx("div", {
     className: "buttons-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: undefined
   }, " ", __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -327,7 +345,7 @@ const Index = () => {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: undefined
   }, "Trabalhador"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -335,73 +353,76 @@ const Index = () => {
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: undefined
   }, "Investidor"))), __jsx("img", {
     src: "/agilidade.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
+    },
+    __self: undefined
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: undefined
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
     },
     __self: undefined
   }), __jsx("div", {
     className: "buttons-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 47
     },
     __self: undefined
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: undefined
+  }), " ", __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 48
     },
     __self: undefined
   }, "Quero participar")), __jsx("div", {
     className: "certified-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 51
     },
     __self: undefined
   }, __jsx("div", {
     className: "certificates",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 52
     },
     __self: undefined
   }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 54
     },
     __self: undefined
   }, "Como funciona a plataforma?"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
-  }, "Conte com toda a seguran\xE7a, agilidade praticidade na libera\xE7\xE3o do seu processo ganho"), __jsx("div", {
-    className: "buttons-container",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 55
     },
     __self: undefined
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
-    color: "secondary",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
-  }, "Quero participar"))), __jsx("img", {
+  }, "Conte com toda a seguran\xE7a, agilidade praticidade na libera\xE7\xE3o do seu processo ganho")), __jsx("img", {
     src: "/trabalhador.svg",
     __source: {
       fileName: _jsxFileName,
@@ -439,22 +460,7 @@ const Index = () => {
       lineNumber: 64
     },
     __self: undefined
-  }, "Queremos te ajudar a resolv\xEA-las"), __jsx("div", {
-    className: "buttons-container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: undefined
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
-    color: "secondary",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: undefined
-  }, "Quero participar")))));
+  }, "Queremos te ajudar a resolv\xEA-las"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);

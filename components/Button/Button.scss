@@ -8,14 +8,13 @@
   font-weight: bold;
   height: 60px;
   margin: 0 5px;
-  align-items: center;
 
   &.primary {
     background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box; 
     border-radius: 40px;
     opacity: 1;
-    
-   }
+  }
+  
 
   &.secondary {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53B67F, #086C7B);
@@ -26,11 +25,13 @@
     border: solid 3px transparent;
     border-radius: 100rem;
     background-color: white;
+    position: center;
+
     
   }
     
   &.third {
-    font-family: "Muli", "Regular";
+    font-family: 'Muli';
     letter-spacing: 0;
     color: #086C7B;
     opacity: 1;
@@ -41,9 +42,9 @@
   height: 70px;
   margin: 0 10px;
 
+
     }
 
-    
   &.fourth {
     background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box; 
     border-radius: 40px;

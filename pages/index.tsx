@@ -16,12 +16,13 @@ const Index = () => {
                 <title>Juscredit - Home</title>
             </Head>
             <main>
-            <br/>
-     
                 <div className="map-container"> 
                     <div className="map" />
-                     <h1>Antecipe seu crédito trabalhista</h1>
-                     <h2>Têm um processo ganho? Receba agora</h2>                    
+                    <br/> 
+                    <br/> 
+                    <br/> 
+                     <h1>Antecipe seu crédito trabalhista</h1><h2>Têm um processo ganho? Receba agora</h2>  
+                     <br/>                 
                     <div className="buttons-container">
                     <Button onClick={()=> Router.push('/signup/user')} color="primary">Quero participar</Button> 
                    <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero investir</Button>
@@ -41,8 +42,10 @@ const Index = () => {
                </div>
                </div>
                             <img src="/agilidade.svg"/>
+                            <br/> 
+                            <br/> 
                             <div className="buttons-container">
-                            <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero participar</Button>
+                            <br/> <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero participar</Button>
 </div>
                      
                     <div className="certified-container">
@@ -51,10 +54,7 @@ const Index = () => {
                         <h1>Como funciona a plataforma?</h1>
                         <h2>Conte com toda a segurança, agilidade 
                             praticidade na liberação do seu processo ganho
-                        </h2>
-                        <div className="buttons-container">
-                        <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero participar</Button>
-                        </div>
+                        </h2>     
                     </div>  
                     <img src="/trabalhador.svg"/>    
                 </div>
@@ -62,16 +62,12 @@ const Index = () => {
                     <h1>Têm dúvidas ?  </h1>
                     <p>Está na hora de saná-las.</p>
                     <br/> <p>Queremos te ajudar a resolvê-las</p> 
-                    <div className="buttons-container">
-                    <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero participar</Button>
-                  </div>   
+                    
                 </div>
             </main>
         </Fragment >
 
     );
 }
-
-
 
 export default Index;
