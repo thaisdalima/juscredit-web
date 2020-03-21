@@ -1,6 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import './styles.scss'
-import { setCustomText } from 'react-native-global-props';
 
 export default class extends Document {
     static async getInitialProps(ctx) {
