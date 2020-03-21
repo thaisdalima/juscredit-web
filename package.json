@@ -1,10 +1,7 @@
 {
   "name": "juscredit-web",
   "version": "1.0.0",
-  "engines": {
-    "node":"12.13.0",
-    "npm":"6.13.7"
-  },
+  "engines"
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "@material/ripple": "^5.1.0",
-    "@types/googlemaps": "^3.39.3",
     "@types/markerclustererplus": "^2.1.33",
     "@types/react-autosuggest": "^9.3.13",
     "@zeit/next-sass": "^1.0.1",
