@@ -1,7 +1,6 @@
 {
   "name": "juscredit-web",
   "version": "1.0.0",
-  "engines"
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@material/ripple": "^5.1.0",
+    "@types/googlemaps": "^3.39.3",
     "@types/markerclustererplus": "^2.1.33",
     "@types/react-autosuggest": "^9.3.13",
     "@zeit/next-sass": "^1.0.1",
@@ -41,5 +41,5 @@
     "tslint": "^6.0.0",
     "tslint-config-airbnb": "^5.11.2",
     "typescript": "^3.8.3"
-  }
+  },
 }
