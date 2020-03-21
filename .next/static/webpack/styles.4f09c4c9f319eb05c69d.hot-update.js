@@ -29,7 +29,7 @@ webpackHotUpdate("styles",{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1584631561401");
+            injectCss(link, link.href.split("?")[0] + "?unix=1584726023038");
           });
       }
     }
@@ -66,7 +66,7 @@ webpackHotUpdate("styles",{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1584631561049");
+            injectCss(link, link.href.split("?")[0] + "?unix=1584726022546");
           });
       }
     }
@@ -75,4 +75,4 @@ webpackHotUpdate("styles",{
 /***/ })
 
 })
-//# sourceMappingURL=styles.e38bdd7ccd9b5ca8125a.hot-update.js.map
+//# sourceMappingURL=styles.4f09c4c9f319eb05c69d.hot-update.js.map
