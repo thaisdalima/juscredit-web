@@ -6,13 +6,21 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "node index.tsx",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "engines": {
     "node": "12.13.x"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/thaisdalima/juscredit-web"
     }
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+    ],
   "author": "",
   "license": "ISC",
   "dependencies": {
