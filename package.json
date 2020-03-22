@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "webpack",  
-    "start": "node index.js",  
+    "start": "node pages/index.js",  
     "test": "echo \"Error: no test specified\" && exit 1",
     "engines": {
     "node": "12.13.x"
