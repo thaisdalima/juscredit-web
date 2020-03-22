@@ -2,11 +2,11 @@
   "name": "juscredit-web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.tsx",
+  "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "node index.js",
+    "start": "next start -p 8000",
     "test": "echo \"Error: no test specified\" && exit 1",
     "engines": {
     "node": "12.13.x"
