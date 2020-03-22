@@ -68,7 +68,7 @@ body {
 }
 .buttons-container {
   flex: 0.5;
-  justify-content: center;
+  justify-content: space-between;
   position: center;
 
   > .button {
@@ -446,10 +446,7 @@ height: 213px;
     background-image: url("/poligono.svg");
     resize: 'cover';
   }
-  .anteceba-container{
-   
-  }
-
+  
   .cursor-container{
   position: flex;
   text-align: right;

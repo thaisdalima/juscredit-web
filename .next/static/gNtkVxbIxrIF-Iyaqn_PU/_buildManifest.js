@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = (function(a,b){return {"/be-part":[a],"/signup/producer":[a,b],"/signup/update-producer":[a,b],"/signup/user":[a,b]}}("static\u002Fchunks\u002F17c25cce55c82f7beeacd2640f3125b12181aa06.cba047c97e3ae7fa7921.js","static\u002Fchunks\u002F9391ac54d7b64fe925a923f29baf7680f256a290.eaac91bbfee7d33e5b27.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
