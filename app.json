@@ -1,0 +1,8 @@
+{
+    "name": "Node.js Getting Started",
+    "description":" A barebnes Node.js app using Typscript,
+    "repository": "https://github.com/thaisdalima/juscredit-web",
+    "logo": "https://node-js-sample.herokuapp.com/nodesvg",
+    "keywords": ["node", "express", "static"],
+    "image": "heroku/nodejs"
+}
