@@ -2,7 +2,7 @@
   "name": "juscredit-web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
     "dev": "next",
     "build": "next build",
