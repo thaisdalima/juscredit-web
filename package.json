@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "webpack",  
-    "start": "node index.js",  
+    "build": "webpack",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "engines": {
-    "node": "12.13.0"
+      "node": "12.13.0"
     }
   },
   "keywords": [
     "node",
     "heroku",
     "express"
-    ],
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -25,6 +25,7 @@
     "@types/markerclustererplus": "^2.1.33",
     "@types/react-autosuggest": "^9.3.13",
     "@zeit/next-sass": "^1.0.1",
+    "core-util-is": "^1.0.2",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
     "formik": "^2.1.4",
