@@ -20,7 +20,7 @@ const Header = () => {
                 <div className="link-container">
             
                     <Link href="/">
-                        <a className="link-container">Como Funciona</a>
+                        <a className="link-container">Como Funcionaaaa</a>
                     </Link>
                     <Link href="/antecipar">
                         <a className="link-container">Antecipar</a>
