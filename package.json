@@ -2,12 +2,15 @@
   "name": "juscredit-web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "webpack",
-    "start": "node index.js",
+    "build": "next build",
+    "start": "next start -p 8080",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/thaisdalima/juscredit-web.git"
+    },
     "engines": {
       "node": "12.13.0"
     }
