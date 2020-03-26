@@ -9,37 +9,44 @@ body {
   display: flex;
   position: relative;
   flex-direction: column;
-  font-family:'Overpass', sans-serif;
+  font-family:'Overpass';
+  font-weight: regular;
   padding-bottom: 0 5em;
 
   h1 {
-  top: 150px; 
+  margin-top: 0px; 
   text-align: left;
   font-family: 'Overpass';
   letter-spacing: 0;
   color: #395E66;
   opacity: 1;
-  font-size: 40px;
+  font-size: 50px;
+  font-weight: 200;
+  margin-bottom: 0;
+  margin-left: 40px;
 
   }
 
   h2 {
-    padding: 0 0em;
-    font-family: 'Muli';
+    margin-top: 40px; 
     text-align: left;
-    letter-spacing: 1;
+    font-family: 'Overpass';
+    letter-spacing: 0;
     color: #9BADB1;
     opacity: 1;
-   font-size: 20px;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 50px;
+    margin-left: 40px;
 
   }
   
   h3 {
     text-align: left;
-    font-family: 'Muli';
+    font-family: "Muli-Regular";
     letter-spacing: 0;
     color: #395E66;
-    opacity: 1
+    opacity: 50%
   }
 
   h4 {
@@ -51,7 +58,7 @@ body {
     font-family: 'Muli';
     letter-spacing: 0;
     color: #395E66;
-    opacity: 1
+    opacity: 50%
     
 } 
 
@@ -73,26 +80,34 @@ body {
 
   > .button {
     margin-right: 24px;
-    min-width: 230px;
+    min-width: 179px;
     margin-bottom: 8px;
+    
     h1 {
-      top: 0 ;
-      text-align: left;
-      font-family: 'Overpass';
-      letter-spacing: 0;
-      color: #395E66;
-      opacity: 1;
-      font-size: 40px;
+      margin-top: 0px; 
+  text-align: left;
+  font-family: 'Overpass';
+  letter-spacing: 0;
+  color: #395E66;
+  opacity: 1;
+  font-size: 50px;
+  font-weight: 200;
+  margin-bottom: 0;
+  margin-left: 40px;
     
       }
     
       h2 {
-        top: 0;
-        font-family:'Muli';
-        text-align: left;
-        letter-spacing: 0;
-        color: #9BADB1;
-        opacity: 1;
+      margin-top: 40px; 
+      text-align: left;
+      font-family: 'Overpass';
+      letter-spacing: 0;
+      color: #9BADB1;
+      opacity: 1;
+      font-size: 25px;
+      font-weight: 200;
+      margin-bottom: 50px;
+      margin-left: 40px
       }
       
       h3{
@@ -118,59 +133,8 @@ body {
     }
   }
 }
-.products-bg {
-  position: absolute;
-  top: 0px;
-  bottom: 40px;
-  left: 0px;
-  right: -150px;
-  background: url("/poligono.svg");
-  z-index: -1;
-  background-size: cover;
 
-  h1 {
-    top: 0 ;
-    text-align: left;
-    font-family:'Overpass';
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1;
-    font-size: 40px;
-  
-    }
-  
-    h2 {
-      top: 0;
-      font-family: 'Muli';
-      text-align: left;
-      letter-spacing: 0;
-      color: #9BADB1;
-      opacity: 1;
-    }
-    
-    h3{
-     
-      text-align: left;
-      font-family: 'Muli';
-      letter-spacing: 0;
-      color: #395E66;
-      opacity: 1
-    }
-  
-    h4 {
-      top: 6019px;
-      left: 593px;
-      width: 766px;
-      height: 38px;
-      text-align: left;
-      font-family:'Muli';
-      letter-spacing: 0;
-      color: #395E66;
-      opacity: 1
-      
-  }
-}
-.who-we-are {
+.antecipar {
   padding: 0 10em;
 
   position: relative;
@@ -181,23 +145,29 @@ body {
   }
 
   h1 {
-    top: 0 ;
+    margin-top: 50px; 
     text-align: left;
-    font-family:'Overpass';
+    font-family: 'Overpass';
     letter-spacing: 0;
     color: #395E66;
     opacity: 1;
     font-size: 40px;
-  
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 40px
     }
   
     h2 {
-      top: 0;
-      font-family: 'Muli';
-      text-align: left;
-      letter-spacing: 0;
-      color: #9BADB1;
-      opacity: 1;
+    margin-top: 20px; 
+    text-align: left;
+    font-family: 'Overpass';
+    letter-spacing: 0;
+    color: #9BADB1;
+    opacity: 1;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 1px;
+    margin-left: 40px
     }
     
     h3{
@@ -221,227 +191,37 @@ body {
       opacity: 1
       
   }
-}
-.certified-container {
-  padding-top: 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  .certificates {
-    display: flex;
-    padding-bottom: 16px;
-    :first-child {
-      margin-right: 16px;
-    }
-  }
-  span {
-    font-weight: light;
-  }
-  p {
-    margin: 0;
-  }
-}
-.mission-container {
- 
-  padding-top: 55px;
-  background-blend-mode: screen;
- 
-  padding-bottom: 80px;
-  flex: 1;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  flex-direction: column;
-  h1 {
-    font-family:'Overpass';
-    text-align: center;
-  }
-  p {
-    text-align: center;
-    padding: 0 15em;
-  }
-}
 
-.traits-container {
-  display: flex;
-  justify-content: center;
-  padding: 50px 15em;
+  .duvidas-container{
+    padding-bottom: 110px;
 
-  h1 {
-    top: 0 ;
-    text-align: left;
-    font-family:'Overpass';
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1;
-    font-size: 40px;
-  
-    }
-  
-    h2 {
-      top: 0;
-      font-family:'Muli';
-      text-align: left;
-      letter-spacing: 0;
-      color: #9BADB1;
-      opacity: 1;
-    }
-    
-    h3{
-     
-      text-align: left;
-      font-family: 'Muli';
-      letter-spacing: 0;
-      color: #395E66;
-      opacity: 1
-    }
-  
-    h4 {
-      top: 6019px;
-      left: 593px;
-      width: 766px;
-      height: 38px;
-      text-align: left;
-      font-family: 'Muli';
-      letter-spacing: 0;
-      color: #395E66;
-      opacity: 1
+      h1 {
+        margin-top: 5px; 
+        text-align: left;
+        font-family: 'Overpass';
+        letter-spacing: 0;
+        color: #395E66;
+        opacity: 1;
+        font-size: 40px;
+        font-weight: 200;
+        margin-bottom: 0;
+        margin-left: 10px;
+        }
       
+        h2 {
+        margin-top: 20px; 
+        text-align: left;
+        font-family: 'Overpass';
+        letter-spacing: 0;
+        color: #9BADB1;
+        opacity: 1;
+        font-size: 25px;
+        font-weight: 200;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        }    
   }
-}
 
-.trait {
-  display: flex;
-  flex-direction: column;
-  > span {
-    font-weight: 600;
-    padding-top: 16px;
-    max-width: 156px;
-    text-align: center;
-  }
-}
-.differentials-container {
-top: 195px;
-left: 670px;
-width: 548px;
-height: 769px;
-}
-
-.differential-container {
-  height: 290px;
-  display: flex;
-  > div {
-    position: relative;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    &:last-child {
-      > img {
-        right: 0px;
-      }
-      > h1 {
-        top: 65px;
-        left: 1012px;
-        width: 174px;
-        height: 30px;
-    text-align: left;
-    font-family:'Overpass';
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1;
-      }
-    }
-    > img {
-      position: absolute;
-      z-index: -1;
-    }
-
-    .id1{
-      position: absolute;
-align-content: flex-start;    }
-
-    > h1 {
-      font-family:'Overpass';
-letter-spacing: 0;
-color: #395E66;
-opacity: 1;
-      text-align: left;
-      top: 368px;
-left: 142px;
-width: 770px;
-height: 213px;
-    }
-  }
-  > p {
-    flex: 1;
-    text-align: left;
-    display: flex;
-    align-items: center;
-  }
-}
-.thumbs-up {
-  top: -30px;
-}
-
-.profile-choice-container {
-  margin-top: 100px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 0 20em;
-  height: 512px;
-  align-items: center;
-
-  .bg-left {
-    position: absolute;
-    left: 0;
-  }
-  .bg-right {
-    position: absolute;
-    right: 0;
-  }
-  .services {
-    padding-right: 32px;
-    border-right: 1px solid;
-  }
-  .market {
-    margin-left: 32px;
-  }
-}
-@media (max-width: 700px) {
-  .map-container {
-    padding: 0 24px;
-  }
-  .who-we-are {
-    padding: 50px 24px;
-  }
-  .mission-container {
-    p {
-      padding: 0 24px;
-    }
-  }
-  .traits-container {
-    flex-direction: column;
-    padding: 50px 24px;
-  }
-  .trait {
-    align-items: center;
-    margin-bottom: 24px;
-  }
-  .differentials-container {
-    padding: 70px 24px 50px 24px;
-  }
-  .differential-container {
-    height: auto;
-    flex-direction: column;
-    display: flex;
-    &:nth-child(even) {
-      flex-direction: column-reverse;
-
-    }
-  }
-  
   .poligono-container {
     background-image: url("/poligono.svg");
     resize: 'cover';
@@ -453,25 +233,43 @@ height: 213px;
   padding: 0 50em;
   }
 
-.lead-container{
-  top: 0 ;
-  text-align: left;
-  font-family: "regular";
-  letter-spacing: 0;
-  color: #395E66;
-  opacity: 1;
-  font-size: 40px;
+.parceiros-container{
+  top: 0px;
+  bottom: 40px;
+  left: 0px;
+  right: -150px;
+  position:center;
+
+  h1 {
+    text-align: center;
+    font-family:'Overpass';
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 40px;
+    position:center;
   
+    }
+
+  h2 {
+      font-family:'Muli';
+      text-align: center;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 50%;
+      position:center;
+      margin-bottom: 20px;
+    }
    
-    h3{
-      text-align: left;
+  h3{
+      text-align: center;
       font-family: 'Muli';
       letter-spacing: 0;
       color: #395E66;
-      opacity: 1
+      opacity: 50%
     }
   
-    h4 {
+  h4 {
       top: 6019px;
       left: 593px;
       width: 766px;
@@ -479,8 +277,7 @@ height: 213px;
       font-family: 'Muli';
       letter-spacing: 0;
       color: #395E66;
-      opacity: 1
-      
+      opacity: 50%
   }
 
 }

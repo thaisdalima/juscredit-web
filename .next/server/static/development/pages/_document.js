@@ -1092,7 +1092,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   render() {
     return __jsx("html", {
       lang: "en",
-      className: "jsx-3851491783",
+      className: "jsx-347588422",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 11
@@ -1101,7 +1101,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }, __jsx("link", {
       href: "https://fonts.googleapis.com/css?family=Muli|Overpass&display=swap",
       rel: "stylesheet",
-      className: "jsx-3851491783",
+      className: "jsx-347588422",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 12
@@ -1114,7 +1114,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       },
       __self: this
     }), __jsx("body", {
-      className: "jsx-3851491783",
+      className: "jsx-347588422",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 17
@@ -1133,9 +1133,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       },
       __self: this
     })), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-      id: "3851491783",
+      id: "347588422",
       __self: this
-    }, "@font-face{font-family:'Overpass';src:url('/fonts/Overpass-Light.ttf');font-family:'Muli',sans-serif;src:url('/fonts/Muli-Light.ttf');}html{font-family:'Overpass','Muli';font-display:swap;}body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcVGhhaXMgTGluZGFcXGp1c2NyZWRpdC13ZWJcXHBhZ2VzXFxfZG9jdW1lbnQudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXdCb0MsQUFHMkMsQUFRUyxBQU0xQixTQUNiLGNBZDZDLE9BUW5CLGtCQUV0QixZQVRrQyw4QkFDRyxpQ0FFckMiLCJmaWxlIjoiQzpcXFVzZXJzXFxUaGFpcyBMaW5kYVxcanVzY3JlZGl0LXdlYlxccGFnZXNcXF9kb2N1bWVudC50c3giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgRG9jdW1lbnQsIHsgSGVhZCwgTWFpbiwgTmV4dFNjcmlwdCB9IGZyb20gJ25leHQvZG9jdW1lbnQnXHJcbmltcG9ydCAnLi9zdHlsZXMuc2NzcydcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGNsYXNzIGV4dGVuZHMgRG9jdW1lbnQge1xyXG4gICAgc3RhdGljIGFzeW5jIGdldEluaXRpYWxQcm9wcyhjdHgpIHtcclxuICAgICAgICBjb25zdCBpbml0aWFsUHJvcHMgPSBhd2FpdCBEb2N1bWVudC5nZXRJbml0aWFsUHJvcHMoY3R4KVxyXG4gICAgICAgIHJldHVybiB7IC4uLmluaXRpYWxQcm9wcyB9XHJcbiAgICB9XHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPGh0bWwgbGFuZz1cImVuXCI+XHJcbiAgICAgICAgICAgICAgIDxsaW5rIGhyZWY9XCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9TXVsaXxPdmVycGFzcyZkaXNwbGF5PXN3YXBcIiByZWw9XCJzdHlsZXNoZWV0XCIvPlxyXG4gICAgICAgICAgICAgICAgPEhlYWQ+XHJcbiAgICAgICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICA8L0hlYWQ+XHJcbiAgICAgICAgICAgIFxyXG4gICAgICAgICAgICAgICAgPGJvZHk+ICBcclxuXHJcbiAgICAgICAgICAgICAgICA8TWFpbiAvPlxyXG4gICAgICAgICAgICAgICAgICAgIDxOZXh0U2NyaXB0IC8+XHJcblxyXG4gICAgICAgICAgICAgICAgICAgIDwvYm9keT5cclxuXHJcblxyXG4gICAgICAgICAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+IHtgXHJcbiAgICAgICAgICAgICAgICBAZm9udC1mYWNlIHtcclxuICAgICAgICAgICAgICAgICAgICBmb250LWZhbWlseTonT3ZlcnBhc3MnO1xyXG4gICAgICAgICAgICAgICAgICAgIHNyYzogdXJsKCcvZm9udHMvT3ZlcnBhc3MtTGlnaHQudHRmJyk7XHJcbiAgICAgICAgICAgICAgICAgICAgZm9udC1mYW1pbHk6J011bGknLCBzYW5zLXNlcmlmO1xyXG4gICAgICAgICAgICAgICAgICAgIHNyYzogdXJsKCcvZm9udHMvTXVsaS1MaWdodC50dGYnKTtcclxuICAgICAgICAgICAgIFxyXG4gICAgICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgICAgIGh0bWwge1xyXG4gICAgICAgICAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnT3ZlcnBhc3MnLCAnTXVsaSc7XHJcbiAgICAgICAgICAgICAgICAgICAgZm9udC1kaXNwbGF5OiBzd2FwO1xyXG5cclxuICAgICAgICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAgICAgICBib2R5IHtcclxuICAgICAgICAgICAgICAgIG1hcmdpbjogMDtcclxuICAgICAgICAgICAgfVxyXG4gICAgICBgfVxyXG4gICAgICA8L3N0eWxlPlxyXG4gICAgICAgICAgICBcclxuICAgICAgICAgICAgPC9odG1sPlxyXG4gICAgICAgIClcclxuICAgIH1cclxufSJdfQ== */\n/*@ sourceURL=C:\\\\Users\\\\Thais Linda\\\\juscredit-web\\\\pages\\\\_document.tsx */"));
+    }, "@font-face{font-family:'Overpass','Muli','Regular';src:url('/fonts/Overpass-Regular.ttf');src:url('/fonts/Muli-Regular.ttf');src:url('/fonts/Muli-Light.ttf');src:url('/fonts/Overpass-Light.ttf');src:url('/fonts/Regular2.ttf');}html{font-family:'Overpass','Muli','Regular';font-display:swap;}body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcVGhhaXMgTGluZGFcXGp1c2NyZWRpdC13ZWJcXHBhZ2VzXFxfZG9jdW1lbnQudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXdCb0MsQUFHOEQsQUFTQyxBQU1yQyxTQUNiLCtCQWYrQyxBQVNyQixrQkFFdEIscUJBVnVDLG1DQUNGLGlDQUNJLHFDQUNOLCtCQUNuQyIsImZpbGUiOiJDOlxcVXNlcnNcXFRoYWlzIExpbmRhXFxqdXNjcmVkaXQtd2ViXFxwYWdlc1xcX2RvY3VtZW50LnRzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBEb2N1bWVudCwgeyBIZWFkLCBNYWluLCBOZXh0U2NyaXB0IH0gZnJvbSAnbmV4dC9kb2N1bWVudCdcclxuaW1wb3J0ICcuL3N0eWxlcy5zY3NzJ1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgZXh0ZW5kcyBEb2N1bWVudCB7XHJcbiAgICBzdGF0aWMgYXN5bmMgZ2V0SW5pdGlhbFByb3BzKGN0eCkge1xyXG4gICAgICAgIGNvbnN0IGluaXRpYWxQcm9wcyA9IGF3YWl0IERvY3VtZW50LmdldEluaXRpYWxQcm9wcyhjdHgpXHJcbiAgICAgICAgcmV0dXJuIHsgLi4uaW5pdGlhbFByb3BzIH1cclxuICAgIH1cclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8aHRtbCBsYW5nPVwiZW5cIj5cclxuICAgICAgICAgICAgICAgPGxpbmsgaHJlZj1cImh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1NdWxpfE92ZXJwYXNzJmRpc3BsYXk9c3dhcFwiIHJlbD1cInN0eWxlc2hlZXRcIi8+XHJcbiAgICAgICAgICAgICAgICA8SGVhZD5cclxuICAgICAgICAgICAgICAgICAgICBcclxuICAgICAgICAgICAgICAgIDwvSGVhZD5cclxuICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICA8Ym9keT4gIFxyXG5cclxuICAgICAgICAgICAgICAgIDxNYWluIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPE5leHRTY3JpcHQgLz5cclxuXHJcbiAgICAgICAgICAgICAgICAgICAgPC9ib2R5PlxyXG5cclxuXHJcbiAgICAgICAgICAgICAgICA8c3R5bGUganN4IGdsb2JhbD4ge2BcclxuICAgICAgICAgICAgICAgIEBmb250LWZhY2Uge1xyXG4gICAgICAgICAgICAgICAgICAgIGZvbnQtZmFtaWx5OidPdmVycGFzcycsICdNdWxpJywgJ1JlZ3VsYXInO1xyXG4gICAgICAgICAgICAgICAgICAgIHNyYzogdXJsKCcvZm9udHMvT3ZlcnBhc3MtUmVndWxhci50dGYnKTtcclxuICAgICAgICAgICAgICAgICAgICBzcmM6IHVybCgnL2ZvbnRzL011bGktUmVndWxhci50dGYnKTtcclxuICAgICAgICAgICAgICAgICAgICBzcmM6IHVybCgnL2ZvbnRzL011bGktTGlnaHQudHRmJyk7XHJcbiAgICAgICAgICAgICAgICAgICAgc3JjOiB1cmwoJy9mb250cy9PdmVycGFzcy1MaWdodC50dGYnKTtcclxuICAgICAgICAgICAgICAgICAgICBzcmM6IHVybCgnL2ZvbnRzL1JlZ3VsYXIyLnR0ZicpO1xyXG4gICAgICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgICAgIGh0bWwge1xyXG4gICAgICAgICAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnT3ZlcnBhc3MnLCAnTXVsaScsICdSZWd1bGFyJztcclxuICAgICAgICAgICAgICAgICAgICBmb250LWRpc3BsYXk6IHN3YXA7XHJcblxyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICBcclxuICAgICAgICAgICAgICAgIGJvZHkge1xyXG4gICAgICAgICAgICAgICAgbWFyZ2luOiAwO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgIGB9XHJcbiAgICAgIDwvc3R5bGU+XHJcbiAgICAgICAgICAgIFxyXG4gICAgICAgICAgICA8L2h0bWw+XHJcbiAgICAgICAgKVxyXG4gICAgfVxyXG59Il19 */\n/*@ sourceURL=C:\\\\Users\\\\Thais Linda\\\\juscredit-web\\\\pages\\\\_document.tsx */"));
   }
 
 });

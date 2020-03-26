@@ -24,19 +24,20 @@ export default class extends Document {
 
                 <style jsx global> {`
                 @font-face {
-                    font-family:'Overpass';
-                    src: url('/fonts/Overpass-Light.ttf');
-                    font-family:'Muli', sans-serif;
+                    font-family:'Overpass', 'Muli', 'Regular';
+                    src: url('/fonts/Overpass-Regular.ttf');
+                    src: url('/fonts/Muli-Regular.ttf');
                     src: url('/fonts/Muli-Light.ttf');
-             
+                    src: url('/fonts/Overpass-Light.ttf');
+                    src: url('/fonts/Regular2.ttf');
                 }
 
                 html {
-                    font-family: 'Overpass', 'Muli';
+                    font-family: 'Overpass', 'Muli', 'Regular';
                     font-display: swap;
 
                 }
-
+                     
                 body {
                 margin: 0;
             }

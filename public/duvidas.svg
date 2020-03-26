@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1104" height="572" viewBox="0 0 1104 872">
+  <defs>
+    <filter id="Retângulo_65" x="30" y="326" width="1044" height="546" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="49" result="blur"/>
+      <feFlood flood-color="#030b61" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Retângulo_65-2" x="30" y="0" width="1044" height="546" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="49" result="blur-2"/>
+      <feFlood flood-color="#030b61" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Retângulo_65-3" x="0" y="152" width="1104" height="553" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="49" result="blur-3"/>
+      <feFlood flood-color="#030b61" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_174" data-name="Grupo 174" transform="translate(177 458)">
+    <g transform="matrix(1, 0, 0, 1, -177, -458)" filter="url(#Retângulo_65)">
+      <rect id="Retângulo_65-4" data-name="Retângulo 65" width="750" height="252" rx="12" transform="translate(177 458)" fill="#fff"/>
+    </g>
+    <text id="To_say_that_your_professionalism_guidance_and_to_your_client_is_outstanding_is_a_sheer_understatement_You_not_only_helped_me_find_what_I_was_looking_for_in_a_career._" data-name="To say that your professionalism, guidance and  to your 
+client is outstanding is a sheer understatement! You not &amp; 
+only helped me find what I was looking for in a career. " transform="translate(47 122)" fill="#395e66" font-size="21" font-family="Muli-SemiBold, Muli" font-weight="600" opacity="0.5"><tspan x="0" y="0" xml:space="preserve">To say that your professionalism, guidance and  to your </tspan><tspan x="0" y="37">client is outstanding is a sheer understatement! You not &amp; </tspan><tspan x="0" y="74">only helped me find what I was looking for in a career. </tspan></text>
+    <text id="Vocês_possuem_alguma_regulamentação_" data-name="Vocês possuem alguma regulamentação?" transform="translate(47 71)" fill="#505050" font-size="25" font-family="Muli-SemiBold, Muli" font-weight="600"><tspan x="0" y="0">Vocês possuem alguma regulamentação?</tspan></text>
+  </g>
+  <g id="Grupo_175" data-name="Grupo 175" transform="translate(177 132)">
+    <g transform="matrix(1, 0, 0, 1, -177, -132)" filter="url(#Retângulo_65-2)">
+      <rect id="Retângulo_65-5" data-name="Retângulo 65" width="750" height="252" rx="12" transform="translate(177 132)" fill="#fff"/>
+    </g>
+    <text id="To_say_that_your_professionalism_guidance_and_to_your_client_is_outstanding_is_a_sheer_understatement_You_not_only_helped_me_find_what_I_was_looking_for_in_a_career._2" data-name="To say that your professionalism, guidance and  to your 
+client is outstanding is a sheer understatement! You not &amp; 
+only helped me find what I was looking for in a career. " transform="translate(47 159)" fill="#395e66" font-size="21" font-family="Muli-SemiBold, Muli" font-weight="600" opacity="0.5"><tspan x="0" y="0" xml:space="preserve">To say that your professionalism, guidance and  to your </tspan><tspan x="0" y="37">client is outstanding is a sheer understatement! You not &amp; </tspan><tspan x="0" y="74">only helped me find what I was looking for in a career. </tspan></text>
+    <text id="Após_aprovar_meu_cadastro_em_quanto_tempo_o_dinheiro_cai_na_conta_" data-name="Após aprovar meu cadastro, em quanto tempo o 
+dinheiro cai na conta?" transform="translate(47 69)" fill="#395e66" font-size="24" font-family="Muli-SemiBold, Muli" font-weight="600"><tspan x="0" y="0">Após aprovar meu cadastro, em quanto tempo o </tspan><tspan x="0" y="38">dinheiro cai na conta?</tspan></text>
+  </g>
+  <g id="Grupo_173" data-name="Grupo 173" transform="translate(147 284)">
+    <g transform="matrix(1, 0, 0, 1, -147, -284)" filter="url(#Retângulo_65-3)">
+      <rect id="Retângulo_65-6" data-name="Retângulo 65" width="810" height="259" rx="12" transform="translate(147 284)" fill="#fff"/>
+    </g>
+    <text id="To_say_that_your_professionalism_guidance_and_to_your_client_is_outstanding_is_a_sheer_understatement_You_not_only_helped_me_find_what_I_was_looking_for_in_a_career._3" data-name="To say that your professionalism, guidance and  to your 
+client is outstanding is a sheer understatement! You not &amp; 
+only helped me find what I was looking for in a career. " transform="translate(50 128)" fill="#395e66" font-size="23" font-family="Muli-SemiBold, Muli" font-weight="600" opacity="0.5"><tspan x="0" y="0" xml:space="preserve">To say that your professionalism, guidance and  to your </tspan><tspan x="0" y="40">client is outstanding is a sheer understatement! You not &amp; </tspan><tspan x="0" y="80">only helped me find what I was looking for in a career. </tspan></text>
+    <text id="Vocês_possuem_alguma_regulamentação_2" data-name="Vocês possuem alguma regulamentação?" transform="translate(50 73)" fill="#395e66" font-size="28" font-family="Muli-SemiBold, Muli" font-weight="600"><tspan x="0" y="0">Vocês possuem alguma regulamentação?</tspan></text>
+  </g>
+</svg>

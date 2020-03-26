@@ -2,10 +2,9 @@
 .footer-container {
   background: rgb(83,182,127);
   background: radial-gradient(circle, rgba(83,182,127,1) 0%, rgba(8,108,123,1) 100%);
-  padding: 40px 10em;
+  padding: 30px 5em;
   display: flex;
   color: white;
-  justify-content: space-around;
   border-top-right-radius: 200px 200px;
   position:relative;
 
@@ -14,14 +13,6 @@
 .footer-logo {
   width: 32px;
   height: 22px;
-}
-.lead-container {
-  display: flex;
-  flex-direction: column;
-  flex: 0.4;
-  padding-right: 40px;
-  border-right: 1px solid #ffffff;
- 
 }
 .menu {
   display: flex;

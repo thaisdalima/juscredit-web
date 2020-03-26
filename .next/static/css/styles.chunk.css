@@ -100,23 +100,15 @@
 .footer-container {
   background: #53b67f;
   background: radial-gradient(circle, #53b67f 0%, #086c7b 100%);
-  padding: 40px 10em;
+  padding: 30px 5em;
   display: flex;
   color: white;
-  justify-content: space-around;
   border-top-right-radius: 200px 200px;
   position: relative; }
 
 .footer-logo {
   width: 32px;
   height: 22px; }
-
-.lead-container {
-  display: flex;
-  flex-direction: column;
-  flex: 0.4;
-  padding-right: 40px;
-  border-right: 1px solid #ffffff; }
 
 .menu {
   display: flex;
@@ -154,30 +146,37 @@ body {
   display: flex;
   position: relative;
   flex-direction: column;
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Overpass';
+  font-weight: regular;
   padding-bottom: 0 5em; }
   .map-container h1 {
-    top: 150px;
+    margin-top: 0px;
     text-align: left;
     font-family: 'Overpass';
     letter-spacing: 0;
     color: #395E66;
     opacity: 1;
-    font-size: 40px; }
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 40px; }
   .map-container h2 {
-    padding: 0 0em;
-    font-family: 'Muli';
+    margin-top: 40px;
     text-align: left;
-    letter-spacing: 1;
+    font-family: 'Overpass';
+    letter-spacing: 0;
     color: #9BADB1;
     opacity: 1;
-    font-size: 20px; }
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 50px;
+    margin-left: 40px; }
   .map-container h3 {
     text-align: left;
-    font-family: 'Muli';
+    font-family: "Muli-Regular";
     letter-spacing: 0;
     color: #395E66;
-    opacity: 1; }
+    opacity: 50%; }
   .map-container h4 {
     top: 6019px;
     left: 593px;
@@ -187,7 +186,7 @@ body {
     font-family: 'Muli';
     letter-spacing: 0;
     color: #395E66;
-    opacity: 1; }
+    opacity: 50%; }
 
 .map {
   position: absolute;
@@ -201,27 +200,34 @@ body {
 
 .buttons-container {
   flex: 0.5;
-  justify-content: center;
+  justify-content: space-between;
   position: center; }
   .buttons-container > .button {
     margin-right: 24px;
-    min-width: 230px;
+    min-width: 179px;
     margin-bottom: 8px; }
     .buttons-container > .button h1 {
-      top: 0;
+      margin-top: 0px;
       text-align: left;
       font-family: 'Overpass';
       letter-spacing: 0;
       color: #395E66;
       opacity: 1;
-      font-size: 40px; }
+      font-size: 50px;
+      font-weight: 200;
+      margin-bottom: 0;
+      margin-left: 40px; }
     .buttons-container > .button h2 {
-      top: 0;
-      font-family: 'Muli';
+      margin-top: 40px;
       text-align: left;
+      font-family: 'Overpass';
       letter-spacing: 0;
       color: #9BADB1;
-      opacity: 1; }
+      opacity: 1;
+      font-size: 25px;
+      font-weight: 200;
+      margin-bottom: 50px;
+      margin-left: 40px; }
     .buttons-container > .button h3 {
       text-align: left;
       font-family: 'Muli';
@@ -239,76 +245,42 @@ body {
       color: #395E66;
       opacity: 1; }
 
-.products-bg {
-  position: absolute;
-  top: 0px;
-  bottom: 40px;
-  left: 0px;
-  right: -150px;
-  background: url("/poligono.svg");
-  z-index: -1;
-  background-size: cover; }
-  .products-bg h1 {
-    top: 0;
-    text-align: left;
-    font-family: 'Overpass';
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1;
-    font-size: 40px; }
-  .products-bg h2 {
-    top: 0;
-    font-family: 'Muli';
-    text-align: left;
-    letter-spacing: 0;
-    color: #9BADB1;
-    opacity: 1; }
-  .products-bg h3 {
-    text-align: left;
-    font-family: 'Muli';
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1; }
-  .products-bg h4 {
-    top: 6019px;
-    left: 593px;
-    width: 766px;
-    height: 38px;
-    text-align: left;
-    font-family: 'Muli';
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1; }
-
-.who-we-are {
+.antecipar {
   padding: 0 10em;
   position: relative;
   padding-bottom: 110px; }
-  .who-we-are p {
+  .antecipar p {
     font-size: 16px;
     max-width: 400px; }
-  .who-we-are h1 {
-    top: 0;
+  .antecipar h1 {
+    margin-top: 50px;
     text-align: left;
     font-family: 'Overpass';
     letter-spacing: 0;
     color: #395E66;
     opacity: 1;
-    font-size: 40px; }
-  .who-we-are h2 {
-    top: 0;
-    font-family: 'Muli';
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 40px; }
+  .antecipar h2 {
+    margin-top: 20px;
     text-align: left;
+    font-family: 'Overpass';
     letter-spacing: 0;
     color: #9BADB1;
-    opacity: 1; }
-  .who-we-are h3 {
+    opacity: 1;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 1px;
+    margin-left: 40px; }
+  .antecipar h3 {
     text-align: left;
     font-family: 'Muli';
     letter-spacing: 0;
     color: #395E66;
     opacity: 1; }
-  .who-we-are h4 {
+  .antecipar h4 {
     top: 6019px;
     left: 593px;
     width: 766px;
@@ -318,198 +290,66 @@ body {
     letter-spacing: 0;
     color: #395E66;
     opacity: 1; }
-
-.certified-container {
-  padding-top: 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; }
-  .certified-container .certificates {
-    display: flex;
-    padding-bottom: 16px; }
-    .certified-container .certificates :first-child {
-      margin-right: 16px; }
-  .certified-container span {
-    font-weight: light; }
-  .certified-container p {
-    margin: 0; }
-
-.mission-container {
-  padding-top: 55px;
-  background-blend-mode: screen;
-  padding-bottom: 80px;
-  flex: 1;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  flex-direction: column; }
-  .mission-container h1 {
-    font-family: 'Overpass';
-    text-align: center; }
-  .mission-container p {
-    text-align: center;
-    padding: 0 15em; }
-
-.traits-container {
-  display: flex;
-  justify-content: center;
-  padding: 50px 15em; }
-  .traits-container h1 {
-    top: 0;
-    text-align: left;
-    font-family: 'Overpass';
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1;
-    font-size: 40px; }
-  .traits-container h2 {
-    top: 0;
-    font-family: 'Muli';
-    text-align: left;
-    letter-spacing: 0;
-    color: #9BADB1;
-    opacity: 1; }
-  .traits-container h3 {
-    text-align: left;
-    font-family: 'Muli';
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1; }
-  .traits-container h4 {
-    top: 6019px;
-    left: 593px;
-    width: 766px;
-    height: 38px;
-    text-align: left;
-    font-family: 'Muli';
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1; }
-
-.trait {
-  display: flex;
-  flex-direction: column; }
-  .trait > span {
-    font-weight: 600;
-    padding-top: 16px;
-    max-width: 156px;
-    text-align: center; }
-
-.differentials-container {
-  top: 195px;
-  left: 670px;
-  width: 548px;
-  height: 769px; }
-
-.differential-container {
-  height: 290px;
-  display: flex; }
-  .differential-container > div {
-    position: relative;
-    flex: 1;
-    display: flex;
-    align-items: center; }
-    .differential-container > div:last-child > img {
-      right: 0px; }
-    .differential-container > div:last-child > h1 {
-      top: 65px;
-      left: 1012px;
-      width: 174px;
-      height: 30px;
+  .antecipar .duvidas-container {
+    padding-bottom: 110px; }
+    .antecipar .duvidas-container h1 {
+      margin-top: 5px;
       text-align: left;
-      font-family: 'Overpass';
-      letter-spacing: 0;
-      color: #395E66;
-      opacity: 1; }
-    .differential-container > div > img {
-      position: absolute;
-      z-index: -1; }
-    .differential-container > div .id1 {
-      position: absolute;
-      align-content: flex-start; }
-    .differential-container > div > h1 {
       font-family: 'Overpass';
       letter-spacing: 0;
       color: #395E66;
       opacity: 1;
+      font-size: 40px;
+      font-weight: 200;
+      margin-bottom: 0;
+      margin-left: 10px; }
+    .antecipar .duvidas-container h2 {
+      margin-top: 20px;
       text-align: left;
-      top: 368px;
-      left: 142px;
-      width: 770px;
-      height: 213px; }
-  .differential-container > p {
-    flex: 1;
-    text-align: left;
-    display: flex;
-    align-items: center; }
-
-.thumbs-up {
-  top: -30px; }
-
-.profile-choice-container {
-  margin-top: 100px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 0 20em;
-  height: 512px;
-  align-items: center; }
-  .profile-choice-container .bg-left {
-    position: absolute;
-    left: 0; }
-  .profile-choice-container .bg-right {
-    position: absolute;
-    right: 0; }
-  .profile-choice-container .services {
-    padding-right: 32px;
-    border-right: 1px solid; }
-  .profile-choice-container .market {
-    margin-left: 32px; }
-
-@media (max-width: 700px) {
-  .map-container {
-    padding: 0 24px; }
-  .who-we-are {
-    padding: 50px 24px; }
-  .mission-container p {
-    padding: 0 24px; }
-  .traits-container {
-    flex-direction: column;
-    padding: 50px 24px; }
-  .trait {
-    align-items: center;
-    margin-bottom: 24px; }
-  .differentials-container {
-    padding: 70px 24px 50px 24px; }
-  .differential-container {
-    height: auto;
-    flex-direction: column;
-    display: flex; }
-    .differential-container:nth-child(even) {
-      flex-direction: column-reverse; }
-  .poligono-container {
+      font-family: 'Overpass';
+      letter-spacing: 0;
+      color: #9BADB1;
+      opacity: 1;
+      font-size: 25px;
+      font-weight: 200;
+      margin-bottom: 30px;
+      margin-left: 10px; }
+  .antecipar .poligono-container {
     background-image: url("/poligono.svg");
     resize: 'cover'; }
-  .cursor-container {
+  .antecipar .cursor-container {
     position: flex;
     text-align: right;
     padding: 0 50em; }
-  .lead-container {
-    top: 0;
-    text-align: left;
-    font-family: "regular";
-    letter-spacing: 0;
-    color: #395E66;
-    opacity: 1;
-    font-size: 40px; }
-    .lead-container h3 {
-      text-align: left;
+  .antecipar .parceiros-container {
+    top: 0px;
+    bottom: 40px;
+    left: 0px;
+    right: -150px;
+    position: center; }
+    .antecipar .parceiros-container h1 {
+      text-align: center;
+      font-family: 'Overpass';
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1;
+      font-size: 40px;
+      position: center; }
+    .antecipar .parceiros-container h2 {
+      font-family: 'Muli';
+      text-align: center;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 50%;
+      position: center;
+      margin-bottom: 20px; }
+    .antecipar .parceiros-container h3 {
+      text-align: center;
       font-family: 'Muli';
       letter-spacing: 0;
       color: #395E66;
-      opacity: 1; }
-    .lead-container h4 {
+      opacity: 50%; }
+    .antecipar .parceiros-container h4 {
       top: 6019px;
       left: 593px;
       width: 766px;
@@ -517,8 +357,8 @@ body {
       font-family: 'Muli';
       letter-spacing: 0;
       color: #395E66;
-      opacity: 1; }
-  .poligono-container {
+      opacity: 50%; }
+  .antecipar .poligono-container {
     position: absolute;
     top: 0px;
     bottom: 40px;
@@ -526,22 +366,26 @@ body {
     right: -150px;
     background: url("/poligono.svg");
     z-index: -1;
-    background-size: cover; } }
+    background-size: cover; }
 
 .button {
   border: none;
   padding: 0 16px;
-  color: white;
+  color: #FFFFFF;
   font-size: 16px;
-  font-family: "Muli" 24px, "Regular" 63px;
+  font-family: 'Muli';
   cursor: pointer;
-  font-weight: bold;
-  height: 60px;
-  margin: 0 5px; }
+  height: 20px;
+  top: 10px;
+  margin: 0 0px;
+  left: 122px;
+  width: 134px;
+  height: 56px; }
   .button.primary {
     background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box;
     border-radius: 40px;
-    opacity: 1; }
+    opacity: 1;
+    margin-left: 35px; }
   .button.secondary {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53B67F, #086C7B);
     background-origin: border-box;
@@ -550,10 +394,10 @@ body {
     color: #086C7B;
     border: solid 3px transparent;
     border-radius: 100rem;
-    background-color: white;
-    position: center; }
+    background-color: white; }
   .button.third {
     font-family: 'Muli';
+    font-weight: bold;
     letter-spacing: 0;
     color: #086C7B;
     opacity: 1;
@@ -562,7 +406,8 @@ body {
     left: 142px;
     width: 234px;
     height: 70px;
-    margin: 0 10px; }
+    margin: 0 10px;
+    margin-top: 40px; }
   .button.fourth {
     background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box;
     border-radius: 40px; }
@@ -572,6 +417,22 @@ body {
 button:disabled,
 .button[disabled] {
   background: #CCC; }
+
+.juscredit-input {
+  top: 0px;
+  left: 133px;
+  width: 600px;
+  height: 53px;
+  background: 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 50px #030B6117;
+  opacity: 1;
+  border-radius: 51px;
+  opacity: 1;
+  margin-top: 5px;
+  margin-left: 80px;
+  position: relative;
+  size: 31px;
+  border: 1px solid rgba(0, 0, 0, 0.25); }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
