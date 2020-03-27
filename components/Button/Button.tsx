@@ -6,3 +6,4 @@ const Button = (props: React.ButtonHTMLAttributes<HTMLButtonElement> & { color: 
 }
 
 export default Button
+
