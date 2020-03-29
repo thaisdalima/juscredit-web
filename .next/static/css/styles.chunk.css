@@ -107,12 +107,12 @@
   position: relative; }
 
 .footer-logo {
-  width: 32px;
+  width: 22px;
   height: 22px; }
 
 .menu {
   display: flex;
-  padding-left: 20px;
+  padding-left: 10px;
   flex-direction: column;
   flex: 0.2; }
 

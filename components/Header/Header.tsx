@@ -2,6 +2,8 @@ import Link from "../Link/Link";
 import './Header.scss'
 import { useRouter } from "next/router";
 import { useState } from "react";
+import NavBar, { ElementsWrapper } from "react-scrolling-nav";
+
 const Header = () => {
     const [openedMenu, setOpenedMenu] = useState(false)
     const router = useRouter()
@@ -19,7 +21,7 @@ const Header = () => {
 </a>
                 <div className="link-container">
             
-                    <Link href="/">
+                    <Link href="/como-funciona">
                         <a className="link-container">Como Funciona</a>
                     </Link>
                     <Link href="/antecipar">

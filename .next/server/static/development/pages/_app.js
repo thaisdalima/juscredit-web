@@ -126,54 +126,60 @@ const Footer = () => __jsx("footer", {
   className: "footer-container",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 6
+    lineNumber: 5
   },
   __self: undefined
 }, __jsx("div", {
   className: "menu",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 7
+    lineNumber: 6
   },
   __self: undefined
 }, __jsx("h3", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 8
+    lineNumber: 7
   },
   __self: undefined
 }, "Como Funciona"), __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 8
   },
   __self: undefined
 }, "Antecipar"), __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 9
   },
   __self: undefined
 }, "D\xFAvidas"), __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 10
   },
   __self: undefined
 }, "Parceiros"), __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12
+    lineNumber: 11
   },
   __self: undefined
 }, "Entrar"), __jsx("div", {
   className: "abfintech-container",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 13
+    lineNumber: 12
   },
   __self: undefined
 }, __jsx("br", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}), __jsx("br", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 14
@@ -191,61 +197,55 @@ const Footer = () => __jsx("footer", {
     lineNumber: 16
   },
   __self: undefined
-}), __jsx("br", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 17
-  },
-  __self: undefined
 }), __jsx("img", {
   src: "/ABFintechs.svg",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 18
+    lineNumber: 17
   },
   __self: undefined
 }))), __jsx("div", {
   className: "contact",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21
+    lineNumber: 20
   },
   __self: undefined
 }, __jsx("h3", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 22
+    lineNumber: 21
   },
   __self: undefined
 }, "Contato"), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 23
+    lineNumber: 22
   },
   __self: undefined
 }, "Indique cr\xE9ditos trabalhistas e ganhe conosco! ", __jsx("strong", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 23
+    lineNumber: 22
   },
   __self: undefined
 }, "contato@juscredit.com.br"))), __jsx("div", {
   className: "contact",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 26
+    lineNumber: 25
   },
   __self: undefined
 }, __jsx("h3", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 27
+    lineNumber: 26
   },
   __self: undefined
 }, "Estamos online"), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28
+    lineNumber: 27
   },
   __self: undefined
 }, __jsx("img", {
@@ -253,13 +253,13 @@ const Footer = () => __jsx("footer", {
   className: "footer-logo",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28
+    lineNumber: 27
   },
   __self: undefined
-}), "Facebook "), __jsx("p", {
+}), " Facebook "), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29
+    lineNumber: 28
   },
   __self: undefined
 }, " ", __jsx("img", {
@@ -267,13 +267,13 @@ const Footer = () => __jsx("footer", {
   className: "footer-logo",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29
+    lineNumber: 28
   },
   __self: undefined
-}), "Instagram "), __jsx("p", {
+}), " Instagram "), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 30
+    lineNumber: 29
   },
   __self: undefined
 }, __jsx("img", {
@@ -281,13 +281,13 @@ const Footer = () => __jsx("footer", {
   className: "footer-logo",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 30
+    lineNumber: 29
   },
   __self: undefined
-}), "LinkedIn "), __jsx("p", {
+}), " LinkedIn "), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 30
   },
   __self: undefined
 }, " ", __jsx("img", {
@@ -295,14 +295,14 @@ const Footer = () => __jsx("footer", {
   className: "footer-logo",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 30
   },
   __self: undefined
-}), "oi@juscredit.com.br"), __jsx("img", {
+}), " oi@juscredit.com.br"), __jsx("img", {
   src: "/direitos.svg",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 32
+    lineNumber: 31
   },
   __self: undefined
 })));
@@ -366,7 +366,7 @@ const Header = () => {
     className: "nav" + themeClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: undefined
   }, __jsx("a", {
@@ -374,7 +374,7 @@ const Header = () => {
     href: "#home",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: undefined
   }, " ", __jsx("img", {
@@ -382,84 +382,84 @@ const Header = () => {
     className: "header-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: undefined
   })), __jsx("div", {
     className: "link-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
     },
     __self: undefined
   }, __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/",
+    href: "/como-funciona",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx("a", {
     className: "link-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 25
     },
     __self: undefined
   }, "Como Funciona")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/antecipar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: undefined
   }, __jsx("a", {
     className: "link-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: undefined
   }, "Antecipar")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/duvidas",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx("a", {
     className: "link-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 31
     },
     __self: undefined
   }, "D\xFAvidas")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/parceiros",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx("a", {
     className: "link-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: undefined
   }, " Parceiros ")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/Entrar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 36
     },
     __self: undefined
   }, __jsx("a", {
     className: "link-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: undefined
   }, " ", __jsx("button", {
@@ -467,7 +467,7 @@ const Header = () => {
     className: "entrar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: undefined
   }, "Entrar")))), __jsx("div", {
@@ -475,7 +475,7 @@ const Header = () => {
     onClick: toggleMenu,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 42
     },
     __self: undefined
   }, __jsx("svg", {
@@ -485,7 +485,7 @@ const Header = () => {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("path", {
@@ -493,84 +493,84 @@ const Header = () => {
     d: "M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 44
     },
     __self: undefined
   })))), openedMenu && __jsx("div", {
     className: "mobile-link-container " + themeClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: undefined
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 51
     },
     __self: undefined
   }, "Como Funciona")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/find-partners",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 53
     },
     __self: undefined
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 54
     },
     __self: undefined
   }, "Antecipar")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/be-part",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 56
     },
     __self: undefined
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 57
     },
     __self: undefined
   }, "D\xFAvidas")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: undefined
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     },
     __self: undefined
   }, " Parceiros ")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/profile",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 62
     },
     __self: undefined
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 63
     },
     __self: undefined
   }, "Entrar "))));
