@@ -13,7 +13,9 @@ const Header = () => {
     }
     const toggleMenu = () => {
         setOpenedMenu(!openedMenu)
-    }                                                                  
+    }    
+    
+    
     return (
         <>
                       <nav className={"nav" + themeClass}>
@@ -28,7 +30,7 @@ const Header = () => {
                         <a className="link">Antecipar</a>
                     </Link>
                     <Link href="/duvidas">
-                        <a className="link">Dúvidas</a>
+                        <a className="link">Investir</a>
                     </Link>
                     <Link href="/parceiros">
                         <a className="link"> Parceiros </a>
@@ -54,7 +56,7 @@ const Header = () => {
                         <a className="link">Antecipar</a>
                     </Link>
                     <Link href="/be-part">
-                        <a className="link">Dúvidas</a>
+                        <a className="link">Investir</a>
                     </Link>
                     <Link href="/content">
                         <a className="link"> Parceiros </a>

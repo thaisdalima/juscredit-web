@@ -223,7 +223,7 @@ var Header = function Header() {
     className: "nav" + themeClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     },
     __self: this
   }, __jsx("a", {
@@ -231,7 +231,7 @@ var Header = function Header() {
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
     },
     __self: this
   }, " ", __jsx("img", {
@@ -239,84 +239,84 @@ var Header = function Header() {
     className: "header-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
     },
     __self: this
   })), __jsx("div", {
     className: "link-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 24
     },
     __self: this
   }, __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/comofunciona",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: this
   }, "Como Funciona")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/antecipar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 29
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 30
     },
     __self: this
   }, "Antecipar")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/duvidas",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: this
   }, __jsx("a", {
     className: "link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, "D\xFAvidas")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/parceiros",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
+  }, "Investir")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    href: "/parceiros",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 36
     },
     __self: this
   }, " Parceiros ")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/Entrar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 38
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: this
   }, " ", __jsx("button", {
@@ -324,7 +324,7 @@ var Header = function Header() {
     className: "entrar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: this
   }, "Entrar")))), __jsx("div", {
@@ -332,7 +332,7 @@ var Header = function Header() {
     onClick: toggleMenu,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 44
     },
     __self: this
   }, __jsx("svg", {
@@ -342,7 +342,7 @@ var Header = function Header() {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 45
     },
     __self: this
   }, __jsx("path", {
@@ -350,84 +350,84 @@ var Header = function Header() {
     d: "M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 46
     },
     __self: this
   })))), openedMenu && __jsx("div", {
     className: "mobile-link-container " + themeClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 51
     },
     __self: this
   }, __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 52
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 53
     },
     __self: this
   }, "Como Funciona")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/find-partners",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 56
     },
     __self: this
   }, "Antecipar")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/be-part",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 58
     },
     __self: this
   }, __jsx("a", {
     className: "link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: this
-  }, "D\xFAvidas")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/content",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
     },
     __self: this
+  }, "Investir")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    href: "/content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 62
     },
     __self: this
   }, " Parceiros ")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/profile",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 64
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 65
     },
     __self: this
   }, "Entrar "))));
