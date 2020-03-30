@@ -43,6 +43,7 @@
     "react-dom": "^16.13.0",
     "react-favicon": "0.0.18",
     "react-input-mask": "^2.0.4",
+    "react-router-dom": "^5.1.2",
     "react-scrolling-nav": "^1.1.5",
     "serve": "^11.3.0",
     "yaml": "^1.8.2"

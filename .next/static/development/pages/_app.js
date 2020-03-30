@@ -23,126 +23,96 @@ var Footer = function Footer() {
     className: "footer-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 6
     },
     __self: this
   }, __jsx("div", {
     className: "menu",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, __jsx("h3", {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
-  }, "Como Funciona"), __jsx("a", {
+  }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
-  }, "Antecipar"), __jsx("a", {
+  }, "Institucional"), __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }, "D\xFAvidas"), __jsx("a", {
+  }, "Pol\xEDtica de privacidade"), __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }, "Parceiros"), __jsx("a", {
+  }, "Termos de uso Trabalhador"), __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }, "Entrar"), __jsx("div", {
-    className: "abfintech-container",
+  }, "Termos de uso Investidor"), __jsx("div", {
+    className: "abfintech",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
-  }, __jsx("br", {
+  }, __jsx("img", {
+    src: "/ABFintechs.svg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }), __jsx("img", {
-    src: "/ABFintechs.svg",
+  }))), __jsx("div", {
+    className: "lead-container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: this
-  }))), __jsx("div", {
-    className: "contact",
+  }, __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, "Ajuda e Atendimento"), __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, "D\xFAvidas"), __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
-  }, __jsx("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, "Contato"), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "Indique cr\xE9ditos trabalhistas e ganhe conosco! ", __jsx("strong", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "contato@juscredit.com.br"))), __jsx("div", {
+  }, "Como Funciona")), __jsx("div", {
     className: "contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 23
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 24
     },
     __self: this
   }, "Estamos online"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 25
     },
     __self: this
   }, __jsx("img", {
@@ -150,13 +120,13 @@ var Footer = function Footer() {
     className: "footer-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 25
     },
     __self: this
   }), " Facebook "), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 26
     },
     __self: this
   }, " ", __jsx("img", {
@@ -164,13 +134,13 @@ var Footer = function Footer() {
     className: "footer-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 26
     },
     __self: this
   }), " Instagram "), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 27
     },
     __self: this
   }, __jsx("img", {
@@ -178,13 +148,13 @@ var Footer = function Footer() {
     className: "footer-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 27
     },
     __self: this
   }), " LinkedIn "), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 28
     },
     __self: this
   }, " ", __jsx("img", {
@@ -192,14 +162,14 @@ var Footer = function Footer() {
     className: "footer-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 28
     },
     __self: this
-  }), " oi@juscredit.com.br"), __jsx("img", {
+  }), "  oi@juscredit.com.br"), __jsx("img", {
     src: "/direitos.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 29
     },
     __self: this
   })));
@@ -258,7 +228,7 @@ var Header = function Header() {
     __self: this
   }, __jsx("a", {
     className: "navbar-brand",
-    href: "#home",
+    href: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -280,14 +250,14 @@ var Header = function Header() {
     },
     __self: this
   }, __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/como-funciona",
+    href: "/comofunciona",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: this
   }, __jsx("a", {
-    className: "link-container",
+    className: "link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
@@ -301,7 +271,7 @@ var Header = function Header() {
     },
     __self: this
   }, __jsx("a", {
-    className: "link-container",
+    className: "link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
@@ -315,7 +285,7 @@ var Header = function Header() {
     },
     __self: this
   }, __jsx("a", {
-    className: "link-container",
+    className: "link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
@@ -329,7 +299,7 @@ var Header = function Header() {
     },
     __self: this
   }, __jsx("a", {
-    className: "link-container",
+    className: "link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
@@ -343,7 +313,7 @@ var Header = function Header() {
     },
     __self: this
   }, __jsx("a", {
-    className: "link-container",
+    className: "link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
@@ -10234,7 +10204,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-function OrganisLanding(_ref) {
+function Juscredit(_ref) {
   var Component = _ref.Component,
       pageProps = _ref.pageProps;
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_components_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -10269,7 +10239,7 @@ function OrganisLanding(_ref) {
 // }
 
 
-/* harmony default export */ __webpack_exports__["default"] = (OrganisLanding);
+/* harmony default export */ __webpack_exports__["default"] = (Juscredit);
 
 /***/ }),
 

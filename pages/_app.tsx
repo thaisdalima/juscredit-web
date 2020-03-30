@@ -1,7 +1,7 @@
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 
-function OrganisLanding({ Component, pageProps }) {
+function Juscredit({ Component, pageProps }) {
     return <>
         <Header />
         <Component {...pageProps} />
@@ -21,4 +21,4 @@ function OrganisLanding({ Component, pageProps }) {
 //   return { ...appProps }
 // }
 
-export default OrganisLanding
+export default Juscredit

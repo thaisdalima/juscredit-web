@@ -2,7 +2,7 @@ import Link from "../Link/Link";
 import './Header.scss'
 import { useRouter } from "next/router";
 import { useState } from "react";
-import NavBar, { ElementsWrapper } from "react-scrolling-nav";
+
 
 const Header = () => {
     const [openedMenu, setOpenedMenu] = useState(false)
@@ -17,24 +17,24 @@ const Header = () => {
     return (
         <>
                       <nav className={"nav" + themeClass}>
-                      <a className="navbar-brand" href="#home"> <img src="/logo.svg" className="header-logo" />
+                      <a className="navbar-brand" href=""> <img src="/logo.svg" className="header-logo" />
 </a>
                 <div className="link-container">
             
-                    <Link href="/como-funciona">
-                        <a className="link-container">Como Funciona</a>
-                    </Link>
+                <Link href="/comofunciona">
+          <a className="link">Como Funciona</a>
+        </Link>
                     <Link href="/antecipar">
-                        <a className="link-container">Antecipar</a>
+                        <a className="link">Antecipar</a>
                     </Link>
                     <Link href="/duvidas">
-                        <a className="link-container">Dúvidas</a>
+                        <a className="link">Dúvidas</a>
                     </Link>
                     <Link href="/parceiros">
-                        <a className="link-container"> Parceiros </a>
+                        <a className="link"> Parceiros </a>
                     </Link>
                     <Link href="/Entrar"> 
-                        <a className="link-container"> <button id="entrar" className="entrar">Entrar</button>
+                        <a className="link"> <button id="entrar" className="entrar">Entrar</button>
 </a>
                     </Link>
                    

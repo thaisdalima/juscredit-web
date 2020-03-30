@@ -1,12 +1,9 @@
 import './styles.scss'
 import Button from '../components/Button/Button';
 import { Fragment } from 'react';
-import Associates from '../containers/Home/Associates';
-import Media from '../containers/Home/Media';
 import Head from 'next/head';
 import Router from 'next/router';
 import StyledInput from '../components/Input/Input';
-
 
 const Index = () => {
 
@@ -29,13 +26,17 @@ const Index = () => {
                         </div>
                 </div>
                 </div>
-
                 <div className="antecipar">
                <div className="products-bg" /> 
-                    <div> <h1>Mais valor para quem vende.<br/>
-                             Rápido para quem antecipa</h1> 
-               <h2>Receba na sua conta de forma rápida e descomplicada seu direito.</h2>
+                    <div> <h1>Mais valor para quem vende<br/>
+                              Simples para quem investe</h1> 
+               <h2>
+                   Vantagens para quem vende:
+               </h2>
                             <img src="/agilidade.svg"/>
+                            <h2>
+                   Vantagens para quem investe:
+               </h2>
                             <img src="/rentabilidade.svg"/>
                                       
                </div>
@@ -50,7 +51,6 @@ const Index = () => {
                         </div>
                 <div className="duvidas-container">   
                     <h1>Têm dúvidas ?</h1>
-                    <h1>Está na hora de saná-las.</h1>
                     <h2>Queremos te ajudar a resolvê-las</h2>
                     <div className="buttons-container"> 
                     <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero antecipar</Button>

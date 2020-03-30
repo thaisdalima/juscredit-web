@@ -21,7 +21,7 @@
   padding-right: 10em;
   transition: background-color 0.5s linear;
   text-decoration-color: #395E66;
-  font-family: 'Muli','Semibold'; }
+  font-family: 'Muli'; }
 
 .header-logo {
   height: 26px;
@@ -46,7 +46,7 @@
   left: 1012px;
   width: 174px;
   height: 30px;
-  font-family: SemiBold 24px/63px Muli;
+  font-family: 'Muli';
   letter-spacing: 0;
   color: #395E66;
   opacity: 1;
@@ -66,8 +66,6 @@
   flex-direction: column;
   padding: 0px 24px 16px 24px;
   transition: background-color 0.5s linear; }
-  .mobile-link-container .link {
-    transition: color 0.5s linear; }
   .mobile-link-container.white-navbar {
     background-color: white; }
     .mobile-link-container.white-navbar .link {
@@ -104,7 +102,44 @@
   display: flex;
   color: white;
   border-top-right-radius: 200px 200px;
-  position: relative; }
+  justify-content: space-around; }
+  .footer-container .a {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+  .footer-container .h3 {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+
+.lead-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0.2; }
+  .lead-container .a {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+  .lead-container .h3 {
+    font-family: 'Overpass';
+    color: #9BADB1;
+    opacity: 0.5;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
 
 .footer-logo {
   width: 22px;
@@ -112,28 +147,45 @@
 
 .menu {
   display: flex;
-  padding-left: 10px;
+  padding-left: 15px;
   flex-direction: column;
   flex: 0.2; }
 
 .contact {
-  padding-left: 80px;
+  padding-left: 15px;
   flex: 0.2; }
+  .contact .a {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+  .contact .h3 {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+
+.abfintech {
+  margin-top: 100px; }
+
+.disclaimer-container {
+  align-content: center; }
 
 @media (max-width: 700px) {
   .footer-container {
     flex-direction: column;
-    padding: 40px 16px; }
-  .lead-container {
-    padding: 0;
-    border: none; }
+    padding: 50px 16px; }
   .menu {
     padding: 0; }
   .contact {
     padding: 0; }
   .footer-logo {
-    display: none; }
-  .abfintech {
     display: none; } }
 
 body {
@@ -262,7 +314,7 @@ body {
     font-size: 40px;
     font-weight: 200;
     margin-bottom: 0;
-    margin-left: 40px; }
+    margin-left: 0px; }
   .antecipar h2 {
     margin-top: 20px;
     text-align: left;
@@ -273,7 +325,7 @@ body {
     font-size: 25px;
     font-weight: 200;
     margin-bottom: 1px;
-    margin-left: 40px; }
+    margin-left: 0px; }
   .antecipar h3 {
     text-align: left;
     font-family: 'Muli';
@@ -304,7 +356,7 @@ body {
       margin-bottom: 0;
       margin-left: 10px; }
     .antecipar .duvidas-container h2 {
-      margin-top: 20px;
+      margin-top: 10px;
       text-align: left;
       font-family: 'Overpass';
       letter-spacing: 0;

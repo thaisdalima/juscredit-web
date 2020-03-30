@@ -23,7 +23,7 @@
   padding-right:10em;
   transition: background-color 0.5s linear;
   text-decoration-color: #395E66;
-  font-family: 'Muli','Semibold';
+  font-family: 'Muli';
 }
 .header-logo {
   height: 26px;
@@ -49,13 +49,12 @@
 
   }
 }
-
 .link-container{
 top: 65px;
 left: 1012px;
 width: 174px;
 height: 30px;
-font-family: SemiBold 24px/63px Muli;
+font-family: 'Muli';
 letter-spacing: 0;
 color: #395E66;
 opacity: 1;
@@ -80,10 +79,9 @@ justify-content: space-between;
  
 
   .link {
-    transition: color 0.5s linear;
-  
 
   }
+   
   &.white-navbar {
     background-color: white;
     .link {

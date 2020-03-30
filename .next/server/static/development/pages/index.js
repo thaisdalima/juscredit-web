@@ -248,64 +248,64 @@ const Index = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 11
     },
     __self: undefined
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 12
     },
     __self: undefined
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 13
     },
     __self: undefined
   }, "Juscredit - Home")), __jsx("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 15
     },
     __self: undefined
   }, __jsx("div", {
     className: "map-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 16
     },
     __self: undefined
   }, __jsx("div", {
     className: "map",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 17
     },
     __self: undefined
   }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 18
     },
     __self: undefined
   }, "Antecipe seu "), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 19
     },
     __self: undefined
   }, "cr\xE9dito trabalhista"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 19
     },
     __self: undefined
   }, "T\xEAm um processo ganho? Receba agora"), __jsx("div", {
     className: "buttons-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -313,7 +313,7 @@ const Index = () => {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 21
     },
     __self: undefined
   }, "Quero antecipar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -321,14 +321,14 @@ const Index = () => {
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 22
     },
     __self: undefined
   }, "Quero investir"), __jsx("div", {
     className: "cursor-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -336,127 +336,127 @@ const Index = () => {
     color: "third",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx("img", {
     src: "/cursor.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 25
     },
     __self: undefined
   }), "Conhe\xE7a as vantagens")))), __jsx("div", {
     className: "antecipar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 29
     },
     __self: undefined
   }, __jsx("div", {
     className: "products-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 30
     },
     __self: undefined
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 31
     },
     __self: undefined
   }, " ", __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 31
     },
     __self: undefined
-  }, "Mais valor para quem vende.", __jsx("br", {
+  }, "Mais valor para quem vende", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 31
     },
     __self: undefined
-  }), "R\xE1pido para quem antecipa"), __jsx("h2", {
+  }), "Simples para quem investe"), __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: undefined
+  }, "Vantagens para quem vende:"), __jsx("img", {
+    src: "/agilidade.svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: undefined
-  }, "Receba na sua conta de forma r\xE1pida e descomplicada seu direito."), __jsx("img", {
-    src: "/agilidade.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: undefined
-  }), __jsx("img", {
+  }, "Vantagens para quem investe:"), __jsx("img", {
     src: "/rentabilidade.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: undefined
   })), __jsx("div", {
     className: "funciona-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: undefined
   }, __jsx("div", {
     className: "poligono-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: undefined
   }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: undefined
   }, "Como funciona a plataforma?"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: undefined
   }, "Conte com toda a seguran\xE7a, agilidade ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: undefined
   }), "e praticidade na libera\xE7\xE3o do seu processo ganho"), __jsx("img", {
     src: "/trabalhador.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 50
     },
     __self: undefined
   })), __jsx("div", {
     className: "duvidas-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
-  }, "T\xEAm d\xFAvidas ?"), __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 53
     },
     __self: undefined
-  }, "Est\xE1 na hora de san\xE1-las."), __jsx("h2", {
+  }, "T\xEAm d\xFAvidas ?"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
