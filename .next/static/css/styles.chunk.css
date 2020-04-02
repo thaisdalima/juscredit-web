@@ -30,7 +30,8 @@
 
 .link-container {
   display: flex;
-  flex: 1; }
+  flex: 1;
+  justify-content: space-around; }
 
 .selected {
   font-weight: bold; }
@@ -38,8 +39,7 @@
 .navbar.white-navbar {
   background-color: white; }
   .navbar.white-navbar .link {
-    color: black;
-    text-decoration: none; }
+    color: black; }
 
 .link-container {
   top: 65px;
@@ -66,6 +66,8 @@
   flex-direction: column;
   padding: 0px 24px 16px 24px;
   transition: background-color 0.5s linear; }
+  .mobile-link-container .link {
+    transition: color 0.5s linear; }
   .mobile-link-container.white-navbar {
     background-color: white; }
     .mobile-link-container.white-navbar .link {
@@ -102,7 +104,8 @@
   display: flex;
   color: white;
   border-top-right-radius: 200px 200px;
-  justify-content: space-around; }
+  justify-content: space-around;
+  display: flex; }
   .footer-container .a {
     font-family: 'Overpass';
     color: #FFFFFF;
@@ -188,16 +191,17 @@
   .footer-logo {
     display: none; } }
 
+body {
+  margin: -5;
+  min-width: 768px; }
+
 .map-container {
   padding: 0 6.5em;
   padding-top: 120px;
   height: 437px;
   display: flex;
   position: relative;
-  flex-direction: column;
-  font-family: 'Overpass';
-  font-weight: regular;
-  padding-bottom: 0 5em; }
+  flex-direction: column; }
   .map-container h1 {
     margin-top: 0px;
     text-align: left;
@@ -244,12 +248,12 @@
   left: 0px;
   right: 50px;
   background: url("/anteceba.svg");
-  background-size: cover; }
+  background-size: cover;
+  z-index: -1; }
 
 .buttons-container {
   flex: 0.5;
-  justify-content: space-between;
-  position: center; }
+  justify-content: space-between; }
   .buttons-container > .button {
     margin-right: 24px;
     min-width: 179px;
@@ -297,9 +301,6 @@
   padding: 0 10em;
   position: relative;
   padding-bottom: 110px; }
-  .antecipar p {
-    font-size: 16px;
-    max-width: 400px; }
   .antecipar h1 {
     margin-top: 50px;
     text-align: left;
@@ -339,7 +340,8 @@
     color: #395E66;
     opacity: 1; }
   .antecipar .duvidas-container {
-    padding-bottom: 110px; }
+    padding-bottom: 110px;
+    flex-direction: column; }
     .antecipar .duvidas-container h1 {
       margin-top: 5px;
       text-align: left;
@@ -373,8 +375,7 @@
     top: 0px;
     bottom: 40px;
     left: 0px;
-    right: -150px;
-    position: center; }
+    right: -150px; }
     .antecipar .parceiros-container h1 {
       text-align: center;
       font-family: 'Overpass';

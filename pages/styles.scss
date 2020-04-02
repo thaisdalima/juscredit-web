@@ -1,5 +1,6 @@
 body {
-  max-width:100%;
+  margin: -5;
+  min-width: 768px;
 
 }
 
@@ -10,10 +11,7 @@ body {
   display: flex;
   position: relative;
   flex-direction: column;
-  font-family:'Overpass';
-  font-weight: regular;
-  padding-bottom: 0 5em;
-
+ 
   h1 {
   margin-top: 0px; 
   text-align: left;
@@ -72,11 +70,11 @@ body {
   right: 50px;
   background: url("/anteceba.svg");
   background-size: cover;
+  z-index: -1;
 }
 .buttons-container {
   flex: 0.5;
   justify-content: space-between;
-  position: center;
 
   > .button {
     margin-right: 24px;
@@ -139,10 +137,7 @@ body {
 
   position: relative;
   padding-bottom: 110px;
-  p {
-    font-size: 16px;
-    max-width: 400px;
-  }
+
 
   h1 {
     margin-top: 50px; 
@@ -194,6 +189,8 @@ body {
 
   .duvidas-container{
     padding-bottom: 110px;
+    flex-direction: column;
+
 
       h1 {
         margin-top: 5px; 
@@ -238,7 +235,6 @@ body {
   bottom: 40px;
   left: 0px;
   right: -150px;
-  position:center;
 
   h1 {
     text-align: center;
