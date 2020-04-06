@@ -10597,7 +10597,7 @@ var Index = function Index() {
       lineNumber: 13
     },
     __self: this
-  }, "Juscredit - Home")), __jsx("main", {
+  }, "JusCredit - Home")), __jsx("main", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -10694,6 +10694,7 @@ var Index = function Index() {
     __self: this
   }), "Conhe\xE7a as vantagens")))), __jsx("div", {
     className: "antecipar",
+    id: "1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
@@ -10845,7 +10846,7 @@ var Index = function Index() {
       lineNumber: 63
     },
     __self: this
-  }, " Seja um parceiro Juscredit"), __jsx("h2", {
+  }, " Seja um parceiro JusCredit"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
@@ -10881,7 +10882,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Cindex.tsx ***!
   \*********************************************************************************************************************************/
@@ -10904,5 +10905,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

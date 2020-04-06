@@ -15,18 +15,19 @@ const Header = () => {
         setOpenedMenu(!openedMenu)
     }    
     
-    
+     
     return (
         <>
                       <nav className={"nav" + themeClass}>
-                      <a className="navbar-brand" href=""> <img src="/logo.svg" className="header-logo" />
+                      <a className="navbar-brand" href="/"> <img src="/logo.svg" className="header-logo" />
 </a>
                 <div className="link-container">
             
                 <Link href="/">
           <a className="link">Como Funciona</a>
         </Link>
-                    <Link href="/">
+        
+                    <Link href="/" > 
                         <a className="link">Antecipar</a>
                         </Link>
                     <Link href="/">

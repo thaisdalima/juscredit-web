@@ -10,7 +10,7 @@ const Index = () => {
     return (
         <Fragment>
             <Head>
-                <title>Juscredit - Home</title>
+                <title>JusCredit - Home</title>
             </Head>
             <main>
                 <p>
@@ -27,7 +27,7 @@ const Index = () => {
                         </div>
                 </div>
                 </div>
-                <div className="antecipar">
+                <div className="antecipar" id="1">
                <div className="products-bg" /> 
                     <div> <h1>Mais valor para quem vende<br/>
                               Simples para quem investe</h1> 
@@ -60,7 +60,7 @@ const Index = () => {
                     </div> 
 
                     <div className= "parceiros-container">
-                        <h1> Seja um parceiro Juscredit</h1>
+                        <h1> Seja um parceiro JusCredit</h1>
                         <h2>Indique créditos trabalhistas elegíveis e ganhe conosco.</h2>
                         <StyledInput mask={null} placeholder="   Insira aqui seu e-mail" tabIndex={-1}/>
 <Button color="fourth" tabIndex={-1}>Enviar</Button>
