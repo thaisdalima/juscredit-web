@@ -1,8 +1,9 @@
 body {
-  margin: -5;
   min-width: 768px;
+  padding-block-end: initial;
 
-}
+  }
+
 
 .map-container {
   padding: 0 6.5em;
@@ -11,7 +12,7 @@ body {
   display: flex;
   position: relative;
   flex-direction: column;
- 
+
   h1 {
   margin-top: 0px; 
   text-align: left;
@@ -71,6 +72,7 @@ body {
   background: url("/anteceba.svg");
   background-size: cover;
   z-index: -1;
+ 
 }
 .buttons-container {
   flex: 0.5;

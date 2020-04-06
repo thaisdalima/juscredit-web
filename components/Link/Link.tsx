@@ -7,8 +7,9 @@ export default ({ href, children }) => {
 
   let className = children.props.className || ''
   if (router && router.pathname === href) {
-    className = `${className} selected`
+    className = `${className} scroll`
   }
 
+  
   return <Link href={href}>{React.cloneElement(children, { className })}</Link>
 }

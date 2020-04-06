@@ -303,7 +303,8 @@ const Footer = () => __jsx("footer", {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Link_Link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Link/Link */ "./components/Link/Link.tsx");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header.scss */ "./components/Header/Header.scss");
 /* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Header_scss__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
@@ -362,8 +363,8 @@ const Header = () => {
       lineNumber: 24
     },
     __self: undefined
-  }, __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/comofunciona",
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
@@ -376,8 +377,8 @@ const Header = () => {
       lineNumber: 27
     },
     __self: undefined
-  }, "Como Funciona")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/antecipar",
+  }, "Como Funciona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
@@ -390,8 +391,8 @@ const Header = () => {
       lineNumber: 30
     },
     __self: undefined
-  }, "Antecipar")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/duvidas",
+  }, "Antecipar")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
@@ -404,8 +405,8 @@ const Header = () => {
       lineNumber: 33
     },
     __self: undefined
-  }, "Investir")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/parceiros",
+  }, "Investir")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
@@ -418,8 +419,8 @@ const Header = () => {
       lineNumber: 36
     },
     __self: undefined
-  }, " Parceiros ")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/Entrar",
+  }, " Parceiros ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -473,7 +474,7 @@ const Header = () => {
       lineNumber: 51
     },
     __self: undefined
-  }, __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
@@ -487,8 +488,8 @@ const Header = () => {
       lineNumber: 53
     },
     __self: undefined
-  }, "Como Funciona")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/find-partners",
+  }, "Como Funciona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
@@ -501,8 +502,8 @@ const Header = () => {
       lineNumber: 56
     },
     __self: undefined
-  }, "Antecipar")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/be-part",
+  }, "Antecipar")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 58
@@ -515,8 +516,8 @@ const Header = () => {
       lineNumber: 59
     },
     __self: undefined
-  }, "Investir")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/content",
+  }, "Investir")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 61
@@ -529,8 +530,8 @@ const Header = () => {
       lineNumber: 62
     },
     __self: undefined
-  }, " Parceiros ")), __jsx(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/profile",
+  }, " Parceiros ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
@@ -547,51 +548,6 @@ const Header = () => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
-
-/***/ }),
-
-/***/ "./components/Link/Link.tsx":
-/*!**********************************!*\
-  !*** ./components/Link/Link.tsx ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\components\\Link\\Link.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (({
-  href,
-  children
-}) => {
-  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
-  let className = children.props.className || '';
-
-  if (router && router.pathname === href) {
-    className = `${className} selected`;
-  }
-
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: href,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.cloneElement(children, {
-    className
-  }));
-});
 
 /***/ }),
 

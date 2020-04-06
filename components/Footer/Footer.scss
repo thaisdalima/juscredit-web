@@ -2,12 +2,11 @@
 .footer-container {
   background: rgb(83,182,127);
   background: radial-gradient(circle, rgba(83,182,127,1) 0%, rgba(8,108,123,1) 100%);
-  padding: 30px 5em;
   display: flex;
   color: white;
   border-top-right-radius: 200px 200px;
   justify-content: space-around;
-  display: flex;
+flex-direction: row;  
   .a{
     font-family: 'Overpass';
     color: #FFFFFF;
@@ -106,7 +105,7 @@ padding-left: 15px;
 @media(max-width: 700px) {
     .footer-container{
         flex-direction: column;
-        padding: 50px 16px;
+        padding: 40px 16px;
     }
     .menu {
         padding: 0;

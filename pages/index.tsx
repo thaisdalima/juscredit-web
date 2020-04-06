@@ -13,14 +13,15 @@ const Index = () => {
                 <title>Juscredit - Home</title>
             </Head>
             <main>
+                <p>
                 <div className="map-container"> 
                     <div className="map" />
                      <h1>Antecipe seu </h1>
-                         <h1>crédito trabalhista</h1><h2>Têm um processo ganho? Receba agora</h2>                
+                         <h1>crédito trabalhista</h1><h2>Têm um processo ganho? Receba agora</h2>       
                     <div className="buttons-container">
                     <Button onClick={()=> Router.push('/signup/user')} color="primary">Quero antecipar</Button> 
                    <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero investir</Button>
-
+    
                 <div className="cursor-container">
                  <Button onClick={()=> Router.push('/be-part')} color="third" ><img src="/cursor.svg"/>Conheça as vantagens</Button>
                         </div>
@@ -66,6 +67,7 @@ const Index = () => {
 </div> 
            </div>
                 <br/>
+                </p>
             </main>
         </Fragment >
 

@@ -1,4 +1,4 @@
-import Link from "../Link/Link";
+import Link from 'next/link';
 import './Header.scss'
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -23,19 +23,19 @@ const Header = () => {
 </a>
                 <div className="link-container">
             
-                <Link href="/comofunciona">
+                <Link href="/">
           <a className="link">Como Funciona</a>
         </Link>
-                    <Link href="/antecipar">
+                    <Link href="/">
                         <a className="link">Antecipar</a>
-                    </Link>
-                    <Link href="/duvidas">
+                        </Link>
+                    <Link href="/">
                         <a className="link">Investir</a>
                     </Link>
-                    <Link href="/parceiros">
+                    <Link href="/">
                         <a className="link"> Parceiros </a>
                     </Link>
-                    <Link href="/Entrar"> 
+                    <Link href="/"> 
                         <a className="link"> <button id="entrar" className="entrar">Entrar</button>
 </a>
                     </Link>
@@ -52,16 +52,16 @@ const Header = () => {
                     <Link href="/">
                         <a className="link">Como Funciona</a>
                     </Link>
-                    <Link href="/find-partners">
+                    <Link href="#">
                         <a className="link">Antecipar</a>
                     </Link>
-                    <Link href="/be-part">
+                    <Link href="#">
                         <a className="link">Investir</a>
                     </Link>
-                    <Link href="/content">
+                    <Link href="#">
                         <a className="link"> Parceiros </a>
                     </Link>
-                    <Link href="/profile">
+                    <Link href="#">
                         <a className="link">Entrar </a>
                     </Link>
                    

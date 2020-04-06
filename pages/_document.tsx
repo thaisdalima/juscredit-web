@@ -1,11 +1,14 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import './styles.scss'
 
+
 export default class extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx)
         return { ...initialProps }
     }
+
+    
     render() {
         return (
             <html lang="en">
@@ -31,11 +34,9 @@ export default class extends Document {
                     src: url('/fonts/Overpass-Light.ttf');
                     src: url('/fonts/Regular2.ttf');
                 }
-
                 html {
                     font-family: 'Overpass', 'Muli', 'Regular';
                     font-display: swap;
-
                 }
                      
                 body {

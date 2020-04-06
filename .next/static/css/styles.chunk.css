@@ -16,7 +16,6 @@
   padding-bottom: 24px;
   justify-content: space-between;
   display: flex;
-  align-items: center;
   padding-left: 10em;
   padding-right: 10em;
   transition: background-color 0.5s linear;
@@ -100,12 +99,11 @@
 .footer-container {
   background: #53b67f;
   background: radial-gradient(circle, #53b67f 0%, #086c7b 100%);
-  padding: 30px 5em;
   display: flex;
   color: white;
   border-top-right-radius: 200px 200px;
   justify-content: space-around;
-  display: flex; }
+  flex-direction: row; }
   .footer-container .a {
     font-family: 'Overpass';
     color: #FFFFFF;
@@ -183,7 +181,7 @@
 @media (max-width: 700px) {
   .footer-container {
     flex-direction: column;
-    padding: 50px 16px; }
+    padding: 40px 16px; }
   .menu {
     padding: 0; }
   .contact {
@@ -192,8 +190,8 @@
     display: none; } }
 
 body {
-  margin: -5;
-  min-width: 768px; }
+  min-width: 768px;
+  padding-block-end: initial; }
 
 .map-container {
   padding: 0 6.5em;

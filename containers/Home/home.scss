@@ -1,3 +1,7 @@
+.body{
+  min-width: 768px;
+
+}
 .associates-container {
   padding: 50px 10em 70px 10em;
   justify-content: center;
@@ -45,20 +49,5 @@
     }
   }
 }
-@media (max-width: 700px) {
-  .news-container {
-    overflow: scroll;
-    width: -webkit-fill-available;
-    padding-bottom: 8px;
-  }
-  .media-container {
-    padding: 50px 8px;
-  }
-  .associates-container {
-    padding: 50px 8px;
-  }
-  .image-container {
-    width: -webkit-fill-available;
-    overflow: scroll;
-  }
+
 }
