@@ -442,7 +442,7 @@ const Index = () => {
       lineNumber: 48
     },
     __self: undefined
-  }), "e praticidade na libera\xE7\xE3o do seu processo ganho"), __jsx("img", {
+  }), "e praticidade na libera\xE7\xE3o do seu processo ganho."), __jsx("img", {
     src: "/trabalhador.svg",
     __source: {
       fileName: _jsxFileName,
