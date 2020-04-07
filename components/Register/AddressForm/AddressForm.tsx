@@ -59,7 +59,7 @@ const AddressForm = ({ values, loading, onSubmit, profile }) => {
                 {({ errors, values, handleChange, setValues }) => {
                     return (
                         <Form className="form-container">
-                            <h2 className="form-title">Para finalizar, basta atualizar os dados do seu endereço comercial.</h2>
+                            <h2 className="form-title">Seja um Investidor</h2>
                             <div className="row">
                                 <div className="form-group">
                                     <label>CEP</label>
@@ -144,7 +144,7 @@ const AddressForm = ({ values, loading, onSubmit, profile }) => {
                             <div className="button-container">
 
                                 <Button
-                                    color="primary"
+                                    color="primary,secondary"
                                     type="submit"
                                     tabIndex={1}
                                     loading={loading}

@@ -5,6 +5,14 @@
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
   position: relative;
 
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 12px;
+opacity: 1;
+
+font-family: Muli;
+color: #395E66;
+opacity: 1;
+
   &.success {
     margin: 100px 25em;
   }
@@ -14,7 +22,7 @@
   top: -40px;
   display: flex;
   padding: 8px 56px;
-  background: #fdc300;
+  background: #086C7B;
   border-radius: 20px;
   color: white;
   font-size: 24px;
@@ -28,7 +36,7 @@
   display: flex;
   flex: 0.5;
   max-width: 50%;
-  margin-top: 16px;
+  margin-top: 20px;
   color: #2e8700;
   &.success {
     max-width: none;
@@ -61,8 +69,8 @@
 }
 .button-container {
   display: flex;
-  justify-content: flex-start;
-  padding-top: 24px;
+  justify-content: center;
+  padding-top: 44px;
   button {
     width: 285px;
   }
@@ -85,9 +93,13 @@
   align-items: flex-end;
 
   button {
-    height: 42px;
-    margin-left: 24px;
-    margin-bottom: 9px;
+    border: none;
+    padding: 0 16px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Muli';
+    cursor: pointer; 
+    height: 20px;
   }
 }
 .not-received {

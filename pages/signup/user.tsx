@@ -29,7 +29,7 @@ const SignupUser = () => {
     }
     const createUser = async (body) => {
         try {
-            const res = await fetch('https://api.organis8.com.br/api/nao_produtores', { method: 'POST', body: JSON.stringify(body) })
+            const res = await fetch('', { method: 'POST', body: JSON.stringify(body) })
             const data = await res.json();
             return data;
         }
@@ -49,9 +49,6 @@ const SignupUser = () => {
         case 3:
             return <RegisterSuccess />
     }
-
-
-
 
 }
 export default SignupUser

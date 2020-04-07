@@ -135,7 +135,7 @@ const Button = props => {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 6
     },
     __self: undefined
   }), loading ? __jsx("img", {
@@ -144,7 +144,7 @@ const Button = props => {
     src: "/loading.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 6
     },
     __self: undefined
   }) : props.children);
@@ -323,7 +323,7 @@ const Index = () => {
     },
     __self: undefined
   }, "Quero antecipar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/producer'),
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
@@ -354,7 +354,6 @@ const Index = () => {
     __self: undefined
   }), "Conhe\xE7a as vantagens")))), __jsx("div", {
     className: "antecipar",
-    id: "1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30

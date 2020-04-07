@@ -20,14 +20,14 @@ const Index = () => {
                          <h1>crédito trabalhista</h1><h2>Têm um processo ganho? Receba agora</h2>       
                     <div className="buttons-container">
                     <Button onClick={()=> Router.push('/signup/user')} color="primary">Quero antecipar</Button> 
-                   <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero investir</Button>
+                   <Button onClick={()=> Router.push('/signup/producer')} color="secondary">Quero investir</Button>
     
                 <div className="cursor-container">
                  <Button onClick={()=> Router.push('/be-part')} color="third" ><img src="/cursor.svg"/>Conheça as vantagens</Button>
                         </div>
                 </div>
                 </div>
-                <div className="antecipar" id="1">
+                <div className="antecipar">
                <div className="products-bg" /> 
                     <div> <h1>Mais valor para quem vende<br/>
                               Simples para quem investe</h1> 

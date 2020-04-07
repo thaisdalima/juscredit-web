@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import './Header.scss'
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 const Header = () => {
@@ -11,11 +11,12 @@ const Header = () => {
     if (router && router.pathname !== '/') {
         themeClass = 'white-navbar'
     }
+    useEffect(()=>{
+        setOpenedMenu(false)
+    },[router.pathname])
     const toggleMenu = () => {
         setOpenedMenu(!openedMenu)
-    }    
-    
-     
+    }
     return (
         <>
                       <nav className={"nav" + themeClass}>

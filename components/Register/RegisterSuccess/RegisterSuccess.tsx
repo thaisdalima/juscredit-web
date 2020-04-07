@@ -8,7 +8,7 @@ const RegisterSuccess = () => {
             <h1 className="form-title success">
                 Parabéns, seu cadastro foi finalizado!
             </h1>
-            <h2 className="community-info">Você agora faz parte da maior comunidade de produtores orgânicos do Brasil.</h2>
+            <h2 className="community-info">Você agora faz parte!</h2>
             <h3 className="contact-info">
                 Iremos entrar em contato com você para confirmar suas informações.
            </h3>

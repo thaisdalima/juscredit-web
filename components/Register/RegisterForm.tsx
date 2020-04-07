@@ -5,12 +5,12 @@ import { Formik, Field, Form, ErrorMessage } from 'formik'
 
 const stringMap = new Map([
     ['user', {
-        cardTitle: 'Cadastrando meus dados',
-        formTitle: 'Informe seus contatos antes de receber acesso gratuito a nossa plataforma.'
+        cardTitle: 'Antecipe o seu crédito',
+       
     }],
     ['producer', {
-        cardTitle: 'Cadastrando meus dados',
-        formTitle: 'Informe seus contatos antes de receber acesso gratuito a nossa plataforma.'
+        cardTitle: 'Seja um Investidor',
+        
     }],
     ['update-producer', {
         cardTitle: 'Atualizando os meus dados',

@@ -1,7 +1,7 @@
 body {
   min-width: 768px;
   padding-block-end: initial;
-
+  flex-direction: row;
   }
 
 
@@ -69,10 +69,9 @@ body {
   bottom: 40px;
   left: 0px;
   right: 50px;
-  background: url("/anteceba.svg");
-  background-size: cover;
+  background: url("/anteceba.svg")no-repeat;
+  background-size:contain;
   z-index: -1;
- 
 }
 .buttons-container {
   flex: 0.5;
