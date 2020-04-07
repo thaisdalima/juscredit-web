@@ -198,6 +198,62 @@
   .footer-logo {
     display: none; } }
 
+main.be-part-container {
+  padding: 85px 15em 0px 15em;
+  background-color: #97d65a;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background-position-x: -500px; }
+  main.be-part-container div {
+    display: flex;
+    flex: 0.8;
+    flex-direction: column; }
+    main.be-part-container div h1 {
+      color: #2E8700; }
+    main.be-part-container div label {
+      color: white;
+      margin-bottom: 16px; }
+  main.be-part-container .bg-left {
+    top: 0;
+    position: absolute;
+    left: -35px; }
+  main.be-part-container .bg-right {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    z-index: 0; }
+  main.be-part-container a {
+    color: #2E8700;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 16px; }
+  main.be-part-container .producer {
+    flex: 0.45;
+    display: flex;
+    z-index: 1;
+    padding-left: 100px; }
+
+.not-found {
+  color: indianred;
+  margin-bottom: 8px !important; }
+
+.user-not-found {
+  color: indianred;
+  margin-bottom: 8px !important;
+  font-weight: bold;
+  font-size: 14px; }
+
+@media (max-width: 790px) {
+  main.be-part-container {
+    padding: 32px; }
+    main.be-part-container div {
+      flex: 1;
+      padding: 0; }
+    main.be-part-container .bg-left, main.be-part-container .bg-right, main.be-part-container .producer {
+      display: none; } }
+
 body {
   min-width: 768px;
   padding-block-end: initial;
@@ -428,115 +484,6 @@ body {
     background: url("/poligono.svg");
     z-index: -1;
     background-size: cover; }
-
-.card {
-  margin: 100px 15em;
-  padding: 56px;
-  border-radius: 32px;
-  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
-  position: relative;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border-radius: 12px;
-  opacity: 1;
-  font-family: Muli;
-  color: #395E66; }
-  .card.success {
-    margin: 100px 25em; }
-
-.card-title {
-  position: absolute;
-  top: -40px;
-  display: flex;
-  padding: 8px 56px;
-  background: #086C7B;
-  border-radius: 20px;
-  color: white;
-  font-size: 24px;
-  margin-left: calc(35% - 68px); }
-  .card-title.success {
-    margin-left: calc(31% - 68px);
-    background-color: #2e8700; }
-
-.form-title {
-  display: flex;
-  flex: 0.5;
-  max-width: 50%;
-  margin-top: 20px;
-  color: #2e8700; }
-  .form-title.success {
-    max-width: none; }
-
-.row {
-  display: flex;
-  justify-content: flex-start; }
-  .row :first-child {
-    margin-right: 70px; }
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  width: 285px; }
-  .form-group label {
-    font-weight: bold; }
-  .form-group input {
-    margin-bottom: 8px; }
-  .form-group span {
-    font-size: 12px;
-    color: indianred;
-    font-weight: bold; }
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 44px; }
-  .button-container button {
-    width: 285px; }
-
-.choice-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-  justify-content: center; }
-  .choice-container span {
-    min-width: 300px; }
-  .choice-container button {
-    min-width: 200px; }
-
-.confirmation-container {
-  display: flex;
-  align-items: flex-end; }
-  .confirmation-container button {
-    border: none;
-    padding: 0 16px;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-family: 'Muli';
-    cursor: pointer;
-    height: 20px; }
-
-.not-received {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  margin-top: 16px; }
-  .not-received span {
-    font-weight: bold;
-    color: #2e8700; }
-  .not-received a {
-    color: #2e8700;
-    text-decoration: underline;
-    cursor: pointer; }
-
-.contact-info {
-  color: #848484;
-  max-width: 70%; }
-
-.community-info {
-  max-width: 80%; }
-
-.finish-container {
-  display: flex;
-  justify-content: center; }
 
 .button {
   border: none;
