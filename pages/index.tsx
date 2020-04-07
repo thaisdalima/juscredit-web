@@ -46,7 +46,7 @@ const Index = () => {
                     <div className="poligono-container"/>
                         <h1>Como funciona a plataforma?</h1>
                         <h2>Conte com toda a segurança, agilidade <br/>
-                           e praticidade na liberação do seu processo ganho
+                           e praticidade na liberação do seu processo ganho.
                         </h2>  
                         <img src="/trabalhador.svg"/>  
                         </div>
