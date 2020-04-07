@@ -54,7 +54,7 @@ const Index = () => {
                     <h1>Têm dúvidas ?</h1>
                      <h2>Queremos te ajudar a resolvê-las</h2>
                     <div className="buttons-container"> 
-                    <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero antecipar</Button>
+                    <Button onClick={()=> Router.push('/signup/user')} color="secondary">Quero antecipar</Button>
 </div>              <img src="/duvidas.svg"/>
                     
                     </div> 

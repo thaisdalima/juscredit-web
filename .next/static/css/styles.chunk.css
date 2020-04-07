@@ -197,116 +197,6 @@
   .footer-logo {
     display: none; } }
 
-.card {
-  margin: 100px 15em;
-  padding: 56px;
-  border-radius: 32px;
-  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
-  position: relative;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border-radius: 12px;
-  opacity: 1;
-  font-family: Muli;
-  color: #395E66;
-  opacity: 1; }
-  .card.success {
-    margin: 100px 25em; }
-
-.card-title {
-  position: absolute;
-  top: -40px;
-  display: flex;
-  padding: 8px 56px;
-  background: #086C7B;
-  border-radius: 20px;
-  color: white;
-  font-size: 24px;
-  margin-left: calc(35% - 68px); }
-  .card-title.success {
-    margin-left: calc(31% - 68px);
-    background-color: #2e8700; }
-
-.form-title {
-  display: flex;
-  flex: 0.5;
-  max-width: 50%;
-  margin-top: 20px;
-  color: #2e8700; }
-  .form-title.success {
-    max-width: none; }
-
-.row {
-  display: flex;
-  justify-content: flex-start; }
-  .row :first-child {
-    margin-right: 70px; }
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  width: 285px; }
-  .form-group label {
-    font-weight: bold; }
-  .form-group input {
-    margin-bottom: 8px; }
-  .form-group span {
-    font-size: 12px;
-    color: indianred;
-    font-weight: bold; }
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 44px; }
-  .button-container button {
-    width: 285px; }
-
-.choice-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-  justify-content: center; }
-  .choice-container span {
-    min-width: 300px; }
-  .choice-container button {
-    min-width: 200px; }
-
-.confirmation-container {
-  display: flex;
-  align-items: flex-end; }
-  .confirmation-container button {
-    border: none;
-    padding: 0 16px;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-family: 'Muli';
-    cursor: pointer;
-    height: 20px; }
-
-.not-received {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  margin-top: 16px; }
-  .not-received span {
-    font-weight: bold;
-    color: #2e8700; }
-  .not-received a {
-    color: #2e8700;
-    text-decoration: underline;
-    cursor: pointer; }
-
-.contact-info {
-  color: #848484;
-  max-width: 70%; }
-
-.community-info {
-  max-width: 80%; }
-
-.finish-container {
-  display: flex;
-  justify-content: center; }
-
 body {
   min-width: 768px;
   padding-block-end: initial;
@@ -489,10 +379,14 @@ body {
     text-align: right;
     padding: 0 50em; }
   .antecipar .parceiros-container {
-    top: 0px;
-    bottom: 40px;
-    left: 0px;
-    right: -150px; }
+    top: 5547px;
+    left: 1033px;
+    right: 1000px;
+    width: 656px;
+    height: 65px;
+    padding-bottom: 200px;
+    padding-left: 180px;
+    text-align: center; }
     .antecipar .parceiros-container h1 {
       text-align: center;
       font-family: 'Overpass';
@@ -534,20 +428,114 @@ body {
     z-index: -1;
     background-size: cover; }
 
-.juscredit-input {
-  top: 0px;
-  width: 230px;
-  height: 53px;
-  background: 0% 0% no-repeat padding-box;
-  box-shadow: 0px 5px 50px #030B6117;
+.card {
+  margin: 100px 15em;
+  padding: 56px;
+  border-radius: 32px;
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
+  position: relative;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 12px;
   opacity: 1;
-  border-radius: 51px;
-  opacity: 1;
-  margin-top: 5px;
-  size: 31px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  padding-left: 16px;
-  height: 38px; }
+  font-family: Muli;
+  color: #395E66; }
+  .card.success {
+    margin: 100px 25em; }
+
+.card-title {
+  position: absolute;
+  top: -40px;
+  display: flex;
+  padding: 8px 56px;
+  background: #086C7B;
+  border-radius: 20px;
+  color: white;
+  font-size: 24px;
+  margin-left: calc(35% - 68px); }
+  .card-title.success {
+    margin-left: calc(31% - 68px);
+    background-color: #2e8700; }
+
+.form-title {
+  display: flex;
+  flex: 0.5;
+  max-width: 50%;
+  margin-top: 20px;
+  color: #2e8700; }
+  .form-title.success {
+    max-width: none; }
+
+.row {
+  display: flex;
+  justify-content: flex-start; }
+  .row :first-child {
+    margin-right: 70px; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 285px; }
+  .form-group label {
+    font-weight: bold; }
+  .form-group input {
+    margin-bottom: 8px; }
+  .form-group span {
+    font-size: 12px;
+    color: indianred;
+    font-weight: bold; }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 44px; }
+  .button-container button {
+    width: 285px; }
+
+.choice-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  justify-content: center; }
+  .choice-container span {
+    min-width: 300px; }
+  .choice-container button {
+    min-width: 200px; }
+
+.confirmation-container {
+  display: flex;
+  align-items: flex-end; }
+  .confirmation-container button {
+    border: none;
+    padding: 0 16px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Muli';
+    cursor: pointer;
+    height: 20px; }
+
+.not-received {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-top: 16px; }
+  .not-received span {
+    font-weight: bold;
+    color: #2e8700; }
+  .not-received a {
+    color: #2e8700;
+    text-decoration: underline;
+    cursor: pointer; }
+
+.contact-info {
+  color: #848484;
+  max-width: 70%; }
+
+.community-info {
+  max-width: 80%; }
+
+.finish-container {
+  display: flex;
+  justify-content: center; }
 
 .button {
   border: none;
@@ -598,6 +586,23 @@ body {
 button:disabled,
 .button[disabled] {
   background: #CCC; }
+
+.juscredit-input {
+  top: 0px;
+  width: 230px;
+  height: 53px;
+  background: 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 50px #030B6117;
+  opacity: 1;
+  border-radius: 51px;
+  opacity: 1;
+  margin-top: 5px;
+  align-items: center;
+  size: 31px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding-right: 50px;
+  padding-left: 60px;
+  height: 49px; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

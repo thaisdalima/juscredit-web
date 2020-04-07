@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -476,7 +476,7 @@ const Index = () => {
     },
     __self: undefined
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/user'),
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
@@ -550,7 +550,7 @@ const Index = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/index.tsx ***!
   \*******************************/
