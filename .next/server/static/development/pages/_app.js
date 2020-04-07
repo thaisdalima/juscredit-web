@@ -371,17 +371,17 @@ const Header = () => {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: undefined
-  }, "Como Funciona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "Antecipar")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
@@ -395,7 +395,7 @@ const Header = () => {
       lineNumber: 32
     },
     __self: undefined
-  }, "Antecipar")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "Investir")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
@@ -409,7 +409,7 @@ const Header = () => {
       lineNumber: 35
     },
     __self: undefined
-  }, "Investir")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, " Parceiros ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
@@ -423,26 +423,12 @@ const Header = () => {
       lineNumber: 38
     },
     __self: undefined
-  }, " Parceiros ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: undefined
   }, " ", __jsx("button", {
     id: "entrar",
     className: "entrar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 38
     },
     __self: undefined
   }, "Entrar")))), __jsx("div", {
@@ -450,7 +436,7 @@ const Header = () => {
     onClick: toggleMenu,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("svg", {
@@ -460,7 +446,7 @@ const Header = () => {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 44
     },
     __self: undefined
   }, __jsx("path", {
@@ -468,84 +454,70 @@ const Header = () => {
     d: "M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 45
     },
     __self: undefined
   })))), openedMenu && __jsx("div", {
     className: "mobile-link-container " + themeClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 50
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: undefined
-  }, "Como Funciona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 53
     },
     __self: undefined
   }, "Antecipar")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 55
     },
     __self: undefined
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 56
     },
     __self: undefined
   }, "Investir")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 58
     },
     __self: undefined
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 59
     },
     __self: undefined
   }, " Parceiros ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 61
     },
     __self: undefined
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 62
     },
     __self: undefined
   }, "Entrar "))));

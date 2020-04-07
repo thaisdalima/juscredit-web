@@ -23,10 +23,7 @@ const Header = () => {
                       <a className="navbar-brand" href="/"> <img src="/logo.svg" className="header-logo" />
 </a>
                 <div className="link-container">
-            
-                <Link href="/">
-          <a className="link">Como Funciona</a>
-        </Link>
+        
         
                     <Link href="/" > 
                         <a className="link">Antecipar</a>
@@ -51,9 +48,7 @@ const Header = () => {
             </nav>
             {openedMenu && (
                 <div className={"mobile-link-container " + themeClass}>
-                    <Link href="/">
-                        <a className="link">Como Funciona</a>
-                    </Link>
+                  
                     <Link href="#">
                         <a className="link">Antecipar</a>
                     </Link>

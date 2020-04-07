@@ -246,41 +246,25 @@ var BePart = function BePart() {
       lineNumber: 56
     },
     __self: this
-  }, __jsx("img", {
-    className: "bg-left",
-    src: "/colored-products-left.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: this
-  }), __jsx("img", {
-    className: "bg-right",
-    src: "/be-part/bg.svg",
+  }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 58
     },
     __self: this
-  }), __jsx("div", {
+  }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
     },
     __self: this
-  }, __jsx("h1", {
+  }, "Insira seu CPF ou CNPJ abaixo"), __jsx("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 60
     },
     __self: this
-  }, "Insira seu CPF ou CNPJ abaixo"), __jsx("label", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, "Se voce\u0302 \xE9 produtor e conhece o cadastro oficial do Ministe\u0301rio (MAPA) e acha que ja\u0301 faz parte, por favor, insira seu CPF ou CNPJ:"), __jsx(_components_Input_Input__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, "Seja um parceiro JusCredit, Indique cr\xE9ditos trabalhistas eleg\xEDveis e ganhe conosco."), __jsx(_components_Input_Input__WEBPACK_IMPORTED_MODULE_12__["default"], {
     mask: mask,
     beforeMaskedValueChange: beforeMaskedValueChange,
     placeholder: "Ex: 111.111.111-11...",
@@ -289,14 +273,14 @@ var BePart = function BePart() {
     className: userNotFound && 'not-found',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 63
     },
     __self: this
   }), userNotFound && __jsx("span", {
     className: "user-not-found",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 71
     },
     __self: this
   }, "Cadastro n\xE3o encontrado"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -306,31 +290,23 @@ var BePart = function BePart() {
     loading: loading.toString(),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 72
     },
     __self: this
   }, "Validar cadastro "), __jsx(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
     href: "/signup/producer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 73
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 73
     },
     __self: this
-  }, "N\xE3o estou cadastrado >"))), __jsx("img", {
-    className: "producer",
-    src: "/be-part/producer.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  }));
+  }, "N\xE3o estou cadastrado >"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (BePart);
@@ -11844,7 +11820,7 @@ var Masks;
 
 /***/ }),
 
-/***/ 9:
+/***/ 10:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fbe-part&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Cbe-part.tsx ***!
   \******************************************************************************************************************************************/
@@ -11867,5 +11843,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[9,"static/runtime/webpack.js","styles"]]]);
+},[[10,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=be-part.js.map

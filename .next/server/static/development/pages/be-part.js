@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -339,41 +339,25 @@ const BePart = () => {
       lineNumber: 56
     },
     __self: undefined
-  }, __jsx("img", {
-    className: "bg-left",
-    src: "/colored-products-left.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: undefined
-  }), __jsx("img", {
-    className: "bg-right",
-    src: "/be-part/bg.svg",
+  }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 58
     },
     __self: undefined
-  }), __jsx("div", {
+  }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
     },
     __self: undefined
-  }, __jsx("h1", {
+  }, "Insira seu CPF ou CNPJ abaixo"), __jsx("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 60
     },
     __self: undefined
-  }, "Insira seu CPF ou CNPJ abaixo"), __jsx("label", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: undefined
-  }, "Se voce\u0302 \xE9 produtor e conhece o cadastro oficial do Ministe\u0301rio (MAPA) e acha que ja\u0301 faz parte, por favor, insira seu CPF ou CNPJ:"), __jsx(_components_Input_Input__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Seja um parceiro JusCredit, Indique cr\xE9ditos trabalhistas eleg\xEDveis e ganhe conosco."), __jsx(_components_Input_Input__WEBPACK_IMPORTED_MODULE_3__["default"], {
     mask: mask,
     beforeMaskedValueChange: beforeMaskedValueChange,
     placeholder: "Ex: 111.111.111-11...",
@@ -382,14 +366,14 @@ const BePart = () => {
     className: userNotFound && 'not-found',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 63
     },
     __self: undefined
   }), userNotFound && __jsx("span", {
     className: "user-not-found",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 71
     },
     __self: undefined
   }, "Cadastro n\xE3o encontrado"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -399,31 +383,23 @@ const BePart = () => {
     loading: loading.toString(),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 72
     },
     __self: undefined
   }, "Validar cadastro "), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/signup/producer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 73
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 73
     },
     __self: undefined
-  }, "N\xE3o estou cadastrado >"))), __jsx("img", {
-    className: "producer",
-    src: "/be-part/producer.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: undefined
-  }));
+  }, "N\xE3o estou cadastrado >"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (BePart);
@@ -2180,7 +2156,7 @@ let Masks;
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!*********************************!*\
   !*** multi ./pages/be-part.tsx ***!
   \*********************************/

@@ -1,15 +1,24 @@
 main.be-part-container {
-  padding: 85px 15em 0px 15em;
-  background-color: #97d65a;
+  margin: 100px 15em;
+  padding: 56px;
+  border-radius: 32px;
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
   position: relative;
-overflow: hidden;
-  display: flex;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  opacity: 1;
+  font-family: Muli;
+  color: #395E66;
+
+  
   div {
     display: flex;
     flex: 0.8;
     flex-direction: column;
     h1 {
-        color: #2E8700;
+        color: #395E66;
+        font-family: Muli;
+
     }
     label {
         color: white;
@@ -30,7 +39,7 @@ overflow: hidden;
   background-position-x: -500px;
 
   a {
-      color: #2E8700;
+      color: #395E66;
       text-decoration: underline;
       font-weight: bold;
       cursor: pointer;
@@ -44,11 +53,11 @@ overflow: hidden;
   }
 }
 .not-found {
-  color: indianred;
+  color: #FFFFFF;
   margin-bottom: 8px !important;
 }
 .user-not-found {
-  color: indianred;
+  color: #FFFFFF;
   margin-bottom: 8px !important;
   font-weight: bold;
   font-size: 14px;

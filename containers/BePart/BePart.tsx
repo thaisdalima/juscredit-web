@@ -54,12 +54,11 @@ const BePart = () => {
     }
     return (
         <main className="be-part-container">
-            <img className="bg-left" src="/colored-products-left.svg" />
-            <img className="bg-right" src="/be-part/bg.svg" />
+           
             <div>
                 <h1>Insira seu CPF ou CNPJ abaixo</h1>
                 <label>
-                    Se você é produtor e conhece o cadastro oficial do Ministério (MAPA) e acha que já faz parte, por favor, insira seu CPF ou CNPJ:
+                Seja um parceiro JusCredit, Indique créditos trabalhistas elegíveis e ganhe conosco.
                 </label>
                 <StyledInput
                     mask={mask}
@@ -73,7 +72,7 @@ const BePart = () => {
                 <Button color="primary" onClick={validateDocument} disabled={!documentInput.length} loading={loading.toString()} >Validar cadastro </Button>
                 <Link href="/signup/producer"><a>Não estou cadastrado ></a></Link>
             </div>
-            <img className="producer" src="/be-part/producer.svg" />
+            
         </main>
     );
 
