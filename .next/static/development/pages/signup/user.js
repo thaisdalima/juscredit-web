@@ -28,16 +28,16 @@ var Button = function Button(props) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: this
-  }), loading ? __jsx("img", {
+  }), loading === 'true' ? __jsx("img", {
     height: "32",
     width: "32",
     src: "/loading.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: this
   }) : props.children);
@@ -19035,7 +19035,7 @@ var SignupUser = function SignupUser() {
 
 /***/ }),
 
-/***/ 7:
+/***/ 3:
 /*!******************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fsignup%2Fuser&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cuser.tsx ***!
   \******************************************************************************************************************************************************/
@@ -19058,5 +19058,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[7,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=user.js.map

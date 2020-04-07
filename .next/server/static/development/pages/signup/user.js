@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -135,16 +135,16 @@ const Button = props => {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: undefined
-  }), loading ? __jsx("img", {
+  }), loading === 'true' ? __jsx("img", {
     height: "32",
     width: "32",
     src: "/loading.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: undefined
   }) : props.children);
@@ -946,7 +946,7 @@ const SignupUser = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*************************************!*\
   !*** multi ./pages/signup/user.tsx ***!
   \*************************************/

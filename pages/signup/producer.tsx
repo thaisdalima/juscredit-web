@@ -1,9 +1,11 @@
 import RegisterForm from "../../components/Register/RegisterForm";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ConfirmationChoice from "../../components/Register/ConfirmationChoice/ConfirmationChoice";
 import Confirmation from "../../components/Register/Confirmation/Confirmation";
 import AddressForm from "../../components/Register/AddressForm/AddressForm";
 import RegisterSuccess from "../../components/Register/RegisterSuccess/RegisterSuccess";
+import { useRouter } from "next/router";
+import ProducerNotFound from "../../components/Register/ProducerNotFound/ProducerNotFound";
 
 const SignupProducer = () => {
     const [step, setStep] = useState(0)

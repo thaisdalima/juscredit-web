@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -135,16 +135,16 @@ const Button = props => {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: undefined
-  }), loading ? __jsx("img", {
+  }), loading === 'true' ? __jsx("img", {
     height: "32",
     width: "32",
     src: "/loading.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: undefined
   }) : props.children);
@@ -338,7 +338,7 @@ const Index = () => {
     },
     __self: undefined
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/user'),
     color: "third",
     __source: {
       fileName: _jsxFileName,
@@ -519,6 +519,7 @@ const Index = () => {
     },
     __self: undefined
   }), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
     color: "fourth",
     tabIndex: -1,
     __source: {
@@ -550,7 +551,7 @@ const Index = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!*******************************!*\
   !*** multi ./pages/index.tsx ***!
   \*******************************/

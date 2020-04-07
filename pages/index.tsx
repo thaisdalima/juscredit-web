@@ -23,7 +23,7 @@ const Index = () => {
                    <Button onClick={()=> Router.push('/signup/producer')} color="secondary">Quero investir</Button>
     
                 <div className="cursor-container">
-                 <Button onClick={()=> Router.push('/be-part')} color="third" ><img src="/cursor.svg"/>Conheça as vantagens</Button>
+                 <Button onClick={()=> Router.push('/signup/user')} color="third" ><img src="/cursor.svg"/>Conheça as vantagens</Button>
                         </div>
                 </div>
                 </div>
@@ -63,7 +63,7 @@ const Index = () => {
                         <h1> Seja um parceiro JusCredit</h1>
                         <h2>Indique créditos trabalhistas elegíveis e ganhe conosco.</h2>
                         <StyledInput mask={null} placeholder="   Insira aqui seu e-mail" tabIndex={-1}/>
-<Button color="fourth" tabIndex={-1}>Enviar</Button>
+<Button onClick={()=> Router.push('/be-part')}color="fourth" tabIndex={-1}>Enviar</Button>
 </div> 
            </div>
                 <br/>

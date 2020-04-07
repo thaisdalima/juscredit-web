@@ -28,16 +28,16 @@ var Button = function Button(props) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: this
-  }), loading ? __jsx("img", {
+  }), loading === 'true' ? __jsx("img", {
     height: "32",
     width: "32",
     src: "/loading.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: this
   }) : props.children);
@@ -10677,7 +10677,7 @@ var Index = function Index() {
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: function onClick() {
-      return next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part');
+      return next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/user');
     },
     color: "third",
     __source: {
@@ -10861,6 +10861,9 @@ var Index = function Index() {
     },
     __self: this
   }), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: function onClick() {
+      return next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part');
+    },
     color: "fourth",
     tabIndex: -1,
     __source: {
@@ -10881,7 +10884,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 8:
 /*!*********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Cindex.tsx ***!
   \*********************************************************************************************************************************/
@@ -10904,5 +10907,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]);
+},[[8,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
