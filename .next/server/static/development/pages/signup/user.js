@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -212,361 +212,6 @@ const StyledInput = (_ref) => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (StyledInput);
-
-/***/ }),
-
-/***/ "./components/Register/AddressForm/AddressForm.tsx":
-/*!*********************************************************!*\
-  !*** ./components/Register/AddressForm/AddressForm.tsx ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _RegisterForm_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../RegisterForm.scss */ "./components/Register/RegisterForm.scss");
-/* harmony import */ var _RegisterForm_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_RegisterForm_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "formik");
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Input_Input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Input/Input */ "./components/Input/Input.tsx");
-/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Button/Button */ "./components/Button/Button.tsx");
-var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\components\\Register\\AddressForm\\AddressForm.tsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-const stringMap = new Map([['user', {
-  cardTitle: 'Cadastrando meus dados'
-}], ['producer', {
-  cardTitle: 'Cadastrando meus dados'
-}], ['update-producer', {
-  cardTitle: 'Atualizando os meus dados'
-}]]);
-
-const validate = values => {
-  let errors = {};
-  return errors;
-};
-
-const AddressForm = ({
-  values,
-  loading,
-  onSubmit,
-  profile
-}) => {
-  const {
-    cardTitle
-  } = stringMap.get(profile);
-
-  const handleCepChange = async (e, setValues) => {
-    const cep = e.target.value;
-
-    if (cep && !cep.includes('_')) {
-      const res = await fetch(`https://viacep.com.br/ws/${cep.replace(/\D/g, '')}/json/`);
-      const data = await res.json();
-      setValues({
-        address: data.logradouro,
-        city: data.localidade,
-        state: data.uf
-      });
-    }
-  };
-
-  return __jsx("div", {
-    className: "card",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
-  }, __jsx("label", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
-  }, "Confirmar dados > Endere\xE7o comercial"), __jsx("h1", {
-    className: "card-title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: undefined
-  }, cardTitle), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
-    initialValues: {
-      address: '',
-      cep: '',
-      number: '',
-      complement: '',
-      city: '',
-      state: ''
-    },
-    validate: validate,
-    onSubmit: onSubmit,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: undefined
-  }, ({
-    errors,
-    values,
-    handleChange,
-    setValues
-  }) => {
-    return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Form"], {
-      className: "form-container",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 61
-      },
-      __self: undefined
-    }, __jsx("h2", {
-      className: "form-title",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62
-      },
-      __self: undefined
-    }, "Seja um Investidor"), __jsx("div", {
-      className: "row",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 63
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 64
-      },
-      __self: undefined
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65
-      },
-      __self: undefined
-    }, "CEP"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      name: "cep",
-      mask: "99999-999",
-      placeholder: "CEP",
-      onChange: e => {
-        handleCepChange(e, setValues);
-        handleChange('cep')(e);
-      },
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_3__["default"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66
-      },
-      __self: undefined
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["ErrorMessage"], {
-      name: "cep",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 76
-      },
-      __self: undefined
-    }))), __jsx("div", {
-      className: "row",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 82
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 83
-      },
-      __self: undefined
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 84
-      },
-      __self: undefined
-    }, "Endere\xE7o"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      name: "address",
-      mask: null,
-      placeholder: "Endere\xE7o",
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_3__["default"],
-      disabled: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 85
-      },
-      __self: undefined
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["ErrorMessage"], {
-      name: "address",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 92
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 95
-      },
-      __self: undefined
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 96
-      },
-      __self: undefined
-    }, "N\xFAmero"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      name: "number",
-      placeholder: "N\xFAmero",
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_3__["default"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 97
-      },
-      __self: undefined
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["ErrorMessage"], {
-      name: "number",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 102
-      },
-      __self: undefined
-    }))), __jsx("div", {
-      className: "row",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 106
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 108
-      },
-      __self: undefined
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 109
-      },
-      __self: undefined
-    }, "Complemento"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      name: "complement",
-      placeholder: "Complemento",
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_3__["default"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 110
-      },
-      __self: undefined
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["ErrorMessage"], {
-      name: "complement",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 115
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 118
-      },
-      __self: undefined
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 119
-      },
-      __self: undefined
-    }, "Cidade"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      name: "city",
-      mask: null,
-      placeholder: "Cidade",
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_3__["default"],
-      disabled: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 120
-      },
-      __self: undefined
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["ErrorMessage"], {
-      name: "city",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 127
-      },
-      __self: undefined
-    }))), __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 131
-      },
-      __self: undefined
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 132
-      },
-      __self: undefined
-    }, "Estado"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      name: "state",
-      mask: null,
-      placeholder: "Estado",
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_3__["default"],
-      disabled: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 133
-      },
-      __self: undefined
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["ErrorMessage"], {
-      name: "state",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 140
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "button-container",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 144
-      },
-      __self: undefined
-    }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      color: "primary,secondary",
-      type: "submit",
-      tabIndex: 1,
-      loading: loading,
-      disabled: Object.keys(errors).length > 0,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 146
-      },
-      __self: undefined
-    }, "Avan\xE7ar")));
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (AddressForm);
 
 /***/ }),
 
@@ -1171,10 +816,10 @@ const RegisterSuccess = () => {
 
 /***/ }),
 
-/***/ "./pages/signup/producer.tsx":
-/*!***********************************!*\
-  !*** ./pages/signup/producer.tsx ***!
-  \***********************************/
+/***/ "./pages/signup/user.tsx":
+/*!*******************************!*\
+  !*** ./pages/signup/user.tsx ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1185,9 +830,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Register_RegisterForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Register/RegisterForm */ "./components/Register/RegisterForm.tsx");
 /* harmony import */ var _components_Register_ConfirmationChoice_ConfirmationChoice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Register/ConfirmationChoice/ConfirmationChoice */ "./components/Register/ConfirmationChoice/ConfirmationChoice.tsx");
 /* harmony import */ var _components_Register_Confirmation_Confirmation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Register/Confirmation/Confirmation */ "./components/Register/Confirmation/Confirmation.tsx");
-/* harmony import */ var _components_Register_AddressForm_AddressForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Register/AddressForm/AddressForm */ "./components/Register/AddressForm/AddressForm.tsx");
-/* harmony import */ var _components_Register_RegisterSuccess_RegisterSuccess__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Register/RegisterSuccess/RegisterSuccess */ "./components/Register/RegisterSuccess/RegisterSuccess.tsx");
-var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\pages\\signup\\producer.tsx";
+/* harmony import */ var _components_Register_RegisterSuccess_RegisterSuccess__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Register/RegisterSuccess/RegisterSuccess */ "./components/Register/RegisterSuccess/RegisterSuccess.tsx");
+var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\pages\\signup\\user.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1203,8 +847,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-const SignupProducer = () => {
+const SignupUser = () => {
   const {
     0: step,
     1: setStep
@@ -1232,33 +875,15 @@ const SignupProducer = () => {
     setStep(2);
   };
 
-  const handleConfimation = value => {
+  const handleConfimation = async value => {
+    setLoading(true);
+    await createUser(_objectSpread({}, userValues));
     setStep(3);
   };
 
-  const handleAddressSubmit = async values => {
-    setLoading(true);
-    const addressString = `${values.address}, ${values.number}, ${values.city}, ${values.state}`;
-    const res = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressString}&key=AIzaSyD9birqocIzncUHjXSWIrx67UAT865gp84`);
-    const data = await res.json();
-    const {
-      lat,
-      lng
-    } = data.results[0].geometry.location;
-    await createProducer(_objectSpread({
-      address: `${values.address}, ${values.number}`,
-      city: values.city,
-      state: values.state
-    }, userValues, {
-      latitude: lat,
-      longitude: lng
-    }));
-    setStep(4);
-  };
-
-  const createProducer = async body => {
+  const createUser = async body => {
     try {
-      const res = await fetch('https://api.organis8.com.br/api/produtores', {
+      const res = await fetch('', {
         method: 'POST',
         body: JSON.stringify(body)
       });
@@ -1272,75 +897,63 @@ const SignupProducer = () => {
   switch (step) {
     case 0:
       return __jsx(_components_Register_RegisterForm__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        profile: "producer",
+        profile: "user",
         onSubmit: handleUserSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 44
         },
         __self: undefined
       });
 
     case 1:
       return __jsx(_components_Register_ConfirmationChoice_ConfirmationChoice__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        profile: "producer",
+        profile: "user",
         values: userValues,
         onSubmit: handleConfimationChoice,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 46
         },
         __self: undefined
       });
 
     case 2:
       return __jsx(_components_Register_Confirmation_Confirmation__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        profile: "producer",
+        loading: loading,
+        profile: "user",
         confirmationChoice: confirmationChoice,
         onSubmit: handleConfimation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 48
         },
         __self: undefined
       });
 
     case 3:
-      return __jsx(_components_Register_AddressForm_AddressForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        profile: "producer",
-        loading: loading,
-        values: userValues,
-        onSubmit: handleAddressSubmit,
+      return __jsx(_components_Register_RegisterSuccess_RegisterSuccess__WEBPACK_IMPORTED_MODULE_4__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: undefined
-      });
-
-    case 4:
-      return __jsx(_components_Register_RegisterSuccess_RegisterSuccess__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 50
         },
         __self: undefined
       });
   }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (SignupProducer);
+/* harmony default export */ __webpack_exports__["default"] = (SignupUser);
 
 /***/ }),
 
-/***/ 4:
-/*!*****************************************!*\
-  !*** multi ./pages/signup/producer.tsx ***!
-  \*****************************************/
+/***/ 5:
+/*!*************************************!*\
+  !*** multi ./pages/signup/user.tsx ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Thais Linda\juscredit-web\pages\signup\producer.tsx */"./pages/signup/producer.tsx");
+module.exports = __webpack_require__(/*! C:\Users\Thais Linda\juscredit-web\pages\signup\user.tsx */"./pages/signup/user.tsx");
 
 
 /***/ }),
@@ -1390,4 +1003,4 @@ module.exports = require("react-input-mask");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=producer.js.map
+//# sourceMappingURL=user.js.map

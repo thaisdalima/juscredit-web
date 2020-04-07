@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\signup\\producer.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\signup\\user.js"],{
 
 /***/ "./components/Button/Button.tsx":
 /*!**************************************!*\
@@ -89,393 +89,6 @@ var StyledInput = function StyledInput(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (StyledInput);
-
-/***/ }),
-
-/***/ "./components/Register/AddressForm/AddressForm.tsx":
-/*!*********************************************************!*\
-  !*** ./components/Register/AddressForm/AddressForm.tsx ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_map__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _RegisterForm_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../RegisterForm.scss */ "./components/Register/RegisterForm.scss");
-/* harmony import */ var _RegisterForm_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_RegisterForm_scss__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! formik */ "./node_modules/formik/dist/formik.esm.js");
-/* harmony import */ var _Input_Input__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Input/Input */ "./components/Input/Input.tsx");
-/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Button/Button */ "./components/Button/Button.tsx");
-
-
-
-
-var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\components\\Register\\AddressForm\\AddressForm.tsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
-
-
-
-
-var stringMap = new _babel_runtime_corejs2_core_js_map__WEBPACK_IMPORTED_MODULE_3___default.a([['user', {
-  cardTitle: 'Cadastrando meus dados'
-}], ['producer', {
-  cardTitle: 'Cadastrando meus dados'
-}], ['update-producer', {
-  cardTitle: 'Atualizando os meus dados'
-}]]);
-
-var validate = function validate(values) {
-  var errors = {};
-  return errors;
-};
-
-var AddressForm = function AddressForm(_ref) {
-  var values = _ref.values,
-      loading = _ref.loading,
-      onSubmit = _ref.onSubmit,
-      profile = _ref.profile;
-
-  var _stringMap$get = stringMap.get(profile),
-      cardTitle = _stringMap$get.cardTitle;
-
-  var handleCepChange = function handleCepChange(e, setValues) {
-    var cep, res, data;
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.async(function handleCepChange$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            cep = e.target.value;
-
-            if (!(cep && !cep.includes('_'))) {
-              _context.next = 9;
-              break;
-            }
-
-            _context.next = 4;
-            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.awrap(fetch("https://viacep.com.br/ws/".concat(cep.replace(/\D/g, ''), "/json/")));
-
-          case 4:
-            res = _context.sent;
-            _context.next = 7;
-            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.awrap(res.json());
-
-          case 7:
-            data = _context.sent;
-            setValues({
-              address: data.logradouro,
-              city: data.localidade,
-              state: data.uf
-            });
-
-          case 9:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, null, null, null, _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default.a);
-  };
-
-  return __jsx("div", {
-    className: "card",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: this
-  }, __jsx("label", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }, "Confirmar dados > Endere\xE7o comercial"), __jsx("h1", {
-    className: "card-title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: this
-  }, cardTitle), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["Formik"], {
-    initialValues: {
-      address: '',
-      cep: '',
-      number: '',
-      complement: '',
-      city: '',
-      state: ''
-    },
-    validate: validate,
-    onSubmit: onSubmit,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: this
-  }, function (_ref2) {
-    var errors = _ref2.errors,
-        values = _ref2.values,
-        handleChange = _ref2.handleChange,
-        setValues = _ref2.setValues;
-    return __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["Form"], {
-      className: "form-container",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 61
-      },
-      __self: this
-    }, __jsx("h2", {
-      className: "form-title",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62
-      },
-      __self: this
-    }, "Seja um Investidor"), __jsx("div", {
-      className: "row",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 63
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 64
-      },
-      __self: this
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65
-      },
-      __self: this
-    }, "CEP"), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["Field"], {
-      name: "cep",
-      mask: "99999-999",
-      placeholder: "CEP",
-      onChange: function onChange(e) {
-        handleCepChange(e, setValues);
-        handleChange('cep')(e);
-      },
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_7__["default"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66
-      },
-      __self: this
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["ErrorMessage"], {
-      name: "cep",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 76
-      },
-      __self: this
-    }))), __jsx("div", {
-      className: "row",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 82
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 83
-      },
-      __self: this
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 84
-      },
-      __self: this
-    }, "Endere\xE7o"), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["Field"], {
-      name: "address",
-      mask: null,
-      placeholder: "Endere\xE7o",
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_7__["default"],
-      disabled: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 85
-      },
-      __self: this
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["ErrorMessage"], {
-      name: "address",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 92
-      },
-      __self: this
-    })), __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 95
-      },
-      __self: this
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 96
-      },
-      __self: this
-    }, "N\xFAmero"), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["Field"], {
-      name: "number",
-      placeholder: "N\xFAmero",
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_7__["default"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 97
-      },
-      __self: this
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["ErrorMessage"], {
-      name: "number",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 102
-      },
-      __self: this
-    }))), __jsx("div", {
-      className: "row",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 106
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 108
-      },
-      __self: this
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 109
-      },
-      __self: this
-    }, "Complemento"), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["Field"], {
-      name: "complement",
-      placeholder: "Complemento",
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_7__["default"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 110
-      },
-      __self: this
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["ErrorMessage"], {
-      name: "complement",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 115
-      },
-      __self: this
-    })), __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 118
-      },
-      __self: this
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 119
-      },
-      __self: this
-    }, "Cidade"), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["Field"], {
-      name: "city",
-      mask: null,
-      placeholder: "Cidade",
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_7__["default"],
-      disabled: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 120
-      },
-      __self: this
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["ErrorMessage"], {
-      name: "city",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 127
-      },
-      __self: this
-    }))), __jsx("div", {
-      className: "form-group",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 131
-      },
-      __self: this
-    }, __jsx("label", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 132
-      },
-      __self: this
-    }, "Estado"), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["Field"], {
-      name: "state",
-      mask: null,
-      placeholder: "Estado",
-      component: _Input_Input__WEBPACK_IMPORTED_MODULE_7__["default"],
-      disabled: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 133
-      },
-      __self: this
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_6__["ErrorMessage"], {
-      name: "state",
-      component: "span",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 140
-      },
-      __self: this
-    })), __jsx("div", {
-      className: "button-container",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 144
-      },
-      __self: this
-    }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
-      color: "primary,secondary",
-      type: "submit",
-      tabIndex: 1,
-      loading: loading,
-      disabled: _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(errors).length > 0,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 146
-      },
-      __self: this
-    }, "Avan\xE7ar")));
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (AddressForm);
 
 /***/ }),
 
@@ -13801,21 +13414,21 @@ module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup%2Fproducer&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cproducer.tsx!./":
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup%2Fproducer&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cproducer.tsx ***!
-  \**********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup%2Fuser&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cuser.tsx!./":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup%2Fuser&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cuser.tsx ***!
+  \**************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/signup/producer", function() {
-      var mod = __webpack_require__(/*! ./pages/signup/producer.tsx */ "./pages/signup/producer.tsx")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/signup/user", function() {
+      var mod = __webpack_require__(/*! ./pages/signup/user.tsx */ "./pages/signup/user.tsx")
       if(true) {
-        module.hot.accept(/*! ./pages/signup/producer.tsx */ "./pages/signup/producer.tsx", function() {
-          if(!next.router.components["/signup/producer"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/signup/producer.tsx */ "./pages/signup/producer.tsx")
-          next.router.update("/signup/producer", updatedPage)
+        module.hot.accept(/*! ./pages/signup/user.tsx */ "./pages/signup/user.tsx", function() {
+          if(!next.router.components["/signup/user"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/signup/user.tsx */ "./pages/signup/user.tsx")
+          next.router.update("/signup/user", updatedPage)
         })
       }
       return mod
@@ -19230,10 +18843,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/signup/producer.tsx":
-/*!***********************************!*\
-  !*** ./pages/signup/producer.tsx ***!
-  \***********************************/
+/***/ "./pages/signup/user.tsx":
+/*!*******************************!*\
+  !*** ./pages/signup/user.tsx ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19263,8 +18876,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Register_RegisterForm__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/Register/RegisterForm */ "./components/Register/RegisterForm.tsx");
 /* harmony import */ var _components_Register_ConfirmationChoice_ConfirmationChoice__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/Register/ConfirmationChoice/ConfirmationChoice */ "./components/Register/ConfirmationChoice/ConfirmationChoice.tsx");
 /* harmony import */ var _components_Register_Confirmation_Confirmation__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/Register/Confirmation/Confirmation */ "./components/Register/Confirmation/Confirmation.tsx");
-/* harmony import */ var _components_Register_AddressForm_AddressForm__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/Register/AddressForm/AddressForm */ "./components/Register/AddressForm/AddressForm.tsx");
-/* harmony import */ var _components_Register_RegisterSuccess_RegisterSuccess__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/Register/RegisterSuccess/RegisterSuccess */ "./components/Register/RegisterSuccess/RegisterSuccess.tsx");
+/* harmony import */ var _components_Register_RegisterSuccess_RegisterSuccess__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/Register/RegisterSuccess/RegisterSuccess */ "./components/Register/RegisterSuccess/RegisterSuccess.tsx");
 
 
 
@@ -19275,7 +18887,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\pages\\signup\\producer.tsx";
+var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\pages\\signup\\user.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement;
 
@@ -19289,8 +18901,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
-
-var SignupProducer = function SignupProducer() {
+var SignupUser = function SignupUser() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(0),
       step = _useState[0],
       setStep = _useState[1];
@@ -19318,43 +18929,18 @@ var SignupProducer = function SignupProducer() {
   };
 
   var handleConfimation = function handleConfimation(value) {
-    setStep(3);
-  };
-
-  var handleAddressSubmit = function handleAddressSubmit(values) {
-    var addressString, res, data, _data$results$0$geome, lat, lng;
-
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.async(function handleAddressSubmit$(_context) {
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.async(function handleConfimation$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             setLoading(true);
-            addressString = "".concat(values.address, ", ").concat(values.number, ", ").concat(values.city, ", ").concat(values.state);
-            _context.next = 4;
-            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.awrap(fetch("https://maps.googleapis.com/maps/api/geocode/json?address=".concat(addressString, "&key=AIzaSyD9birqocIzncUHjXSWIrx67UAT865gp84")));
+            _context.next = 3;
+            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.awrap(createUser(_objectSpread({}, userValues)));
+
+          case 3:
+            setStep(3);
 
           case 4:
-            res = _context.sent;
-            _context.next = 7;
-            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.awrap(res.json());
-
-          case 7:
-            data = _context.sent;
-            _data$results$0$geome = data.results[0].geometry.location, lat = _data$results$0$geome.lat, lng = _data$results$0$geome.lng;
-            _context.next = 11;
-            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.awrap(createProducer(_objectSpread({
-              address: "".concat(values.address, ", ").concat(values.number),
-              city: values.city,
-              state: values.state
-            }, userValues, {
-              latitude: lat,
-              longitude: lng
-            })));
-
-          case 11:
-            setStep(4);
-
-          case 12:
           case "end":
             return _context.stop();
         }
@@ -19362,15 +18948,15 @@ var SignupProducer = function SignupProducer() {
     }, null, null, null, _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_7___default.a);
   };
 
-  var createProducer = function createProducer(body) {
+  var createUser = function createUser(body) {
     var res, data;
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.async(function createProducer$(_context2) {
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.async(function createUser$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
             _context2.prev = 0;
             _context2.next = 3;
-            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.awrap(fetch('https://api.organis8.com.br/api/produtores', {
+            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.awrap(fetch('', {
               method: 'POST',
               body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_6___default()(body)
             }));
@@ -19400,75 +18986,63 @@ var SignupProducer = function SignupProducer() {
   switch (step) {
     case 0:
       return __jsx(_components_Register_RegisterForm__WEBPACK_IMPORTED_MODULE_11__["default"], {
-        profile: "producer",
+        profile: "user",
         onSubmit: handleUserSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 44
         },
         __self: this
       });
 
     case 1:
       return __jsx(_components_Register_ConfirmationChoice_ConfirmationChoice__WEBPACK_IMPORTED_MODULE_12__["default"], {
-        profile: "producer",
+        profile: "user",
         values: userValues,
         onSubmit: handleConfimationChoice,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 46
         },
         __self: this
       });
 
     case 2:
       return __jsx(_components_Register_Confirmation_Confirmation__WEBPACK_IMPORTED_MODULE_13__["default"], {
-        profile: "producer",
+        loading: loading,
+        profile: "user",
         confirmationChoice: confirmationChoice,
         onSubmit: handleConfimation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 48
         },
         __self: this
       });
 
     case 3:
-      return __jsx(_components_Register_AddressForm_AddressForm__WEBPACK_IMPORTED_MODULE_14__["default"], {
-        profile: "producer",
-        loading: loading,
-        values: userValues,
-        onSubmit: handleAddressSubmit,
+      return __jsx(_components_Register_RegisterSuccess_RegisterSuccess__WEBPACK_IMPORTED_MODULE_14__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
-      });
-
-    case 4:
-      return __jsx(_components_Register_RegisterSuccess_RegisterSuccess__WEBPACK_IMPORTED_MODULE_15__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 50
         },
         __self: this
       });
   }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (SignupProducer);
+/* harmony default export */ __webpack_exports__["default"] = (SignupUser);
 
 /***/ }),
 
-/***/ 7:
-/*!**************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fsignup%2Fproducer&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cproducer.tsx ***!
-  \**************************************************************************************************************************************************************/
+/***/ 9:
+/*!******************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fsignup%2Fuser&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cuser.tsx ***!
+  \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fsignup%2Fproducer&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cproducer.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup%2Fproducer&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cproducer.tsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fsignup%2Fuser&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cuser.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup%2Fuser&absolutePagePath=C%3A%5CUsers%5CThais%20Linda%5Cjuscredit-web%5Cpages%5Csignup%5Cuser.tsx!./");
 
 
 /***/ }),
@@ -19484,5 +19058,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[7,"static/runtime/webpack.js","styles"]]]);
-//# sourceMappingURL=producer.js.map
+},[[9,"static/runtime/webpack.js","styles"]]]);
+//# sourceMappingURL=user.js.map
