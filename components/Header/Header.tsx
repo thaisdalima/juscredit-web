@@ -1,7 +1,8 @@
-import Link from 'next/link';
 import './Header.scss'
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
+
 
 
 const Header = () => {
@@ -17,22 +18,26 @@ const Header = () => {
     const toggleMenu = () => {
         setOpenedMenu(!openedMenu)
     }
+
     return (
         <>
-                      <nav className={"nav" + themeClass}>
-                      <a className="navbar-brand" href="/"> <img src="/logo.svg" className="header-logo" />
-</a>
+            <nav className={"nav" + themeClass}>
+                 <img src="/logo.svg" className="header-logo"/>
                 <div className="link-container">
-        
-        
-                    <Link href="/" > 
+
+                    <Link to="funciona-container" > 
+                        <a className="link">Como Funciona</a>
+                        </Link>
+                        
+                    <Link to="antecipar" > 
                         <a className="link">Antecipar</a>
                         </Link>
-                    <Link href="/">
-                        <a className="link">Investir</a>
+                    
+                    <Link to="duvidas-container">
+                        <a className="link">Dúvidas</a>
                     </Link>
-                    <Link href="/">
-                        <a className="link"> Parceiros </a>
+                    <Link to="parceiros-container">
+                        <a className="link">Parceiros</a>
                     </Link>
                     <Link href="/"> 
                         <a className="link"> <button id="entrar" className="entrar">Entrar</button>

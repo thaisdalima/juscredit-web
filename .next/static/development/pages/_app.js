@@ -190,12 +190,12 @@ var Footer = function Footer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header.scss */ "./components/Header/Header.scss");
-/* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Header_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header.scss */ "./components/Header/Header.scss");
+/* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Header_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-scroll */ "./node_modules/react-scroll/modules/index.js");
+/* harmony import */ var react_scroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_scroll__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\components\\Header\\Header.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -209,7 +209,7 @@ var Header = function Header() {
       openedMenu = _useState[0],
       setOpenedMenu = _useState[1];
 
-  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["useRouter"])();
+  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
   var themeClass = '';
 
   if (router && router.pathname !== '/') {
@@ -228,34 +228,26 @@ var Header = function Header() {
     className: "nav" + themeClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 24
     },
     __self: this
-  }, __jsx("a", {
-    className: "navbar-brand",
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, " ", __jsx("img", {
+  }, __jsx("img", {
     src: "/logo.svg",
     className: "header-logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  })), __jsx("div", {
-    className: "link-container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
+  }), __jsx("div", {
+    className: "link-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "funciona-container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
@@ -268,46 +260,60 @@ var Header = function Header() {
       lineNumber: 29
     },
     __self: this
-  }, "Antecipar")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, __jsx("a", {
-    className: "link",
+  }, "Como Funciona")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "antecipar",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
     },
     __self: this
-  }, "Investir")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 33
     },
     __self: this
-  }, " Parceiros ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
+  }, "Antecipar")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "duvidas-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, __jsx("a", {
+    className: "link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: this
+  }, "D\xFAvidas")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "parceiros-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 40
+    },
+    __self: this
+  }, "Parceiros")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, __jsx("a", {
+    className: "link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
     },
     __self: this
   }, " ", __jsx("button", {
@@ -315,7 +321,7 @@ var Header = function Header() {
     className: "entrar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 43
     },
     __self: this
   }, "Entrar")))), __jsx("div", {
@@ -323,7 +329,7 @@ var Header = function Header() {
     onClick: toggleMenu,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 48
     },
     __self: this
   }, __jsx("svg", {
@@ -333,7 +339,7 @@ var Header = function Header() {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 49
     },
     __self: this
   }, __jsx("path", {
@@ -341,70 +347,70 @@ var Header = function Header() {
     d: "M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 50
     },
     __self: this
   })))), openedMenu && __jsx("div", {
     className: "mobile-link-container " + themeClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: this
-  }, __jsx("a", {
-    className: "link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: this
-  }, "Antecipar")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 55
     },
     __self: this
-  }, __jsx("a", {
-    className: "link",
+  }, __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 57
     },
     __self: this
-  }, "Investir")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "#",
+  }, __jsx("a", {
+    className: "link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 58
     },
     __self: this
-  }, __jsx("a", {
-    className: "link",
+  }, "Antecipar")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: this
-  }, " Parceiros ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "#",
+  }, __jsx("a", {
+    className: "link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 61
     },
     __self: this
+  }, "Investir")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 64
+    },
+    __self: this
+  }, " Parceiros ")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, __jsx("a", {
+    className: "link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
     },
     __self: this
   }, "Entrar "))));
@@ -444,17 +450,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/get-iterator */ "./n
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/is-iterable */ "./node_modules/core-js/library/fn/is-iterable.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/map.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/map.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/map */ "./node_modules/core-js/library/fn/map.js");
 
 /***/ }),
 
@@ -499,17 +494,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "./node_modules/core-js/library/fn/object/get-own-property-descriptor.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype-of */ "./node_modules/core-js/library/fn/object/get-prototype-of.js");
 
 /***/ }),
 
@@ -604,25 +588,6 @@ function _arrayWithHoles(arr) {
 }
 
 module.exports = _arrayWithHoles;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-module.exports = _assertThisInitialized;
 
 /***/ }),
 
@@ -748,58 +713,6 @@ function _extends() {
 
   return _extends.apply(this, arguments);
 }
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Object$getPrototypeOf = __webpack_require__(/*! ../core-js/object/get-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js");
-
-var _Object$setPrototypeOf = __webpack_require__(/*! ../core-js/object/set-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js");
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = _Object$setPrototypeOf ? _Object$getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || _Object$getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/inherits.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/inherits.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Object$create = __webpack_require__(/*! ../core-js/object/create */ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js");
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/setPrototypeOf.js");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = _Object$create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
 
 /***/ }),
 
@@ -951,29 +864,6 @@ module.exports = _nonIterableRest;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/@babel/runtime-corejs2/helpers/typeof.js");
-
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/setPrototypeOf.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/setPrototypeOf.js ***!
@@ -1101,25 +991,6 @@ module.exports = __webpack_require__(/*! ../modules/core.is-iterable */ "./node_
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/fn/map.js":
-/*!************************************************!*\
-  !*** ./node_modules/core-js/library/fn/map.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../modules/es6.object.to-string */ "./node_modules/core-js/library/modules/es6.object.to-string.js");
-__webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/core-js/library/modules/es6.string.iterator.js");
-__webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/library/modules/web.dom.iterable.js");
-__webpack_require__(/*! ../modules/es6.map */ "./node_modules/core-js/library/modules/es6.map.js");
-__webpack_require__(/*! ../modules/es7.map.to-json */ "./node_modules/core-js/library/modules/es7.map.to-json.js");
-__webpack_require__(/*! ../modules/es7.map.of */ "./node_modules/core-js/library/modules/es7.map.of.js");
-__webpack_require__(/*! ../modules/es7.map.from */ "./node_modules/core-js/library/modules/es7.map.from.js");
-module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Map;
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/fn/object/assign.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/library/fn/object/assign.js ***!
@@ -1177,19 +1048,6 @@ var $Object = __webpack_require__(/*! ../../modules/_core */ "./node_modules/cor
 module.exports = function getOwnPropertyDescriptor(it, key) {
   return $Object.getOwnPropertyDescriptor(it, key);
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/fn/object/get-prototype-of.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/core-js/library/fn/object/get-prototype-of.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../../modules/es6.object.get-prototype-of */ "./node_modules/core-js/library/modules/es6.object.get-prototype-of.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.getPrototypeOf;
 
 
 /***/ }),
@@ -1352,24 +1210,6 @@ var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/l
 module.exports = function (it) {
   if (!isObject(it)) throw TypeError(it + ' is not an object!');
   return it;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_array-from-iterable.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_array-from-iterable.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var forOf = __webpack_require__(/*! ./_for-of */ "./node_modules/core-js/library/modules/_for-of.js");
-
-module.exports = function (iter, ITERATOR) {
-  var result = [];
-  forOf(iter, false, result.push, result, ITERATOR);
-  return result;
 };
 
 
@@ -1590,182 +1430,6 @@ var toString = {}.toString;
 
 module.exports = function (it) {
   return toString.call(it).slice(8, -1);
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_collection-strong.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_collection-strong.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var dP = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/library/modules/_object-dp.js").f;
-var create = __webpack_require__(/*! ./_object-create */ "./node_modules/core-js/library/modules/_object-create.js");
-var redefineAll = __webpack_require__(/*! ./_redefine-all */ "./node_modules/core-js/library/modules/_redefine-all.js");
-var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/library/modules/_ctx.js");
-var anInstance = __webpack_require__(/*! ./_an-instance */ "./node_modules/core-js/library/modules/_an-instance.js");
-var forOf = __webpack_require__(/*! ./_for-of */ "./node_modules/core-js/library/modules/_for-of.js");
-var $iterDefine = __webpack_require__(/*! ./_iter-define */ "./node_modules/core-js/library/modules/_iter-define.js");
-var step = __webpack_require__(/*! ./_iter-step */ "./node_modules/core-js/library/modules/_iter-step.js");
-var setSpecies = __webpack_require__(/*! ./_set-species */ "./node_modules/core-js/library/modules/_set-species.js");
-var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/library/modules/_descriptors.js");
-var fastKey = __webpack_require__(/*! ./_meta */ "./node_modules/core-js/library/modules/_meta.js").fastKey;
-var validate = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/library/modules/_validate-collection.js");
-var SIZE = DESCRIPTORS ? '_s' : 'size';
-
-var getEntry = function (that, key) {
-  // fast case
-  var index = fastKey(key);
-  var entry;
-  if (index !== 'F') return that._i[index];
-  // frozen object case
-  for (entry = that._f; entry; entry = entry.n) {
-    if (entry.k == key) return entry;
-  }
-};
-
-module.exports = {
-  getConstructor: function (wrapper, NAME, IS_MAP, ADDER) {
-    var C = wrapper(function (that, iterable) {
-      anInstance(that, C, NAME, '_i');
-      that._t = NAME;         // collection type
-      that._i = create(null); // index
-      that._f = undefined;    // first entry
-      that._l = undefined;    // last entry
-      that[SIZE] = 0;         // size
-      if (iterable != undefined) forOf(iterable, IS_MAP, that[ADDER], that);
-    });
-    redefineAll(C.prototype, {
-      // 23.1.3.1 Map.prototype.clear()
-      // 23.2.3.2 Set.prototype.clear()
-      clear: function clear() {
-        for (var that = validate(this, NAME), data = that._i, entry = that._f; entry; entry = entry.n) {
-          entry.r = true;
-          if (entry.p) entry.p = entry.p.n = undefined;
-          delete data[entry.i];
-        }
-        that._f = that._l = undefined;
-        that[SIZE] = 0;
-      },
-      // 23.1.3.3 Map.prototype.delete(key)
-      // 23.2.3.4 Set.prototype.delete(value)
-      'delete': function (key) {
-        var that = validate(this, NAME);
-        var entry = getEntry(that, key);
-        if (entry) {
-          var next = entry.n;
-          var prev = entry.p;
-          delete that._i[entry.i];
-          entry.r = true;
-          if (prev) prev.n = next;
-          if (next) next.p = prev;
-          if (that._f == entry) that._f = next;
-          if (that._l == entry) that._l = prev;
-          that[SIZE]--;
-        } return !!entry;
-      },
-      // 23.2.3.6 Set.prototype.forEach(callbackfn, thisArg = undefined)
-      // 23.1.3.5 Map.prototype.forEach(callbackfn, thisArg = undefined)
-      forEach: function forEach(callbackfn /* , that = undefined */) {
-        validate(this, NAME);
-        var f = ctx(callbackfn, arguments.length > 1 ? arguments[1] : undefined, 3);
-        var entry;
-        while (entry = entry ? entry.n : this._f) {
-          f(entry.v, entry.k, this);
-          // revert to the last existing entry
-          while (entry && entry.r) entry = entry.p;
-        }
-      },
-      // 23.1.3.7 Map.prototype.has(key)
-      // 23.2.3.7 Set.prototype.has(value)
-      has: function has(key) {
-        return !!getEntry(validate(this, NAME), key);
-      }
-    });
-    if (DESCRIPTORS) dP(C.prototype, 'size', {
-      get: function () {
-        return validate(this, NAME)[SIZE];
-      }
-    });
-    return C;
-  },
-  def: function (that, key, value) {
-    var entry = getEntry(that, key);
-    var prev, index;
-    // change existing entry
-    if (entry) {
-      entry.v = value;
-    // create new entry
-    } else {
-      that._l = entry = {
-        i: index = fastKey(key, true), // <- index
-        k: key,                        // <- key
-        v: value,                      // <- value
-        p: prev = that._l,             // <- previous entry
-        n: undefined,                  // <- next entry
-        r: false                       // <- removed
-      };
-      if (!that._f) that._f = entry;
-      if (prev) prev.n = entry;
-      that[SIZE]++;
-      // add to index
-      if (index !== 'F') that._i[index] = entry;
-    } return that;
-  },
-  getEntry: getEntry,
-  setStrong: function (C, NAME, IS_MAP) {
-    // add .keys, .values, .entries, [@@iterator]
-    // 23.1.3.4, 23.1.3.8, 23.1.3.11, 23.1.3.12, 23.2.3.5, 23.2.3.8, 23.2.3.10, 23.2.3.11
-    $iterDefine(C, NAME, function (iterated, kind) {
-      this._t = validate(iterated, NAME); // target
-      this._k = kind;                     // kind
-      this._l = undefined;                // previous
-    }, function () {
-      var that = this;
-      var kind = that._k;
-      var entry = that._l;
-      // revert to the last existing entry
-      while (entry && entry.r) entry = entry.p;
-      // get next entry
-      if (!that._t || !(that._l = entry = entry ? entry.n : that._t._f)) {
-        // or finish the iteration
-        that._t = undefined;
-        return step(1);
-      }
-      // return step by kind
-      if (kind == 'keys') return step(0, entry.k);
-      if (kind == 'values') return step(0, entry.v);
-      return step(0, [entry.k, entry.v]);
-    }, IS_MAP ? 'entries' : 'values', !IS_MAP, true);
-
-    // add [@@species], 23.1.2.2, 23.2.2.2
-    setSpecies(NAME);
-  }
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_collection-to-json.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_collection-to-json.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var classof = __webpack_require__(/*! ./_classof */ "./node_modules/core-js/library/modules/_classof.js");
-var from = __webpack_require__(/*! ./_array-from-iterable */ "./node_modules/core-js/library/modules/_array-from-iterable.js");
-module.exports = function (NAME) {
-  return function toJSON() {
-    if (classof(this) != NAME) throw TypeError(NAME + "#toJSON isn't generic");
-    return from(this);
-  };
 };
 
 
@@ -3832,37 +3496,6 @@ addToUnscopables('entries');
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/es6.map.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es6.map.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var strong = __webpack_require__(/*! ./_collection-strong */ "./node_modules/core-js/library/modules/_collection-strong.js");
-var validate = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/library/modules/_validate-collection.js");
-var MAP = 'Map';
-
-// 23.1 Map Objects
-module.exports = __webpack_require__(/*! ./_collection */ "./node_modules/core-js/library/modules/_collection.js")(MAP, function (get) {
-  return function Map() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
-}, {
-  // 23.1.3.6 Map.prototype.get(key)
-  get: function get(key) {
-    var entry = strong.getEntry(validate(this, MAP), key);
-    return entry && entry.v;
-  },
-  // 23.1.3.9 Map.prototype.set(key, value)
-  set: function set(key, value) {
-    return strong.def(validate(this, MAP), key === 0 ? 0 : key, value);
-  }
-}, strong, true);
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/es6.object.assign.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es6.object.assign.js ***!
@@ -3920,26 +3553,6 @@ var $getOwnPropertyDescriptor = __webpack_require__(/*! ./_object-gopd */ "./nod
 __webpack_require__(/*! ./_object-sap */ "./node_modules/core-js/library/modules/_object-sap.js")('getOwnPropertyDescriptor', function () {
   return function getOwnPropertyDescriptor(it, key) {
     return $getOwnPropertyDescriptor(toIObject(it), key);
-  };
-});
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es6.object.get-prototype-of.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es6.object.get-prototype-of.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.9 Object.getPrototypeOf(O)
-var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/library/modules/_to-object.js");
-var $getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ "./node_modules/core-js/library/modules/_object-gpo.js");
-
-__webpack_require__(/*! ./_object-sap */ "./node_modules/core-js/library/modules/_object-sap.js")('getPrototypeOf', function () {
-  return function getPrototypeOf(it) {
-    return $getPrototypeOf(toObject(it));
   };
 });
 
@@ -4706,47 +4319,6 @@ if (NATIVE_WEAK_MAP && IS_IE11) {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/es7.map.from.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.map.from.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
-__webpack_require__(/*! ./_set-collection-from */ "./node_modules/core-js/library/modules/_set-collection-from.js")('Map');
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es7.map.of.js":
-/*!************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.map.of.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
-__webpack_require__(/*! ./_set-collection-of */ "./node_modules/core-js/library/modules/_set-collection-of.js")('Map');
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es7.map.to-json.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.map.to-json.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-
-$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(/*! ./_collection-to-json */ "./node_modules/core-js/library/modules/_collection-to-json.js")('Map') });
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/es7.promise.finally.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es7.promise.finally.js ***!
@@ -4883,101 +4455,454 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ }),
 
-/***/ "./node_modules/function-bind/implementation.js":
-/*!******************************************************!*\
-  !*** ./node_modules/function-bind/implementation.js ***!
-  \******************************************************/
+/***/ "./node_modules/lodash.throttle/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash.throttle/index.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
 
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
 
-/* eslint no-invalid-this: 1 */
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
 
-var ERROR_MESSAGE = 'Function.prototype.bind called on incompatible ';
-var slice = Array.prototype.slice;
-var toStr = Object.prototype.toString;
-var funcType = '[object Function]';
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
 
-module.exports = function bind(that) {
-    var target = this;
-    if (typeof target !== 'function' || toStr.call(target) !== funcType) {
-        throw new TypeError(ERROR_MESSAGE + target);
-    }
-    var args = slice.call(arguments, 1);
+/** Used to match leading and trailing whitespace. */
+var reTrim = /^\s+|\s+$/g;
 
-    var bound;
-    var binder = function () {
-        if (this instanceof bound) {
-            var result = target.apply(
-                this,
-                args.concat(slice.call(arguments))
-            );
-            if (Object(result) === result) {
-                return result;
-            }
-            return this;
-        } else {
-            return target.apply(
-                that,
-                args.concat(slice.call(arguments))
-            );
-        }
-    };
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
 
-    var boundLength = Math.max(0, target.length - args.length);
-    var boundArgs = [];
-    for (var i = 0; i < boundLength; i++) {
-        boundArgs.push('$' + i);
-    }
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
 
-    bound = Function('binder', 'return function (' + boundArgs.join(',') + '){ return binder.apply(this,arguments); }')(binder);
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
 
-    if (target.prototype) {
-        var Empty = function Empty() {};
-        Empty.prototype = target.prototype;
-        bound.prototype = new Empty();
-        Empty.prototype = null;
-    }
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
 
-    return bound;
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max,
+    nativeMin = Math.min;
+
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */
+var now = function() {
+  return root.Date.now();
 };
 
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */
+function debounce(func, wait, options) {
+  var lastArgs,
+      lastThis,
+      maxWait,
+      result,
+      timerId,
+      lastCallTime,
+      lastInvokeTime = 0,
+      leading = false,
+      maxing = false,
+      trailing = true;
 
-/***/ }),
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  wait = toNumber(wait) || 0;
+  if (isObject(options)) {
+    leading = !!options.leading;
+    maxing = 'maxWait' in options;
+    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
 
-/***/ "./node_modules/function-bind/index.js":
-/*!*********************************************!*\
-  !*** ./node_modules/function-bind/index.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+  function invokeFunc(time) {
+    var args = lastArgs,
+        thisArg = lastThis;
 
-"use strict";
+    lastArgs = lastThis = undefined;
+    lastInvokeTime = time;
+    result = func.apply(thisArg, args);
+    return result;
+  }
 
+  function leadingEdge(time) {
+    // Reset any `maxWait` timer.
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = setTimeout(timerExpired, wait);
+    // Invoke the leading edge.
+    return leading ? invokeFunc(time) : result;
+  }
 
-var implementation = __webpack_require__(/*! ./implementation */ "./node_modules/function-bind/implementation.js");
+  function remainingWait(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime,
+        result = wait - timeSinceLastCall;
 
-module.exports = Function.prototype.bind || implementation;
+    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+  }
 
+  function shouldInvoke(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime;
 
-/***/ }),
+    // Either this is the first call, activity has stopped and we're at the
+    // trailing edge, the system time has gone backwards and we're treating
+    // it as the trailing edge, or we've hit the `maxWait` limit.
+    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+  }
 
-/***/ "./node_modules/has/src/index.js":
-/*!***************************************!*\
-  !*** ./node_modules/has/src/index.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+  function timerExpired() {
+    var time = now();
+    if (shouldInvoke(time)) {
+      return trailingEdge(time);
+    }
+    // Restart the timer.
+    timerId = setTimeout(timerExpired, remainingWait(time));
+  }
 
-"use strict";
+  function trailingEdge(time) {
+    timerId = undefined;
 
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
+    if (trailing && lastArgs) {
+      return invokeFunc(time);
+    }
+    lastArgs = lastThis = undefined;
+    return result;
+  }
 
-var bind = __webpack_require__(/*! function-bind */ "./node_modules/function-bind/index.js");
+  function cancel() {
+    if (timerId !== undefined) {
+      clearTimeout(timerId);
+    }
+    lastInvokeTime = 0;
+    lastArgs = lastCallTime = lastThis = timerId = undefined;
+  }
 
-module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
+  function flush() {
+    return timerId === undefined ? result : trailingEdge(now());
+  }
 
+  function debounced() {
+    var time = now(),
+        isInvoking = shouldInvoke(time);
+
+    lastArgs = arguments;
+    lastThis = this;
+    lastCallTime = time;
+
+    if (isInvoking) {
+      if (timerId === undefined) {
+        return leadingEdge(lastCallTime);
+      }
+      if (maxing) {
+        // Handle invocations in a tight loop.
+        timerId = setTimeout(timerExpired, wait);
+        return invokeFunc(lastCallTime);
+      }
+    }
+    if (timerId === undefined) {
+      timerId = setTimeout(timerExpired, wait);
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  debounced.flush = flush;
+  return debounced;
+}
+
+/**
+ * Creates a throttled function that only invokes `func` at most once per
+ * every `wait` milliseconds. The throttled function comes with a `cancel`
+ * method to cancel delayed `func` invocations and a `flush` method to
+ * immediately invoke them. Provide `options` to indicate whether `func`
+ * should be invoked on the leading and/or trailing edge of the `wait`
+ * timeout. The `func` is invoked with the last arguments provided to the
+ * throttled function. Subsequent calls to the throttled function return the
+ * result of the last `func` invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the throttled function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.throttle` and `_.debounce`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to throttle.
+ * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=true]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new throttled function.
+ * @example
+ *
+ * // Avoid excessively updating the position while scrolling.
+ * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
+ *
+ * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
+ * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
+ * jQuery(element).on('click', throttled);
+ *
+ * // Cancel the trailing throttled invocation.
+ * jQuery(window).on('popstate', throttled.cancel);
+ */
+function throttle(func, wait, options) {
+  var leading = true,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  if (isObject(options)) {
+    leading = 'leading' in options ? !!options.leading : leading;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+  return debounce(func, wait, {
+    'leading': leading,
+    'maxWait': wait,
+    'trailing': trailing
+  });
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+}
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */
+function toNumber(value) {
+  if (typeof value == 'number') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return NAN;
+  }
+  if (isObject(value)) {
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = isObject(other) ? (other + '') : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = value.replace(reTrim, '');
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}
+
+module.exports = throttle;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -4989,18 +4914,6 @@ module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f */ "dll-reference dll_82519ec661270f7f484f"))("./node_modules/next/dist/build/polyfills/object-assign.js");
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/polyfills/object.assign/index.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/next/dist/build/polyfills/object.assign/index.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineProperties(g(),{implementation:{get:g},shim:{value:g},getPolyfill:{value:g}});module.exports=g();
 
 /***/ }),
 
@@ -5024,348 +4937,6 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
       return mod
     }]);
   
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/client/link.js":
-/*!***********************************************!*\
-  !*** ./node_modules/next/dist/client/link.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _slicedToArray = __webpack_require__(/*! @babel/runtime-corejs2/helpers/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js");
-
-var _classCallCheck = __webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js");
-
-var _createClass = __webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js");
-
-var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime-corejs2/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js");
-
-var _getPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js");
-
-var _inherits = __webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/inherits.js");
-
-var _Map = __webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
-
-exports.__esModule = true;
-exports["default"] = void 0;
-
-var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _url = __webpack_require__(/*! url */ "./node_modules/url/url.js");
-
-var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
-
-var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js"));
-
-function isLocal(href) {
-  var url = (0, _url.parse)(href, false, true);
-  var origin = (0, _url.parse)((0, _utils.getLocationOrigin)(), false, true);
-  return !url.host || url.protocol === origin.protocol && url.host === origin.host;
-}
-
-function memoizedFormatUrl(formatFunc) {
-  var lastHref = null;
-  var lastAs = null;
-  var lastResult = null;
-  return function (href, as) {
-    if (lastResult && href === lastHref && as === lastAs) {
-      return lastResult;
-    }
-
-    var result = formatFunc(href, as);
-    lastHref = href;
-    lastAs = as;
-    lastResult = result;
-    return result;
-  };
-}
-
-function formatUrl(url) {
-  return url && typeof url === 'object' ? (0, _utils.formatWithValidation)(url) : url;
-}
-
-var observer;
-var listeners = new _Map();
-var IntersectionObserver = true ? window.IntersectionObserver : undefined;
-var prefetched = {};
-
-function getObserver() {
-  // Return shared instance of IntersectionObserver if already created
-  if (observer) {
-    return observer;
-  } // Only create shared IntersectionObserver if supported in browser
-
-
-  if (!IntersectionObserver) {
-    return undefined;
-  }
-
-  return observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!listeners.has(entry.target)) {
-        return;
-      }
-
-      var cb = listeners.get(entry.target);
-
-      if (entry.isIntersecting || entry.intersectionRatio > 0) {
-        observer.unobserve(entry.target);
-        listeners["delete"](entry.target);
-        cb();
-      }
-    });
-  }, {
-    rootMargin: '200px'
-  });
-}
-
-var listenToIntersections = function listenToIntersections(el, cb) {
-  var observer = getObserver();
-
-  if (!observer) {
-    return function () {};
-  }
-
-  observer.observe(el);
-  listeners.set(el, cb);
-  return function () {
-    try {
-      observer.unobserve(el);
-    } catch (err) {
-      console.error(err);
-    }
-
-    listeners["delete"](el);
-  };
-};
-
-var Link = /*#__PURE__*/function (_react$Component) {
-  _inherits(Link, _react$Component);
-
-  function Link(props) {
-    var _this;
-
-    _classCallCheck(this, Link);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Link).call(this, props));
-    _this.p = void 0;
-
-    _this.cleanUpListeners = function () {};
-
-    _this.formatUrls = memoizedFormatUrl(function (href, asHref) {
-      return {
-        href: formatUrl(href),
-        as: asHref ? formatUrl(asHref) : asHref
-      };
-    });
-
-    _this.linkClicked = function (e) {
-      var _e$currentTarget = e.currentTarget,
-          nodeName = _e$currentTarget.nodeName,
-          target = _e$currentTarget.target;
-
-      if (nodeName === 'A' && (target && target !== '_self' || e.metaKey || e.ctrlKey || e.shiftKey || e.nativeEvent && e.nativeEvent.which === 2)) {
-        // ignore click for new tab / new window behavior
-        return;
-      }
-
-      var _this$formatUrls = _this.formatUrls(_this.props.href, _this.props.as),
-          href = _this$formatUrls.href,
-          as = _this$formatUrls.as;
-
-      if (!isLocal(href)) {
-        // ignore click if it's outside our scope (e.g. https://google.com)
-        return;
-      }
-
-      var pathname = window.location.pathname;
-      href = (0, _url.resolve)(pathname, href);
-      as = as ? (0, _url.resolve)(pathname, as) : href;
-      e.preventDefault(); //  avoid scroll for urls with anchor refs
-
-      var scroll = _this.props.scroll;
-
-      if (scroll == null) {
-        scroll = as.indexOf('#') < 0;
-      } // replace state instead of push if prop is present
-
-
-      _router["default"][_this.props.replace ? 'replace' : 'push'](href, as, {
-        shallow: _this.props.shallow
-      }).then(function (success) {
-        if (!success) return;
-
-        if (scroll) {
-          window.scrollTo(0, 0);
-          document.body.focus();
-        }
-      });
-    };
-
-    if (true) {
-      if (props.prefetch) {
-        console.warn('Next.js auto-prefetches automatically based on viewport. The prefetch attribute is no longer needed. More: https://err.sh/zeit/next.js/prefetch-true-deprecated');
-      }
-    }
-
-    _this.p = props.prefetch !== false;
-    return _this;
-  }
-
-  _createClass(Link, [{
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.cleanUpListeners();
-    }
-  }, {
-    key: "getPaths",
-    value: function getPaths() {
-      var pathname = window.location.pathname;
-
-      var _this$formatUrls2 = this.formatUrls(this.props.href, this.props.as),
-          parsedHref = _this$formatUrls2.href,
-          parsedAs = _this$formatUrls2.as;
-
-      var resolvedHref = (0, _url.resolve)(pathname, parsedHref);
-      return [resolvedHref, parsedAs ? (0, _url.resolve)(pathname, parsedAs) : resolvedHref];
-    }
-  }, {
-    key: "handleRef",
-    value: function handleRef(ref) {
-      var _this2 = this;
-
-      var isPrefetched = prefetched[this.getPaths()[0]];
-
-      if (this.p && IntersectionObserver && ref && ref.tagName) {
-        this.cleanUpListeners();
-
-        if (!isPrefetched) {
-          this.cleanUpListeners = listenToIntersections(ref, function () {
-            _this2.prefetch();
-          });
-        }
-      }
-    } // The function is memoized so that no extra lifecycles are needed
-    // as per https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
-
-  }, {
-    key: "prefetch",
-    value: function prefetch(options) {
-      if (!this.p || false) return; // Prefetch the JSON page if asked (only in the client)
-
-      var _this$getPaths = this.getPaths(),
-          _this$getPaths2 = _slicedToArray(_this$getPaths, 2),
-          href = _this$getPaths2[0],
-          asPath = _this$getPaths2[1];
-
-      _router["default"].prefetch(href, asPath, options);
-
-      prefetched[href] = true;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this3 = this;
-
-      var children = this.props.children;
-
-      var _this$formatUrls3 = this.formatUrls(this.props.href, this.props.as),
-          href = _this$formatUrls3.href,
-          as = _this$formatUrls3.as; // Deprecated. Warning shown by propType check. If the children provided is a string (<Link>example</Link>) we wrap it in an <a> tag
-
-
-      if (typeof children === 'string') {
-        children = _react["default"].createElement("a", null, children);
-      } // This will return the first child, if multiple are provided it will throw an error
-
-
-      var child = _react.Children.only(children);
-
-      var props = {
-        ref: function ref(el) {
-          _this3.handleRef(el);
-
-          if (child && typeof child === 'object' && child.ref) {
-            if (typeof child.ref === 'function') child.ref(el);else if (typeof child.ref === 'object') {
-              child.ref.current = el;
-            }
-          }
-        },
-        onMouseEnter: function onMouseEnter(e) {
-          if (child.props && typeof child.props.onMouseEnter === 'function') {
-            child.props.onMouseEnter(e);
-          }
-
-          _this3.prefetch({
-            priority: true
-          });
-        },
-        onClick: function onClick(e) {
-          if (child.props && typeof child.props.onClick === 'function') {
-            child.props.onClick(e);
-          }
-
-          if (!e.defaultPrevented) {
-            _this3.linkClicked(e);
-          }
-        }
-      }; // If child is an <a> tag and doesn't have a href attribute, or if the 'passHref' property is
-      // defined, we specify the current 'href', so that repetition is not needed by the user
-
-      if (this.props.passHref || child.type === 'a' && !('href' in child.props)) {
-        props.href = as || href;
-      } // Add the ending slash to the paths. So, we can serve the
-      // "<page>/index.html" directly.
-
-
-      if (false) { var rewriteUrlForNextExport; }
-
-      return _react["default"].cloneElement(child, props);
-    }
-  }]);
-
-  return Link;
-}(_react.Component);
-
-if (true) {
-  var warn = (0, _utils.execOnce)(console.error); // This module gets removed by webpack.IgnorePlugin
-
-  var PropTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-
-  var exact = __webpack_require__(/*! prop-types-exact */ "./node_modules/prop-types-exact/build/index.js"); // @ts-ignore the property is supported, when declaring it on the class it outputs an extra bit of code which is not needed.
-
-
-  Link.propTypes = exact({
-    href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
-    as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    prefetch: PropTypes.bool,
-    replace: PropTypes.bool,
-    shallow: PropTypes.bool,
-    passHref: PropTypes.bool,
-    scroll: PropTypes.bool,
-    children: PropTypes.oneOfType([PropTypes.element, function (props, propName) {
-      var value = props[propName];
-
-      if (typeof value === 'string') {
-        warn("Warning: You're using a string directly inside <Link>. This usage has been deprecated. Please add an <a> tag as child of <Link>");
-      }
-
-      return null;
-    }]).isRequired
-  });
-}
-
-var _default = Link;
-exports["default"] = _default;
 
 /***/ }),
 
@@ -6781,18 +6352,6 @@ exports.ST = exports.SP && typeof performance.mark === 'function' && typeof perf
 
 /***/ }),
 
-/***/ "./node_modules/next/link.js":
-/*!***********************************!*\
-  !*** ./node_modules/next/link.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/next/dist/client/link.js")
-
-
-/***/ }),
-
 /***/ "./node_modules/node-libs-browser/node_modules/punycode/punycode.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/node-libs-browser/node_modules/punycode/punycode.js ***!
@@ -7321,95 +6880,6 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 }(this));
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./node_modules/prop-types-exact/build/helpers/isPlainObject.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/prop-types-exact/build/helpers/isPlainObject.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-exports['default'] = isPlainObject;
-function isPlainObject(x) {
-  return x && (typeof x === 'undefined' ? 'undefined' : _typeof(x)) === 'object' && !Array.isArray(x);
-}
-module.exports = exports['default'];
-//# sourceMappingURL=isPlainObject.js.map
-
-/***/ }),
-
-/***/ "./node_modules/prop-types-exact/build/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/prop-types-exact/build/index.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports['default'] = forbidExtraProps;
-
-var _object = __webpack_require__(/*! object.assign */ "./node_modules/next/dist/build/polyfills/object.assign/index.js");
-
-var _object2 = _interopRequireDefault(_object);
-
-var _has = __webpack_require__(/*! has */ "./node_modules/has/src/index.js");
-
-var _has2 = _interopRequireDefault(_has);
-
-var _isPlainObject = __webpack_require__(/*! ./helpers/isPlainObject */ "./node_modules/prop-types-exact/build/helpers/isPlainObject.js");
-
-var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var zeroWidthSpace = '\u200B';
-var specialProperty = 'prop-types-exact: ' + zeroWidthSpace;
-var semaphore = typeof Symbol === 'function' && typeof Symbol['for'] === 'function' ? Symbol['for'](specialProperty) : /* istanbul ignore next */specialProperty;
-
-function brand(fn) {
-  return (0, _object2['default'])(fn, _defineProperty({}, specialProperty, semaphore));
-}
-
-function isBranded(value) {
-  return value && value[specialProperty] === semaphore;
-}
-
-function forbidExtraProps(propTypes) {
-  if (!(0, _isPlainObject2['default'])(propTypes)) {
-    throw new TypeError('given propTypes must be an object');
-  }
-  if ((0, _has2['default'])(propTypes, specialProperty) && !isBranded(propTypes[specialProperty])) {
-    throw new TypeError('Against all odds, you created a propType for a prop that uses both the zero-width space and our custom string - which, sadly, conflicts with `prop-types-exact`');
-  }
-
-  return (0, _object2['default'])({}, propTypes, _defineProperty({}, specialProperty, brand(function () {
-    function forbidUnknownProps(props, _, componentName) {
-      var unknownProps = Object.keys(props).filter(function (prop) {
-        return !(0, _has2['default'])(propTypes, prop);
-      });
-      if (unknownProps.length > 0) {
-        return new TypeError(String(componentName) + ': unknown props found: ' + String(unknownProps.join(', ')));
-      }
-      return null;
-    }
-
-    return forbidUnknownProps;
-  }())));
-}
-module.exports = exports['default'];
-//# sourceMappingURL=index.js.map
 
 /***/ }),
 
@@ -8273,6 +7743,17 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ }),
 
+/***/ "./node_modules/react-dom/index.js":
+/*!***********************************************************************************************!*\
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_82519ec661270f7f484f ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f */ "dll-reference dll_82519ec661270f7f484f"))("./node_modules/react-dom/index.js");
+
+/***/ }),
+
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -8526,6 +8007,1762 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/components/Button.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/components/Button.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _scrollLink = __webpack_require__(/*! ../mixins/scroll-link */ "./node_modules/react-scroll/modules/mixins/scroll-link.js");
+
+var _scrollLink2 = _interopRequireDefault(_scrollLink);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ButtonElement = function (_React$Component) {
+  _inherits(ButtonElement, _React$Component);
+
+  function ButtonElement() {
+    _classCallCheck(this, ButtonElement);
+
+    return _possibleConstructorReturn(this, (ButtonElement.__proto__ || Object.getPrototypeOf(ButtonElement)).apply(this, arguments));
+  }
+
+  _createClass(ButtonElement, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'input',
+        this.props,
+        this.props.children
+      );
+    }
+  }]);
+
+  return ButtonElement;
+}(_react2.default.Component);
+
+;
+
+exports.default = (0, _scrollLink2.default)(ButtonElement);
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/components/Element.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/components/Element.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _scrollElement = __webpack_require__(/*! ../mixins/scroll-element */ "./node_modules/react-scroll/modules/mixins/scroll-element.js");
+
+var _scrollElement2 = _interopRequireDefault(_scrollElement);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ElementWrapper = function (_React$Component) {
+  _inherits(ElementWrapper, _React$Component);
+
+  function ElementWrapper() {
+    _classCallCheck(this, ElementWrapper);
+
+    return _possibleConstructorReturn(this, (ElementWrapper.__proto__ || Object.getPrototypeOf(ElementWrapper)).apply(this, arguments));
+  }
+
+  _createClass(ElementWrapper, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      // Remove `parentBindings` from props
+      var newProps = _extends({}, this.props);
+      if (newProps.parentBindings) {
+        delete newProps.parentBindings;
+      }
+
+      return _react2.default.createElement(
+        'div',
+        _extends({}, newProps, { ref: function ref(el) {
+            _this2.props.parentBindings.domNode = el;
+          } }),
+        this.props.children
+      );
+    }
+  }]);
+
+  return ElementWrapper;
+}(_react2.default.Component);
+
+;
+
+ElementWrapper.propTypes = {
+  name: _propTypes2.default.string,
+  id: _propTypes2.default.string
+};
+
+exports.default = (0, _scrollElement2.default)(ElementWrapper);
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/components/Link.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/components/Link.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _scrollLink = __webpack_require__(/*! ../mixins/scroll-link */ "./node_modules/react-scroll/modules/mixins/scroll-link.js");
+
+var _scrollLink2 = _interopRequireDefault(_scrollLink);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var LinkElement = function (_React$Component) {
+  _inherits(LinkElement, _React$Component);
+
+  function LinkElement() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, LinkElement);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = LinkElement.__proto__ || Object.getPrototypeOf(LinkElement)).call.apply(_ref, [this].concat(args))), _this), _this.render = function () {
+      return _react2.default.createElement(
+        'a',
+        _this.props,
+        _this.props.children
+      );
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  return LinkElement;
+}(_react2.default.Component);
+
+;
+
+exports.default = (0, _scrollLink2.default)(LinkElement);
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-scroll/modules/index.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Helpers = exports.ScrollElement = exports.ScrollLink = exports.animateScroll = exports.scrollSpy = exports.Events = exports.scroller = exports.Element = exports.Button = exports.Link = undefined;
+
+var _Link = __webpack_require__(/*! ./components/Link.js */ "./node_modules/react-scroll/modules/components/Link.js");
+
+var _Link2 = _interopRequireDefault(_Link);
+
+var _Button = __webpack_require__(/*! ./components/Button.js */ "./node_modules/react-scroll/modules/components/Button.js");
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _Element = __webpack_require__(/*! ./components/Element.js */ "./node_modules/react-scroll/modules/components/Element.js");
+
+var _Element2 = _interopRequireDefault(_Element);
+
+var _scroller = __webpack_require__(/*! ./mixins/scroller.js */ "./node_modules/react-scroll/modules/mixins/scroller.js");
+
+var _scroller2 = _interopRequireDefault(_scroller);
+
+var _scrollEvents = __webpack_require__(/*! ./mixins/scroll-events.js */ "./node_modules/react-scroll/modules/mixins/scroll-events.js");
+
+var _scrollEvents2 = _interopRequireDefault(_scrollEvents);
+
+var _scrollSpy = __webpack_require__(/*! ./mixins/scroll-spy.js */ "./node_modules/react-scroll/modules/mixins/scroll-spy.js");
+
+var _scrollSpy2 = _interopRequireDefault(_scrollSpy);
+
+var _animateScroll = __webpack_require__(/*! ./mixins/animate-scroll.js */ "./node_modules/react-scroll/modules/mixins/animate-scroll.js");
+
+var _animateScroll2 = _interopRequireDefault(_animateScroll);
+
+var _scrollLink = __webpack_require__(/*! ./mixins/scroll-link.js */ "./node_modules/react-scroll/modules/mixins/scroll-link.js");
+
+var _scrollLink2 = _interopRequireDefault(_scrollLink);
+
+var _scrollElement = __webpack_require__(/*! ./mixins/scroll-element.js */ "./node_modules/react-scroll/modules/mixins/scroll-element.js");
+
+var _scrollElement2 = _interopRequireDefault(_scrollElement);
+
+var _Helpers = __webpack_require__(/*! ./mixins/Helpers.js */ "./node_modules/react-scroll/modules/mixins/Helpers.js");
+
+var _Helpers2 = _interopRequireDefault(_Helpers);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Link = _Link2.default;
+exports.Button = _Button2.default;
+exports.Element = _Element2.default;
+exports.scroller = _scroller2.default;
+exports.Events = _scrollEvents2.default;
+exports.scrollSpy = _scrollSpy2.default;
+exports.animateScroll = _animateScroll2.default;
+exports.ScrollLink = _scrollLink2.default;
+exports.ScrollElement = _scrollElement2.default;
+exports.Helpers = _Helpers2.default;
+exports.default = { Link: _Link2.default, Button: _Button2.default, Element: _Element2.default, scroller: _scroller2.default, Events: _scrollEvents2.default, scrollSpy: _scrollSpy2.default, animateScroll: _animateScroll2.default, ScrollLink: _scrollLink2.default, ScrollElement: _scrollElement2.default, Helpers: _Helpers2.default };
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/Helpers.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/Helpers.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* DEPRECATED */
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/react-scroll/modules/mixins/utils.js");
+var scrollSpy = __webpack_require__(/*! ./scroll-spy */ "./node_modules/react-scroll/modules/mixins/scroll-spy.js");
+var defaultScroller = __webpack_require__(/*! ./scroller */ "./node_modules/react-scroll/modules/mixins/scroller.js");
+var PropTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+var scrollHash = __webpack_require__(/*! ./scroll-hash */ "./node_modules/react-scroll/modules/mixins/scroll-hash.js");
+
+var protoTypes = {
+  to: PropTypes.string.isRequired,
+  containerId: PropTypes.string,
+  container: PropTypes.object,
+  activeClass: PropTypes.string,
+  spy: PropTypes.bool,
+  smooth: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  offset: PropTypes.number,
+  delay: PropTypes.number,
+  isDynamic: PropTypes.bool,
+  onClick: PropTypes.func,
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.func]),
+  absolute: PropTypes.bool,
+  onSetActive: PropTypes.func,
+  onSetInactive: PropTypes.func,
+  ignoreCancelEvents: PropTypes.bool,
+  hashSpy: PropTypes.bool
+};
+
+var Helpers = {
+  Scroll: function Scroll(Component, customScroller) {
+
+    console.warn("Helpers.Scroll is deprecated since v1.7.0");
+
+    var scroller = customScroller || defaultScroller;
+
+    var Scroll = function (_React$Component) {
+      _inherits(Scroll, _React$Component);
+
+      function Scroll(props) {
+        _classCallCheck(this, Scroll);
+
+        var _this = _possibleConstructorReturn(this, (Scroll.__proto__ || Object.getPrototypeOf(Scroll)).call(this, props));
+
+        _initialiseProps.call(_this);
+
+        _this.state = {
+          active: false
+        };
+        return _this;
+      }
+
+      _createClass(Scroll, [{
+        key: 'getScrollSpyContainer',
+        value: function getScrollSpyContainer() {
+          var containerId = this.props.containerId;
+          var container = this.props.container;
+
+          if (containerId) {
+            return document.getElementById(containerId);
+          }
+
+          if (container && container.nodeType) {
+            return container;
+          }
+
+          return document;
+        }
+      }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+          if (this.props.spy || this.props.hashSpy) {
+            var scrollSpyContainer = this.getScrollSpyContainer();
+
+            if (!scrollSpy.isMounted(scrollSpyContainer)) {
+              scrollSpy.mount(scrollSpyContainer);
+            }
+
+            if (this.props.hashSpy) {
+              if (!scrollHash.isMounted()) {
+                scrollHash.mount(scroller);
+              }
+              scrollHash.mapContainer(this.props.to, scrollSpyContainer);
+            }
+
+            if (this.props.spy) {
+              scrollSpy.addStateHandler(this.stateHandler);
+            }
+
+            scrollSpy.addSpyHandler(this.spyHandler, scrollSpyContainer);
+
+            this.setState({
+              container: scrollSpyContainer
+            });
+          }
+        }
+      }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+          scrollSpy.unmount(this.stateHandler, this.spyHandler);
+        }
+      }, {
+        key: 'render',
+        value: function render() {
+          var className = "";
+
+          if (this.state && this.state.active) {
+            className = ((this.props.className || "") + " " + (this.props.activeClass || "active")).trim();
+          } else {
+            className = this.props.className;
+          }
+
+          var props = _extends({}, this.props);
+
+          for (var prop in protoTypes) {
+            if (props.hasOwnProperty(prop)) {
+              delete props[prop];
+            }
+          }
+
+          props.className = className;
+          props.onClick = this.handleClick;
+
+          return React.createElement(Component, props);
+        }
+      }]);
+
+      return Scroll;
+    }(React.Component);
+
+    var _initialiseProps = function _initialiseProps() {
+      var _this2 = this;
+
+      this.scrollTo = function (to, props) {
+        scroller.scrollTo(to, _extends({}, _this2.state, props));
+      };
+
+      this.handleClick = function (event) {
+
+        /*
+         * give the posibility to override onClick
+         */
+
+        if (_this2.props.onClick) {
+          _this2.props.onClick(event);
+        }
+
+        /*
+         * dont bubble the navigation
+         */
+
+        if (event.stopPropagation) event.stopPropagation();
+        if (event.preventDefault) event.preventDefault();
+
+        /*
+         * do the magic!
+         */
+        _this2.scrollTo(_this2.props.to, _this2.props);
+      };
+
+      this.stateHandler = function () {
+        if (scroller.getActiveLink() !== _this2.props.to) {
+          if (_this2.state !== null && _this2.state.active && _this2.props.onSetInactive) {
+            _this2.props.onSetInactive();
+          }
+          _this2.setState({ active: false });
+        }
+      };
+
+      this.spyHandler = function (y) {
+
+        var scrollSpyContainer = _this2.getScrollSpyContainer();
+
+        if (scrollHash.isMounted() && !scrollHash.isInitialized()) {
+          return;
+        }
+
+        var to = _this2.props.to;
+        var element = null;
+        var elemTopBound = 0;
+        var elemBottomBound = 0;
+        var containerTop = 0;
+
+        if (scrollSpyContainer.getBoundingClientRect) {
+          var containerCords = scrollSpyContainer.getBoundingClientRect();
+          containerTop = containerCords.top;
+        }
+
+        if (!element || _this2.props.isDynamic) {
+          element = scroller.get(to);
+          if (!element) {
+            return;
+          }
+
+          var cords = element.getBoundingClientRect();
+          elemTopBound = cords.top - containerTop + y;
+          elemBottomBound = elemTopBound + cords.height;
+        }
+
+        var offsetY = y - _this2.props.offset;
+        var isInside = offsetY >= Math.floor(elemTopBound) && offsetY < Math.floor(elemBottomBound);
+        var isOutside = offsetY < Math.floor(elemTopBound) || offsetY >= Math.floor(elemBottomBound);
+        var activeLink = scroller.getActiveLink();
+
+        if (isOutside) {
+          if (to === activeLink) {
+            scroller.setActiveLink(void 0);
+          }
+
+          if (_this2.props.hashSpy && scrollHash.getHash() === to) {
+            scrollHash.changeHash();
+          }
+
+          if (_this2.props.spy && _this2.state.active) {
+            _this2.setState({ active: false });
+            _this2.props.onSetInactive && _this2.props.onSetInactive();
+          }
+
+          return scrollSpy.updateStates();
+        }
+
+        if (isInside && activeLink !== to) {
+          scroller.setActiveLink(to);
+
+          _this2.props.hashSpy && scrollHash.changeHash(to);
+
+          if (_this2.props.spy) {
+            _this2.setState({ active: true });
+            _this2.props.onSetActive && _this2.props.onSetActive(to);
+          }
+          return scrollSpy.updateStates();
+        }
+      };
+    };
+
+    ;
+
+    Scroll.propTypes = protoTypes;
+
+    Scroll.defaultProps = { offset: 0 };
+
+    return Scroll;
+  },
+  Element: function Element(Component) {
+
+    console.warn("Helpers.Element is deprecated since v1.7.0");
+
+    var Element = function (_React$Component2) {
+      _inherits(Element, _React$Component2);
+
+      function Element(props) {
+        _classCallCheck(this, Element);
+
+        var _this3 = _possibleConstructorReturn(this, (Element.__proto__ || Object.getPrototypeOf(Element)).call(this, props));
+
+        _this3.childBindings = {
+          domNode: null
+        };
+        return _this3;
+      }
+
+      _createClass(Element, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+          if (typeof window === 'undefined') {
+            return false;
+          }
+          this.registerElems(this.props.name);
+        }
+      }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(prevProps) {
+          if (this.props.name !== prevProps.name) {
+            this.registerElems(this.props.name);
+          }
+        }
+      }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+          if (typeof window === 'undefined') {
+            return false;
+          }
+          defaultScroller.unregister(this.props.name);
+        }
+      }, {
+        key: 'registerElems',
+        value: function registerElems(name) {
+          defaultScroller.register(name, this.childBindings.domNode);
+        }
+      }, {
+        key: 'render',
+        value: function render() {
+          return React.createElement(Component, _extends({}, this.props, { parentBindings: this.childBindings }));
+        }
+      }]);
+
+      return Element;
+    }(React.Component);
+
+    ;
+
+    Element.propTypes = {
+      name: PropTypes.string,
+      id: PropTypes.string
+    };
+
+    return Element;
+  }
+};
+
+module.exports = Helpers;
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/animate-scroll.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/animate-scroll.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-scroll/modules/mixins/utils.js");
+
+var _utils2 = _interopRequireDefault(_utils);
+
+var _smooth = __webpack_require__(/*! ./smooth */ "./node_modules/react-scroll/modules/mixins/smooth.js");
+
+var _smooth2 = _interopRequireDefault(_smooth);
+
+var _cancelEvents = __webpack_require__(/*! ./cancel-events */ "./node_modules/react-scroll/modules/mixins/cancel-events.js");
+
+var _cancelEvents2 = _interopRequireDefault(_cancelEvents);
+
+var _scrollEvents = __webpack_require__(/*! ./scroll-events */ "./node_modules/react-scroll/modules/mixins/scroll-events.js");
+
+var _scrollEvents2 = _interopRequireDefault(_scrollEvents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Gets the easing type from the smooth prop within options.
+ */
+var getAnimationType = function getAnimationType(options) {
+  return _smooth2.default[options.smooth] || _smooth2.default.defaultEasing;
+};
+/*
+ * Function helper
+ */
+var functionWrapper = function functionWrapper(value) {
+  return typeof value === 'function' ? value : function () {
+    return value;
+  };
+};
+/*
+ * Wraps window properties to allow server side rendering
+ */
+var currentWindowProperties = function currentWindowProperties() {
+  if (typeof window !== 'undefined') {
+    return window.requestAnimationFrame || window.webkitRequestAnimationFrame;
+  }
+};
+
+/*
+ * Helper function to never extend 60fps on the webpage.
+ */
+var requestAnimationFrameHelper = function () {
+  return currentWindowProperties() || function (callback, element, delay) {
+    window.setTimeout(callback, delay || 1000 / 60, new Date().getTime());
+  };
+}();
+
+var makeData = function makeData() {
+  return {
+    currentPositionY: 0,
+    startPositionY: 0,
+    targetPositionY: 0,
+    progress: 0,
+    duration: 0,
+    cancel: false,
+
+    target: null,
+    containerElement: null,
+    to: null,
+    start: null,
+    deltaTop: null,
+    percent: null,
+    delayTimeout: null
+  };
+};
+
+var currentPositionY = function currentPositionY(options) {
+  var containerElement = options.data.containerElement;
+  if (containerElement && containerElement !== document && containerElement !== document.body) {
+    return containerElement.scrollTop;
+  } else {
+    var supportPageOffset = window.pageXOffset !== undefined;
+    var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
+    return supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+  }
+};
+
+var scrollContainerHeight = function scrollContainerHeight(options) {
+  var containerElement = options.data.containerElement;
+  if (containerElement && containerElement !== document && containerElement !== document.body) {
+    return containerElement.scrollHeight - containerElement.offsetHeight;
+  } else {
+    var body = document.body;
+    var html = document.documentElement;
+
+    return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  }
+};
+
+var animateScroll = function animateScroll(easing, options, timestamp) {
+  var data = options.data;
+
+  // Cancel on specific events
+  if (!options.ignoreCancelEvents && data.cancel) {
+    if (_scrollEvents2.default.registered['end']) {
+      _scrollEvents2.default.registered['end'](data.to, data.target, data.currentPositionY);
+    }
+    return;
+  };
+
+  data.deltaTop = Math.round(data.targetPositionY - data.startPositionY);
+
+  if (data.start === null) {
+    data.start = timestamp;
+  }
+
+  data.progress = timestamp - data.start;
+
+  data.percent = data.progress >= data.duration ? 1 : easing(data.progress / data.duration);
+
+  data.currentPositionY = data.startPositionY + Math.ceil(data.deltaTop * data.percent);
+
+  if (data.containerElement && data.containerElement !== document && data.containerElement !== document.body) {
+    data.containerElement.scrollTop = data.currentPositionY;
+  } else {
+    window.scrollTo(0, data.currentPositionY);
+  }
+
+  if (data.percent < 1) {
+    var easedAnimate = animateScroll.bind(null, easing, options);
+    requestAnimationFrameHelper.call(window, easedAnimate);
+    return;
+  }
+
+  if (_scrollEvents2.default.registered['end']) {
+    _scrollEvents2.default.registered['end'](data.to, data.target, data.currentPositionY);
+  }
+};
+
+var setContainer = function setContainer(options) {
+  options.data.containerElement = !options ? null : options.containerId ? document.getElementById(options.containerId) : options.container && options.container.nodeType ? options.container : document;
+};
+
+var animateTopScroll = function animateTopScroll(y, options, to, target) {
+  options.data = options.data || makeData();
+
+  window.clearTimeout(options.data.delayTimeout);
+
+  _cancelEvents2.default.subscribe(function () {
+    options.data.cancel = true;
+  });
+
+  setContainer(options);
+
+  options.data.start = null;
+  options.data.cancel = false;
+  options.data.startPositionY = currentPositionY(options);
+  options.data.targetPositionY = options.absolute ? y : y + options.data.startPositionY;
+
+  if (options.data.startPositionY === options.data.targetPositionY) {
+    if (_scrollEvents2.default.registered['end']) {
+      _scrollEvents2.default.registered['end'](options.data.to, options.data.target, options.data.currentPositionY);
+    }
+    return;
+  }
+
+  options.data.deltaTop = Math.round(options.data.targetPositionY - options.data.startPositionY);
+
+  options.data.duration = functionWrapper(options.duration)(options.data.deltaTop);
+  options.data.duration = isNaN(parseFloat(options.data.duration)) ? 1000 : parseFloat(options.data.duration);
+  options.data.to = to;
+  options.data.target = target;
+
+  var easing = getAnimationType(options);
+  var easedAnimate = animateScroll.bind(null, easing, options);
+
+  if (options && options.delay > 0) {
+    options.data.delayTimeout = window.setTimeout(function () {
+      if (_scrollEvents2.default.registered['begin']) {
+        _scrollEvents2.default.registered['begin'](options.data.to, options.data.target);
+      }
+      requestAnimationFrameHelper.call(window, easedAnimate);
+    }, options.delay);
+    return;
+  }
+
+  if (_scrollEvents2.default.registered['begin']) {
+    _scrollEvents2.default.registered['begin'](options.data.to, options.data.target);
+  }
+  requestAnimationFrameHelper.call(window, easedAnimate);
+};
+
+var proceedOptions = function proceedOptions(options) {
+  options = _extends({}, options);
+  options.data = options.data || makeData();
+  options.absolute = true;
+  return options;
+};
+
+var scrollToTop = function scrollToTop(options) {
+  animateTopScroll(0, proceedOptions(options));
+};
+
+var scrollTo = function scrollTo(toY, options) {
+  animateTopScroll(toY, proceedOptions(options));
+};
+
+var scrollToBottom = function scrollToBottom(options) {
+  options = proceedOptions(options);
+  setContainer(options);
+  animateTopScroll(scrollContainerHeight(options), options);
+};
+
+var scrollMore = function scrollMore(toY, options) {
+  options = proceedOptions(options);
+  setContainer(options);
+  animateTopScroll(currentPositionY(options) + toY, options);
+};
+
+exports.default = {
+  animateTopScroll: animateTopScroll,
+  getAnimationType: getAnimationType,
+  scrollToTop: scrollToTop,
+  scrollToBottom: scrollToBottom,
+  scrollTo: scrollTo,
+  scrollMore: scrollMore
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/cancel-events.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/cancel-events.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _passiveEventListeners = __webpack_require__(/*! ./passive-event-listeners */ "./node_modules/react-scroll/modules/mixins/passive-event-listeners.js");
+
+var events = ['mousedown', 'mousewheel', 'touchmove', 'keydown'];
+
+exports.default = {
+  subscribe: function subscribe(cancelEvent) {
+    return typeof document !== 'undefined' && events.forEach(function (event) {
+      return (0, _passiveEventListeners.addPassiveEventListener)(document, event, cancelEvent);
+    });
+  }
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/passive-event-listeners.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/passive-event-listeners.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/*
+ * Tell the browser that the event listener won't prevent a scroll.
+ * Allowing the browser to continue scrolling without having to
+ * to wait for the listener to return.
+ */
+var addPassiveEventListener = exports.addPassiveEventListener = function addPassiveEventListener(target, eventName, listener) {
+  var supportsPassiveOption = function () {
+    var supportsPassiveOption = false;
+    try {
+      var opts = Object.defineProperty({}, 'passive', {
+        get: function get() {
+          supportsPassiveOption = true;
+        }
+      });
+      window.addEventListener('test', null, opts);
+    } catch (e) {}
+    return supportsPassiveOption;
+  }();
+  target.addEventListener(eventName, listener, supportsPassiveOption ? { passive: true } : false);
+};
+
+var removePassiveEventListener = exports.removePassiveEventListener = function removePassiveEventListener(target, eventName, listener) {
+  target.removeEventListener(eventName, listener);
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/scroll-element.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/scroll-element.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _scroller = __webpack_require__(/*! ./scroller */ "./node_modules/react-scroll/modules/mixins/scroller.js");
+
+var _scroller2 = _interopRequireDefault(_scroller);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+exports.default = function (Component) {
+  var Element = function (_React$Component) {
+    _inherits(Element, _React$Component);
+
+    function Element(props) {
+      _classCallCheck(this, Element);
+
+      var _this = _possibleConstructorReturn(this, (Element.__proto__ || Object.getPrototypeOf(Element)).call(this, props));
+
+      _this.childBindings = {
+        domNode: null
+      };
+      return _this;
+    }
+
+    _createClass(Element, [{
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        if (typeof window === 'undefined') {
+          return false;
+        }
+        this.registerElems(this.props.name);
+      }
+    }, {
+      key: 'componentDidUpdate',
+      value: function componentDidUpdate(prevProps) {
+        if (this.props.name !== prevProps.name) {
+          this.registerElems(this.props.name);
+        }
+      }
+    }, {
+      key: 'componentWillUnmount',
+      value: function componentWillUnmount() {
+        if (typeof window === 'undefined') {
+          return false;
+        }
+        _scroller2.default.unregister(this.props.name);
+      }
+    }, {
+      key: 'registerElems',
+      value: function registerElems(name) {
+        _scroller2.default.register(name, this.childBindings.domNode);
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        return _react2.default.createElement(Component, _extends({}, this.props, { parentBindings: this.childBindings }));
+      }
+    }]);
+
+    return Element;
+  }(_react2.default.Component);
+
+  ;
+
+  Element.propTypes = {
+    name: _propTypes2.default.string,
+    id: _propTypes2.default.string
+  };
+
+  return Element;
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/scroll-events.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/scroll-events.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var Events = {
+	registered: {},
+	scrollEvent: {
+		register: function register(evtName, callback) {
+			Events.registered[evtName] = callback;
+		},
+		remove: function remove(evtName) {
+			Events.registered[evtName] = null;
+		}
+	}
+};
+
+exports.default = Events;
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/scroll-hash.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/scroll-hash.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _passiveEventListeners = __webpack_require__(/*! ./passive-event-listeners */ "./node_modules/react-scroll/modules/mixins/passive-event-listeners.js");
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-scroll/modules/mixins/utils.js");
+
+var _utils2 = _interopRequireDefault(_utils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var scrollHash = {
+  mountFlag: false,
+  initialized: false,
+  scroller: null,
+  containers: {},
+
+  mount: function mount(scroller) {
+    this.scroller = scroller;
+
+    this.handleHashChange = this.handleHashChange.bind(this);
+    window.addEventListener('hashchange', this.handleHashChange);
+
+    this.initStateFromHash();
+    this.mountFlag = true;
+  },
+  mapContainer: function mapContainer(to, container) {
+    this.containers[to] = container;
+  },
+  isMounted: function isMounted() {
+    return this.mountFlag;
+  },
+  isInitialized: function isInitialized() {
+    return this.initialized;
+  },
+  initStateFromHash: function initStateFromHash() {
+    var _this = this;
+
+    var hash = this.getHash();
+    if (hash) {
+      window.setTimeout(function () {
+        _this.scrollTo(hash, true);
+        _this.initialized = true;
+      }, 10);
+    } else {
+      this.initialized = true;
+    }
+  },
+  scrollTo: function scrollTo(to, isInit) {
+    var scroller = this.scroller;
+    var element = scroller.get(to);
+    if (element && (isInit || to !== scroller.getActiveLink())) {
+      var container = this.containers[to] || document;
+      scroller.scrollTo(to, { container: container });
+    }
+  },
+  getHash: function getHash() {
+    return _utils2.default.getHash();
+  },
+  changeHash: function changeHash(to) {
+    if (this.isInitialized() && _utils2.default.getHash() !== to) {
+      _utils2.default.pushHash(to);
+    }
+  },
+  handleHashChange: function handleHashChange() {
+    this.scrollTo(this.getHash());
+  },
+  unmount: function unmount() {
+    this.scroller = null;
+    this.containers = null;
+    window.removeEventListener('hashchange', this.handleHashChange);
+  }
+};
+
+exports.default = scrollHash;
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/scroll-link.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/scroll-link.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _scrollSpy = __webpack_require__(/*! ./scroll-spy */ "./node_modules/react-scroll/modules/mixins/scroll-spy.js");
+
+var _scrollSpy2 = _interopRequireDefault(_scrollSpy);
+
+var _scroller = __webpack_require__(/*! ./scroller */ "./node_modules/react-scroll/modules/mixins/scroller.js");
+
+var _scroller2 = _interopRequireDefault(_scroller);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _scrollHash = __webpack_require__(/*! ./scroll-hash */ "./node_modules/react-scroll/modules/mixins/scroll-hash.js");
+
+var _scrollHash2 = _interopRequireDefault(_scrollHash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var protoTypes = {
+  to: _propTypes2.default.string.isRequired,
+  containerId: _propTypes2.default.string,
+  container: _propTypes2.default.object,
+  activeClass: _propTypes2.default.string,
+  spy: _propTypes2.default.bool,
+  smooth: _propTypes2.default.oneOfType([_propTypes2.default.bool, _propTypes2.default.string]),
+  offset: _propTypes2.default.number,
+  delay: _propTypes2.default.number,
+  isDynamic: _propTypes2.default.bool,
+  onClick: _propTypes2.default.func,
+  duration: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.func]),
+  absolute: _propTypes2.default.bool,
+  onSetActive: _propTypes2.default.func,
+  onSetInactive: _propTypes2.default.func,
+  ignoreCancelEvents: _propTypes2.default.bool,
+  hashSpy: _propTypes2.default.bool
+};
+
+exports.default = function (Component, customScroller) {
+
+  var scroller = customScroller || _scroller2.default;
+
+  var Link = function (_React$PureComponent) {
+    _inherits(Link, _React$PureComponent);
+
+    function Link(props) {
+      _classCallCheck(this, Link);
+
+      var _this = _possibleConstructorReturn(this, (Link.__proto__ || Object.getPrototypeOf(Link)).call(this, props));
+
+      _initialiseProps.call(_this);
+
+      _this.state = {
+        active: false
+      };
+      return _this;
+    }
+
+    _createClass(Link, [{
+      key: 'getScrollSpyContainer',
+      value: function getScrollSpyContainer() {
+        var containerId = this.props.containerId;
+        var container = this.props.container;
+
+        if (containerId && !container) {
+          return document.getElementById(containerId);
+        }
+
+        if (container && container.nodeType) {
+          return container;
+        }
+
+        return document;
+      }
+    }, {
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        if (this.props.spy || this.props.hashSpy) {
+          var scrollSpyContainer = this.getScrollSpyContainer();
+
+          if (!_scrollSpy2.default.isMounted(scrollSpyContainer)) {
+            _scrollSpy2.default.mount(scrollSpyContainer);
+          }
+
+          if (this.props.hashSpy) {
+            if (!_scrollHash2.default.isMounted()) {
+              _scrollHash2.default.mount(scroller);
+            }
+            _scrollHash2.default.mapContainer(this.props.to, scrollSpyContainer);
+          }
+
+          _scrollSpy2.default.addSpyHandler(this.spyHandler, scrollSpyContainer);
+
+          this.setState({
+            container: scrollSpyContainer
+          });
+        }
+      }
+    }, {
+      key: 'componentWillUnmount',
+      value: function componentWillUnmount() {
+        _scrollSpy2.default.unmount(this.stateHandler, this.spyHandler);
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var className = "";
+
+        if (this.state && this.state.active) {
+          className = ((this.props.className || "") + " " + (this.props.activeClass || "active")).trim();
+        } else {
+          className = this.props.className;
+        }
+
+        var props = _extends({}, this.props);
+
+        for (var prop in protoTypes) {
+          if (props.hasOwnProperty(prop)) {
+            delete props[prop];
+          }
+        }
+
+        props.className = className;
+        props.onClick = this.handleClick;
+
+        return _react2.default.createElement(Component, props);
+      }
+    }]);
+
+    return Link;
+  }(_react2.default.PureComponent);
+
+  var _initialiseProps = function _initialiseProps() {
+    var _this2 = this;
+
+    this.scrollTo = function (to, props) {
+      scroller.scrollTo(to, _extends({}, _this2.state, props));
+    };
+
+    this.handleClick = function (event) {
+
+      /*
+       * give the posibility to override onClick
+       */
+
+      if (_this2.props.onClick) {
+        _this2.props.onClick(event);
+      }
+
+      /*
+       * dont bubble the navigation
+       */
+
+      if (event.stopPropagation) event.stopPropagation();
+      if (event.preventDefault) event.preventDefault();
+
+      /*
+       * do the magic!
+       */
+      _this2.scrollTo(_this2.props.to, _this2.props);
+    };
+
+    this.spyHandler = function (y) {
+
+      var scrollSpyContainer = _this2.getScrollSpyContainer();
+
+      if (_scrollHash2.default.isMounted() && !_scrollHash2.default.isInitialized()) {
+        return;
+      }
+
+      var to = _this2.props.to;
+      var element = null;
+      var elemTopBound = 0;
+      var elemBottomBound = 0;
+      var containerTop = 0;
+
+      if (scrollSpyContainer.getBoundingClientRect) {
+        var containerCords = scrollSpyContainer.getBoundingClientRect();
+        containerTop = containerCords.top;
+      }
+
+      if (!element || _this2.props.isDynamic) {
+        element = scroller.get(to);
+        if (!element) {
+          return;
+        }
+
+        var cords = element.getBoundingClientRect();
+        elemTopBound = cords.top - containerTop + y;
+        elemBottomBound = elemTopBound + cords.height;
+      }
+
+      var offsetY = y - _this2.props.offset;
+      var isInside = offsetY >= Math.floor(elemTopBound) && offsetY < Math.floor(elemBottomBound);
+      var isOutside = offsetY < Math.floor(elemTopBound) || offsetY >= Math.floor(elemBottomBound);
+      var activeLink = scroller.getActiveLink();
+
+      if (isOutside) {
+        if (to === activeLink) {
+          scroller.setActiveLink(void 0);
+        }
+
+        if (_this2.props.hashSpy && _scrollHash2.default.getHash() === to) {
+          _scrollHash2.default.changeHash();
+        }
+
+        if (_this2.props.spy && _this2.state.active) {
+          _this2.setState({ active: false });
+          _this2.props.onSetInactive && _this2.props.onSetInactive(to, element);
+        }
+      }
+
+      if (isInside && (activeLink !== to || _this2.state.active === false)) {
+        scroller.setActiveLink(to);
+
+        _this2.props.hashSpy && _scrollHash2.default.changeHash(to);
+
+        if (_this2.props.spy) {
+          _this2.setState({ active: true });
+          _this2.props.onSetActive && _this2.props.onSetActive(to, element);
+        }
+      }
+    };
+  };
+
+  ;
+
+  Link.propTypes = protoTypes;
+
+  Link.defaultProps = { offset: 0 };
+
+  return Link;
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/scroll-spy.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/scroll-spy.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _lodash = __webpack_require__(/*! lodash.throttle */ "./node_modules/lodash.throttle/index.js");
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _passiveEventListeners = __webpack_require__(/*! ./passive-event-listeners */ "./node_modules/react-scroll/modules/mixins/passive-event-listeners.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// The eventHandler will execute at a rate of 15fps
+var eventThrottler = function eventThrottler(eventHandler) {
+  return (0, _lodash2.default)(eventHandler, 66);
+};
+
+var scrollSpy = {
+
+  spyCallbacks: [],
+  spySetState: [],
+  scrollSpyContainers: [],
+
+  mount: function mount(scrollSpyContainer) {
+    if (scrollSpyContainer) {
+      var eventHandler = eventThrottler(function (event) {
+        scrollSpy.scrollHandler(scrollSpyContainer);
+      });
+      scrollSpy.scrollSpyContainers.push(scrollSpyContainer);
+      (0, _passiveEventListeners.addPassiveEventListener)(scrollSpyContainer, 'scroll', eventHandler);
+    }
+  },
+  isMounted: function isMounted(scrollSpyContainer) {
+    return scrollSpy.scrollSpyContainers.indexOf(scrollSpyContainer) !== -1;
+  },
+  currentPositionY: function currentPositionY(scrollSpyContainer) {
+    if (scrollSpyContainer === document) {
+      var supportPageOffset = window.pageXOffset !== undefined;
+      var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
+      return supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+    } else {
+      return scrollSpyContainer.scrollTop;
+    }
+  },
+  scrollHandler: function scrollHandler(scrollSpyContainer) {
+    var callbacks = scrollSpy.scrollSpyContainers[scrollSpy.scrollSpyContainers.indexOf(scrollSpyContainer)].spyCallbacks || [];
+    callbacks.forEach(function (c) {
+      return c(scrollSpy.currentPositionY(scrollSpyContainer));
+    });
+  },
+  addStateHandler: function addStateHandler(handler) {
+    scrollSpy.spySetState.push(handler);
+  },
+  addSpyHandler: function addSpyHandler(handler, scrollSpyContainer) {
+    var container = scrollSpy.scrollSpyContainers[scrollSpy.scrollSpyContainers.indexOf(scrollSpyContainer)];
+
+    if (!container.spyCallbacks) {
+      container.spyCallbacks = [];
+    }
+
+    container.spyCallbacks.push(handler);
+
+    handler(scrollSpy.currentPositionY(scrollSpyContainer));
+  },
+  updateStates: function updateStates() {
+    scrollSpy.spySetState.forEach(function (s) {
+      return s();
+    });
+  },
+  unmount: function unmount(stateHandler, spyHandler) {
+    scrollSpy.scrollSpyContainers.forEach(function (c) {
+      return c.spyCallbacks && c.spyCallbacks.length && c.spyCallbacks.splice(c.spyCallbacks.indexOf(spyHandler), 1);
+    });
+
+    if (scrollSpy.spySetState && scrollSpy.spySetState.length) {
+      scrollSpy.spySetState.splice(scrollSpy.spySetState.indexOf(stateHandler), 1);
+    }
+
+    document.removeEventListener('scroll', scrollSpy.scrollHandler);
+  },
+
+
+  update: function update() {
+    return scrollSpy.scrollSpyContainers.forEach(function (c) {
+      return scrollSpy.scrollHandler(c);
+    });
+  }
+};
+
+exports.default = scrollSpy;
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/scroller.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/scroller.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-scroll/modules/mixins/utils.js");
+
+var _utils2 = _interopRequireDefault(_utils);
+
+var _animateScroll = __webpack_require__(/*! ./animate-scroll */ "./node_modules/react-scroll/modules/mixins/animate-scroll.js");
+
+var _animateScroll2 = _interopRequireDefault(_animateScroll);
+
+var _scrollEvents = __webpack_require__(/*! ./scroll-events */ "./node_modules/react-scroll/modules/mixins/scroll-events.js");
+
+var _scrollEvents2 = _interopRequireDefault(_scrollEvents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var __mapped = {};
+var __activeLink = void 0;
+
+exports.default = {
+
+  unmount: function unmount() {
+    __mapped = {};
+  },
+
+  register: function register(name, element) {
+    __mapped[name] = element;
+  },
+
+  unregister: function unregister(name) {
+    delete __mapped[name];
+  },
+
+  get: function get(name) {
+    return __mapped[name] || document.getElementById(name) || document.getElementsByName(name)[0] || document.getElementsByClassName(name)[0];
+  },
+
+  setActiveLink: function setActiveLink(link) {
+    return __activeLink = link;
+  },
+
+  getActiveLink: function getActiveLink() {
+    return __activeLink;
+  },
+
+  scrollTo: function scrollTo(to, props) {
+
+    var target = this.get(to);
+
+    if (!target) {
+      console.warn("target Element not found");
+      return;
+    }
+
+    props = _extends({}, props, { absolute: false });
+
+    var containerId = props.containerId;
+    var container = props.container;
+
+    var containerElement = void 0;
+    if (containerId) {
+      containerElement = document.getElementById(containerId);
+    } else if (container && container.nodeType) {
+      containerElement = container;
+    } else {
+      containerElement = document;
+    }
+
+    props.absolute = true;
+
+    var scrollOffset = _utils2.default.scrollOffset(containerElement, target) + (props.offset || 0);
+
+    /*
+     * if animate is not provided just scroll into the view
+     */
+    if (!props.smooth) {
+      if (_scrollEvents2.default.registered['begin']) {
+        _scrollEvents2.default.registered['begin'](to, target);
+      }
+
+      if (containerElement === document) {
+        window.scrollTo(0, scrollOffset);
+      } else {
+        containerElement.scrollTop = scrollOffset;
+      }
+
+      if (_scrollEvents2.default.registered['end']) {
+        _scrollEvents2.default.registered['end'](to, target);
+      }
+
+      return;
+    }
+
+    /*
+     * Animate scrolling
+     */
+
+    _animateScroll2.default.animateTopScroll(scrollOffset, props, to, target);
+  }
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/smooth.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/smooth.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  /*
+   * https://github.com/oblador/angular-scroll (duScrollDefaultEasing)
+   */
+  defaultEasing: function defaultEasing(x) {
+    if (x < 0.5) {
+      return Math.pow(x * 2, 2) / 2;
+    }
+    return 1 - Math.pow((1 - x) * 2, 2) / 2;
+  },
+  /*
+   * https://gist.github.com/gre/1650294
+   */
+  // no easing, no acceleration
+  linear: function linear(x) {
+    return x;
+  },
+  // accelerating from zero velocity
+  easeInQuad: function easeInQuad(x) {
+    return x * x;
+  },
+  // decelerating to zero velocity
+  easeOutQuad: function easeOutQuad(x) {
+    return x * (2 - x);
+  },
+  // acceleration until halfway, then deceleration
+  easeInOutQuad: function easeInOutQuad(x) {
+    return x < .5 ? 2 * x * x : -1 + (4 - 2 * x) * x;
+  },
+  // accelerating from zero velocity 
+  easeInCubic: function easeInCubic(x) {
+    return x * x * x;
+  },
+  // decelerating to zero velocity π
+  easeOutCubic: function easeOutCubic(x) {
+    return --x * x * x + 1;
+  },
+  // acceleration until halfway, then deceleration 
+  easeInOutCubic: function easeInOutCubic(x) {
+    return x < .5 ? 4 * x * x * x : (x - 1) * (2 * x - 2) * (2 * x - 2) + 1;
+  },
+  // accelerating from zero velocity 
+  easeInQuart: function easeInQuart(x) {
+    return x * x * x * x;
+  },
+  // decelerating to zero velocity 
+  easeOutQuart: function easeOutQuart(x) {
+    return 1 - --x * x * x * x;
+  },
+  // acceleration until halfway, then deceleration
+  easeInOutQuart: function easeInOutQuart(x) {
+    return x < .5 ? 8 * x * x * x * x : 1 - 8 * --x * x * x * x;
+  },
+  // accelerating from zero velocity
+  easeInQuint: function easeInQuint(x) {
+    return x * x * x * x * x;
+  },
+  // decelerating to zero velocity
+  easeOutQuint: function easeOutQuint(x) {
+    return 1 + --x * x * x * x * x;
+  },
+  // acceleration until halfway, then deceleration 
+  easeInOutQuint: function easeInOutQuint(x) {
+    return x < .5 ? 16 * x * x * x * x * x : 1 + 16 * --x * x * x * x * x;
+  }
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-scroll/modules/mixins/utils.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-scroll/modules/mixins/utils.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var pushHash = function pushHash(hash) {
+  hash = hash ? hash.indexOf("#") === 0 ? hash : "#" + hash : "";
+
+  if (history.pushState) {
+    var loc = window.location;
+    history.pushState(null, null, hash ? loc.pathname + loc.search + hash : // remove hash
+    loc.pathname + loc.search);
+  } else {
+    location.hash = hash;
+  }
+};
+
+var getHash = function getHash() {
+  return window.location.hash.replace(/^#/, "");
+};
+
+var filterElementInContainer = function filterElementInContainer(container) {
+  return function (element) {
+    return container.contains ? container != element && container.contains(element) : !!(container.compareDocumentPosition(element) & 16);
+  };
+};
+
+var scrollOffset = function scrollOffset(c, t) {
+  return c === document ? t.getBoundingClientRect().top + (window.scrollY || window.pageYOffset) : getComputedStyle(c).position !== "static" ? t.offsetTop : t.offsetTop - c.offsetTop;
+};
+exports.default = {
+  pushHash: pushHash,
+  getHash: getHash,
+  filterElementInContainer: filterElementInContainer,
+  scrollOffset: scrollOffset
+};
 
 /***/ }),
 

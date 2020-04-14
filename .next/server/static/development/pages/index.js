@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -315,7 +315,7 @@ const Index = () => {
     },
     __self: undefined
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/user'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/'),
     color: "primary",
     __source: {
       fileName: _jsxFileName,
@@ -323,7 +323,7 @@ const Index = () => {
     },
     __self: undefined
   }, "Quero antecipar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/producer'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/'),
     color: "secondary",
     __source: {
       fileName: _jsxFileName,
@@ -338,7 +338,7 @@ const Index = () => {
     },
     __self: undefined
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/user'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/'),
     color: "third",
     __source: {
       fileName: _jsxFileName,
@@ -403,110 +403,125 @@ const Index = () => {
       lineNumber: 38
     },
     __self: undefined
-  }, "Vantagens para quem investe:"), __jsx("img", {
+  }, __jsx("div", {
+    className: "buttons-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/'),
+    color: "sixty",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  }, "Quero antecipar")), "Vantagens para quem investe:"), __jsx("img", {
     src: "/rentabilidade.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 44
     },
     __self: undefined
-  })), __jsx("div", {
-    className: "funciona-container",
+  }), __jsx("div", {
+    className: "buttons-container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
+    },
+    __self: undefined
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/'),
+    color: "sixty",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: undefined
+  }, "Quero investir"))), __jsx("div", {
+    className: "funciona-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
     },
     __self: undefined
   }, __jsx("div", {
     className: "poligono-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 52
     },
     __self: undefined
   }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 53
     },
     __self: undefined
   }, "Como funciona a plataforma?"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 54
     },
     __self: undefined
   }, "Conte com toda a seguran\xE7a, agilidade ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 54
     },
     __self: undefined
   }), "e praticidade na libera\xE7\xE3o do seu processo ganho."), __jsx("img", {
     src: "/trabalhador.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 57
     },
     __self: undefined
   })), __jsx("div", {
     className: "duvidas-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 59
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 60
     },
     __self: undefined
   }, "T\xEAm d\xFAvidas ?"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 61
     },
     __self: undefined
-  }, "Queremos te ajudar a resolv\xEA-las"), __jsx("div", {
-    className: "buttons-container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/user'),
-    color: "secondary",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: undefined
-  }, "Quero antecipar")), "              ", __jsx("img", {
+  }, "Queremos te ajudar a resolv\xEA-las"), __jsx("img", {
     src: "/duvidas.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 62
     },
     __self: undefined
   })), __jsx("div", {
     className: "parceiros-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 65
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 66
     },
     __self: undefined
   }, " Seja um parceiro JusCredit"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 67
     },
     __self: undefined
   }, "Indique cr\xE9ditos trabalhistas eleg\xEDveis e ganhe conosco."), __jsx(_components_Input_Input__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -515,22 +530,22 @@ const Index = () => {
     tabIndex: -1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 68
     },
     __self: undefined
   }), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/'),
     color: "fourth",
     tabIndex: -1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 69
     },
     __self: undefined
   }, "Enviar"))), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 72
     },
     __self: undefined
   }))));
@@ -551,7 +566,7 @@ const Index = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*******************************!*\
   !*** multi ./pages/index.tsx ***!
   \*******************************/

@@ -5,10 +5,10 @@ import StyledInput from '../../Input/Input';
 import Button from '../../Button/Button';
 
 const stringMap = new Map([
-    ['user', {
+    ['cliente', {
         cardTitle: 'Cadastrando meus dados',
     }],
-    ['producer', {
+    ['investidor', {
         cardTitle: 'Cadastrando meus dados',
     }],
     ['update-producer', {

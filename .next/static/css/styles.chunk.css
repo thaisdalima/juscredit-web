@@ -16,6 +16,7 @@
   padding-bottom: 24px;
   justify-content: space-between;
   display: flex;
+  align-items: center;
   padding-left: 10em;
   padding-right: 10em;
   transition: background-color 0.5s linear;
@@ -37,7 +38,7 @@
 
 .white-navbar {
   background-color: white;
-  background: #FFFFFF;
+  background: #395E66;
   padding-top: 24px;
   padding-bottom: 24px;
   justify-content: space-between;
@@ -69,7 +70,7 @@
     opacity: 0.7; }
 
 .mobile-link-container {
-  background: #FFFFFF;
+  background: #6666;
   display: flex;
   flex-direction: column;
   padding: 0px 24px 16px 24px;
@@ -92,7 +93,7 @@
     display: none; } }
 
 .entrar {
-  font: Regular 24px/63px Muli;
+  font-family: Muli;
   letter-spacing: 0;
   color: #53B67F;
   opacity: 1;
@@ -201,7 +202,8 @@
 body {
   min-width: 768px;
   padding-block-end: initial;
-  flex-direction: row; }
+  flex-direction: row;
+  overflow-x: hidden; }
 
 .map-container {
   padding: 0 6.5em;
@@ -307,8 +309,8 @@ body {
 
 .antecipar {
   padding: 0 10em;
-  position: relative;
-  padding-bottom: 110px; }
+  padding-bottom: 110px;
+  position: relative; }
   .antecipar h1 {
     margin-top: 50px;
     text-align: left;
@@ -329,7 +331,7 @@ body {
     opacity: 1;
     font-size: 25px;
     font-weight: 200;
-    margin-bottom: 1px;
+    margin-bottom: 20px;
     margin-left: 0px; }
   .antecipar h3 {
     text-align: left;
@@ -428,115 +430,21 @@ body {
     background: url("/poligono.svg");
     z-index: -1;
     background-size: cover; }
-
-.card {
-  margin: 100px 15em;
-  padding: 56px;
-  border-radius: 32px;
-  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
-  position: relative;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border-radius: 12px;
-  opacity: 1;
-  font-family: Muli;
-  color: #395E66; }
-  .card.success {
-    margin: 100px 25em; }
-
-.card-title {
-  position: absolute;
-  top: -40px;
-  display: flex;
-  padding: 8px 56px;
-  background: #086C7B;
-  border-radius: 20px;
-  color: white;
-  font-size: 24px;
-  margin-left: calc(35% - 68px); }
-  .card-title.success {
-    margin-left: calc(31% - 68px);
-    background-color: #2e8700; }
-
-.form-title {
-  display: flex;
-  flex: 0.5;
-  max-width: 50%;
-  margin-top: 20px;
-  color: #2e8700; }
-  .form-title.success {
-    max-width: none; }
-
-.row {
-  display: flex;
-  justify-content: flex-start; }
-  .row :first-child {
-    margin-right: 70px; }
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  width: 285px; }
-  .form-group label {
-    font-weight: bold; }
-  .form-group input {
-    margin-bottom: 8px; }
-  .form-group span {
-    font-size: 12px;
-    color: indianred;
-    font-weight: bold; }
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 44px; }
-  .button-container button {
-    width: 285px; }
-
-.choice-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-  justify-content: center; }
-  .choice-container span {
-    min-width: 300px; }
-  .choice-container button {
-    min-width: 200px; }
-
-.confirmation-container {
-  display: flex;
-  align-items: flex-end; }
-  .confirmation-container button {
-    border: none;
-    padding: 0 16px;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-family: 'Muli';
-    cursor: pointer;
-    height: 20px; }
-
-.not-received {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  margin-top: 16px; }
-  .not-received span {
-    font-weight: bold;
-    color: #2e8700; }
-  .not-received a {
-    color: #2e8700;
-    text-decoration: underline;
-    cursor: pointer; }
-
-.contact-info {
-  color: #848484;
-  max-width: 70%; }
-
-.community-info {
-  max-width: 80%; }
-
-.finish-container {
-  display: flex;
-  justify-content: center; }
+  @media (max-width: 790px) {
+    .antecipar .map-container {
+      padding: 0 24px; }
+    .antecipar .antecipar {
+      flex-direction: column;
+      padding: 50px 24px; }
+    .antecipar .differential-container {
+      height: auto;
+      flex-direction: column;
+      display: flex; }
+      .antecipar .differential-container:nth-child(even) {
+        flex-direction: column-reverse; }
+    .antecipar .map-loading-container {
+      width: fit-content;
+      height: fit-content; } }
 
 .button {
   border: none;
@@ -583,6 +491,16 @@ body {
     border-radius: 40px; }
   .button:hover {
     opacity: 0.7; }
+  .button.sixty {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53B67F, #086C7B);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    color: #086C7B;
+    border: solid 3px transparent;
+    border-radius: 100rem;
+    background-color: white;
+    margin-left: 390px; }
 
 button:disabled,
 .button[disabled] {

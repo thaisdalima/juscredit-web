@@ -19,11 +19,11 @@ const Index = () => {
                      <h1>Antecipe seu </h1>
                          <h1>crédito trabalhista</h1><h2>Têm um processo ganho? Receba agora</h2>       
                     <div className="buttons-container">
-                    <Button onClick={()=> Router.push('/signup/user')} color="primary">Quero antecipar</Button> 
-                   <Button onClick={()=> Router.push('/signup/producer')} color="secondary">Quero investir</Button>
+                    <Button onClick={()=> Router.push('/')} color="primary">Quero antecipar</Button> 
+                   <Button onClick={()=> Router.push('/')} color="secondary">Quero investir</Button>
     
                 <div className="cursor-container">
-                 <Button onClick={()=> Router.push('/signup/user')} color="third" ><img src="/cursor.svg"/>Conheça as vantagens</Button>
+                 <Button onClick={()=> Router.push('/')} color="third" ><img src="/cursor.svg"/>Conheça as vantagens</Button>
                         </div>
                 </div>
                 </div>
@@ -36,9 +36,15 @@ const Index = () => {
                </h2>
                             <img src="/agilidade.svg"/>
                             <h2>
+                            <div className="buttons-container"> 
+                    <Button onClick={()=> Router.push('/')} color="sixty">Quero antecipar</Button>
+</div>
                    Vantagens para quem investe:
                </h2>
                             <img src="/rentabilidade.svg"/>
+                            <div className="buttons-container"> 
+                    <Button onClick={()=> Router.push('/')} color="sixty">Quero investir</Button>
+</div>
                                       
                </div>
                      
@@ -53,17 +59,14 @@ const Index = () => {
                 <div className="duvidas-container">   
                     <h1>Têm dúvidas ?</h1>
                      <h2>Queremos te ajudar a resolvê-las</h2>
-                    <div className="buttons-container"> 
-                    <Button onClick={()=> Router.push('/signup/user')} color="secondary">Quero antecipar</Button>
-</div>              <img src="/duvidas.svg"/>
+                        <img src="/duvidas.svg"/>
                     
                     </div> 
-
                     <div className= "parceiros-container">
                         <h1> Seja um parceiro JusCredit</h1>
                         <h2>Indique créditos trabalhistas elegíveis e ganhe conosco.</h2>
                         <StyledInput mask={null} placeholder="   Insira aqui seu e-mail" tabIndex={-1}/>
-<Button onClick={()=> Router.push('/be-part')}color="fourth" tabIndex={-1}>Enviar</Button>
+<Button onClick={()=> Router.push('/')}color="fourth" tabIndex={-1}>Enviar</Button>
 </div> 
            </div>
                 <br/>

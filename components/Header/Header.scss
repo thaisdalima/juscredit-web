@@ -18,6 +18,7 @@
   padding-bottom: 24px;
   justify-content: space-between;
   display: flex;
+  align-items: center;
   padding-left: 10em;
   padding-right:10em;
   transition: background-color 0.5s linear;
@@ -43,7 +44,7 @@
 
 .white-navbar {
   background-color: white;
-  background: #FFFFFF;
+  background: #395E66;
     padding-top: 24px;
     padding-bottom: 24px;
     justify-content: space-between;
@@ -80,7 +81,7 @@ display: flex;
   display: none;
 }
 .mobile-link-container {      
-  background: #FFFFFF;
+  background: #6666;
   display: flex;
   flex-direction: column;
   padding: 0px 24px 16px 24px;
@@ -93,7 +94,7 @@ display: flex;
     background-color: white;
     .link {
       color: #666;
-  
+
 
     }
   }
@@ -115,7 +116,7 @@ display: flex;
 }
 
 .entrar{
-  font: Regular 24px/63px Muli;
+  font-family: Muli;
   letter-spacing: 0;
   color: #53B67F;
   opacity: 1;

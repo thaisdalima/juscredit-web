@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1041,126 +1041,14 @@ const ESCAPE_LOOKUP={'&':'\\u0026','>':'\\u003e','<':'\\u003c','\u2028':'\\u2028
 
 /***/ }),
 
-/***/ "./node_modules/next/document.js":
+/***/ 2:
 /*!***************************************!*\
-  !*** ./node_modules/next/document.js ***!
+  !*** multi next/dist/pages/_document ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./dist/pages/_document */ "./node_modules/next/dist/pages/_document.js")
-
-
-/***/ }),
-
-/***/ "./pages/_document.tsx":
-/*!*****************************!*\
-  !*** ./pages/_document.tsx ***!
-  \*****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/document */ "./node_modules/next/document.js");
-/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles.scss */ "./pages/styles.scss");
-/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\Thais Linda\\juscredit-web\\pages\\_document.tsx";
-
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (class extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
-  static async getInitialProps(ctx) {
-    const initialProps = await next_document__WEBPACK_IMPORTED_MODULE_2___default.a.getInitialProps(ctx);
-    return _objectSpread({}, initialProps);
-  }
-
-  render() {
-    return __jsx("html", {
-      lang: "en",
-      className: "jsx-1624000227",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 14
-      },
-      __self: this
-    }, __jsx("link", {
-      href: "https://fonts.googleapis.com/css?family=Muli|Overpass&display=swap",
-      rel: "stylesheet",
-      className: "jsx-1624000227",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Head"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16
-      },
-      __self: this
-    }), __jsx("body", {
-      className: "jsx-1624000227",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20
-      },
-      __self: this
-    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22
-      },
-      __self: this
-    }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 23
-      },
-      __self: this
-    })), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-      id: "1624000227",
-      __self: this
-    }, "@font-face{font-family:'Overpass','Muli','Regular';src:url('/fonts/Overpass-Regular.ttf');src:url('/fonts/Muli-Regular.ttf');src:url('/fonts/Muli-Light.ttf');src:url('/fonts/Overpass-Light.ttf');src:url('/fonts/Regular2.ttf');}html{font-family:'Overpass','Muli','Regular';font-display:swap;}body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcVGhhaXMgTGluZGFcXGp1c2NyZWRpdC13ZWJcXHBhZ2VzXFxfZG9jdW1lbnQudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQTJCb0MsQUFHOEQsQUFRQyxBQUtyQyxTQUNiLCtCQWIrQyxBQVFyQixrQkFDdEIscUJBUnVDLG1DQUNGLGlDQUNJLHFDQUNOLCtCQUNuQyIsImZpbGUiOiJDOlxcVXNlcnNcXFRoYWlzIExpbmRhXFxqdXNjcmVkaXQtd2ViXFxwYWdlc1xcX2RvY3VtZW50LnRzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBEb2N1bWVudCwgeyBIZWFkLCBNYWluLCBOZXh0U2NyaXB0IH0gZnJvbSAnbmV4dC9kb2N1bWVudCdcclxuaW1wb3J0ICcuL3N0eWxlcy5zY3NzJ1xyXG5cclxuXHJcbmV4cG9ydCBkZWZhdWx0IGNsYXNzIGV4dGVuZHMgRG9jdW1lbnQge1xyXG4gICAgc3RhdGljIGFzeW5jIGdldEluaXRpYWxQcm9wcyhjdHgpIHtcclxuICAgICAgICBjb25zdCBpbml0aWFsUHJvcHMgPSBhd2FpdCBEb2N1bWVudC5nZXRJbml0aWFsUHJvcHMoY3R4KVxyXG4gICAgICAgIHJldHVybiB7IC4uLmluaXRpYWxQcm9wcyB9XHJcbiAgICB9XHJcblxyXG4gICAgXHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPGh0bWwgbGFuZz1cImVuXCI+XHJcbiAgICAgICAgICAgICAgIDxsaW5rIGhyZWY9XCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9TXVsaXxPdmVycGFzcyZkaXNwbGF5PXN3YXBcIiByZWw9XCJzdHlsZXNoZWV0XCIvPlxyXG4gICAgICAgICAgICAgICAgPEhlYWQ+XHJcbiAgICAgICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICA8L0hlYWQ+XHJcbiAgICAgICAgICAgIFxyXG4gICAgICAgICAgICAgICAgPGJvZHk+ICBcclxuXHJcbiAgICAgICAgICAgICAgICA8TWFpbiAvPlxyXG4gICAgICAgICAgICAgICAgICAgIDxOZXh0U2NyaXB0IC8+XHJcblxyXG4gICAgICAgICAgICAgICAgICAgIDwvYm9keT5cclxuXHJcblxyXG4gICAgICAgICAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+IHtgXHJcbiAgICAgICAgICAgICAgICBAZm9udC1mYWNlIHtcclxuICAgICAgICAgICAgICAgICAgICBmb250LWZhbWlseTonT3ZlcnBhc3MnLCAnTXVsaScsICdSZWd1bGFyJztcclxuICAgICAgICAgICAgICAgICAgICBzcmM6IHVybCgnL2ZvbnRzL092ZXJwYXNzLVJlZ3VsYXIudHRmJyk7XHJcbiAgICAgICAgICAgICAgICAgICAgc3JjOiB1cmwoJy9mb250cy9NdWxpLVJlZ3VsYXIudHRmJyk7XHJcbiAgICAgICAgICAgICAgICAgICAgc3JjOiB1cmwoJy9mb250cy9NdWxpLUxpZ2h0LnR0ZicpO1xyXG4gICAgICAgICAgICAgICAgICAgIHNyYzogdXJsKCcvZm9udHMvT3ZlcnBhc3MtTGlnaHQudHRmJyk7XHJcbiAgICAgICAgICAgICAgICAgICAgc3JjOiB1cmwoJy9mb250cy9SZWd1bGFyMi50dGYnKTtcclxuICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgIGh0bWwge1xyXG4gICAgICAgICAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnT3ZlcnBhc3MnLCAnTXVsaScsICdSZWd1bGFyJztcclxuICAgICAgICAgICAgICAgICAgICBmb250LWRpc3BsYXk6IHN3YXA7XHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgIFxyXG4gICAgICAgICAgICAgICAgYm9keSB7XHJcbiAgICAgICAgICAgICAgICBtYXJnaW46IDA7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgYH1cclxuICAgICAgPC9zdHlsZT5cclxuICAgICAgICAgICAgXHJcbiAgICAgICAgICAgIDwvaHRtbD5cclxuICAgICAgICApXHJcbiAgICB9XHJcbn0iXX0= */\n/*@ sourceURL=C:\\\\Users\\\\Thais Linda\\\\juscredit-web\\\\pages\\\\_document.tsx */"));
-  }
-
-});
-
-/***/ }),
-
-/***/ "./pages/styles.scss":
-/*!***************************!*\
-  !*** ./pages/styles.scss ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ 1:
-/*!**********************************************!*\
-  !*** multi private-next-pages/_document.tsx ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! private-next-pages/_document.tsx */"./pages/_document.tsx");
+module.exports = __webpack_require__(/*! next/dist/pages/_document */"./node_modules/next/dist/pages/_document.js");
 
 
 /***/ }),
@@ -1195,17 +1083,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("styled-jsx/server");
-
-/***/ }),
-
-/***/ "styled-jsx/style":
-/*!***********************************!*\
-  !*** external "styled-jsx/style" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("styled-jsx/style");
 
 /***/ }),
 
