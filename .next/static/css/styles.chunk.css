@@ -199,5 +199,325 @@
   .footer-logo {
     display: none; } }
 
+body {
+  min-width: 768px;
+  padding-block-end: initial;
+  flex-direction: row;
+  overflow-x: hidden; }
+
+.map-container {
+  padding: 0 6.5em;
+  padding-top: 120px;
+  height: 437px;
+  display: flex;
+  position: relative;
+  flex-direction: column; }
+  .map-container h1 {
+    margin-top: 0px;
+    text-align: left;
+    font-family: 'Overpass';
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 40px; }
+  .map-container h2 {
+    margin-top: 40px;
+    text-align: left;
+    font-family: 'Overpass';
+    letter-spacing: 0;
+    color: #9BADB1;
+    opacity: 1;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 50px;
+    margin-left: 40px; }
+  .map-container h3 {
+    text-align: left;
+    font-family: "Muli-Regular";
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 50%; }
+  .map-container h4 {
+    top: 6019px;
+    left: 593px;
+    width: 766px;
+    height: 38px;
+    text-align: left;
+    font-family: 'Muli';
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 50%; }
+
+.map {
+  position: absolute;
+  top: 0px;
+  bottom: 40px;
+  left: 0px;
+  right: 50px;
+  background: url("/anteceba.svg") no-repeat;
+  background-size: contain;
+  z-index: -1; }
+
+.buttons-container {
+  flex: 0.5;
+  justify-content: space-between; }
+  .buttons-container > .button {
+    margin-right: 24px;
+    min-width: 179px;
+    margin-bottom: 8px; }
+    .buttons-container > .button h1 {
+      margin-top: 0px;
+      text-align: left;
+      font-family: 'Overpass';
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1;
+      font-size: 50px;
+      font-weight: 200;
+      margin-bottom: 0;
+      margin-left: 40px; }
+    .buttons-container > .button h2 {
+      margin-top: 40px;
+      text-align: left;
+      font-family: 'Overpass';
+      letter-spacing: 0;
+      color: #9BADB1;
+      opacity: 1;
+      font-size: 25px;
+      font-weight: 200;
+      margin-bottom: 50px;
+      margin-left: 40px; }
+    .buttons-container > .button h3 {
+      text-align: left;
+      font-family: 'Muli';
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1; }
+    .buttons-container > .button h4 {
+      top: 6019px;
+      left: 593px;
+      width: 766px;
+      height: 38px;
+      text-align: left;
+      font-family: 'Muli';
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1; }
+
+.antecipar {
+  padding: 0 10em;
+  padding-bottom: 110px;
+  position: relative; }
+  .antecipar h1 {
+    margin-top: 50px;
+    text-align: left;
+    font-family: 'Overpass';
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 0px; }
+  .antecipar h2 {
+    margin-top: 20px;
+    text-align: left;
+    font-family: 'Overpass';
+    letter-spacing: 0;
+    color: #9BADB1;
+    opacity: 1;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    margin-left: 0px; }
+  .antecipar h3 {
+    text-align: left;
+    font-family: 'Muli';
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1; }
+  .antecipar h4 {
+    top: 6019px;
+    left: 593px;
+    width: 766px;
+    height: 38px;
+    text-align: left;
+    font-family: 'Muli';
+    letter-spacing: 0;
+    color: #395E66;
+    opacity: 1; }
+  .antecipar .duvidas-container {
+    padding-bottom: 110px;
+    flex-direction: column; }
+    .antecipar .duvidas-container h1 {
+      margin-top: 5px;
+      text-align: left;
+      font-family: 'Overpass';
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1;
+      font-size: 40px;
+      font-weight: 200;
+      margin-bottom: 0;
+      margin-left: 10px; }
+    .antecipar .duvidas-container h2 {
+      margin-top: 10px;
+      text-align: left;
+      font-family: 'Overpass';
+      letter-spacing: 0;
+      color: #9BADB1;
+      opacity: 1;
+      font-size: 25px;
+      font-weight: 200;
+      margin-bottom: 30px;
+      margin-left: 10px; }
+  .antecipar .poligono-container {
+    background-image: url("/poligono.svg");
+    resize: 'cover'; }
+  .antecipar .cursor-container {
+    position: flex;
+    text-align: right;
+    padding: 0 50em; }
+  .antecipar .parceiros-container {
+    top: 5547px;
+    left: 1033px;
+    right: 1000px;
+    width: 656px;
+    height: 65px;
+    padding-bottom: 200px;
+    padding-left: 180px;
+    text-align: center; }
+    .antecipar .parceiros-container h1 {
+      text-align: center;
+      font-family: 'Overpass';
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 1;
+      font-size: 40px;
+      position: center; }
+    .antecipar .parceiros-container h2 {
+      font-family: 'Muli';
+      text-align: center;
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 50%;
+      position: center;
+      margin-bottom: 20px; }
+    .antecipar .parceiros-container h3 {
+      text-align: center;
+      font-family: 'Muli';
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 50%; }
+    .antecipar .parceiros-container h4 {
+      top: 6019px;
+      left: 593px;
+      width: 766px;
+      height: 38px;
+      font-family: 'Muli';
+      letter-spacing: 0;
+      color: #395E66;
+      opacity: 50%; }
+  .antecipar .poligono-container {
+    position: absolute;
+    top: 0px;
+    bottom: 40px;
+    left: 0px;
+    right: -150px;
+    background: url("/poligono.svg");
+    z-index: -1;
+    background-size: cover; }
+  @media (max-width: 790px) {
+    .antecipar .map-container {
+      padding: 0 24px; }
+    .antecipar .antecipar {
+      flex-direction: column;
+      padding: 50px 24px; }
+    .antecipar .differential-container {
+      height: auto;
+      flex-direction: column;
+      display: flex; }
+      .antecipar .differential-container:nth-child(even) {
+        flex-direction: column-reverse; } }
+
+.button {
+  border: none;
+  padding: 0 16px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: 'Muli';
+  cursor: pointer;
+  height: 20px;
+  top: 10px;
+  margin: 0 0px;
+  left: 122px;
+  width: 134px;
+  height: 56px; }
+  .button.primary {
+    background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    opacity: 1;
+    margin-left: 35px; }
+  .button.secondary {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53B67F, #086C7B);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    color: #086C7B;
+    border: solid 3px transparent;
+    border-radius: 100rem;
+    background-color: white; }
+  .button.third {
+    font-family: 'Muli';
+    font-weight: bold;
+    letter-spacing: 0;
+    color: #086C7B;
+    opacity: 1;
+    background-color: white;
+    top: 563px;
+    left: 142px;
+    width: 234px;
+    height: 70px;
+    margin: 0 10px;
+    margin-top: 40px; }
+  .button.fourth {
+    background: transparent linear-gradient(254deg, #53B67F 0%, #086C7B 100%) 0% 0% no-repeat padding-box;
+    border-radius: 40px; }
+  .button:hover {
+    opacity: 0.7; }
+  .button.sixty {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53B67F, #086C7B);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    color: #086C7B;
+    border: solid 3px transparent;
+    border-radius: 100rem;
+    background-color: white;
+    margin-left: 390px; }
+
+button:disabled,
+.button[disabled] {
+  background: #CCC; }
+
+.juscredit-input {
+  top: 0px;
+  width: 230px;
+  background: 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 50px #030B6117;
+  opacity: 1;
+  border-radius: 51px;
+  opacity: 1;
+  margin-top: 5px;
+  align-items: center;
+  size: 31px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding-right: 50px;
+  padding-left: 60px;
+  height: 48px; }
+
 
 /*# sourceMappingURL=styles.chunk.css.map*/
