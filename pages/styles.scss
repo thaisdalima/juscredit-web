@@ -5,6 +5,7 @@ body {
   overflow-x:hidden;
   }
 
+
 .map-container {
   padding: 0 6.5em;
   padding-top: 120px;
@@ -137,6 +138,7 @@ body {
   padding: 0 10em;
   padding-bottom: 110px;
   position: relative;
+ 
   h1 {
     margin-top: 50px; 
     text-align: left;
@@ -188,7 +190,6 @@ body {
   .duvidas-container{
     padding-bottom: 110px;
     flex-direction: column;
-
 
       h1 {
         margin-top: 5px; 
@@ -312,10 +313,6 @@ background-size: cover;
     }
   }
   
-  .map-loading-container{
-    width: fit-content;
-    height: fit-content;
-  }
   }
 
 }

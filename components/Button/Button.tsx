@@ -1,8 +1,4 @@
 import './Button.scss'
+import '@trendmicro/react-buttons/dist/react-buttons.css';
 
-const Button = (props: React.ButtonHTMLAttributes<HTMLButtonElement> & { color: string, loading?: boolean | string }) => {
-    const { color, loading } = props;
-    return (<button className={`button ${color}`} {...props} >{loading === 'true' ? (<img height="32" width="32" src="/loading.svg" />) : props.children}</button>)
-}
-
-export default Button
+export { Button, ButtonGroup, ButtonToolbar } from '@trendmicro/react-buttons';
