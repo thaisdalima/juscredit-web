@@ -21,7 +21,8 @@
   padding-right: 10em;
   transition: background-color 0.5s linear;
   text-decoration-color: #395E66;
-  font-family: 'Muli'; }
+  font-family: 'Muli';
+  cursor: pointer; }
 
 .header-logo {
   height: 26px;
