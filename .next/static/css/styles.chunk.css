@@ -71,7 +71,7 @@
     opacity: 0.7; }
 
 .mobile-link-container {
-  background: #6666;
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   padding: 0px 24px 16px 24px;
@@ -81,7 +81,7 @@
   .mobile-link-container.white-navbar {
     background-color: white; }
     .mobile-link-container.white-navbar .link {
-      color: #666; }
+      color: #ffffff; }
 
 @media (max-width: 700px) {
   .menu-button {
@@ -100,105 +100,13 @@
   opacity: 1;
   top: 66px;
   left: 1681px;
-  width: 68px;
-  height: 30px;
+  width: 98px;
+  height: 40px;
   background: #53B67F14 0% 0% no-repeat padding-box;
   border: 1px solid #53B67F1A;
   border-radius: 25px;
-  opacity: 1; }
-
-.footer-container {
-  background: #53b67f;
-  background: radial-gradient(circle, #53b67f 0%, #086c7b 100%);
-  display: flex;
-  color: white;
-  border-top-right-radius: 200px 200px;
-  justify-content: space-around;
-  flex-direction: row; }
-  .footer-container .a {
-    font-family: 'Overpass';
-    color: #FFFFFF;
-    opacity: 1;
-    font-size: 40px;
-    font-weight: 200;
-    margin-bottom: 0;
-    margin-left: 10px; }
-  .footer-container .h3 {
-    font-family: 'Overpass';
-    color: #FFFFFF;
-    opacity: 0.5;
-    font-size: 40px;
-    font-weight: 200;
-    margin-bottom: 0;
-    margin-left: 10px; }
-
-.lead-container {
-  display: flex;
-  flex-direction: column;
-  flex: 0.2; }
-  .lead-container .a {
-    font-family: 'Overpass';
-    color: #FFFFFF;
-    opacity: 1;
-    font-size: 40px;
-    font-weight: 200;
-    margin-bottom: 0;
-    margin-left: 10px; }
-  .lead-container .h3 {
-    font-family: 'Overpass';
-    color: #9BADB1;
-    opacity: 0.5;
-    font-size: 40px;
-    font-weight: 200;
-    margin-bottom: 0;
-    margin-left: 10px; }
-
-.footer-logo {
-  width: 22px;
-  height: 22px; }
-
-.menu {
-  display: flex;
-  padding-left: 15px;
-  flex-direction: column;
-  flex: 0.2; }
-
-.contact {
-  padding-left: 15px;
-  flex: 0.2; }
-  .contact .a {
-    font-family: 'Overpass';
-    color: #FFFFFF;
-    opacity: 1;
-    font-size: 40px;
-    font-weight: 200;
-    margin-bottom: 0;
-    margin-left: 10px; }
-  .contact .h3 {
-    font-family: 'Overpass';
-    color: #FFFFFF;
-    opacity: 0.5;
-    font-size: 40px;
-    font-weight: 200;
-    margin-bottom: 0;
-    margin-left: 10px; }
-
-.abfintech {
-  margin-top: 100px; }
-
-.disclaimer-container {
-  align-content: center; }
-
-@media (max-width: 700px) {
-  .footer-container {
-    flex-direction: column;
-    padding: 40px 16px; }
-  .menu {
-    padding: 0; }
-  .contact {
-    padding: 0; }
-  .footer-logo {
-    display: none; } }
+  opacity: 1;
+  cursor: pointer; }
 
 body {
   min-width: 768px;
@@ -499,10 +407,116 @@ body {
     border-radius: 100rem;
     background-color: white;
     margin-left: 390px; }
+  .button .seven {
+    font-family: Muli;
+    letter-spacing: 0;
+    color: #53B67F;
+    opacity: 1;
+    top: 66px;
+    left: 1681px;
+    width: 68px;
+    height: 30px;
+    background: #53B67F14 0% 0% no-repeat padding-box;
+    border: 1px solid #53B67F1A;
+    border-radius: 25px;
+    opacity: 1; }
 
 button:disabled,
 .button[disabled] {
-  background: #CCC; }
+  background: red; }
+
+.footer-container {
+  background: #53b67f;
+  background: radial-gradient(circle, #53b67f 0%, #086c7b 100%);
+  display: flex;
+  color: white;
+  border-top-right-radius: 200px 200px;
+  justify-content: space-around;
+  flex-direction: row; }
+  .footer-container .a {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+  .footer-container .h3 {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+
+.lead-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0.2; }
+  .lead-container .a {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+  .lead-container .h3 {
+    font-family: 'Overpass';
+    color: #9BADB1;
+    opacity: 0.5;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+
+.footer-logo {
+  width: 22px;
+  height: 22px; }
+
+.menu {
+  display: flex;
+  padding-left: 15px;
+  flex-direction: column;
+  flex: 0.2; }
+
+.contact {
+  padding-left: 15px;
+  flex: 0.2; }
+  .contact .a {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+  .contact .h3 {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-left: 10px; }
+
+.abfintech {
+  margin-top: 100px; }
+
+.disclaimer-container {
+  align-content: center; }
+
+@media (max-width: 700px) {
+  .footer-container {
+    flex-direction: column;
+    padding: 40px 16px; }
+  .menu {
+    padding: 0; }
+  .contact {
+    padding: 0; }
+  .footer-logo {
+    display: none; } }
 
 .juscredit-input {
   top: 0px;

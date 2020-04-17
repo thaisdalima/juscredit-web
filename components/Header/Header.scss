@@ -83,7 +83,7 @@ display: flex;
   display: none;
 }
 .mobile-link-container {      
-  background: #6666;
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   padding: 0px 24px 16px 24px;
@@ -95,7 +95,7 @@ display: flex;
   &.white-navbar {
     background-color: white;
     .link {
-      color: #666;
+      color: #ffffff;
 
 
     }
@@ -124,10 +124,11 @@ display: flex;
   opacity: 1;
   top: 66px;
   left: 1681px;
-  width: 68px;
-  height: 30px;
+  width: 98px;
+  height: 40px;
   background: #53B67F14 0% 0% no-repeat padding-box;
 border: 1px solid #53B67F1A;
 border-radius: 25px;
 opacity: 1;
+cursor: pointer;
 }

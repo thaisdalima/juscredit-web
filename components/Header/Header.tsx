@@ -2,6 +2,8 @@ import './Header.scss'
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import Button from '../Button/Button';
+
 
 
 
@@ -23,8 +25,8 @@ const Header = () => {
     return (
         <>
             <nav className={"nav" + themeClass}>
-                 <img src="/logo.svg" className="header-logo"/>
-                <div className="link-container">
+            <a className="navbar-brand" href="/"> <img src="/logo.svg" className="header-logo" />
+</a>                <div className="link-container">
 
                     <Link to="funciona-container" > 
                         <a className="link">Como Funciona</a>
@@ -41,16 +43,12 @@ const Header = () => {
                         <a className="link">Parceiros</a>
                     </Link>
                     <Link href="/"> 
-                        <a className="link"> <button id="entrar" className="entrar">Entrar</button>
+                        <a className="link"> <Button onClick={()=> router.push('/contact')}id="entrar" className="entrar" color="seven">Entrar</Button>
 </a>
                     </Link>
                    
                 </div>
-                <div className="menu-button" onClick={toggleMenu}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill={themeClass === 'white-navbar' ? 'black' : 'white'} d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
-                    </svg>
-                </div>
+
             </nav>
             {openedMenu && (
                 <div className={"mobile-link-container " + themeClass}>
