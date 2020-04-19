@@ -6,7 +6,7 @@
   transition: color 0.5s linear;
   font-weight: Bold;
   letter-spacing: 0;
-  align-items: center;
+  max-width: 1125px;
 
   &:hover {
     opacity: 1;
@@ -16,7 +16,6 @@
   background: #FFFFFF;
   padding-top: 24px;
   padding-bottom: 24px;
-  justify-content: space-between;
   display: flex;
   align-items: center;
   padding-left: 10em;
@@ -25,6 +24,7 @@
   text-decoration-color: #395E66;
   font-family: 'Muli';
   cursor:pointer;
+  max-width: 1128px
 
 }
 .header-logo {
@@ -57,8 +57,15 @@
     text-decoration-color: #395E66;
     font-family: 'Muli';
 
-  
 }
+
+.navbar.white-navbar {
+  background-color: white;
+  .link {
+    color: black;
+  }
+}
+
 .link-container{
 top: 65px;
 left: 1012px;
@@ -102,7 +109,7 @@ display: flex;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 790px) {
   .menu-button {
     display: flex;
   }
@@ -117,6 +124,8 @@ display: flex;
   }
 }
 
+
+
 .entrar{
   font-family: Muli;
   letter-spacing: 0;
@@ -125,7 +134,7 @@ display: flex;
   top: 66px;
   left: 1681px;
   width: 98px;
-  height: 40px;
+  height: 33px;
   background: #53B67F14 0% 0% no-repeat padding-box;
 border: 1px solid #53B67F1A;
 border-radius: 25px;

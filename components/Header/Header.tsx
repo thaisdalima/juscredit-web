@@ -20,7 +20,6 @@ const Header = () => {
     const toggleMenu = () => {
         setOpenedMenu(!openedMenu)
     }
-
     
     return (
         <>
@@ -43,12 +42,16 @@ const Header = () => {
                         <a className="link">Parceiros</a>
                     </Link>
                     <Link href="/"> 
-                        <a className="link"> <Button onClick={()=> router.push('/contact')}id="entrar" className="entrar" color="seven">Entrar</Button>
+                        <a> <Button onClick={()=> router.push('/login')}id="entrar" className="entrar" color="seven">Entrar</Button>
 </a>
                     </Link>
                    
                 </div>
-
+                <div className="menu-button" onClick={toggleMenu}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill={themeClass === 'white-navbar' ? 'black' : 'white'} d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+                    </svg>
+                </div>
             </nav>
             {openedMenu && (
                 <div className={"mobile-link-container " + themeClass}>
