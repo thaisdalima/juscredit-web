@@ -41,11 +41,9 @@ const Header = () => {
                     <Link to="parceiros-container">
                         <a className="link">Parceiros</a>
                     </Link>
-                    <Link href="/"> 
-                        <a> <Button onClick={()=> router.push('/login')}id="entrar" className="entrar" color="seven">Entrar</Button>
-</a>
-                    </Link>
-                   
+          <a href="https://front-dot-juscredit-273101.ue.r.appspot.com/"/> 
+          <Button id="entrar" className="entrar" color="seven">Entrar</Button>
+                      
                 </div>
                 <div className="menu-button" onClick={toggleMenu}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

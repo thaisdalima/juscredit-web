@@ -1,3 +1,4 @@
+
 .footer-container {
   background: rgb(83,182,127);
   background: radial-gradient(circle, rgba(83,182,127,1) 0%, rgba(8,108,123,1) 100%);
@@ -6,7 +7,8 @@
   border-top-right-radius: 200px 200px;
   justify-content: space-around;
   flex-direction: row;  
- 
+  
+
   .a{
     font-family: 'Overpass';
     color: #FFFFFF;
@@ -51,6 +53,8 @@
 .contact {
   flex: 0.2;
   padding-right: 20px;
+  text-decoration: none;
+
   
   .a{
     font-family: 'Overpass';
@@ -83,10 +87,10 @@
   .direitos-container{
     margin-top: 75px;  
    }
-
-   .disclaimer-container{
-  align-content: center;
-  }
+   .disclaime{
+    margin-top: 180px;
+   }
+  
 
 @media(max-width: 700px) {
     .footer-container{

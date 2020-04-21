@@ -137,72 +137,72 @@ var Footer = function Footer() {
     className: "ajuda-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 22
     },
     __self: this
   }, "Ajuda e Atendimento"), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "duvidas-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 23
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }), "D\xFAvidas "), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "funciona-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }), "Como Funciona")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: this
   }, "Fale conosco"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
   }, __jsx("a", {
     href: "/contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }, __jsx("img", {
@@ -210,33 +210,33 @@ var Footer = function Footer() {
     className: "footer-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
-  })), " oi@juscredit.com.br")), __jsx("div", {
+  })), "  oi@juscredit.com.br")), __jsx("div", {
     className: "contact",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
     },
     __self: this
-  }, "Estamos online"), __jsx("p", {
+  }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
+    },
+    __self: this
+  }, "Estamos online"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
     },
     __self: this
   }, __jsx("a", {
     href: "https://www.facebook.com/juscredit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: this
   }, __jsx("img", {
@@ -244,20 +244,20 @@ var Footer = function Footer() {
     className: "footer-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
-  })), " Facebook "), __jsx("p", {
+  })), "  Facebook"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
   }, __jsx("a", {
     href: "https://www.instagram.com/juscredit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: this
   }, __jsx("img", {
@@ -265,7 +265,7 @@ var Footer = function Footer() {
     className: "footer-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: this
   })), " Instagram "), __jsx("p", {
@@ -289,18 +289,18 @@ var Footer = function Footer() {
       lineNumber: 50
     },
     __self: this
-  })), " LinkedIn "), __jsx("div", {
+  })), "  LinkedIn "), __jsx("div", {
     className: "direitos-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   }, __jsx("img", {
     src: "/direitos.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: this
   }))));
@@ -443,23 +443,14 @@ var Header = function Header() {
       lineNumber: 42
     },
     __self: this
-  }, "Parceiros")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    href: "/",
+  }, "Parceiros")), __jsx("a", {
+    href: "https://front-dot-juscredit-273101.ue.r.appspot.com/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
     },
     __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }, " ", __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    onClick: function onClick() {
-      return router.push('/login');
-    },
+  }), __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     id: "entrar",
     className: "entrar",
     color: "seven",
@@ -468,12 +459,12 @@ var Header = function Header() {
       lineNumber: 45
     },
     __self: this
-  }, "Entrar")))), __jsx("div", {
+  }, "Entrar")), __jsx("div", {
     className: "menu-button",
     onClick: toggleMenu,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 48
     },
     __self: this
   }, __jsx("svg", {
@@ -483,7 +474,7 @@ var Header = function Header() {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 49
     },
     __self: this
   }, __jsx("path", {
@@ -491,70 +482,70 @@ var Header = function Header() {
     d: "M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 50
     },
     __self: this
   })))), openedMenu && __jsx("div", {
     className: "mobile-link-container " + themeClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 55
     },
     __self: this
   }, __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 57
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 58
     },
     __self: this
   }, "Antecipar")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 60
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 61
     },
     __self: this
   }, "Investir")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 63
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 64
     },
     __self: this
   }, " Parceiros ")), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 66
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 67
     },
     __self: this
   }, "Entrar "))));

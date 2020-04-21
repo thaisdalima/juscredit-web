@@ -15,8 +15,9 @@ const Footer = () => (
             <a>Termos de uso Investidor</a>
             <div className="abfintech"> 
             <img src="/ABFintechs.svg"/> 
+            </div>  
             </div>
-           </div>
+
         <div className="ajuda-container">
             <h3>Ajuda e Atendimento</h3>
             <Link to="duvidas-container">
@@ -30,8 +31,8 @@ const Footer = () => (
           <h3>Fale conosco</h3>
           <p> 
           <a href="/contact"> 
-          <img src="/Grupo de máscara -9@2x.png" className="footer-logo"/>  
-          </a> oi@juscredit.com.br</p>
+          <img src="/Grupo de máscara -9@2x.png" className="footer-logo" />
+          </a>  oi@juscredit.com.br</p>
           </div>
 
           <div className="contact">
@@ -39,22 +40,20 @@ const Footer = () => (
             <p>
                 <a href="https://www.facebook.com/juscredit">
                 <img src="/Grupo de máscara -6@2x.png" className="footer-logo"/>
-                </a> Facebook </p>
+                </a>  Facebook</p>
                 <p>
                 <a href="https://www.instagram.com/juscredit">
                 <img src="/Grupo de máscara -7@2x.png" className="footer-logo"/>
                 </a> Instagram </p>
-
                 <p>
                 <a href="https://www.linkedin.com/company/juscredit">
                 <img src="/Grupo de máscara -19@2x.png" className="footer-logo"/>
-                </a> LinkedIn </p>
+               </a>  LinkedIn </p>
+                
                 <div className="direitos-container"> 
-                 <img src="/direitos.svg"/> 
+                 <img src="/direitos.svg"/>    
             </div>
-         
-           </div> 
-           
+            </div>           
     </footer>
 
 )
