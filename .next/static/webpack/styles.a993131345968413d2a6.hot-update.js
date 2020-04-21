@@ -29,7 +29,7 @@ webpackHotUpdate("styles",{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1587410110333");
+            injectCss(link, link.href.split("?")[0] + "?unix=1587440415438");
           });
       }
     }
@@ -37,10 +37,10 @@ webpackHotUpdate("styles",{
 
 /***/ }),
 
-/***/ "./pages/styles.scss":
-/*!***************************!*\
-  !*** ./pages/styles.scss ***!
-  \***************************/
+/***/ "./containers/Contact/contact.scss":
+/*!*****************************************!*\
+  !*** ./containers/Contact/contact.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -66,7 +66,7 @@ webpackHotUpdate("styles",{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1587410110255");
+            injectCss(link, link.href.split("?")[0] + "?unix=1587440415294");
           });
       }
     }
@@ -75,4 +75,4 @@ webpackHotUpdate("styles",{
 /***/ })
 
 })
-//# sourceMappingURL=styles.22d9885133af4f71bbf3.hot-update.js.map
+//# sourceMappingURL=styles.a993131345968413d2a6.hot-update.js.map
