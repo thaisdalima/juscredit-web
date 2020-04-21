@@ -30,7 +30,7 @@ const Footer = () => (
           <div>
           <h3>Fale conosco</h3>
           <p> 
-          <a href="/contact"> 
+          <a href="/"> 
           <img src="/Grupo de máscara -9@2x.png" className="footer-logo" />
           </a>  oi@juscredit.com.br</p>
           </div>
