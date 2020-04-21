@@ -180,7 +180,7 @@ var Footer = function Footer() {
       lineNumber: 27
     },
     __self: this
-  }), "D\xFAvidas "), __jsx("br", {
+  }), "D\xFAvidas"), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28

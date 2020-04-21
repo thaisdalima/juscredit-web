@@ -297,7 +297,7 @@ const Footer = () => __jsx("footer", {
     lineNumber: 27
   },
   __self: undefined
-}), "D\xFAvidas "), __jsx("br", {
+}), "D\xFAvidas"), __jsx("br", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 28
