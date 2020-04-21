@@ -41,8 +41,8 @@ const Header = () => {
                     <Link to="parceiros-container">
                         <a className="link">Parceiros</a>
                     </Link>
-          <a href="https://front-dot-juscredit-273101.ue.r.appspot.com/"/> 
-          <Button id="entrar" className="entrar" color="seven"> Entrar</Button>
+                    <Button id="entrar" className="entrar" color="seven"> 
+          <a href="https://front-dot-juscredit-273101.ue.r.appspot.com/"></a>Entrar</Button>
                       
                 </div>
                 <div className="menu-button" onClick={toggleMenu}>
