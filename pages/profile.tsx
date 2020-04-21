@@ -1,5 +1,4 @@
 import { auth } from "../utils/auth"
-import JwtDecode from 'jwt-decode'
 import Profile from "../containers/Profile/Profile"
 
 
