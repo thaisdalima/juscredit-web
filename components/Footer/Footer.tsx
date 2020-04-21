@@ -24,7 +24,7 @@ const Footer = () => (
             <a className="link"></a>Dúvidas </Link>
             <br/>
             <Link to="funciona-container">
-            <a className="link"></a>Como Funciona</Link>
+            <a className="link"></a> Como Funciona</Link>
           </div>
 
           <div>

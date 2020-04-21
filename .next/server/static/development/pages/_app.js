@@ -297,7 +297,7 @@ const Footer = () => __jsx("footer", {
     lineNumber: 27
   },
   __self: undefined
-}), "Como Funciona")), __jsx("div", {
+}), " Como Funciona")), __jsx("div", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 30
@@ -586,7 +586,7 @@ const Header = () => {
       lineNumber: 45
     },
     __self: undefined
-  }, "Entrar")), __jsx("div", {
+  }, " Entrar")), __jsx("div", {
     className: "menu-button",
     onClick: toggleMenu,
     __source: {

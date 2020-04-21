@@ -180,7 +180,7 @@ var Footer = function Footer() {
       lineNumber: 27
     },
     __self: this
-  }), "Como Funciona")), __jsx("div", {
+  }), " Como Funciona")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
@@ -459,7 +459,7 @@ var Header = function Header() {
       lineNumber: 45
     },
     __self: this
-  }, "Entrar")), __jsx("div", {
+  }, " Entrar")), __jsx("div", {
     className: "menu-button",
     onClick: toggleMenu,
     __source: {
