@@ -577,22 +577,15 @@ const Header = () => {
     },
     __self: undefined
   }, "Parceiros")), __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    id: "entrar",
     className: "entrar",
     color: "seven",
+    onClick: () => window.open('https://front-dot-juscredit-273101.ue.r.appspot.com/'),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
     },
     __self: undefined
-  }, __jsx("a", {
-    href: "https://front-dot-juscredit-273101.ue.r.appspot.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
-  }), "Entrar")), __jsx("div", {
+  }, "Entrar")), __jsx("div", {
     className: "menu-button",
     onClick: toggleMenu,
     __source: {

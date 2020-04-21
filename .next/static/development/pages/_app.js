@@ -450,22 +450,17 @@ var Header = function Header() {
     },
     __self: this
   }, "Parceiros")), __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    id: "entrar",
     className: "entrar",
     color: "seven",
+    onClick: function onClick() {
+      return window.open('https://front-dot-juscredit-273101.ue.r.appspot.com/');
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
     },
     __self: this
-  }, __jsx("a", {
-    href: "https://front-dot-juscredit-273101.ue.r.appspot.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }), "Entrar")), __jsx("div", {
+  }, "Entrar")), __jsx("div", {
     className: "menu-button",
     onClick: toggleMenu,
     __source: {
