@@ -61,7 +61,7 @@ const Index = () => {
                         <img src="/trabalhador.svg"/>  
                         </div>
                 <div className="duvidas-container">   
-                    <h1>Têm dúvidas ?</h1>
+                    <h1>Têm dúvidas?</h1>
                      <h2>Queremos te ajudar a resolvê-las</h2>
                         <img src="/duvidas.svg"/>
                     
