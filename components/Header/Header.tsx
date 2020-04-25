@@ -5,8 +5,6 @@ import { Link } from "react-scroll";
 import Button from '../Button/Button';
 
 
-
-
 const Header = () => {
     const [openedMenu, setOpenedMenu] = useState(false)
     const router = useRouter()
@@ -20,6 +18,8 @@ const Header = () => {
     const toggleMenu = () => {
         setOpenedMenu(!openedMenu)
     }
+
+    
     
     return (
         <>
@@ -46,25 +46,28 @@ const Header = () => {
                       
                 </div>
                 <div className="menu-button" onClick={toggleMenu}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill={themeClass === 'white-navbar' ? 'black' : 'white'} d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 10 27">
+                        <path fill={themeClass === 'white-navbar' ? 'white' : '#395E66'} d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
                     </svg>
                 </div>
             </nav>
             {openedMenu && (
                 <div className={"mobile-link-container " + themeClass}>
                   
-                    <Link href="#">
+                  <Link to="antecipar" > 
                         <a className="link">Antecipar</a>
+                        </Link>
+                        <br/>
+                    <Link to="duvidas-container">
+                        <a className="link">Dúvidas</a>
                     </Link>
-                    <Link href="#">
-                        <a className="link">Investir</a>
-                    </Link>
-                    <Link href="#">
+                    <br/>
+                    <Link to="parceiros-container">
                         <a className="link"> Parceiros </a>
                     </Link>
-                    <Link href="#">
-                        <a className="link">Entrar </a>
+                    <br/>
+                    <Link to="nav">
+                        <a className="entrar">Entrar </a>
                     </Link>
                    
                 </div>

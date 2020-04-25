@@ -23,10 +23,11 @@ const Footer = () => (
             <h3>Ajuda e Atendimento</h3>
             <a className="link"></a>Como Funciona</Link>
             <br/>
+            <div> 
             <Link to="duvidas-container">
             <a className="link"></a>Dúvidas</Link>
             <br/>
-        
+        </div>
           </div>
 
           <div>

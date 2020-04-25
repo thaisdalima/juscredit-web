@@ -5,9 +5,10 @@ import Head from 'next/head';
 import Router from 'next/router';
 import StyledInput from '../components/Input/Input';
 import { Link } from "react-scroll";
+import Modal from '../containers/Modal/modal-container';
+
 
 const Index = () => {
-
     return (
         <Fragment>
             <Head>
@@ -20,10 +21,10 @@ const Index = () => {
                      <h1>Antecipe seu </h1>
                          <h1>crédito trabalhista</h1><h2>Têm um processo ganho? Receba agora</h2>       
                     <div className="buttons-container">
-                    <Button onClick={()=> Router.push('/')} color="primary">Quero antecipar</Button> 
+                    <Button onClick={()=> Router.push('/')}color="primary">Quero antecipar</Button> 
                    <Button onClick={()=> Router.push('/')} color="secondary">Quero investir</Button>
-    
-                <div className="cursor-container">
+                   
+                    <div className="cursor-container">
                  <Button onClick={()=> Router.push('/')} color="third" ><img src="/cursor.svg"/>
                  <Link to="antecipar" > 
                         <a className="link">Conheça as vantagens</a>
@@ -80,5 +81,4 @@ const Index = () => {
 
     );
 }
-
 export default Index;

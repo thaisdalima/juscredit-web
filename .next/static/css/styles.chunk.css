@@ -6,7 +6,8 @@
   transition: color 0.5s linear;
   font-weight: Bold;
   letter-spacing: 0;
-  max-width: 1125px; }
+  max-width: 1125px;
+  font-family: 'Muli'; }
   .link:hover {
     opacity: 1; }
 
@@ -79,14 +80,17 @@
   background: #FFFFFF;
   display: flex;
   flex-direction: column;
-  padding: 0px 24px 16px 24px;
-  transition: background-color 0.5s linear; }
+  padding: 10px 55px 16px 154px;
+  transition: background-color 0.5s linear;
+  text-decoration: none;
+  font-family: 'Muli';
+  cursor: pointer; }
   .mobile-link-container .link {
     transition: color 0.5s linear; }
   .mobile-link-container.white-navbar {
     background-color: white; }
     .mobile-link-container.white-navbar .link {
-      color: #ffffff; }
+      color: black; }
 
 @media (max-width: 790px) {
   .menu-button {
@@ -477,6 +481,7 @@ button:disabled,
   display: flex;
   flex-direction: column;
   flex: 0.2;
+  color: white;
   cursor: pointer;
   text-decoration: none; }
 
