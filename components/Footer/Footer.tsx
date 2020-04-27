@@ -22,11 +22,10 @@ const Footer = () => (
         <Link to="funciona-container">
             <h3>Ajuda e Atendimento</h3>
             <a className="link"></a>Como Funciona</Link>
-            <br/>
             <div> 
+                <br/>
             <Link to="duvidas-container">
             <a className="link"></a>Dúvidas</Link>
-            <br/>
         </div>
           </div>
 

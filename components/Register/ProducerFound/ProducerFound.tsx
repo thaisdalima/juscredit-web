@@ -20,7 +20,6 @@ const ProducerFound = ({ producer, onSubmit }) => {
                         <p>{`${producer.address}, ${producer.city} - ${producer.state}`}</p>
                         <p>CEP {producer.zipcode}</p>
                     </div>
-                    <img src="/brazil.svg" />
                 </div>
 
 

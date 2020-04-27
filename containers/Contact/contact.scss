@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   h2,
   .email {
     color: #395E66;
@@ -34,13 +35,12 @@
         min-width: 200px;
         color: #395E66;
         
+        
     }
     button {
       border-radius: 30px;  
       color: #395E66;
       margin-top: 5px;
-
-
     }
 }
 }

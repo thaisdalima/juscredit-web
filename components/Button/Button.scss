@@ -83,9 +83,29 @@
   opacity: 1;
   }
 
+   &.eity {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53B67F, #086C7B);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    color: #086C7B ;
+    border: solid 3px transparent;
+    border-radius: 100rem;
+    background-color: white;
+    
+  }
+
 }
 button:disabled,
 .button[disabled] {
-    background: red;
+background: #9BADB140 0% 0% no-repeat padding-box;
+border-radius: 40px;
+opacity: 1;
+color: #395E66;
+top: 783px;
+left: 720px;
+width: 430px;
+size: 31px;
+height: 48px;
 
 }

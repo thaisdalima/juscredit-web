@@ -9,7 +9,6 @@
   max-width: 1125px;
   font-family: 'Muli';
 
-
   &:hover {
     opacity: 1;
   }
@@ -39,6 +38,7 @@
   display: flex;
   flex: 1;
   justify-content: space-around;
+margin-right: 40px;
 
 }
 .selected {
@@ -129,8 +129,6 @@ display: flex;
     display: none;
   }
 }
-
-
 
 .entrar{
   font-family: Muli;

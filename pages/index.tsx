@@ -3,13 +3,33 @@ import Button from '../components/Button/Button';
 import { Fragment } from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
-import StyledInput from '../components/Input/Input';
 import { Link } from "react-scroll";
-import Modal from '../containers/Modal/modal-container';
+import StyledInput from '../components/Input/Input';
+import React from "react";
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
+
 
 
 const Index = () => {
-    return (
+
+    const [open, setOpen] = React.useState(false);
+  
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+
+      
+       return (
         <Fragment>
             <Head>
                 <title>JusCredit - Home</title>
@@ -21,16 +41,72 @@ const Index = () => {
                      <h1>Antecipe seu </h1>
                          <h1>crédito trabalhista</h1><h2>Têm um processo ganho? Receba agora</h2>       
                     <div className="buttons-container">
-                    <Button onClick={()=> Router.push('/')}color="primary">Quero antecipar</Button> 
-                   <Button onClick={()=> Router.push('/')} color="secondary">Quero investir</Button>
-                   
-                    <div className="cursor-container">
+                         <Button  color="primary" onClick={handleClickOpen}>
+        Quero Antecipar
+      </Button>
+      <Dialog open={open} onClose={handleClose} aria-labelledby="antecipe-dialog-title">
+        <DialogTitle id="antecipe-dialog-title">Antecipe o seu crédito</DialogTitle>
+       <DialogContent>
+       <TextField
+         autoFocus
+         margin="dense"
+         id="name"
+         label="Email Address"
+         type="email"
+         fullWidth
+       />
+
+     </DialogContent>
+     
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Cancelar
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            Enviar
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      <Button  color="eity" onClick={handleClickOpen}>
+        Quero Investir
+      </Button>
+      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <DialogTitle id="form-dialog-title">Seja um investidor</DialogTitle>
+        <DialogContent>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Email @ "
+            type="email"
+            fullWidth
+          />
+             <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="CPF @ "
+            type="email"
+            fullWidth
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Cancelar
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            Enviar
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+    <div className="cursor-container">
                  <Button onClick={()=> Router.push('/')} color="third" ><img src="/cursor.svg"/>
                  <Link to="antecipar" > 
                         <a className="link">Conheça as vantagens</a>
                         </Link></Button>
                         </div>
-                </div>
                 </div>
                 <div className="antecipar">
                <div className="products-bg" /> 
@@ -42,15 +118,72 @@ const Index = () => {
                             <img src="/agilidade.svg"/>
                             <h2>
                             <div className="buttons-container"> 
-                    <Button onClick={()=> Router.push('/')} color="sixty">Quero antecipar</Button>
+                         <Button  color="sixty" onClick={handleClickOpen}>
+        Quero Antecipar
+      </Button>
+      <Dialog open={open} onClose={handleClose} aria-labelledby="antecipe-dialog-title">
+        <DialogTitle id="antecipe-dialog-title">Antecipe o seu crédito</DialogTitle>
+       <DialogContent>
+       <TextField
+         autoFocus
+         margin="dense"
+         id="name"
+         label="Email Address"
+         type="email"
+         fullWidth
+       />
+
+     </DialogContent>
+     
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Cancelar
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            Enviar
+          </Button>
+        </DialogActions>
+      </Dialog>
+
 </div>
                    Vantagens para quem investe:
                </h2>
                             <img src="/rentabilidade.svg"/>
                             <div className="buttons-container"> 
-                    <Button onClick={()=> Router.push('/')} color="sixty">Quero investir</Button>
-</div>
-                                      
+                            <Button  color="sixty" onClick={handleClickOpen}>
+        Quero Investir
+      </Button>
+      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <DialogTitle id="form-dialog-title">Seja um investidor</DialogTitle>
+        <DialogContent>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Email @ "
+            type="email"
+            fullWidth
+          />
+             <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="CPF @ "
+            type="email"
+            fullWidth
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Cancelar
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            Enviar
+          </Button>
+        </DialogActions>
+      </Dialog>
+</div>       
+
                </div>
                      
                     <div className="funciona-container">
@@ -70,10 +203,40 @@ const Index = () => {
                     <div className= "parceiros-container">
                         <h1> Seja um parceiro JusCredit</h1>
                         <h2>Indique créditos trabalhistas elegíveis e ganhe conosco.</h2>
-                        <StyledInput mask={null} placeholder="   Insira aqui seu e-mail" tabIndex={-1}/>
-<Button onClick={()=> Router.push('/')}color="fourth" tabIndex={-1}>Enviar</Button>
+        
+<div>
+      <Button  color="primary" onClick={handleClickOpen}>
+        Indicar
+      </Button>
+      <Dialog open={open} onClose={handleClose} aria-labelledby="parceiro-dialog-title">
+        <DialogTitle id="parceiro-dialog-title">Inscreva-se</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+          Você receberá um email para criação de senha e completar seu perfil
+          Iremos entrar em contato com você para confirmar suas informações.
+          </DialogContentText>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Email @ "
+            type="email"
+            fullWidth
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Cancelar
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            Enviar
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+
 </div> 
-           </div>
+           </div>   
                 <br/>
                 </p>
             </main>

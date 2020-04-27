@@ -1,5 +1,4 @@
 import '../RegisterForm.scss'
-
 import { FastField } from 'formik';
 import StyledInput from '../../Input/Input';
 import Button from '../../Button/Button';

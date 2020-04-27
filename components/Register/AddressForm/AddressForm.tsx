@@ -150,7 +150,7 @@ const AddressForm = ({ values, loading, onSubmit, profile, producer = null }) =>
                                 <div className="button-container">
 
                                     <Button
-                                        color="primary"
+                                        color="secundary"
                                         type="submit"
                                         tabIndex={1}
                                         loading={loading.toString()}

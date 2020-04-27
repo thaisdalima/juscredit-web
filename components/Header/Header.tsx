@@ -18,15 +18,12 @@ const Header = () => {
     const toggleMenu = () => {
         setOpenedMenu(!openedMenu)
     }
-
-    
     
     return (
         <>
             <nav className={"nav" + themeClass}>
             <a className="navbar-brand" href="/"> <img src="/logo.svg" className="header-logo" />
-</a>                <div className="link-container">
-
+</a>                <div className="link-container"> 
                     <Link to="funciona-container" > 
                         <a className="link">Como Funciona</a>
                         </Link>

@@ -9,7 +9,7 @@ const ProducerNotFound = ({ onSubmit }) => {
 
             <div className="card-content">
                 <h1 className="form-title success">
-                    Ops, você ainda não está cadastrado no MAPA!
+                   Obrigado
             </h1>
                 <p>Cadastre-se para começar a usufruir gratuitamente da plataforma</p>
                 <div className="button-container">
@@ -17,7 +17,6 @@ const ProducerNotFound = ({ onSubmit }) => {
                 </div>
             </div>
             <div className="background-container">
-            <img src="/lupa.png" />
             </div>
       
         </div>)
