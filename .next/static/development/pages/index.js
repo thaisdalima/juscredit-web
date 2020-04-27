@@ -14851,7 +14851,7 @@ var grid = Object(_compose__WEBPACK_IMPORTED_MODULE_1__["default"])(gridGap, gri
 /*!*******************************************************!*\
   !*** ./node_modules/@material-ui/system/esm/index.js ***!
   \*******************************************************/
-/*! exports provided: borders, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, breakpoints, compose, css, display, flexbox, flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf, grid, gridGap, gridColumnGap, gridRowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea, palette, color, bgcolor, positions, position, zIndex, top, right, bottom, left, shadows, sizing, width, maxWidth, minWidth, height, maxHeight, minHeight, sizeWidth, sizeHeight, boxSizing, spacing, createUnarySpacing, style, typography, fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign */
+/*! exports provided: borders, breakpoints, compose, css, display, flexbox, grid, palette, positions, shadows, sizing, spacing, style, typography, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf, gridGap, gridColumnGap, gridRowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea, color, bgcolor, position, zIndex, top, right, bottom, left, width, maxWidth, minWidth, height, maxHeight, minHeight, sizeWidth, sizeHeight, boxSizing, createUnarySpacing, fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33177,70 +33177,70 @@ var Index = function Index() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_3__["Fragment"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 30
     },
     __self: this
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 31
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 32
     },
     __self: this
   }, "JusCredit - Home")), __jsx("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 34
     },
     __self: this
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 35
     },
     __self: this
   }, __jsx("div", {
     className: "map-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 36
     },
     __self: this
   }, __jsx("div", {
     className: "map",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 37
     },
     __self: this
   }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 38
     },
     __self: this
   }, "Antecipe seu "), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 39
     },
     __self: this
   }, "cr\xE9dito trabalhista"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 39
     },
     __self: this
   }, "T\xEAm um processo ganho? Receba agora"), __jsx("div", {
     className: "buttons-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 40
     },
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33248,7 +33248,7 @@ var Index = function Index() {
     onClick: handleClickOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 41
     },
     __self: this
   }, "Quero Antecipar"), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -33257,20 +33257,20 @@ var Index = function Index() {
     "aria-labelledby": "antecipe-dialog-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 44
     },
     __self: this
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_11__["default"], {
     id: "antecipe-dialog-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 45
     },
     __self: this
   }, "Antecipe o seu cr\xE9dito"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 46
     },
     __self: this
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -33282,13 +33282,13 @@ var Index = function Index() {
     fullWidth: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 47
     },
     __self: this
   })), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 58
     },
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33296,7 +33296,7 @@ var Index = function Index() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 59
     },
     __self: this
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33304,7 +33304,7 @@ var Index = function Index() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 62
     },
     __self: this
   }, "Enviar"))), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33312,7 +33312,7 @@ var Index = function Index() {
     onClick: handleClickOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 68
     },
     __self: this
   }, "Quero Investir"), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -33321,20 +33321,20 @@ var Index = function Index() {
     "aria-labelledby": "form-dialog-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 71
     },
     __self: this
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_11__["default"], {
     id: "form-dialog-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 72
     },
     __self: this
   }, "Seja um investidor"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 73
     },
     __self: this
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -33346,7 +33346,7 @@ var Index = function Index() {
     fullWidth: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 74
     },
     __self: this
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -33358,13 +33358,13 @@ var Index = function Index() {
     fullWidth: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 82
     },
     __self: this
   })), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 91
     },
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33372,7 +33372,7 @@ var Index = function Index() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 92
     },
     __self: this
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33380,14 +33380,14 @@ var Index = function Index() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 95
     },
     __self: this
   }, "Enviar")))), __jsx("div", {
     className: "cursor-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 101
     },
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33397,86 +33397,86 @@ var Index = function Index() {
     color: "third",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 102
     },
     __self: this
   }, __jsx("img", {
     src: "/cursor.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 102
     },
     __self: this
   }), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_6__["Link"], {
     to: "antecipar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 103
     },
     __self: this
   }, __jsx("a", {
     className: "link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 104
     },
     __self: this
   }, "Conhe\xE7a as vantagens"))))), __jsx("div", {
     className: "antecipar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 108
     },
     __self: this
   }, __jsx("div", {
     className: "products-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 109
     },
     __self: this
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 110
     },
     __self: this
   }, " ", __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 110
     },
     __self: this
   }, "Mais valor para quem vende", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 110
     },
     __self: this
   }), "Simples para quem investe"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 112
     },
     __self: this
   }, "Vantagens para quem vende:"), __jsx("img", {
     src: "/agilidade.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 115
     },
     __self: this
   }), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 116
     },
     __self: this
   }, __jsx("div", {
     className: "buttons-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 117
     },
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33484,7 +33484,7 @@ var Index = function Index() {
     onClick: handleClickOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 118
     },
     __self: this
   }, "Quero Antecipar"), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -33493,20 +33493,20 @@ var Index = function Index() {
     "aria-labelledby": "antecipe-dialog-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 121
     },
     __self: this
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_11__["default"], {
     id: "antecipe-dialog-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 122
     },
     __self: this
   }, "Antecipe o seu cr\xE9dito"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 123
     },
     __self: this
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -33518,13 +33518,13 @@ var Index = function Index() {
     fullWidth: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 124
     },
     __self: this
   })), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 135
     },
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33532,7 +33532,7 @@ var Index = function Index() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 136
     },
     __self: this
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33540,21 +33540,21 @@ var Index = function Index() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 139
     },
     __self: this
   }, "Enviar")))), "Vantagens para quem investe:"), __jsx("img", {
     src: "/rentabilidade.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 148
     },
     __self: this
   }), __jsx("div", {
     className: "buttons-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 149
     },
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33562,7 +33562,7 @@ var Index = function Index() {
     onClick: handleClickOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 150
     },
     __self: this
   }, "Quero Investir"), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -33571,20 +33571,20 @@ var Index = function Index() {
     "aria-labelledby": "form-dialog-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 153
     },
     __self: this
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_11__["default"], {
     id: "form-dialog-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 154
     },
     __self: this
   }, "Seja um investidor"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 155
     },
     __self: this
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -33596,7 +33596,7 @@ var Index = function Index() {
     fullWidth: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 156
     },
     __self: this
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -33608,13 +33608,13 @@ var Index = function Index() {
     fullWidth: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 164
     },
     __self: this
   })), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 173
     },
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33622,7 +33622,7 @@ var Index = function Index() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 174
     },
     __self: this
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33630,97 +33630,97 @@ var Index = function Index() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180
+      lineNumber: 177
     },
     __self: this
   }, "Enviar"))))), __jsx("div", {
     className: "funciona-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 186
     },
     __self: this
   }, __jsx("div", {
     className: "poligono-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 187
     },
     __self: this
   }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 188
     },
     __self: this
   }, "Como funciona a plataforma?"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 189
     },
     __self: this
   }, "Conte com toda a seguran\xE7a, agilidade ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 189
     },
     __self: this
   }), "e praticidade na libera\xE7\xE3o do seu processo ganho."), __jsx("img", {
     src: "/trabalhador.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 192
     },
     __self: this
   })), __jsx("div", {
     className: "duvidas-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197
+      lineNumber: 194
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 195
     },
     __self: this
   }, "T\xEAm d\xFAvidas?"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
+      lineNumber: 196
     },
     __self: this
   }, "Queremos te ajudar a resolv\xEA-las"), __jsx("img", {
     src: "/duvidas.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
+      lineNumber: 197
     },
     __self: this
   })), __jsx("div", {
     className: "parceiros-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
+      lineNumber: 200
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204
+      lineNumber: 201
     },
     __self: this
   }, " Seja um parceiro JusCredit"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205
+      lineNumber: 202
     },
     __self: this
   }, "Indique cr\xE9ditos trabalhistas eleg\xEDveis e ganhe conosco."), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 204
     },
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33728,7 +33728,7 @@ var Index = function Index() {
     onClick: handleClickOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 205
     },
     __self: this
   }, "Indicar"), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -33737,26 +33737,26 @@ var Index = function Index() {
     "aria-labelledby": "parceiro-dialog-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 208
     },
     __self: this
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_11__["default"], {
     id: "parceiro-dialog-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212
+      lineNumber: 209
     },
     __self: this
   }, "Inscreva-se"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213
+      lineNumber: 210
     },
     __self: this
   }, __jsx(_material_ui_core_DialogContentText__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 211
     },
     __self: this
   }, "Voc\xEA receber\xE1 um email para cria\xE7\xE3o de senha e completar seu perfil Iremos entrar em contato com voc\xEA para confirmar suas informac\u0327o\u0303es."), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -33768,13 +33768,13 @@ var Index = function Index() {
     fullWidth: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
+      lineNumber: 215
     },
     __self: this
   })), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 224
     },
     __self: this
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33782,7 +33782,7 @@ var Index = function Index() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228
+      lineNumber: 225
     },
     __self: this
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -33790,13 +33790,13 @@ var Index = function Index() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231
+      lineNumber: 228
     },
     __self: this
   }, "Enviar")))))), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240
+      lineNumber: 237
     },
     __self: this
   }))));

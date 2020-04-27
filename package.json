@@ -57,6 +57,7 @@
     "react-scroll-to": "^3.0.0-beta.6",
     "react-scrolling-nav": "^1.1.5",
     "serve": "^11.3.0",
+    "webpack-dev-server": "^3.10.3",
     "yaml": "^1.8.2"
   },
   "devDependencies": {
