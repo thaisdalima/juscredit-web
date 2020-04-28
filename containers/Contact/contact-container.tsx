@@ -11,7 +11,6 @@ const Contact = () => {
   return (
     <div>
       <div className="contact-card">
-        <img src="/email.svg" />
         <div className="form-container">
           <h2>Quer falar com a gente?</h2>
           <p>É só escrever para <a className="email" href="mailto:oi@juscredit.com.br">oi@juscredit.com.br</a> ou nos enviar uma mensagem no campo abaixo. Entraremos em contato o mais rápido possível!</p>
@@ -21,7 +20,7 @@ const Contact = () => {
 
           <StyledInput placeholder="Assunto" value={subject} onChange={(e) => setSubject(e.target.value)} />
           <textarea className="juscredit-input" placeholder="Mensagem" value={message} onChange={(e) => setMessage(e.target.value)} />
-          <a className="link button warn" href={`mailto:oi@juscredit.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + '\n' + name)}`} >Enviar</a>
+          <button><a className="link button warn" href={`mailto:oi@juscredit.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + '\n' + name)}`} >Enviar</a></button>
         </div>
       </div>
     </div>
