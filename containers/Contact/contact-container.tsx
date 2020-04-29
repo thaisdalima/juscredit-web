@@ -1,5 +1,7 @@
 import './contact.scss'
 import StyledInput from '../../components/Input/Input'
+import Button from '../components/Button/Button'
+
 import { useState } from 'react';
 const Contact = () => {
   const [name, setName] = useState('')
@@ -20,7 +22,7 @@ const Contact = () => {
 
           <StyledInput placeholder="Assunto" value={subject} onChange={(e) => setSubject(e.target.value)} />
           <textarea className="juscredit-input" placeholder="Mensagem" value={message} onChange={(e) => setMessage(e.target.value)} />
-          <button><a className="link button warn" href={`mailto:oi@juscredit.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + '\n' + name)}`} >Enviar</a></button>
+          <Button><a className="link button warn" href={`mailto:oi@juscredit.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + '\n' + name)}`} >Enviar</a></Button>
         </div>
       </div>
     </div>
