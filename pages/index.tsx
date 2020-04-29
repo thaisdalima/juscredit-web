@@ -215,7 +215,7 @@ const Index = () => {
             autoFocus
             margin="dense"
             id="name"
-            label="Email @ "
+            label="Email "
             type="email"
             fullWidth
           />
