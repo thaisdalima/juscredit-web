@@ -1,6 +1,5 @@
 import './contact.scss'
 import StyledInput from '../../components/Input/Input'
-import Button from '../components/Button/Button'
 
 import { useState } from 'react';
 const Contact = () => {
