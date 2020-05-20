@@ -23,7 +23,7 @@ const Footer = () => (
             <h3>Ajuda e Atendimento</h3>
             <a className="link"></a>Como Funciona</Link>
             <div> 
-                <br/>
+                <br/> 
             <Link to="duvidas-container">
             <a className="link"></a>Dúvidas</Link>
         </div>
@@ -36,20 +36,23 @@ const Footer = () => (
           <img src="/Grupo de máscara -9@2x.png" className="footer-logo"/></a>  oi@juscredit.com.br</p>
           </div>
 
-          <div className="contact">
+          <div className="contato">
             <h3>Estamos online</h3>
             <p>
                 <a href="https://www.facebook.com/juscredit">
                 <img src="/Grupo de máscara -6@2x.png" className="footer-logo"/>
-                </a>  Facebook</p>
+                </a>
+                </p>
                 <p>
                 <a href="https://www.instagram.com/juscredit">
                 <img src="/Grupo de máscara -7@2x.png" className="footer-logo"/>
-                </a> Instagram </p>
+               </a>
+               </p>
                 <p>
                 <a href="https://www.linkedin.com/company/juscredit">
                 <img src="/Grupo de máscara -19@2x.png" className="footer-logo"/>
-               </a>  LinkedIn </p>
+              </a>
+              </p>
                 
                 <div className="direitos-container"> 
                  <img src="/direitos.svg"/>    

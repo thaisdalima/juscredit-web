@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 
+
 function Juscredit({ Component, pageProps }) {
     return <>
         <Header />
@@ -9,6 +10,7 @@ function Juscredit({ Component, pageProps }) {
     </>
      
 } 
+
 
 // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to

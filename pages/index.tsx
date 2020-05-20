@@ -11,6 +11,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
+import StyledInput from '../components/Input/Input';
+
 
 const Index = () => {
 
@@ -197,39 +199,10 @@ const Index = () => {
                     
                     </div> 
                     <div className= "parceiros-container">
-                        <h1> Seja um parceiro JusCredit</h1>
-                        <h2>Indique créditos trabalhistas elegíveis e ganhe conosco.</h2>
-        
-<div>
-      <Button  color="primary" onClick={handleClickOpen}>
-        Indicar
-      </Button>
-      <Dialog open={open} onClose={handleClose} aria-labelledby="parceiro-dialog-title">
-        <DialogTitle id="parceiro-dialog-title">Inscreva-se</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-          Você receberá um email para criação de senha e completar seu perfil
-          Iremos entrar em contato com você para confirmar suas informações.
-          </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email "
-            type="email"
-            fullWidth
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancelar
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Enviar
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </div>
+                         <h1>Seja um parceiro Juscredit</h1>
+                            <h2>Indique créditos trabalhistas elegíveis e ganhe conosco.</h2>
+                            <StyledInput mask={null} placeholder="Insira aqui seu e-mail" tabIndex={-1} />
+            <Button color="fourth" tabIndex={-1}>Enviar</Button>
 
 </div> 
            </div>   
@@ -240,4 +213,4 @@ const Index = () => {
 
     );
 }
-export default Index;
+export default Index; 
