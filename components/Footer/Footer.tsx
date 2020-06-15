@@ -1,5 +1,4 @@
 import './Footer.scss'
-import StyledInput from '../Input/Input';
 import { Link } from "react-scroll";
 
 
@@ -44,7 +43,7 @@ const Footer = () => (
                 </a>
                 </p>
                 <p>
-                <a href="https://www.instagram.com/juscredit">
+                <a href="https://www.instagram.com/jus.credit/">
                 <img src="/Grupo de máscara -7@2x.png" className="footer-logo"/>
                </a>
                </p>

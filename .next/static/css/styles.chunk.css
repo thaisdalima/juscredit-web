@@ -26,7 +26,7 @@
 
 .header-logo {
   height: 32px;
-  width: 127.6px;
+  width: 167.6px;
   margin-right: 200px; }
 
 .link-container {
@@ -50,7 +50,7 @@
   background: white;
   display: flex;
   flex-direction: column;
-  padding: 0px 24px 16px 24px;
+  padding: 0px 34px 26px 34px;
   transition: background-color 0.5s linear;
   font-family: 'Muli';
   cursor: pointer;
@@ -76,15 +76,15 @@
   font-family: Muli;
   letter-spacing: 0;
   color: #53B67F;
-  opacity: 1;
-  top: 66px;
+  transition: color 0.5s linear;
+  top: 76px;
   left: 1681px;
-  width: 98px;
+  width: 108px;
   height: 33px;
   background: #53B67F14 0% 0% no-repeat padding-box;
   border: 1px solid #53B67F1A;
   border-radius: 25px;
-  opacity: 1;
+  transition: color 0.5s linear;
   cursor: pointer; }
 
 body {
@@ -93,24 +93,8 @@ body {
   width: 100%;
   padding-block-end: initial;
   flex-direction: row;
-  overflow-x: hidden; }
-
-.pop {
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  box-shadow: 0px 40px 80px #4648551A;
-  border-radius: 12px;
-  opacity: 1;
-  top: 287px;
-  left: 687px;
-  width: 536px;
-  height: 588px;
-  top: 387px;
-  left: 720px;
-  width: 456px;
-  height: 60px;
-  border: 1px solid #395E66;
-  border-radius: 6px;
-  opacity: 0.15; }
+  overflow-x: hidden;
+  max-width: 100%; }
 
 .map-container {
   padding: 0 6.5em;
@@ -192,8 +176,8 @@ body {
 .antecipar {
   padding: 0 10em;
   padding-bottom: 110px;
-  position: relative;
-  width: 100%; }
+  width: 100%;
+  justify-content: space-between; }
   .antecipar h1 {
     margin-top: 50px;
     text-align: left;
@@ -586,72 +570,6 @@ button:disabled,
     padding: 0; }
   .footer-logo {
     display: none; } }
-
-.contact-card {
-  margin: 100px 25em;
-  padding: 24px;
-  border-radius: 32px;
-  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .contact-card h2,
-  .contact-card .email {
-    color: #395E66;
-    font-weight: bold; }
-  .contact-card .form-container {
-    max-width: 300px;
-    padding: 16px;
-    text-align: center; }
-    .contact-card .form-container input, .contact-card .form-container textarea {
-      width: 250px; }
-    .contact-card .form-container textarea.juscredit-input {
-      font-family: 'Overpass';
-      padding-top: 8px;
-      min-height: 70px; }
-    .contact-card .form-container .link {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-      min-width: 200px;
-      color: #395E66; }
-    .contact-card .form-container button {
-      border-radius: 30px;
-      color: #395E66;
-      margin-top: 5px; }
-
-@media (max-width: 790px) {
-  .card {
-    padding: 16px;
-    margin: 0 !important;
-    border-radius: 0;
-    box-shadow: none; } }
-
-.juscredit-input {
-  top: 0px;
-  width: 230px;
-  background: 0% 0% no-repeat padding-box;
-  box-shadow: 0px 5px 50px #030B6117;
-  opacity: 1;
-  border-radius: 51px;
-  opacity: 1;
-  margin-top: 5px;
-  align-items: center;
-  size: 31px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  padding-right: 50px;
-  padding-left: 60px;
-  height: 48px; }
-
-.segundo-input {
-  padding-left: 16px;
-  margin-bottom: 16px;
-  height: 38px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.25); }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

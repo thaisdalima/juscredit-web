@@ -81,7 +81,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 7,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -89,49 +89,49 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 8,
       columnNumber: 9
     }
   }, __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 9,
       columnNumber: 13
     }
   }, "Institucional"), __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 10,
       columnNumber: 13
     }
   }, "Pol\xEDtica de privacidade"), __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 11,
       columnNumber: 13
     }
   }), __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 12,
       columnNumber: 13
     }
   }, "Termos de uso Trabalhador"), __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 13,
       columnNumber: 13
     }
   }), __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 14,
       columnNumber: 13
     }
   }, "Termos de uso Investidor"), __jsx("div", {
@@ -139,7 +139,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 15,
       columnNumber: 13
     }
   }, __jsx("img", {
@@ -147,7 +147,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 16,
       columnNumber: 13
     }
   }))), __jsx("div", {
@@ -155,7 +155,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 20,
       columnNumber: 9
     }
   }, __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -163,14 +163,14 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 21,
       columnNumber: 9
     }
   }, __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 22,
       columnNumber: 13
     }
   }, "Ajuda e Atendimento"), __jsx("a", {
@@ -178,21 +178,21 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 23,
       columnNumber: 13
     }
   }), "Como Funciona"), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 24,
       columnNumber: 13
     }
   }, __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 25,
       columnNumber: 17
     }
   }), __jsx(react_scroll__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -200,7 +200,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 26,
       columnNumber: 13
     }
   }, __jsx("a", {
@@ -208,28 +208,28 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 27,
       columnNumber: 13
     }
   }), "D\xFAvidas"))), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 31,
       columnNumber: 11
     }
   }, __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 32,
       columnNumber: 11
     }
   }, "Fale conosco"), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 33,
       columnNumber: 11
     }
   }, __jsx("a", {
@@ -237,7 +237,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 34,
       columnNumber: 11
     }
   }, __jsx("img", {
@@ -246,7 +246,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 35,
       columnNumber: 11
     }
   })), "  oi@juscredit.com.br")), __jsx("div", {
@@ -254,21 +254,21 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 38,
       columnNumber: 11
     }
   }, __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 39,
       columnNumber: 13
     }
   }, "Estamos online"), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 40,
       columnNumber: 13
     }
   }, __jsx("a", {
@@ -276,7 +276,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 41,
       columnNumber: 17
     }
   }, __jsx("img", {
@@ -285,22 +285,22 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 42,
       columnNumber: 17
     }
   }))), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 45,
       columnNumber: 17
     }
   }, __jsx("a", {
-    href: "https://www.instagram.com/juscredit",
+    href: "https://www.instagram.com/jus.credit/",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 46,
       columnNumber: 17
     }
   }, __jsx("img", {
@@ -309,14 +309,14 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 47,
       columnNumber: 17
     }
   }))), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 50,
       columnNumber: 17
     }
   }, __jsx("a", {
@@ -324,7 +324,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 51,
       columnNumber: 17
     }
   }, __jsx("img", {
@@ -333,7 +333,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 52,
       columnNumber: 17
     }
   }))), __jsx("div", {
@@ -341,7 +341,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 56,
       columnNumber: 17
     }
   }, __jsx("img", {
@@ -349,7 +349,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 57,
       columnNumber: 18
     }
   }))));
