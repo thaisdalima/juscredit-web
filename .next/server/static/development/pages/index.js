@@ -307,7 +307,7 @@ const Index = () => {
       columnNumber: 26
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/signup/user'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/'),
     color: "primary",
     __self: undefined,
     __source: {
@@ -316,7 +316,7 @@ const Index = () => {
       columnNumber: 21
     }
   }, "Quero participar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/be-part'),
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/'),
     color: "secondary",
     __self: undefined,
     __source: {
@@ -440,8 +440,8 @@ const Index = () => {
       columnNumber: 29
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/'),
     color: "sixty",
-    onClick: handleClickOpen,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -465,8 +465,8 @@ const Index = () => {
       columnNumber: 29
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    onClick: () => next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/'),
     color: "sixty",
-    onClick: handleClickOpen,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,

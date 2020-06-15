@@ -38,8 +38,8 @@ const Index = () => {
                      <h1>Antecipe seu </h1>
                          <h1>crédito trabalhista</h1><h2>Têm um processo ganho? Receba agora</h2>       
                          <div className="buttons-container">
-                    <Button onClick={()=> Router.push('/signup/user')} color="primary">Quero participar</Button> 
-                   <Button onClick={()=> Router.push('/be-part')} color="secondary">Quero investir</Button>
+                    <Button onClick={()=> Router.push('/')} color="primary">Quero participar</Button> 
+                   <Button onClick={()=> Router.push('/')} color="secondary">Quero investir</Button>
                    <div className="cursor-container">
                  <Button onClick={()=> Router.push('/')} color="third" ><img src="/cursor.svg"/>
                  <Link to="antecipar" > 
@@ -61,7 +61,7 @@ const Index = () => {
                             <img src="/agilidade.svg"/>
                             <h2>
                             <div className="buttons-container"> 
-                         <Button  color="sixty" onClick={handleClickOpen}>
+                         <Button onClick={()=> Router.push('/')} color="sixty" >
         Quero Antecipar
       </Button>
       
@@ -71,7 +71,7 @@ const Index = () => {
                </h2>
                             <img src="/rentabilidade.svg"/>
                             <div className="buttons-container"> 
-                            <Button  color="sixty" onClick={handleClickOpen}>
+                            <Button  onClick={()=> Router.push('/')}color="sixty">
         Quero Investir
       </Button>
     </div>

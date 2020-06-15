@@ -27698,7 +27698,7 @@ var Index = function Index() {
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: function onClick() {
-      return next_router__WEBPACK_IMPORTED_MODULE_5___default.a.push('/signup/user');
+      return next_router__WEBPACK_IMPORTED_MODULE_5___default.a.push('/');
     },
     color: "primary",
     __self: _this,
@@ -27709,7 +27709,7 @@ var Index = function Index() {
     }
   }, "Quero participar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: function onClick() {
-      return next_router__WEBPACK_IMPORTED_MODULE_5___default.a.push('/be-part');
+      return next_router__WEBPACK_IMPORTED_MODULE_5___default.a.push('/');
     },
     color: "secondary",
     __self: _this,
@@ -27836,8 +27836,10 @@ var Index = function Index() {
       columnNumber: 29
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: function onClick() {
+      return next_router__WEBPACK_IMPORTED_MODULE_5___default.a.push('/');
+    },
     color: "sixty",
-    onClick: handleClickOpen,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -27861,8 +27863,10 @@ var Index = function Index() {
       columnNumber: 29
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: function onClick() {
+      return next_router__WEBPACK_IMPORTED_MODULE_5___default.a.push('/');
+    },
     color: "sixty",
-    onClick: handleClickOpen,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
