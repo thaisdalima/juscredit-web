@@ -34,11 +34,11 @@ const Index = () => {
 
   const tipoPessoaArr = [
     {
-      value: 'F',
+      value: 'f',
       label: 'CPF',
     },
     {
-      value: 'J',
+      value: 'j',
       label: 'CNPJ',
     }
   ];
@@ -51,13 +51,13 @@ const Index = () => {
   const handleModalAntecipar = () => {
     setAnteciparOpen(true);
     setFormValue({});
-    setFormValue({ ...formValues, account_type: 'C' });
+    setFormValue({ ...formValues, account_type: 'c' });
   };
 
   const handleModalInvestir = () => {
     setInvestirOpen(true);
     setFormValue({});
-    setFormValue({ ...formValues, account_type: 'I' });
+    setFormValue({ ...formValues, account_type: 'i' });
   };
 
   const handleClose = () => {
