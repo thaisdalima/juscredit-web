@@ -30,13 +30,15 @@ const Index = () => {
   const [profile, setProfile] = React.useState("cliente");
   const [selectProfile, setSelectProfile] = React.useState('');
 
+  const axios = require('axios');
+
   const tipoPessoaArr = [
     {
-      value: 'pessoa_fisica',
+      value: 'F',
       label: 'CPF',
     },
     {
-      value: 'pessoa_juridica',
+      value: 'J',
       label: 'CNPJ',
     }
   ];
@@ -49,11 +51,13 @@ const Index = () => {
   const handleModalAntecipar = () => {
     setAnteciparOpen(true);
     setFormValue({});
+    setFormValue({ ...formValues, account_type: 'C' });
   };
 
   const handleModalInvestir = () => {
     setInvestirOpen(true);
     setFormValue({});
+    setFormValue({ ...formValues, account_type: 'I' });
   };
 
   const handleClose = () => {
@@ -82,24 +86,14 @@ const Index = () => {
     console.log(formValues);
   }, [formValues]);
 
-  const handleSubmit = (reqURL, reqMethod, reqBody, callbackSuccess?) => {
-    var myHeaders = new Headers();
+  const handleSubmit = (reqURL, reqBody) => {
 
-    var myRequest = new Request(reqURL, {
-      method: reqMethod,
-      headers: myHeaders,
-      mode: 'cors',
-      cache: 'default',
-      body: reqBody
-    });
-
-    fetch(myRequest)
+    axios.post(reqURL, reqBody)
       .then(function (response) {
         console.log(response);
-        callbackSuccess;
       })
-      .then(function () {
-        handleClose();
+      .catch(function (error) {
+        console.log(error);
       });
   }
 
@@ -399,7 +393,7 @@ const Index = () => {
           <Button onClick={handleClose} color="primary">
             Cancelar
           </Button>
-          <Button onClick={e => { handleSubmit(`${API}/user`, 'POST', formValues) }} color="primary">
+          <Button onClick={e => { handleSubmit(`${API}/user`, formValues) }} color="primary">
             Enviar
           </Button>
         </DialogActions>
@@ -470,7 +464,7 @@ const Index = () => {
           <Button onClick={handleClose} color="primary">
             Cancelar
           </Button>
-          <Button onClick={e => { handleSubmit(`${API}/user`, 'POST', formValues) }} color="primary">
+          <Button onClick={e => { handleSubmit(`${API}/user`, formValues) }} color="primary">
             Enviar
           </Button>
         </DialogActions>
