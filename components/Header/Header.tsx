@@ -1,11 +1,8 @@
-import './Header.scss'
+import './Header.scss';
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Button from '../Button/Button';
-import { Link } from "react-scroll";
-
-
-
+import Link from 'next/link';
 
 const Header = () => {
     const [openedMenu, setOpenedMenu] = useState(false)
@@ -33,29 +30,36 @@ const Header = () => {
     return (
         <>
             <nav className={"navbar " + themeClass}>
-                <a className="navbar-brand" href="/"> <img src="/logo.svg" className="header-logo" />
-</a>      
-               
-                <div className="link-container">
-                <Link to="funciona-container" > 
-                        <a className="link">Como Funciona</a>
-                        </Link>
-                        
-                    <Link to="antecipar" > 
-                        <a className="link">Antecipar</a>
-                        </Link>
-                    
-                    
-                    <Link to="duvidas-container">
-                    <a className="link">Dúvidas</a>
-                        </Link>
+                <a className="navbar-brand" href="/">
+                    <img src="/logo.svg" className="header-logo" />
+                </a>
 
-                    <Link to="parceiros-container">
-                        <a className="link">Parceiros</a>
-                    </Link>
-                    <Button className="entrar" color="seven" onClick={()=> window.open('https://front-dot-juscredit-273101.ue.r.appspot.com/')}> 
-                    Entrar</Button>
-                </div>
+                <ul className="link-container">
+                    <li className="link">
+                        <Link href="#como-funciona">
+                            <a>Como Funciona</a>
+                        </Link>
+                    </li>
+                    {/* <li className="link">
+                        <Link href="#">
+                            <a>Antecipar</a>
+                        </Link>
+                    </li>
+                    <li className="link">
+                        <Link href="duvidas-container">
+                            <a>Dúvidas</a>
+                        </Link>
+                    </li> */}
+                    <li className="link">
+                        <Link href="#parceiros-container">
+                            <a>Parceiros</a>
+                        </Link>
+                    </li>
+                    <li className="link">
+                        <Button className="entrar" color="seven" onClick={() => window.open('https://front-dot-juscredit-273101.ue.r.appspot.com/')}>
+                            Entrar</Button>
+                    </li>
+                </ul>
                 <div className="menu-button" onClick={toggleMenu}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill={themeClass === 'white-navbar' ? 'white' : '#395E66'} d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
@@ -63,24 +67,32 @@ const Header = () => {
                 </div>
             </nav>
             {openedMenu && (
-                <div className={"mobile-link-container " + themeClass}>
-                    <Link to="antecipar" > 
-                        <a className="link">Antecipar</a>
+                <ul className={"mobile-link-container " + themeClass}>
+                    <li className="link">
+                        <Link href="#como-funciona">
+                            <a>Como Funciona</a>
                         </Link>
-                        <br/>
-                    <Link >
-                        <a className="link" href="/contact">Contato</a>
-                    </Link>
-                    <br/>
-                    <Link to="parceiros-container">
-                        <a className="link"> Parceiros </a>
-                    </Link>
-                    <br/>
-                    <Link to="nav">
-                        <a className="entrar">Entrar </a>
-                    </Link>
-                   
-                </div>
+                    </li>
+                    {/* <li className="link">
+                        <Link href="antecipar" >
+                            <a>Antecipar</a>
+                        </Link>
+                    </li>
+                    <li className="link">
+                        <Link href="duvidas-container">
+                            <a>Dúvidas</a>
+                        </Link>
+                    </li> */}
+                    <li className="link">
+                        <Link href="#parceiros-container">
+                            <a>Parceiros</a>
+                        </Link>
+                    </li>
+                    <li className="link">
+                        <Button className="entrar" color="seven" onClick={() => window.open('https://front-dot-juscredit-273101.ue.r.appspot.com/')}>
+                            Entrar</Button>
+                    </li>
+                </ul>
             )
             }
         </>

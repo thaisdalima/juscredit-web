@@ -940,7 +940,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "C:\\Users\\Thais Linda\\juscredit-web\\.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "D:\\VS2017\\Juscredit\\juscredit-web\\.next");
       return error;
     }
   };
@@ -5891,12 +5891,12 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_839099f27aa445711cff ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_77a815f570ae38c2d683 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_839099f27aa445711cff */ "dll-reference dll_839099f27aa445711cff"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_77a815f570ae38c2d683 */ "dll-reference dll_77a815f570ae38c2d683"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -6158,12 +6158,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_839099f27aa445711cff ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_77a815f570ae38c2d683 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_839099f27aa445711cff */ "dll-reference dll_839099f27aa445711cff"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_77a815f570ae38c2d683 */ "dll-reference dll_77a815f570ae38c2d683"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -6907,14 +6907,14 @@ try {
 
 /***/ }),
 
-/***/ "dll-reference dll_839099f27aa445711cff":
+/***/ "dll-reference dll_77a815f570ae38c2d683":
 /*!*******************************************!*\
-  !*** external "dll_839099f27aa445711cff" ***!
+  !*** external "dll_77a815f570ae38c2d683" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_839099f27aa445711cff;
+module.exports = dll_77a815f570ae38c2d683;
 
 /***/ })
 

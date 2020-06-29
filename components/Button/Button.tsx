@@ -1,5 +1,4 @@
-import './Button.scss'
-
+import './Button.scss';
 
 const Button = (props: React.ButtonHTMLAttributes<HTMLButtonElement> & { color: string, loading?: boolean | string }) => {
     const { color, loading } = props;

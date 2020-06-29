@@ -1,42 +1,52 @@
 .link {
-  color: #395E66;
-  font-size: 16;
-  font-weight: 300;
-  text-decoration: none;
-  transition: color 0.5s linear;
-  font-weight: Bold;
-  letter-spacing: 0;
-  font-family: 'Muli';
-  
+  a {
+    color: #395E66;
+    font-size: 16;
+    font-weight: 300;
+    text-decoration: none;
+    transition: color 0.5s linear;
+    font-weight: Bold;
+    letter-spacing: 0;
+    font-family: 'Muli';
 
-  &:hover {
-    opacity: 0.7;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
+
 .navbar {
+  box-sizing: border-box;
   background: white;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding-left: 10em;
-  padding-right: 10em;
+  margin: 0 auto;
+  padding: 24px 16px;
+  width: 86%;
   transition: background-color 0.5s linear;
   text-decoration-color: #395E66;
   font-family: 'Muli';
-  cursor: pointer;
 }
+
 .header-logo {
-  height: 32px;
-  width: 167.6px;
-  margin-right: 200px;
+  height: auto;
+  width: 170px;
 }
+
 .link-container {
   display: flex;
-  flex: 1;
   justify-content: space-around;
-  color: #395E66; 
+  align-items: center;
+  color: #395E66;
+
+  .link {
+    margin-right: 16px;
+  }
+
+  .link:last-child {
+    margin-right: 0px;
+  }
 }
 
 
@@ -47,13 +57,17 @@
     color: black;
   }
 }
+
 .menu-button {
   cursor: pointer;
+
   &:hover {
     opacity: 0.7;
   }
+
   display: none;
 }
+
 .mobile-link-container {
   background: white;
   display: flex;
@@ -63,11 +77,19 @@
   font-family: 'Muli';
   cursor: pointer;
   text-decoration: none;
+
   .link {
     transition: color 0.5s linear;
+
+    a {
+      padding: 1em;
+      display: block;
+    }
   }
+
   &.white-navbar {
     background-color: white;
+
     .link {
       color: black;
     }
@@ -78,28 +100,35 @@
   .menu-button {
     display: flex;
   }
+
   .navbar {
     padding: 24px;
+    width: 100%;
   }
+
   .header-logo {
     margin-right: 0px;
   }
+
   .link-container {
     display: none;
   }
 }
-.entrar{
- font-family: Muli;
- letter-spacing: 0;
- color: #53B67F;
- transition: color 0.5s linear;
- top: 76px;
- left: 1681px;
- width: 108px;
- height: 33px;
- background: #53B67F14 0% 0% no-repeat padding-box;
- border: 1px solid #53B67F1A;
- border-radius: 25px;
- transition: color 0.5s linear;
- cursor: pointer;
+
+.entrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Muli;
+  letter-spacing: 0;
+  color: #53B67F;
+  transition: color 0.5s linear;
+  width: 108px;
+  height: 33px;
+  background: #53B67F14 0% 0% no-repeat padding-box;
+  border: 1px solid #53B67F1A;
+  border-radius: 25px;
+  transition: color 0.5s linear;
+  outline: none;
+  cursor: pointer;
 }

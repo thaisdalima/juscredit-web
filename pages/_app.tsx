@@ -8,8 +8,8 @@ function Juscredit({ Component, pageProps }) {
         <Component {...pageProps} />
         <Footer />
     </>
-     
-} 
+
+}
 
 
 // Only uncomment this method if you have blocking data requirements for
