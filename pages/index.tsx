@@ -13,6 +13,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Checkbox from '@material-ui/core/Checkbox';
+import API from './../api';
 
 <meta name="viewport" content="::-webkit=device-width"></meta>
 const Index = () => {
@@ -398,7 +399,7 @@ const Index = () => {
           <Button onClick={handleClose} color="primary">
             Cancelar
           </Button>
-          <Button onClick={e => { handleSubmit('http://juscredit-273101.ue.r.appspot.com/user', 'POST', formValues) }} color="primary">
+          <Button onClick={e => { handleSubmit(`${API}/user`, 'POST', formValues) }} color="primary">
             Enviar
           </Button>
         </DialogActions>
@@ -469,7 +470,7 @@ const Index = () => {
           <Button onClick={handleClose} color="primary">
             Cancelar
           </Button>
-          <Button onClick={e => { handleSubmit('http://juscredit-273101.ue.r.appspot.com/user', 'POST', formValues) }} color="primary">
+          <Button onClick={e => { handleSubmit(`${API}/user`, 'POST', formValues) }} color="primary">
             Enviar
           </Button>
         </DialogActions>
