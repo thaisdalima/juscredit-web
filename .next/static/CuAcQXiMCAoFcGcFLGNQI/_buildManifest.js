@@ -1,1 +1,0 @@
-self.__BUILD_MANIFEST = (function(a){return {"/signup/create-password/[token]":[a],"/signup/update-producer/[id]":[a]}}("static\u002Fchunks\u002F01f985e894e883c54c759c4c4a4fbce750ab8360.06ab949c0dab3b382bc6.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

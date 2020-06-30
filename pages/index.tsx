@@ -16,7 +16,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import API from './../api';
 
 <meta name="viewport" content="::-webkit=device-width"></meta>
-const Index = () => {
+const Index = (props) => {
   const [state, setState] = React.useState({
     checkedModalAntecipe: false,
     checkedModalInvestirQualificado: false,
@@ -29,6 +29,7 @@ const Index = () => {
   const [modalInvestirState, setInvestirOpen] = React.useState(false);
   const [profile, setProfile] = React.useState("cliente");
   const [selectProfile, setSelectProfile] = React.useState('');
+  const [originPath, setOriginPath] = React.useState('');
 
   const axios = require('axios');
 
@@ -83,8 +84,8 @@ const Index = () => {
   }
 
   useEffect(() => {
-    console.log(formValues);
-  }, [formValues]);
+    setOriginPath(window.location.origin);
+  });
 
   const handleSubmit = (reqURL, reqBody) => {
 
@@ -140,7 +141,7 @@ const Index = () => {
               <div className="cards-showcase-wrapper">
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/illustration-2.svg" />
+                    <img src={`${originPath}/illustration-2.svg`} />
                     <h3>Praticidade</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Processo de antecipação 100% digital.</p></li>
@@ -150,7 +151,7 @@ const Index = () => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/illustration-1.svg" />
+                    <img src={`${originPath}/illustration-1.svg`} />
                     <h3>Agilidade</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Liquidez imediata, não espere mais para receber o seu direito.</p></li>
@@ -159,7 +160,7 @@ const Index = () => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/illustration-3.svg" />
+                    <img src={`${originPath}/illustration-3.svg`} />
                     <h3>Liberação</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Receba diretamente em sua JusCredit.</p></li>
@@ -188,7 +189,7 @@ const Index = () => {
               <div className="cards-showcase-wrapper">
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/illustration-4.svg" />
+                    <img src={`${originPath}/illustration-4.svg`} />
                     <h3>Rentabilidade</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Maior retorno que investimentos tradicionais.</p></li>
@@ -199,7 +200,7 @@ const Index = () => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/illustration-5.svg" />
+                    <img src={`${originPath}/illustration-5.svg`} />
                     <h3>Segurança</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Modelo proprietário de análise.</p></li>
@@ -210,7 +211,7 @@ const Index = () => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/illustration-3.svg" />
+                    <img src={`${originPath}/illustration-3.svg`} />
                     <h3>Recebimento</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Receba os valores dos créditos judiciais adquiridos diretamente em sua conta JusCredit.</p></li>
@@ -239,7 +240,7 @@ const Index = () => {
                 <div className="card-inner">
                   <div className="flex align-items-center">
                     <div className="flex align-items-center">
-                      <img style={{ maxWidth: "70px", marginRight: "10px" }} src="/illustration-6.svg" />
+                      <img style={{ maxWidth: "70px", marginRight: "10px" }} src={`${originPath}/illustration-6.svg`} />
                       <h4>Cliente solicita</h4>
                     </div>
                     <h4 className="card-number">1</h4>
@@ -253,7 +254,7 @@ const Index = () => {
                 <div className="card-inner">
                   <div className="flex align-items-center">
                     <div className="flex align-items-center">
-                      <img style={{ maxWidth: "70px", marginRight: "10px" }} src="/illustration-7.svg" />
+                      <img style={{ maxWidth: "70px", marginRight: "10px" }} src={`${originPath}/illustration-7.svg`} />
                       <h4>Análise avançada</h4>
                     </div>
                     <h4 className="card-number">2</h4>
@@ -269,7 +270,7 @@ const Index = () => {
                 <div className="card-inner">
                   <div className="flex align-items-center">
                     <div className="flex align-items-center">
-                      <img style={{ maxWidth: "70px", marginRight: "10px" }} src="/illustration-8.svg" />
+                      <img style={{ maxWidth: "70px", marginRight: "10px" }} src={`${originPath}/illustration-8.svg`} />
                       <h4>Investidores</h4>
                     </div>
                     <h4 className="card-number">3</h4>
@@ -283,7 +284,7 @@ const Index = () => {
                 <div className="card-inner">
                   <div className="flex align-items-center">
                     <div className="flex align-items-center">
-                      <img style={{ maxWidth: "70px", marginRight: "10px" }} src="/illustration-9.svg" />
+                      <img style={{ maxWidth: "70px", marginRight: "10px" }} src={`${originPath}/illustration-9.svg`} />
                       <h4>Receba</h4>
                     </div>
                     <h4 className="card-number">4</h4>
