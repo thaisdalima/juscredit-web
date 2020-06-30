@@ -48,7 +48,7 @@ const AddressForm = ({ values, loading, onSubmit, profile, producer = null }) =>
                 <h1 className="card-title">{cardTitle}</h1>
             </div>
             <div className="card-content">
-                <label>Confirmar dados > Endereço comercial</label>
+                <label>Confirmar dados <span> &gt; </span> Endereço comercial</label>
 
                 <Formik
                     initialValues={{

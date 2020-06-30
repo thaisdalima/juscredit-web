@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { validateCpf, validateCnpj } from \"./validateDocuments\";\nexport class Validators {\n  static cpf(cpf) {\n    return validateCpf(cpf);\n  }\n\n  static cnpj(cnpj) {\n    return validateCnpj(cnpj);\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

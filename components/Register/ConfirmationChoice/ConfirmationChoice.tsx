@@ -22,7 +22,7 @@ const ConfirmationChoice = ({ values, onSubmit, profile, choice }) => {
             </div>
             <div className="card-content">
 
-                <label>Confirmar dados > Confirmar identidade</label>
+                <label>Confirmar dados <span> &gt; </span> Confirmar identidade</label>
                 <h2 className="form-title">Como prefere confirmar sua identidade?</h2>
                 <div className="choice-container">
                     <div className="choice-label">

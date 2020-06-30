@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let Masks;\n\n(function (Masks) {\n  Masks[\"CPF\"] = \"999.999.999-99\";\n  Masks[\"CNPJ\"] = \"99.999.999/9999-99\";\n})(Masks || (Masks = {}));","map":null,"metadata":{},"sourceType":"module"}
