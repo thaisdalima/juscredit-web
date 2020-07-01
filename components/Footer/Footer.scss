@@ -11,10 +11,19 @@
   a {
     font-family: 'Overpass';
     color: #FFFFFF;
+    cursor: pointer;
     opacity: .5;
     font-weight: 200;
     margin-bottom: 10px;
     display: flex;
+    text-decoration: none;
+  }
+
+  a:hover {
+    font-family: 'Overpass';
+    color: #FFFFFF;
+    opacity: 1;
+    cursor: pointer;
   }
 
   h3 {

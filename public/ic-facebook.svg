@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_66" data-name="Retângulo 66" width="30" height="30" transform="translate(1378 6438)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="ic-facebook" transform="translate(-1378 -6438)" clip-path="url(#clip-path)">
+    <path id="_ionicons_svg_logo-facebook" d="M33.344,5H6.656A1.657,1.657,0,0,0,5,6.656V33.344A1.657,1.657,0,0,0,6.656,35H20V23.125H16.414V18.75H20V15.516c0-3.875,2.688-5.984,6.148-5.984,1.656,0,3.438.125,3.852.18v4.047H27.242c-1.883,0-2.242.891-2.242,2.2V18.75h4.484L28.9,23.125H25V35h8.344A1.657,1.657,0,0,0,35,33.344V6.656A1.657,1.657,0,0,0,33.344,5Z" transform="translate(1373 6433)" fill="#fff"/>
+  </g>
+</svg>

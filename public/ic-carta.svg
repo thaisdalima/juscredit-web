@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_71" data-name="Retângulo 71" width="30" height="30" transform="translate(1445 6609)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="ic-carta" transform="translate(-1445 -6609)" clip-path="url(#clip-path)">
+    <g id="email-24px" transform="translate(1445 6609)">
+      <path id="Caminho_171" data-name="Caminho 171" d="M29.5,5H5.5A3,3,0,0,0,2.515,8L2.5,26a3.009,3.009,0,0,0,3,3h24a3.009,3.009,0,0,0,3-3V8A3.009,3.009,0,0,0,29.5,5Zm0,6-12,7.5L5.5,11V8l12,7.5L29.5,8Z" transform="translate(-2.5 -2)" fill="#fff"/>
+      <path id="Caminho_172" data-name="Caminho 172" d="M0,0H30V30H0Z" fill="none"/>
+    </g>
+  </g>
+</svg>

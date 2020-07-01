@@ -30,21 +30,24 @@ const Footer = () => (
         <div>
             <h3>Fale conosco</h3>
             <a className="flex align-items-center" href="/contact">
-                <img src="/Grupo de máscara -9@2x.png" className="footer-logo" style={{ marginRight: '8px' }} />
+                <img src="/ic-carta.svg" className="footer-logo" style={{ marginRight: '8px' }} />
                 <span>oi@juscredit.com.br</span>
             </a>
         </div>
 
         <div className="contato">
             <h3>Estamos online</h3>
-            <a href="https://www.facebook.com/juscredit">
-                <img src="/Grupo de máscara -6@2x.png" className="footer-logo" />
+            <a className="flex align-items-center" href="https://www.facebook.com/juscredit">
+                <img src="/ic-facebook.svg" className="footer-logo" style={{ marginRight: '8px' }} />
+                <span>Facebook</span>
             </a>
-            <a href="https://www.instagram.com/jus.credit/">
-                <img src="/Grupo de máscara -7@2x.png" className="footer-logo" />
+            <a className="flex align-items-center" href="https://www.instagram.com/jus.credit/">
+                <img src="/ic-instagram.svg" className="footer-logo" style={{ marginRight: '8px' }} />
+                <span>Instagram</span>
             </a>
-            <a href="https://www.linkedin.com/company/juscredit">
-                <img src="/Grupo de máscara -19@2x.png" className="footer-logo" />
+            <a className="flex align-items-center" href="https://www.linkedin.com/company/juscredit">
+                <img src="/ic-linkedin.svg" className="footer-logo" style={{ marginRight: '8px' }} />
+                <span>Linkedin</span>
             </a>
 
             <div className="direitos-container">
