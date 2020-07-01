@@ -23,10 +23,8 @@ const Footer = () => (
 
         <div className="ajuda-container">
             <h3>Ajuda e Atendimento</h3>
-            <Link to="funciona-container">
+            <Link to="#como-funciona">
                 Como Funciona</Link>
-            <Link to="duvidas-container">
-                Dúvidas</Link>
         </div>
 
         <div>
