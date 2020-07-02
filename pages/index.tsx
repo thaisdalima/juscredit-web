@@ -141,7 +141,7 @@ const Index = (props) => {
               <div className="cards-showcase-wrapper">
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-2.svg" alt="Ilustração do Card" />
+                    <img src="/card-img-2.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
                     <h3>Praticidade</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Processo de antecipação 100% digital.</p></li>
@@ -151,7 +151,7 @@ const Index = (props) => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-1.svg" alt="Ilustração do Card" />
+                    <img src="/card-img-1.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
                     <h3>Agilidade</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Liquidez imediata, não espere mais para receber o seu direito.</p></li>
@@ -160,7 +160,7 @@ const Index = (props) => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-3.svg" alt="Ilustração do Card" />
+                    <img src="/card-img-3.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
                     <h3>Liberação</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Receba diretamente em sua JusCredit.</p></li>
@@ -189,7 +189,7 @@ const Index = (props) => {
               <div className="cards-showcase-wrapper">
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-4.svg" alt="Ilustração do Card" />
+                    <img src="/card-img-4.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
                     <h3>Rentabilidade</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Maior retorno que investimentos tradicionais.</p></li>
@@ -200,7 +200,7 @@ const Index = (props) => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-5.svg" alt="Ilustração do Card" />
+                    <img src="/card-img-5.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
                     <h3>Segurança</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Modelo proprietário de análise.</p></li>
@@ -211,7 +211,7 @@ const Index = (props) => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-3.svg" alt="Ilustração do Card" />
+                    <img src="/card-img-3.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
                     <h3>Recebimento</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Receba os valores dos créditos judiciais adquiridos diretamente em sua conta JusCredit.</p></li>
