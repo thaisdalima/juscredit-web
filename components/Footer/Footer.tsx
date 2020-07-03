@@ -8,7 +8,7 @@ const Footer = () => (
         <div>
             <div className="menu">
                 <h3>Institucional</h3>
-                <Link href="/JusCredit_-_Política_de_Privacidade.pdf">
+                <Link href="/JusCredit_-_Politica_de_Privacidade.pdf">
                     <a target="_blank">Política de privacidade</a>
                 </Link>
                 <Link href="/JusCredit_-_Temos_de_Uso_do_Cliente.pdf">
