@@ -37,6 +37,7 @@ const Index = (props) => {
     checkedModalInvestirConcordo: false,
   });
   const [formValues, setFormValue] = React.useState(INITIAL_FORM);
+  const [parceiroValues, setParceiroValue] = React.useState({});
   const [modalIndicarState, setIndicarOpen] = React.useState(false);
   const [modalAnteciparState, setAnteciparOpen] = React.useState(false);
   const [modalInvestirState, setInvestirOpen] = React.useState(false);
@@ -105,12 +106,11 @@ const Index = (props) => {
   };
 
   const atualizaFormValues = (event, formItem) => {
-    var fieldNumeroProcesso = document.getElementById("modalFieldAntecipar-2");
-    if (fieldNumeroProcesso != null) {
-      console.log(fieldNumeroProcesso);
-
-    }
     setFormValue({ ...formValues, [formItem]: event });
+  }
+
+  const getParceiroValue = (event, formItem) => {
+    setParceiroValue({ ...parceiroValues, [formItem]: event });
   }
 
   const isEnabled = () => {
@@ -139,6 +139,18 @@ const Index = (props) => {
         console.log(error);
         handleClose();
         setFeedbackErro(true);
+      });
+  }
+
+  const handleSubmitParceiro = (reqURL, reqBody) => {
+    axios.post(reqURL, reqBody)
+      .then(function (response) {
+        console.log(response);
+        handleClose();
+      })
+      .catch(function (error) {
+        console.log(error);
+        handleClose();
       });
   }
 
@@ -381,6 +393,7 @@ const Index = (props) => {
             label="Email @"
             type="mail"
             variant="outlined"
+            onChange={e => { getParceiroValue(e.target.value, 'email') }}
             fullWidth
           />
         </DialogContent>
@@ -388,7 +401,7 @@ const Index = (props) => {
           <Button onClick={handleClose} color="primary">
             Cancelar
           </Button>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={e => { handleSubmitParceiro(`https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/sendmailpartner`, parceiroValues) }} color="primary">
             Enviar
           </Button>
         </DialogActions>
