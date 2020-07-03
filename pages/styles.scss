@@ -1,3 +1,51 @@
+@font-face {
+  font-family: 'Overpass';
+  src: local('/fonts/Overpass Light'), local('Overpass-Light'),
+    url('/fonts/Overpass-Light.woff2') format('woff2'),
+    url('/fonts/Overpass-Light.woff') format('woff'),
+    url('/fonts/Overpass-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: local('/fonts/Overpass Regular'), local('Overpass-Regular'),
+    url('/fonts/Overpass-Regular.woff2') format('woff2'),
+    url('/fonts/Overpass-Regular.woff') format('woff'),
+    url('/fonts/Overpass-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: local('/fonts/Muli Regular'), local('Muli-Regular'),
+    url('/fonts/Muli-Regular.woff2') format('woff2'),
+    url('/fonts/Muli-Regular.woff') format('woff'),
+    url('/fonts/Muli-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: local('/fonts/Muli Light'), local('Muli-Light'),
+    url('/fonts/Muli-Light.woff2') format('woff2'),
+    url('/fonts/Muli-Light.woff') format('woff'),
+    url('/fonts/Muli-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -9,11 +57,21 @@ body {
 
 .modal-label {
   text-align: left;
+  text-decoration: none;
   font-family: 'Muli';
   font-weight: 600;
   letter-spacing: 0;
   color: #395E66;
   cursor: pointer;
+  opacity: 1
+}
+
+a.modal-label {
+  opacity: .65
+}
+
+a.modal-label:hover {
+  text-decoration: underline;
   opacity: 1
 }
 
@@ -34,11 +92,15 @@ body {
   width: 86%;
 }
 
+.remove-padding {
+  padding: 0 !important;
+}
+
 .map-container {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 90px 0 0;
+  padding: 4em 0 0;
   position: relative;
   min-height: 80vh;
   width: 100%;
@@ -372,6 +434,7 @@ img {
 
   .card {
     flex: 1;
+    margin-left: 0;
     margin-right: 2em;
     margin-bottom: 2em;
 
@@ -496,6 +559,10 @@ img {
   }
 }
 
+.MuiOutlinedInput-input {
+  color: #000;
+}
+
 .MuiInputBase-root {
   color: rgba($color: #9BADB1, $alpha: .5) !important;
 }
@@ -512,6 +579,30 @@ img {
   color: rgba($color: #395E66, $alpha: 1) !important;
 }
 
+.MuiTypography-h1,
+.MuiTypography-h2,
+.MuiTypography-h3,
+.MuiTypography-h4,
+.MuiTypography-h5,
+.MuiTypography-h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Overpass', sans-serif !important;
+}
+
+.MuiInputBase-input,
+.MuiMenuItem-root,
+.MuiFormLabel-root,
+p,
+span,
+li {
+  font-family: 'Muli', sans-serif !important;
+}
+
 @media (max-width: 1125px) {
   .map-texts {
     width: 70%;
@@ -526,6 +617,7 @@ img {
   .map {
     padding: 0;
     right: 0;
+    display: none;
   }
 
   .map-texts {

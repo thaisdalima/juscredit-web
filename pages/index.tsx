@@ -1,32 +1,47 @@
+import React from "react";
+import PropTypes from 'prop-types';
 import './styles.scss';
 import Button from '../components/Button/Button';
 import { Fragment, useEffect } from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
 import Link from 'next/link';
-import React from "react";
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Alert from '@material-ui/lab/Alert';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Checkbox from '@material-ui/core/Checkbox';
+
+import NumberFormat from 'react-number-format';
 import API from './../api';
 
 <meta name="viewport" content="::-webkit=device-width"></meta>
 const Index = (props) => {
+  const INITIAL_FORM = {
+    full_name: '',
+    account_type: '',
+    person_type: '',
+    title: '',
+    email: '',
+    phone: '',
+    concordo_termos: '',
+    investidor_qualificado: ''
+  };
   const [state, setState] = React.useState({
     checkedModalAntecipe: false,
     checkedModalInvestirQualificado: false,
     checkedModalInvestirConcordo: false,
   });
-  const [formValues, setFormValue] = React.useState({
-  });
+  const [formValues, setFormValue] = React.useState(INITIAL_FORM);
   const [modalIndicarState, setIndicarOpen] = React.useState(false);
   const [modalAnteciparState, setAnteciparOpen] = React.useState(false);
   const [modalInvestirState, setInvestirOpen] = React.useState(false);
+  const [modalEnviado, setFeedbackEnviado] = React.useState(false);
+  const [modalErro, setFeedbackErro] = React.useState(false);
   const [profile, setProfile] = React.useState("cliente");
   const [selectProfile, setSelectProfile] = React.useState('');
   const [originPath, setOriginPath] = React.useState('');
@@ -46,25 +61,35 @@ const Index = (props) => {
 
   const handleModalIndicar = () => {
     setIndicarOpen(true);
-    setFormValue({});
   };
 
   const handleModalAntecipar = () => {
-    setAnteciparOpen(true);
-    setFormValue({});
     setFormValue({ ...formValues, account_type: 'c' });
+    setAnteciparOpen(true);
   };
 
   const handleModalInvestir = () => {
-    setInvestirOpen(true);
-    setFormValue({});
     setFormValue({ ...formValues, account_type: 'i' });
+    setInvestirOpen(true);
   };
 
   const handleClose = () => {
     setIndicarOpen(false);
     setAnteciparOpen(false);
     setInvestirOpen(false);
+    setFeedbackEnviado(false);
+    setFeedbackErro(false);
+    setFormValue({
+      ...formValues,
+      full_name: '',
+      account_type: '',
+      person_type: '',
+      title: '',
+      email: '',
+      phone: '',
+      concordo_termos: '',
+      investidor_qualificado: ''
+    });
   };
 
   const handleProfile = (_profile) => {
@@ -80,23 +105,64 @@ const Index = (props) => {
   };
 
   const atualizaFormValues = (event, formItem) => {
+    var fieldNumeroProcesso = document.getElementById("modalFieldAntecipar-2");
+    if (fieldNumeroProcesso != null) {
+      console.log(fieldNumeroProcesso);
+
+    }
     setFormValue({ ...formValues, [formItem]: event });
   }
+
+  const isEnabled = () => {
+    for (var key in formValues) {
+      if (formValues["account_type"] !== "i") {
+        formValues["investidor_qualificado"] = null
+      }
+      if (formValues["account_type"] !== "c") {
+        formValues["title"] = null
+      }
+      if (formValues[key] != "") {
+      } else {
+        return true;
+      }
+    }
+  }
+
+  const handleSubmit = (reqURL, reqBody) => {
+    axios.post(reqURL, reqBody)
+      .then(function (response) {
+        console.log(response);
+        handleClose();
+        setFeedbackEnviado(true);
+      })
+      .catch(function (error) {
+        console.log(error);
+        handleClose();
+        setFeedbackErro(true);
+      });
+  }
+
+  function ProcessoFormat(props) {
+    const { inputRef, onChange, ...other } = props;
+
+    return (
+      <NumberFormat
+        {...other}
+        getInputRef={inputRef}
+        format="#######-##.####.#.##.########"
+        allowEmptyFormatting
+        isNumericString
+      />
+    );
+  }
+
+  ProcessoFormat.propTypes = {
+    inputRef: PropTypes.func.isRequired,
+  };
 
   useEffect(() => {
     setOriginPath(window.location.origin);
   });
-
-  const handleSubmit = (reqURL, reqBody) => {
-
-    axios.post(reqURL, reqBody)
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
 
   return (
     <Fragment>
@@ -141,7 +207,7 @@ const Index = (props) => {
               <div className="cards-showcase-wrapper">
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-2.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
+                    <img src="/card-img-2.svg" alt="Ilustração do Card" style={{ maxHeight: '105px' }} />
                     <h3>Praticidade</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Processo de antecipação 100% digital.</p></li>
@@ -151,7 +217,7 @@ const Index = (props) => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-1.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
+                    <img src="/card-img-1.svg" alt="Ilustração do Card" style={{ maxHeight: '105px' }} />
                     <h3>Agilidade</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Liquidez imediata, não espere mais para receber o seu direito.</p></li>
@@ -160,7 +226,7 @@ const Index = (props) => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-3.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
+                    <img src="/card-img-3.svg" alt="Ilustração do Card" style={{ maxHeight: '105px' }} />
                     <h3>Liberação</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Receba diretamente em sua JusCredit.</p></li>
@@ -189,7 +255,7 @@ const Index = (props) => {
               <div className="cards-showcase-wrapper">
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-4.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
+                    <img src="/card-img-4.svg" alt="Ilustração do Card" style={{ maxHeight: '105px' }} />
                     <h3>Rentabilidade</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Maior retorno que investimentos tradicionais.</p></li>
@@ -200,7 +266,7 @@ const Index = (props) => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-5.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
+                    <img src="/card-img-5.svg" alt="Ilustração do Card" style={{ maxHeight: '105px' }} />
                     <h3>Segurança</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Modelo proprietário de análise.</p></li>
@@ -211,7 +277,7 @@ const Index = (props) => {
                 </div>
                 <div className="card">
                   <div className="card-inner">
-                    <img src="/card-img-3.svg" alt="Ilustração do Card" style={{maxHeight: '105px'}} />
+                    <img src="/card-img-3.svg" alt="Ilustração do Card" style={{ maxHeight: '105px' }} />
                     <h3>Recebimento</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Receba os valores dos créditos judiciais adquiridos diretamente em sua conta JusCredit.</p></li>
@@ -309,16 +375,11 @@ const Index = (props) => {
       <Dialog open={modalIndicarState} onClose={handleClose} aria-labelledby="parceiro-dialog-title">
         <DialogTitle id="parceiro-dialog-title">Inscreva-se</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            Você receberá um email para criação de senha e completar seu perfil
-            Iremos entrar em contato com você para confirmar suas informações.
-          </DialogContentText>
           <TextField
             autoFocus
-            margin="dense"
             id="name"
             label="Email @"
-            type="email"
+            type="mail"
             variant="outlined"
             fullWidth
           />
@@ -363,6 +424,9 @@ const Index = (props) => {
               label="Número do processo"
               helperText="Exemplo: 0000020-37.2010.5.15.0118"
               variant="outlined"
+              InputProps={{
+                inputComponent: ProcessoFormat,
+              }}
               onChange={e => { atualizaFormValues(e.target.value, 'title') }}
               fullWidth />
             <TextField
@@ -377,6 +441,7 @@ const Index = (props) => {
               variant="outlined"
               onChange={e => { atualizaFormValues(e.target.value, 'phone') }}
               fullWidth />
+
             <div className="flex align-items-center">
               <Checkbox
                 id="modalFieldAntecipar-5"
@@ -386,15 +451,21 @@ const Index = (props) => {
                 color="primary"
                 inputProps={{ 'aria-label': 'Checkbox Modal Antecipe' }}
               />
-              <label className="modal-label" htmlFor="modalFieldAntecipar-5">Concordo com os Termos do JusCredit</label>
+              <label className="modal-label" htmlFor="modalFieldAntecipar-5">Concordo com os Termos do JusCredit,</label>
+              <Link href="/JusCredit_-_Temos_de_Uso_do_Cliente.pdf">
+                <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
+                  Clique para ler
+                </a>
+              </Link>
             </div>
+
           </form>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancelar
           </Button>
-          <Button onClick={e => { handleSubmit(`${API}/user`, formValues) }} color="primary">
+          <Button disabled={isEnabled()} onClick={e => { handleSubmit(`${API}/user`, formValues) }} color="primary">
             Enviar
           </Button>
         </DialogActions>
@@ -446,7 +517,12 @@ const Index = (props) => {
                 color="primary"
                 inputProps={{ 'aria-label': 'Checkbox Modal Investir' }}
               />
-              <label className="modal-label" htmlFor="modalFieldInvestir-4">Sou um investidor qualificado</label>
+              <label className="modal-label" htmlFor="modalFieldInvestir-4">Sou um investidor qualificado,</label>
+              <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
+                <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
+                  Leia os termos
+                </a>
+              </Link>
             </div>
             <div className="flex align-items-center">
               <Checkbox
@@ -457,7 +533,12 @@ const Index = (props) => {
                 color="primary"
                 inputProps={{ 'aria-label': 'Checkbox Modal Investir' }}
               />
-              <label className="modal-label" htmlFor="modalFieldInvestir-5">Concordo com os Termos do JusCredit</label>
+              <label className="modal-label" htmlFor="modalFieldInvestir-5">Concordo com os Termos do JusCredit,</label>
+              <Link href="/JusCredit_-_Temos_de_Uso_do_Cliente.pdf">
+                <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
+                  Clique para ler
+                </a>
+              </Link>
             </div>
           </form>
         </DialogContent>
@@ -465,10 +546,26 @@ const Index = (props) => {
           <Button onClick={handleClose} color="primary">
             Cancelar
           </Button>
-          <Button onClick={e => { handleSubmit(`${API}/user`, formValues) }} color="primary">
+          <Button disabled={isEnabled()} onClick={e => { handleSubmit(`${API}/user`, formValues) }} color="primary">
             Enviar
           </Button>
         </DialogActions>
+      </Dialog>
+
+      <Dialog open={modalEnviado} onClose={handleClose} aria-labelledby="investir-dialog-title">
+        <DialogContent className="remove-padding">
+          <Alert severity="success">
+            Seu cadastro foi iniciado, <strong>verifique seu email</strong> para conclui-lo e iniciar seus investimentos em nossa plataforma!
+          </Alert>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={modalErro} onClose={handleClose} aria-labelledby="investir-dialog-title">
+        <DialogContent className="remove-padding">
+          <Alert severity="error">
+            Houve um problema, tente novamente mais tarde.
+          </Alert>
+        </DialogContent>
       </Dialog>
     </Fragment >
 

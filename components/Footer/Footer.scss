@@ -1,18 +1,48 @@
 .footer-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
   background: rgb(83, 182, 127);
   background: radial-gradient(circle, rgba(83, 182, 127, 1) 0%, rgba(8, 108, 123, 1) 100%);
-  display: flex;
-  color: white;
   border-top-right-radius: 200px 200px;
-  justify-content: space-around;
-  flex-direction: row;
 
+  >div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    padding: 1em 2em;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    div {
+      flex: 1;
+      padding: 0 20px;
+      margin-bottom: .5em;
+
+      >span {
+        font-family: 'Overpass';
+        color: #FFFFFF;
+        opacity: .6;
+        font-weight: 200;
+        font-size: .9em;
+        white-space: nowrap;
+      }
+
+      &:last-child {
+        flex: 1.3;
+      }
+    }
+  }
 
   a {
     font-family: 'Overpass';
     color: #FFFFFF;
     cursor: pointer;
-    opacity: .5;
+    opacity: .6;
     font-weight: 200;
     margin-bottom: 10px;
     display: flex;
@@ -33,8 +63,6 @@
     font-weight: 200;
     margin-bottom: 16px;
   }
-
-
 }
 
 .footer-logo {
@@ -48,7 +76,6 @@
   flex: 0.2;
   cursor: pointer;
   text-decoration: none;
-
 }
 
 .menu {
@@ -63,7 +90,6 @@
   padding-right: 20px;
   text-decoration: none;
   margin-right: 5px;
-
 
   .a {
     font-family: 'Overpass';
@@ -83,26 +109,44 @@
     font-weight: 200;
     margin-bottom: 0;
     margin-left: 10px;
-
   }
-
 }
 
 .abfintech {
-  margin-top: 80px;
+  margin-top: 1em;
   margin-bottom: 20px;
 }
 
 .direitos-container {
-  margin-top: 75px;
+  margin-top: .9em;
+  text-align: right;
 }
 
-.disclaime {
-  margin-top: 180px;
+.disclaimer {
+  font-family: 'Overpass';
+  color: #FFFFFF;
+  opacity: .6;
+  font-weight: 200;
+  font-size: .8em;
+  padding: 0 0 1em 0;
+  margin: 0;
 }
 
+@media (max-width: 768px) {
+  .footer-container span {
+    white-space: initial;
+  }
 
-@media(max-width: 790px) {
+  .footer-container>div {
+    padding: .5em;
+  }
+
+  .direitos-container {
+    text-align: left;
+  }
+}
+
+@media (max-width: 790px) {
   .footer-container {
     flex-direction: column;
     padding: 40px 16px;
@@ -116,7 +160,4 @@
     padding: 0;
   }
 
-  .footer-logo {
-    display: none;
-  }
 }
