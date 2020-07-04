@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -124,7 +124,7 @@ module.exports = require("next/dist/next-server/lib/utils.js");
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-const API = "http://juscredit-273101.ue.r.appspot.com/api/v1";
+const API = "https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/";
 /* harmony default export */ __webpack_exports__["default"] = (API);
 
 /***/ }),
@@ -1996,10 +1996,10 @@ const Index = props => {
 
   const tipoPessoaArr = [{
     value: 'f',
-    label: 'CPF'
+    label: 'Pessoa Física'
   }, {
     value: 'j',
-    label: 'CNPJ'
+    label: 'Pessoa Jurídica'
   }];
 
   const handleModalIndicar = () => {
@@ -2150,7 +2150,7 @@ const Index = props => {
       lineNumber: 182,
       columnNumber: 9
     }
-  }, "JusCredit - Home")), __jsx("main", {
+  }, "JusCredit")), __jsx("main", {
     className: "main-page-wrapper",
     __self: undefined,
     __source: {
@@ -2320,7 +2320,7 @@ const Index = props => {
       columnNumber: 19
     }
   }, "Servi\xE7o de antecipa\xE7\xE3o dispon\xEDvel para Trabalhadores e Advogados.")), __jsx("div", {
-    className: "buttons-container small",
+    className: "buttons-container",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -2550,7 +2550,7 @@ const Index = props => {
       lineNumber: 244,
       columnNumber: 27
     }
-  }, "Receba diretamente em sua JusCredit.")))))), __jsx("div", {
+  }, "Receba diretamente em sua conta JusCredit.")))))), __jsx("div", {
     className: "buttons-container flex justify-content-center",
     __self: undefined,
     __source: {
@@ -2611,7 +2611,7 @@ const Index = props => {
       columnNumber: 19
     }
   }, "Investimentos em cr\xE9ditos judiciais de forma r\xE1pida e descomplicada.")), __jsx("div", {
-    className: "buttons-container small",
+    className: "buttons-container",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -2815,7 +2815,7 @@ const Index = props => {
       lineNumber: 285,
       columnNumber: 27
     }
-  }, "Empresas saud\xE1veis, sem negativa\xE7\xE3o \xE9 inclusas no banco nacional de devedores trabalhistas.")), __jsx("li", {
+  }, "Empresas saud\xE1veis, sem negativa\xE7\xE3o e inclusas no banco nacional de devedores trabalhistas.")), __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3294,7 +3294,7 @@ const Index = props => {
       lineNumber: 388,
       columnNumber: 9
     }
-  }, "Inscreva-se"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8___default.a, {
+  }, "Seja parceiro!"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3326,7 +3326,7 @@ const Index = props => {
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     onClick: handleClose,
-    color: "primary",
+    color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3337,7 +3337,7 @@ const Index = props => {
     onClick: e => {
       handleSubmitParceiro(`https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/sendmailpartner`, parceiroValues);
     },
-    color: "primary",
+    color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3529,7 +3529,7 @@ const Index = props => {
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     onClick: handleClose,
-    color: "primary",
+    color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3539,9 +3539,9 @@ const Index = props => {
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     disabled: isEnabled(),
     onClick: e => {
-      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_15__["default"]}/user`, formValues);
+      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_15__["default"]}user`, formValues);
     },
-    color: "primary",
+    color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3566,7 +3566,7 @@ const Index = props => {
       lineNumber: 488,
       columnNumber: 9
     }
-  }, "Inscreva-se"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8___default.a, {
+  }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3686,27 +3686,7 @@ const Index = props => {
       lineNumber: 533,
       columnNumber: 15
     }
-  }, "Sou um investidor qualificado,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 534,
-      columnNumber: 15
-    }
-  }, __jsx("a", {
-    className: "modal-label",
-    target: "_blank",
-    style: {
-      marginLeft: "6px"
-    },
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 535,
-      columnNumber: 17
-    }
-  }, "Leia os termos"))), __jsx("div", {
+  }, "Sou um investidor qualificado,")), __jsx("div", {
     className: "flex align-items-center",
     __self: undefined,
     __source: {
@@ -3742,7 +3722,7 @@ const Index = props => {
       columnNumber: 15
     }
   }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    href: "/JusCredit_-_Temos_de_Uso_do_Cliente.pdf",
+    href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3770,7 +3750,7 @@ const Index = props => {
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     onClick: handleClose,
-    color: "primary",
+    color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3780,9 +3760,9 @@ const Index = props => {
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     disabled: isEnabled(),
     onClick: e => {
-      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_15__["default"]}/user`, formValues);
+      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_15__["default"]}user`, formValues);
     },
-    color: "primary",
+    color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3866,7 +3846,7 @@ const Index = props => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/index.tsx ***!
   \*******************************/

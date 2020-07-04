@@ -124,7 +124,7 @@ module.exports = require("next/dist/next-server/lib/utils.js");
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-const API = "http://juscredit-273101.ue.r.appspot.com/api/v1";
+const API = "https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/";
 /* harmony default export */ __webpack_exports__["default"] = (API);
 
 /***/ }),
@@ -255,7 +255,7 @@ const Footer = () => __jsx("footer", {
     columnNumber: 17
   }
 }, "Institucional"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: "/JusCredit_-_Pol\xEDtica_de_Privacidade.pdf",
+  href: "/JusCredit_-_Politica_de_Privacidade.pdf",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -651,10 +651,10 @@ const Header = () => {
 
   const tipoPessoaArr = [{
     value: 'f',
-    label: 'CPF'
+    label: 'Pessoa Fisica'
   }, {
     value: 'j',
-    label: 'CNPJ'
+    label: 'Pessoa Jurídica'
   }];
   let themeClass = '';
 
@@ -826,7 +826,7 @@ const Header = () => {
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
-    href: "#",
+    href: "/",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -850,7 +850,7 @@ const Header = () => {
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
-    href: "#",
+    href: "/",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -899,7 +899,7 @@ const Header = () => {
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "entrar",
     color: "seven",
-    onClick: () => window.open('https://front-dot-juscredit-273101.ue.r.appspot.com/'),
+    onClick: () => window.open('https://app.juscredit.com.br'),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -975,7 +975,7 @@ const Header = () => {
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
-    href: "#",
+    href: "/",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -999,7 +999,7 @@ const Header = () => {
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
-    href: "#",
+    href: "/",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1048,7 +1048,7 @@ const Header = () => {
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "entrar",
     color: "seven",
-    onClick: () => window.open('https://front-dot-juscredit-273101.ue.r.appspot.com/'),
+    onClick: () => window.open('https://app.juscredit.com.br'),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1247,7 +1247,7 @@ const Header = () => {
   }, "Cancelar"), __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     disabled: isEnabled(),
     onClick: e => {
-      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_13__["default"]}/user`, formValues);
+      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_13__["default"]}user`, formValues);
     },
     color: "primary",
     __self: undefined,
@@ -1274,7 +1274,7 @@ const Header = () => {
       lineNumber: 293,
       columnNumber: 17
     }
-  }, "Inscreva-se"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_6___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1394,27 +1394,7 @@ const Header = () => {
       lineNumber: 338,
       columnNumber: 29
     }
-  }, "Sou um investidor qualificado,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
-    href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 339,
-      columnNumber: 29
-    }
-  }, __jsx("a", {
-    className: "modal-label",
-    target: "_blank",
-    style: {
-      marginLeft: "6px"
-    },
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 340,
-      columnNumber: 33
-    }
-  }, "Leia os termos"))), __jsx("div", {
+  }, "Sou um investidor qualificado,")), __jsx("div", {
     className: "flex align-items-center",
     __self: undefined,
     __source: {
@@ -1450,7 +1430,7 @@ const Header = () => {
       columnNumber: 29
     }
   }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
-    href: "/JusCredit_-_Temos_de_Uso_do_Cliente.pdf",
+    href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1488,7 +1468,7 @@ const Header = () => {
   }, "Cancelar"), __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     disabled: isEnabled(),
     onClick: e => {
-      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_13__["default"]}/user`, formValues);
+      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_13__["default"]}user`, formValues);
     },
     color: "primary",
     __self: undefined,

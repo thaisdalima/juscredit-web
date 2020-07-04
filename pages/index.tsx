@@ -52,11 +52,11 @@ const Index = (props) => {
   const tipoPessoaArr = [
     {
       value: 'f',
-      label: 'CPF',
+      label: 'Pessoa Física',
     },
     {
       value: 'j',
-      label: 'CNPJ',
+      label: 'Pessoa Jurídica',
     }
   ];
 
@@ -179,7 +179,7 @@ const Index = (props) => {
   return (
     <Fragment>
       <Head>
-        <title>JusCredit - Home</title>
+        <title>JusCredit</title>
       </Head>
       <main className="main-page-wrapper">
         <div className="map-container">
@@ -211,7 +211,7 @@ const Index = (props) => {
                   <h1>Mais valor para quem investe.<br />Rápido para quem antecipa.</h1>
                   <h2>Serviço de antecipação disponível para Trabalhadores e Advogados.</h2>
                 </div>
-                <div className="buttons-container small">
+                <div className="buttons-container">
                   <Button onClick={() => handleProfile("cliente")} color={profile == "cliente" ? "primary" : "secondary"}>Cliente</Button>
                   <Button onClick={() => handleProfile("investidor")} color={profile != "cliente" ? "primary" : "secondary"}>Investidor</Button>
                 </div>
@@ -241,7 +241,7 @@ const Index = (props) => {
                     <img src="/card-img-3.svg" alt="Ilustração do Card" style={{ maxHeight: '105px' }} />
                     <h3>Liberação</h3>
                     <ul className="list">
-                      <li><p style={{ margin: 0 }}>Receba diretamente em sua JusCredit.</p></li>
+                      <li><p style={{ margin: 0 }}>Receba diretamente em sua conta JusCredit.</p></li>
                     </ul>
                   </div>
                 </div>
@@ -259,7 +259,7 @@ const Index = (props) => {
                   <h1>Mais valor para quem investe.<br />Rápido para quem antecipa.</h1>
                   <h2>Investimentos em créditos judiciais de forma rápida e descomplicada.</h2>
                 </div>
-                <div className="buttons-container small">
+                <div className="buttons-container">
                   <Button onClick={() => handleProfile("cliente")} color={profile == "cliente" ? "primary" : "secondary"}>Cliente</Button>
                   <Button onClick={() => handleProfile("investidor")} color={profile != "cliente" ? "primary" : "secondary"}>Investidor</Button>
                 </div>
@@ -282,7 +282,7 @@ const Index = (props) => {
                     <h3>Segurança</h3>
                     <ul className="list">
                       <li><p style={{ margin: 0 }}>Modelo proprietário de análise.</p></li>
-                      <li><p style={{ margin: 0 }}>Empresas saudáveis, sem negativação é inclusas no banco nacional de devedores trabalhistas.</p></li>
+                      <li><p style={{ margin: 0 }}>Empresas saudáveis, sem negativação e inclusas no banco nacional de devedores trabalhistas.</p></li>
                       <li><p style={{ margin: 0 }}>Parceiro de escritório especializado em direito do trabalho.</p></li>
                     </ul>
                   </div>
@@ -385,7 +385,7 @@ const Index = (props) => {
         </div>
       </main>
       <Dialog open={modalIndicarState} onClose={handleClose} aria-labelledby="parceiro-dialog-title">
-        <DialogTitle id="parceiro-dialog-title">Inscreva-se</DialogTitle>
+        <DialogTitle id="parceiro-dialog-title">Seja parceiro!</DialogTitle>
         <DialogContent>
           <TextField
             autoFocus
@@ -398,10 +398,10 @@ const Index = (props) => {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} color="primary small">
             Cancelar
           </Button>
-          <Button onClick={e => { handleSubmitParceiro(`https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/sendmailpartner`, parceiroValues) }} color="primary">
+          <Button onClick={e => { handleSubmitParceiro(`https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/sendmailpartner`, parceiroValues) }} color="primary small">
             Enviar
           </Button>
         </DialogActions>
@@ -475,17 +475,17 @@ const Index = (props) => {
           </form>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} color="primary small">
             Cancelar
           </Button>
-          <Button disabled={isEnabled()} onClick={e => { handleSubmit(`${API}/user`, formValues) }} color="primary">
+          <Button disabled={isEnabled()} onClick={e => { handleSubmit(`${API}user`, formValues) }} color="primary small">
             Enviar
           </Button>
         </DialogActions>
       </Dialog>
 
       <Dialog open={modalInvestirState} onClose={handleClose} aria-labelledby="investir-dialog-title">
-        <DialogTitle id="investir-dialog-title">Inscreva-se</DialogTitle>
+        <DialogTitle id="investir-dialog-title">Invista em créditos trabalhistas</DialogTitle>
         <DialogContent>
           <form className="modal-form" noValidate autoComplete="off">
             <TextField
@@ -531,11 +531,11 @@ const Index = (props) => {
                 inputProps={{ 'aria-label': 'Checkbox Modal Investir' }}
               />
               <label className="modal-label" htmlFor="modalFieldInvestir-4">Sou um investidor qualificado,</label>
-              <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
+              {/* <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
                 <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
                   Leia os termos
                 </a>
-              </Link>
+              </Link> */}
             </div>
             <div className="flex align-items-center">
               <Checkbox
@@ -547,7 +547,7 @@ const Index = (props) => {
                 inputProps={{ 'aria-label': 'Checkbox Modal Investir' }}
               />
               <label className="modal-label" htmlFor="modalFieldInvestir-5">Concordo com os Termos do JusCredit,</label>
-              <Link href="/JusCredit_-_Temos_de_Uso_do_Cliente.pdf">
+              <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
                 <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
                   Clique para ler
                 </a>
@@ -556,10 +556,10 @@ const Index = (props) => {
           </form>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} color="primary small">
             Cancelar
           </Button>
-          <Button disabled={isEnabled()} onClick={e => { handleSubmit(`${API}/user`, formValues) }} color="primary">
+          <Button disabled={isEnabled()} onClick={e => { handleSubmit(`${API}user`, formValues) }} color="primary small">
             Enviar
           </Button>
         </DialogActions>

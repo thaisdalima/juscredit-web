@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var API = "http://juscredit-273101.ue.r.appspot.com/api/v1";
+var API = "https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/";
 /* harmony default export */ __webpack_exports__["default"] = (API);
 
 /***/ }),
@@ -32960,10 +32960,10 @@ var Index = function Index(props) {
 
   var tipoPessoaArr = [{
     value: 'f',
-    label: 'CPF'
+    label: 'Pessoa Física'
   }, {
     value: 'j',
-    label: 'CNPJ'
+    label: 'Pessoa Jurídica'
   }];
 
   var handleModalIndicar = function handleModalIndicar() {
@@ -33106,7 +33106,7 @@ var Index = function Index(props) {
       lineNumber: 182,
       columnNumber: 9
     }
-  }, "JusCredit - Home")), __jsx("main", {
+  }, "JusCredit")), __jsx("main", {
     className: "main-page-wrapper",
     __self: _this,
     __source: {
@@ -33280,7 +33280,7 @@ var Index = function Index(props) {
       columnNumber: 19
     }
   }, "Servi\xE7o de antecipa\xE7\xE3o dispon\xEDvel para Trabalhadores e Advogados.")), __jsx("div", {
-    className: "buttons-container small",
+    className: "buttons-container",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -33514,7 +33514,7 @@ var Index = function Index(props) {
       lineNumber: 244,
       columnNumber: 27
     }
-  }, "Receba diretamente em sua JusCredit.")))))), __jsx("div", {
+  }, "Receba diretamente em sua conta JusCredit.")))))), __jsx("div", {
     className: "buttons-container flex justify-content-center",
     __self: _this,
     __source: {
@@ -33577,7 +33577,7 @@ var Index = function Index(props) {
       columnNumber: 19
     }
   }, "Investimentos em cr\xE9ditos judiciais de forma r\xE1pida e descomplicada.")), __jsx("div", {
-    className: "buttons-container small",
+    className: "buttons-container",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -33785,7 +33785,7 @@ var Index = function Index(props) {
       lineNumber: 285,
       columnNumber: 27
     }
-  }, "Empresas saud\xE1veis, sem negativa\xE7\xE3o \xE9 inclusas no banco nacional de devedores trabalhistas.")), __jsx("li", {
+  }, "Empresas saud\xE1veis, sem negativa\xE7\xE3o e inclusas no banco nacional de devedores trabalhistas.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -34266,7 +34266,7 @@ var Index = function Index(props) {
       lineNumber: 388,
       columnNumber: 9
     }
-  }, "Inscreva-se"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, "Seja parceiro!"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -34298,7 +34298,7 @@ var Index = function Index(props) {
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
     onClick: handleClose,
-    color: "primary",
+    color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -34309,7 +34309,7 @@ var Index = function Index(props) {
     onClick: function onClick(e) {
       handleSubmitParceiro("https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/sendmailpartner", parceiroValues);
     },
-    color: "primary",
+    color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -34503,7 +34503,7 @@ var Index = function Index(props) {
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
     onClick: handleClose,
-    color: "primary",
+    color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -34513,9 +34513,9 @@ var Index = function Index(props) {
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
     disabled: isEnabled(),
     onClick: function onClick(e) {
-      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_19__["default"], "/user"), formValues);
+      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_19__["default"], "user"), formValues);
     },
-    color: "primary",
+    color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -34540,7 +34540,7 @@ var Index = function Index(props) {
       lineNumber: 488,
       columnNumber: 9
     }
-  }, "Inscreva-se"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -34662,27 +34662,7 @@ var Index = function Index(props) {
       lineNumber: 533,
       columnNumber: 15
     }
-  }, "Sou um investidor qualificado,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
-    href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 534,
-      columnNumber: 15
-    }
-  }, __jsx("a", {
-    className: "modal-label",
-    target: "_blank",
-    style: {
-      marginLeft: "6px"
-    },
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 535,
-      columnNumber: 17
-    }
-  }, "Leia os termos"))), __jsx("div", {
+  }, "Sou um investidor qualificado,")), __jsx("div", {
     className: "flex align-items-center",
     __self: _this,
     __source: {
@@ -34718,7 +34698,7 @@ var Index = function Index(props) {
       columnNumber: 15
     }
   }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
-    href: "/JusCredit_-_Temos_de_Uso_do_Cliente.pdf",
+    href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -34746,7 +34726,7 @@ var Index = function Index(props) {
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
     onClick: handleClose,
-    color: "primary",
+    color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -34756,9 +34736,9 @@ var Index = function Index(props) {
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
     disabled: isEnabled(),
     onClick: function onClick(e) {
-      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_19__["default"], "/user"), formValues);
+      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_19__["default"], "user"), formValues);
     },
-    color: "primary",
+    color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -34831,7 +34811,7 @@ var Index = function Index(props) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CVS2017%5CJuscredit%5Cjuscredit-web%5Cpages%5Cindex.tsx&hotRouterUpdates=true ***!
   \****************************************************************************************************************************************************/
@@ -34854,5 +34834,5 @@ module.exports = dll_77a815f570ae38c2d683;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

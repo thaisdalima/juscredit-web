@@ -90,6 +90,7 @@ a.modal-label:hover {
   margin: 0 auto;
   padding: 1em;
   width: 86%;
+  max-width: 1600px;
 }
 
 .remove-padding {
@@ -225,7 +226,7 @@ ul.list {
 
   .button {
     margin-right: 24px;
-    min-width: 179px;
+    min-width: 178px;
     margin-bottom: 8px;
 
     h1 {
@@ -252,9 +253,9 @@ ul.list {
 
     .button {
       margin-right: 10px;
-      height: 40px;
-      min-width: 100px;
-      font-size: 12px;
+      height: 46px;
+      min-width: 120px;
+      font-size: .9em;
     }
   }
 }
@@ -401,7 +402,7 @@ img {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin: 4em 0;
+  margin: 2.5em 0;
 
   &::after {
     content: '';
@@ -430,13 +431,14 @@ img {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin: 4em 18%;
+  margin: 2.5em auto;
+  max-width: 760px;
 
   .card {
     flex: 1;
     margin-left: 0;
-    margin-right: 2em;
-    margin-bottom: 2em;
+    margin-right: 1.3em;
+    margin-bottom: 1.3em;
 
     &:last-child {
       margin-right: 0;
@@ -603,6 +605,10 @@ li {
   font-family: 'Muli', sans-serif !important;
 }
 
+.MuiInputBase-input {
+  color: #395E66 !important;
+}
+
 @media (max-width: 1125px) {
   .map-texts {
     width: 70%;
@@ -704,7 +710,7 @@ li {
   .cards-howto-wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: 4em 0;
+    margin: 2.5em 0;
 
     &::after {
       content: '';
@@ -714,7 +720,7 @@ li {
     .card {
       flex: 1 100%;
       margin-right: 0;
-      margin-bottom: 2em;
+      margin-bottom: 1.3em;
     }
   }
 

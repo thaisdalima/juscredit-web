@@ -47,11 +47,11 @@ const Header = () => {
     const tipoPessoaArr = [
         {
             value: 'f',
-            label: 'CPF',
+            label: 'Pessoa Fisica',
         },
         {
             value: 'j',
-            label: 'CNPJ',
+            label: 'Pessoa Jurídica',
         }
     ];
     let themeClass = ''
@@ -163,12 +163,12 @@ const Header = () => {
                         </Link>
                     </li>
                     <li className="link">
-                        <Link href="#">
+                        <Link href="/">
                             <a onClick={handleModalAntecipar}>Antecipar</a>
                         </Link>
                     </li>
                     <li className="link">
-                        <Link href="#">
+                        <Link href="/">
                             <a onClick={handleModalInvestir}>Investir</a>
                         </Link>
                     </li>
@@ -178,7 +178,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li className="link">
-                        <Button className="entrar" color="seven" onClick={() => window.open('https://front-dot-juscredit-273101.ue.r.appspot.com/')}>
+                        <Button className="entrar" color="seven" onClick={() => window.open('https://app.juscredit.com.br')}>
                             Entrar</Button>
                     </li>
                 </ul>
@@ -196,12 +196,12 @@ const Header = () => {
                         </Link>
                     </li>
                     <li className="link">
-                        <Link href="#">
+                        <Link href="/">
                             <a onClick={handleModalAntecipar}>Antecipar</a>
                         </Link>
                     </li>
                     <li className="link">
-                        <Link href="#">
+                        <Link href="/">
                             <a onClick={handleModalInvestir}>Investir</a>
                         </Link>
                     </li>
@@ -211,7 +211,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li className="link">
-                        <Button className="entrar" color="seven" onClick={() => window.open('https://front-dot-juscredit-273101.ue.r.appspot.com/')}>
+                        <Button className="entrar" color="seven" onClick={() => window.open('https://app.juscredit.com.br')}>
                             Entrar</Button>
                     </li>
                 </ul>
@@ -283,14 +283,14 @@ const Header = () => {
                     <Button onClick={handleClose} color="primary">
                         Cancelar
           </Button>
-                    <Button disabled={isEnabled()} onClick={e => { handleSubmit(`${API}/user`, formValues) }} color="primary">
+                    <Button disabled={isEnabled()} onClick={e => { handleSubmit(`${API}user`, formValues) }} color="primary">
                         Enviar
           </Button>
                 </DialogActions>
             </Dialog>
 
             <Dialog open={modalInvestirState} onClose={handleClose} aria-labelledby="investir-dialog-title">
-                <DialogTitle id="investir-dialog-title">Inscreva-se</DialogTitle>
+                <DialogTitle id="investir-dialog-title">Invista em créditos trabalhistas</DialogTitle>
                 <DialogContent>
                     <form className="modal-form" noValidate autoComplete="off">
                         <TextField
@@ -336,11 +336,11 @@ const Header = () => {
                                 inputProps={{ 'aria-label': 'Checkbox Modal Investir' }}
                             />
                             <label className="modal-label" htmlFor="modalFieldInvestir-4">Sou um investidor qualificado,</label>
-                            <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
+                            {/* <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
                                 <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
                                     Leia os termos
                                 </a>
-                            </Link>
+                            </Link> */}
                         </div>
                         <div className="flex align-items-center">
                             <Checkbox
@@ -352,7 +352,7 @@ const Header = () => {
                                 inputProps={{ 'aria-label': 'Checkbox Modal Investir' }}
                             />
                             <label className="modal-label" htmlFor="modalFieldInvestir-5">Concordo com os Termos do JusCredit,</label>
-                            <Link href="/JusCredit_-_Temos_de_Uso_do_Cliente.pdf">
+                            <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
                                 <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
                                     Clique para ler
                                 </a>
@@ -364,7 +364,7 @@ const Header = () => {
                     <Button onClick={handleClose} color="primary">
                         Cancelar
           </Button>
-                    <Button disabled={isEnabled()} onClick={e => { handleSubmit(`${API}/user`, formValues) }} color="primary">
+                    <Button disabled={isEnabled()} onClick={e => { handleSubmit(`${API}user`, formValues) }} color="primary">
                         Enviar
           </Button>
                 </DialogActions>
