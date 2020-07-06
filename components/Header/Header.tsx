@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import './Header.scss';
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
@@ -13,6 +14,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Alert from '@material-ui/lab/Alert';
 import Link from 'next/link';
 import API from '../../api';
+
+import NumberFormat from 'react-number-format';
 
 const Header = () => {
     const INITIAL_FORM = {
@@ -145,6 +148,39 @@ const Header = () => {
             });
     }
 
+    function ProcessoFormat(props) {
+        const { inputRef, onChange, ...other } = props;
+
+        return (
+            <NumberFormat
+                {...other}
+                getInputRef={inputRef}
+                format="#######-##.####.#.##.########"
+                allowEmptyFormatting
+                allowLeadingZeros
+                isNumericString
+            />
+        );
+    }
+
+    function CelularFormat(props) {
+        const { inputRef, onChange, ...other } = props;
+
+        return (
+            <NumberFormat
+                {...other}
+                getInputRef={inputRef}
+                format="(##) #-####-####"
+                allowEmptyFormatting
+                isNumericString
+            />
+        );
+    }
+
+    ProcessoFormat.propTypes = {
+        inputRef: PropTypes.func.isRequired,
+    };
+
     useEffect(() => {
         setOriginPath(window.location.origin);
     });
@@ -247,6 +283,9 @@ const Header = () => {
                             label="Número do processo"
                             helperText="Exemplo: 0000020-37.2010.5.15.0118"
                             variant="outlined"
+                            InputProps={{
+                                inputComponent: ProcessoFormat,
+                            }}
                             onChange={e => { atualizaFormValues(e.target.value, 'title') }}
                             fullWidth />
                         <TextField
@@ -259,6 +298,9 @@ const Header = () => {
                             id="modalFieldAntecipar-4"
                             label="Celular"
                             variant="outlined"
+                            InputProps={{
+                                inputComponent: CelularFormat,
+                            }}
                             onChange={e => { atualizaFormValues(e.target.value, 'phone') }}
                             fullWidth />
                         <div className="flex align-items-center">
@@ -309,6 +351,9 @@ const Header = () => {
                             id="modalFieldInvestir-2"
                             label="Celular"
                             variant="outlined"
+                            InputProps={{
+                                inputComponent: CelularFormat,
+                            }}
                             onChange={e => { atualizaFormValues(e.target.value, 'phone') }}
                             fullWidth />
                         <TextField

@@ -163,6 +163,21 @@ const Index = (props) => {
         getInputRef={inputRef}
         format="#######-##.####.#.##.########"
         allowEmptyFormatting
+        allowLeadingZeros
+        isNumericString
+      />
+    );
+  }
+
+  function CelularFormat(props) {
+    const { inputRef, onChange, ...other } = props;
+
+    return (
+      <NumberFormat
+        {...other}
+        getInputRef={inputRef}
+        format="(##) #-####-####"
+        allowEmptyFormatting
         isNumericString
       />
     );
@@ -452,9 +467,11 @@ const Index = (props) => {
               id="modalFieldAntecipar-4"
               label="Celular"
               variant="outlined"
+              InputProps={{
+                inputComponent: CelularFormat,
+              }}
               onChange={e => { atualizaFormValues(e.target.value, 'phone') }}
               fullWidth />
-
             <div className="flex align-items-center">
               <Checkbox
                 id="modalFieldAntecipar-5"
@@ -504,6 +521,9 @@ const Index = (props) => {
               id="modalFieldInvestir-2"
               label="Celular"
               variant="outlined"
+              InputProps={{
+                inputComponent: CelularFormat,
+              }}
               onChange={e => { atualizaFormValues(e.target.value, 'phone') }}
               fullWidth />
             <TextField
