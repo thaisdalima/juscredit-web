@@ -214,7 +214,8 @@ var Footer = function Footer() {
     }
   }, "Fale conosco"), __jsx("a", {
     className: "flex align-items-center",
-    href: "/contact",
+    target: "top",
+    href: "mailto:oi@juscredit.com.br",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -436,13 +437,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/DialogContent */ "./node_modules/@material-ui/core/esm/DialogContent/index.js");
 /* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "./node_modules/@material-ui/core/esm/DialogTitle/index.js");
 /* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js");
-/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "./node_modules/@material-ui/core/esm/MenuItem/index.js");
-/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material-ui/core/Checkbox */ "./node_modules/@material-ui/core/esm/Checkbox/index.js");
-/* harmony import */ var _material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @material-ui/lab/Alert */ "./node_modules/@material-ui/lab/esm/Alert/index.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../api */ "./api.js");
-/* harmony import */ var react_number_format__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react-number-format */ "./node_modules/react-number-format/dist/react-number-format.es.js");
+/* harmony import */ var react_input_mask__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-input-mask */ "./node_modules/react-input-mask/index.js");
+/* harmony import */ var react_input_mask__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react_input_mask__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "./node_modules/@material-ui/core/esm/MenuItem/index.js");
+/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @material-ui/core/Checkbox */ "./node_modules/@material-ui/core/esm/Checkbox/index.js");
+/* harmony import */ var _material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @material-ui/lab/Alert */ "./node_modules/@material-ui/lab/esm/Alert/index.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../api */ "./api.js");
+/* harmony import */ var react_number_format__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! react-number-format */ "./node_modules/react-number-format/dist/react-number-format.es.js");
 
 
 
@@ -475,7 +478,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
-var Header = function Header() {
+
+var Header = function Header(props) {
   var INITIAL_FORM = {
     full_name: '',
     account_type: '',
@@ -617,11 +621,11 @@ var Header = function Header() {
   };
 
   var handleChangeCheckbox = function handleChangeCheckbox(event) {
-    setState(_objectSpread({}, state, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, event.target.name, event.target.checked)));
+    setState(_objectSpread({}, state, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, event.target.ariaLabel, event.target.checked)));
   };
 
-  var atualizaFormValues = function atualizaFormValues(event, formItem) {
-    setFormValue(_objectSpread({}, formValues, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, formItem, event)));
+  var atualizaFormValues = function atualizaFormValues(event) {
+    setFormValue(_objectSpread({}, formValues, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, event.target.name, event.target.value)));
   };
 
   var isEnabled = function isEnabled() {
@@ -657,7 +661,7 @@ var Header = function Header() {
         onChange = props.onChange,
         other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["inputRef", "onChange"]);
 
-    return __jsx(react_number_format__WEBPACK_IMPORTED_MODULE_19__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, other, {
+    return __jsx(react_number_format__WEBPACK_IMPORTED_MODULE_20__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, other, {
       getInputRef: inputRef,
       format: "#######-##.####.#.##.########",
       allowEmptyFormatting: true,
@@ -666,7 +670,7 @@ var Header = function Header() {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155,
+        lineNumber: 156,
         columnNumber: 13
       }
     }));
@@ -677,7 +681,7 @@ var Header = function Header() {
         onChange = props.onChange,
         other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["inputRef", "onChange"]);
 
-    return __jsx(react_number_format__WEBPACK_IMPORTED_MODULE_19__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, other, {
+    return __jsx(react_number_format__WEBPACK_IMPORTED_MODULE_20__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, other, {
       getInputRef: inputRef,
       format: "(##) #-####-####",
       allowEmptyFormatting: true,
@@ -685,7 +689,7 @@ var Header = function Header() {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 170,
+        lineNumber: 171,
         columnNumber: 13
       }
     }));
@@ -702,7 +706,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190,
+      lineNumber: 191,
       columnNumber: 13
     }
   }, __jsx("a", {
@@ -711,7 +715,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191,
+      lineNumber: 192,
       columnNumber: 17
     }
   }, __jsx("img", {
@@ -720,7 +724,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192,
+      lineNumber: 193,
       columnNumber: 21
     }
   })), __jsx("ul", {
@@ -728,7 +732,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195,
+      lineNumber: 196,
       columnNumber: 17
     }
   }, __jsx("li", {
@@ -736,22 +740,22 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196,
+      lineNumber: 197,
       columnNumber: 21
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
     href: "#como-funciona",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197,
+      lineNumber: 198,
       columnNumber: 25
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198,
+      lineNumber: 199,
       columnNumber: 29
     }
   }, "Como Funciona"))), __jsx("li", {
@@ -759,15 +763,15 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201,
+      lineNumber: 202,
       columnNumber: 21
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
     href: "/",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202,
+      lineNumber: 203,
       columnNumber: 25
     }
   }, __jsx("a", {
@@ -775,7 +779,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203,
+      lineNumber: 204,
       columnNumber: 29
     }
   }, "Antecipar"))), __jsx("li", {
@@ -783,15 +787,15 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206,
+      lineNumber: 207,
       columnNumber: 21
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
     href: "/",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207,
+      lineNumber: 208,
       columnNumber: 25
     }
   }, __jsx("a", {
@@ -799,7 +803,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208,
+      lineNumber: 209,
       columnNumber: 29
     }
   }, "Investir"))), __jsx("li", {
@@ -807,22 +811,22 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211,
+      lineNumber: 212,
       columnNumber: 21
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
     href: "#parceiros-container",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212,
+      lineNumber: 213,
       columnNumber: 25
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213,
+      lineNumber: 214,
       columnNumber: 29
     }
   }, "Parceiros"))), __jsx("li", {
@@ -830,7 +834,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216,
+      lineNumber: 217,
       columnNumber: 21
     }
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -842,7 +846,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217,
+      lineNumber: 218,
       columnNumber: 25
     }
   }, "Entrar"))), __jsx("div", {
@@ -851,7 +855,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221,
+      lineNumber: 222,
       columnNumber: 17
     }
   }, __jsx("svg", {
@@ -862,7 +866,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222,
+      lineNumber: 223,
       columnNumber: 21
     }
   }, __jsx("path", {
@@ -871,7 +875,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223,
+      lineNumber: 224,
       columnNumber: 25
     }
   })))), openedMenu && __jsx("ul", {
@@ -879,7 +883,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228,
+      lineNumber: 229,
       columnNumber: 17
     }
   }, __jsx("li", {
@@ -887,22 +891,22 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229,
+      lineNumber: 230,
       columnNumber: 21
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
     href: "#como-funciona",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230,
+      lineNumber: 231,
       columnNumber: 25
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231,
+      lineNumber: 232,
       columnNumber: 29
     }
   }, "Como Funciona"))), __jsx("li", {
@@ -910,15 +914,15 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234,
+      lineNumber: 235,
       columnNumber: 21
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
     href: "/",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235,
+      lineNumber: 236,
       columnNumber: 25
     }
   }, __jsx("a", {
@@ -926,7 +930,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236,
+      lineNumber: 237,
       columnNumber: 29
     }
   }, "Antecipar"))), __jsx("li", {
@@ -934,15 +938,15 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239,
+      lineNumber: 240,
       columnNumber: 21
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
     href: "/",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 241,
       columnNumber: 25
     }
   }, __jsx("a", {
@@ -950,7 +954,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241,
+      lineNumber: 242,
       columnNumber: 29
     }
   }, "Investir"))), __jsx("li", {
@@ -958,22 +962,22 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244,
+      lineNumber: 245,
       columnNumber: 21
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
     href: "#parceiros-container",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245,
+      lineNumber: 246,
       columnNumber: 25
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246,
+      lineNumber: 247,
       columnNumber: 29
     }
   }, "Parceiros"))), __jsx("li", {
@@ -981,7 +985,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249,
+      lineNumber: 250,
       columnNumber: 21
     }
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -993,7 +997,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250,
+      lineNumber: 251,
       columnNumber: 25
     }
   }, "Entrar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -1003,7 +1007,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256,
+      lineNumber: 257,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -1011,14 +1015,14 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257,
+      lineNumber: 258,
       columnNumber: 17
     }
   }, "Antecipe o seu cr\xE9dito"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258,
+      lineNumber: 259,
       columnNumber: 17
     }
   }, __jsx("form", {
@@ -1028,21 +1032,22 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259,
+      lineNumber: 260,
       columnNumber: 21
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
     id: "modalFieldAntecipar-0",
     label: "Nome completo",
     variant: "outlined",
+    name: "full_name",
     onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'full_name');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260,
+      lineNumber: 261,
       columnNumber: 25
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -1051,101 +1056,117 @@ var Header = function Header() {
     label: "Tipo de Pessoa",
     variant: "outlined",
     value: selectProfile,
+    name: "person_type",
     onChange: function onChange(e) {
       handleChangeSelect(e);
-      atualizaFormValues(e.target.value, 'person_type');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266,
+      lineNumber: 268,
       columnNumber: 25
     }
   }, tipoPessoaArr.map(function (option) {
-    return __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    return __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_15__["default"], {
       key: option.value,
       value: option.value,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 276,
+        lineNumber: 279,
         columnNumber: 33
       }
     }, option.label);
-  })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  })), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_14___default.a, {
+    onChange: function onChange(e) {
+      atualizaFormValues(e);
+    },
+    mask: "9999999-99.9999.9.99.9999",
+    value: props.value,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 284,
+      columnNumber: 25
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
     id: "modalFieldAntecipar-2",
     label: "N\xFAmero do processo",
     helperText: "Exemplo: 0000020-37.2010.5.15.0118",
     variant: "outlined",
-    InputProps: {
-      inputComponent: ProcessoFormat
-    },
-    onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'title');
-    },
+    name: "title",
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 281,
-      columnNumber: 25
+      lineNumber: 288,
+      columnNumber: 29
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
     id: "modalFieldAntecipar-3",
     label: "Email",
     variant: "outlined",
+    name: "email",
     onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'email');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291,
+      lineNumber: 296,
       columnNumber: 25
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_14___default.a, {
+    onChange: function onChange(e) {
+      atualizaFormValues(e);
+    },
+    mask: "(99) 99999-9999",
+    value: props.value,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 303,
+      columnNumber: 25
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
     id: "modalFieldAntecipar-4",
     label: "Celular",
     variant: "outlined",
-    InputProps: {
-      inputComponent: CelularFormat
-    },
-    onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'phone');
-    },
+    name: "phone",
     fullWidth: true,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 297,
-      columnNumber: 25
-    }
-  }), __jsx("div", {
-    className: "flex align-items-center",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 306,
-      columnNumber: 25
-    }
-  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
-    id: "modalFieldAntecipar-5",
-    checked: state.checkedModalAntecipe,
-    onChange: function onChange(e) {
-      handleChangeCheckbox(e);
-      atualizaFormValues(e.target.checked, 'concordo_termos');
-    },
-    name: "checkedModalAntecipe",
-    color: "primary",
-    inputProps: {
-      'aria-label': 'Checkbox Modal Antecipe'
-    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 307,
+      columnNumber: 29
+    }
+  })), __jsx("div", {
+    className: "flex align-items-center",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 314,
+      columnNumber: 25
+    }
+  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_16__["default"], {
+    id: "modalFieldAntecipar-5",
+    checked: state.checkedModalAntecipe,
+    onChange: function onChange(e) {
+      handleChangeCheckbox(e);
+      atualizaFormValues(e);
+    },
+    name: "concordo_termos",
+    color: "primary",
+    inputProps: {
+      'aria-label': 'checkedModalAntecipe'
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 315,
       columnNumber: 29
     }
   }), __jsx("label", {
@@ -1154,15 +1175,15 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315,
+      lineNumber: 323,
       columnNumber: 29
     }
-  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
     href: "/JusCredit_-_Temos_de_Uso_do_Cliente.pdf",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316,
+      lineNumber: 324,
       columnNumber: 29
     }
   }, __jsx("a", {
@@ -1174,14 +1195,14 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 317,
+      lineNumber: 325,
       columnNumber: 33
     }
   }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 324,
+      lineNumber: 333,
       columnNumber: 17
     }
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -1190,19 +1211,19 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 325,
+      lineNumber: 334,
       columnNumber: 21
     }
   }, "Cancelar"), __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
     disabled: isEnabled(),
     onClick: function onClick(e) {
-      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_18__["default"], "user"), formValues);
+      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_19__["default"], "user"), formValues);
     },
     color: "primary",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328,
+      lineNumber: 337,
       columnNumber: 21
     }
   }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -1212,7 +1233,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 334,
+      lineNumber: 343,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -1220,14 +1241,14 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 335,
+      lineNumber: 344,
       columnNumber: 17
     }
   }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 336,
+      lineNumber: 345,
       columnNumber: 17
     }
   }, __jsx("form", {
@@ -1237,79 +1258,89 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 337,
+      lineNumber: 346,
       columnNumber: 21
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
     id: "modalFieldInvestir-0",
     label: "Nome completo",
     variant: "outlined",
+    name: "full_nameF",
     onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'full_name');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 338,
+      lineNumber: 347,
       columnNumber: 25
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
     id: "modalFieldInvestir-1",
     label: "Email",
     variant: "outlined",
+    name: "email",
     onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'email');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 344,
+      lineNumber: 354,
       columnNumber: 25
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_14___default.a, {
+    onChange: function onChange(e) {
+      atualizaFormValues(e);
+    },
+    mask: "(99) 99999-9999",
+    value: props.value,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 361,
+      columnNumber: 25
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
     id: "modalFieldInvestir-2",
     label: "Celular",
     variant: "outlined",
-    InputProps: {
-      inputComponent: CelularFormat
-    },
-    onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'phone');
-    },
+    name: "phone",
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 350,
-      columnNumber: 25
+      lineNumber: 365,
+      columnNumber: 29
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
     id: "modalFieldInvestir-3",
     select: true,
     label: "Tipo de Pessoa",
     variant: "outlined",
     value: selectProfile,
+    name: "person_type",
     onChange: function onChange(e) {
       handleChangeSelect(e);
-      atualizaFormValues(e.target.value, 'person_type');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359,
+      lineNumber: 372,
       columnNumber: 25
     }
   }, tipoPessoaArr.map(function (option) {
-    return __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    return __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_15__["default"], {
       key: option.value,
       value: option.value,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 369,
+        lineNumber: 383,
         columnNumber: 33
       }
     }, option.label);
@@ -1318,25 +1349,25 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 374,
+      lineNumber: 388,
       columnNumber: 25
     }
-  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_16__["default"], {
     id: "modalFieldInvestir-4",
     checked: state.checkedModalInvestirQualificado,
     onChange: function onChange(e) {
       handleChangeCheckbox(e);
-      atualizaFormValues(e.target.checked, 'investidor_qualificado');
+      atualizaFormValues(e);
     },
-    name: "checkedModalInvestirQualificado",
+    name: "investidor_qualificado",
     color: "primary",
     inputProps: {
-      'aria-label': 'Checkbox Modal Investir'
+      'aria-label': 'checkedModalInvestirQualificado'
     },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 375,
+      lineNumber: 389,
       columnNumber: 29
     }
   }), __jsx("label", {
@@ -1345,33 +1376,33 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 383,
+      lineNumber: 397,
       columnNumber: 29
     }
-  }, "Sou um investidor qualificado,")), __jsx("div", {
+  }, "Sou um investidor qualificado")), __jsx("div", {
     className: "flex align-items-center",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 390,
+      lineNumber: 399,
       columnNumber: 25
     }
-  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_16__["default"], {
     id: "modalFieldInvestir-5",
     checked: state.checkedModalInvestirConcordo,
     onChange: function onChange(e) {
       handleChangeCheckbox(e);
-      atualizaFormValues(e.target.checked, 'concordo_termos');
+      atualizaFormValues(e);
     },
-    name: "checkedModalInvestirConcordo",
+    name: "concordo_termos",
     color: "primary",
     inputProps: {
-      'aria-label': 'Checkbox Modal Investir'
+      'aria-label': 'checkedModalInvestirConcordo'
     },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 391,
+      lineNumber: 400,
       columnNumber: 29
     }
   }), __jsx("label", {
@@ -1380,15 +1411,15 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 399,
+      lineNumber: 408,
       columnNumber: 29
     }
-  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
     href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 400,
+      lineNumber: 409,
       columnNumber: 29
     }
   }, __jsx("a", {
@@ -1400,14 +1431,14 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 401,
+      lineNumber: 410,
       columnNumber: 33
     }
   }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 408,
+      lineNumber: 417,
       columnNumber: 17
     }
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -1416,19 +1447,19 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 409,
+      lineNumber: 418,
       columnNumber: 21
     }
   }, "Cancelar"), __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
     disabled: isEnabled(),
     onClick: function onClick(e) {
-      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_18__["default"], "user"), formValues);
+      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_19__["default"], "user"), formValues);
     },
     color: "primary",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 412,
+      lineNumber: 421,
       columnNumber: 21
     }
   }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -1438,7 +1469,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 418,
+      lineNumber: 427,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -1446,22 +1477,22 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 419,
+      lineNumber: 428,
       columnNumber: 17
     }
-  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_16__["default"], {
+  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_17__["default"], {
     severity: "success",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 420,
+      lineNumber: 429,
       columnNumber: 21
     }
   }, "Seu cadastro foi iniciado, ", __jsx("strong", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 421,
+      lineNumber: 430,
       columnNumber: 52
     }
   }, "verifique seu email"), " para conclui-lo e iniciar seus investimentos em nossa plataforma!"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -1471,7 +1502,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 426,
+      lineNumber: 435,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -1479,15 +1510,15 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 427,
+      lineNumber: 436,
       columnNumber: 17
     }
-  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_16__["default"], {
+  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_17__["default"], {
     severity: "error",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 428,
+      lineNumber: 437,
       columnNumber: 21
     }
   }, "Houve um problema, tente novamente mais tarde."))));
@@ -23376,6 +23407,67 @@ function hyphenateStyleName(name) {
 
 /***/ }),
 
+/***/ "./node_modules/invariant/browser.js":
+/*!*******************************************!*\
+  !*** ./node_modules/invariant/browser.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var invariant = function(condition, format, a, b, c, d, e, f) {
+  if (true) {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  }
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error(
+        'Minified exception occurred; use the non-minified dev environment ' +
+        'for the full error message and additional helpful warnings.'
+      );
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(
+        format.replace(/%s/g, function() { return args[argIndex++]; })
+      );
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+};
+
+module.exports = invariant;
+
+
+/***/ }),
+
 /***/ "./node_modules/is-in-browser/dist/module.js":
 /*!***************************************************!*\
   !*** ./node_modules/is-in-browser/dist/module.js ***!
@@ -29485,6 +29577,1052 @@ module.exports = (__webpack_require__(/*! dll-reference dll_77a815f570ae38c2d683
 
 /***/ }),
 
+/***/ "./node_modules/react-input-mask/index.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-input-mask/index.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* eslint-disable import/no-unresolved */
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./lib/react-input-mask.development.js */ "./node_modules/react-input-mask/lib/react-input-mask.development.js");
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-input-mask/lib/react-input-mask.development.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/react-input-mask/lib/react-input-mask.development.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var React__default = _interopDefault(React);
+var reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+var PropTypes = _interopDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+var invariant = _interopDefault(__webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js"));
+var warning = _interopDefault(__webpack_require__(/*! warning */ "./node_modules/warning/warning.js"));
+
+function _defaults2(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+
+  _defaults2(subClass, superClass);
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function defer(fn) {
+  return requestAnimationFrame(fn);
+}
+function cancelDefer(deferId) {
+  cancelAnimationFrame(deferId);
+}
+
+function setInputSelection(input, start, end) {
+  if (end === undefined) {
+    end = start;
+  }
+
+  input.setSelectionRange(start, end);
+}
+function getInputSelection(input) {
+  var start = input.selectionStart;
+  var end = input.selectionEnd;
+  return {
+    start: start,
+    end: end,
+    length: end - start
+  };
+}
+function isInputFocused(input) {
+  var inputDocument = input.ownerDocument;
+  return inputDocument.hasFocus() && inputDocument.activeElement === input;
+}
+
+// Element's window may differ from the one within React instance
+// if element rendered within iframe.
+// See https://github.com/sanniassin/react-input-mask/issues/182
+function getElementDocument(element) {
+  return element == null ? void 0 : element.ownerDocument;
+}
+function getElementWindow(element) {
+  var _getElementDocument;
+
+  return (_getElementDocument = getElementDocument(element)) == null ? void 0 : _getElementDocument.defaultView;
+}
+function isDOMElement(element) {
+  var elementWindow = getElementWindow(element);
+  return !!elementWindow && element instanceof elementWindow.HTMLElement;
+}
+function isFunction(value) {
+  return typeof value === "function";
+}
+function findLastIndex(array, predicate) {
+  for (var i = array.length - 1; i >= 0; i--) {
+    var x = array[i];
+
+    if (predicate(x, i)) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+function repeat(string, n) {
+  if (n === void 0) {
+    n = 1;
+  }
+
+  var result = "";
+
+  for (var i = 0; i < n; i++) {
+    result += string;
+  }
+
+  return result;
+}
+function toString(value) {
+  return "" + value;
+}
+
+function useInputElement(inputRef) {
+  return React.useCallback(function () {
+    var input = inputRef.current;
+    var isDOMNode = typeof window !== "undefined" && isDOMElement(input); // workaround for react-test-renderer
+    // https://github.com/sanniassin/react-input-mask/issues/147
+
+    if (!input || !isDOMNode) {
+      return null;
+    }
+
+    if (input.nodeName !== "INPUT") {
+      input = input.querySelector("input");
+    }
+
+    if (!input) {
+      throw new Error("react-input-mask: inputComponent doesn't contain input node");
+    }
+
+    return input;
+  }, [inputRef]);
+}
+
+function useDeferLoop(callback) {
+  var deferIdRef = React.useRef(null);
+  var runLoop = React.useCallback(function () {
+    // If there are simulated focus events, runLoop could be
+    // called multiple times without blur or re-render
+    if (deferIdRef.current !== null) {
+      return;
+    }
+
+    function loop() {
+      callback();
+      deferIdRef.current = defer(loop);
+    }
+
+    loop();
+  }, [callback]);
+  var stopLoop = React.useCallback(function () {
+    cancelDefer(deferIdRef.current);
+    deferIdRef.current = null;
+  }, []);
+  React.useEffect(function () {
+    if (deferIdRef.current) {
+      stopLoop();
+      runLoop();
+    }
+  }, [runLoop, stopLoop]);
+  React.useEffect(cancelDefer, []);
+  return [runLoop, stopLoop];
+}
+
+function useSelection(inputRef, isMasked) {
+  var selectionRef = React.useRef({
+    start: null,
+    end: null
+  });
+  var getInputElement = useInputElement(inputRef);
+  var getSelection = React.useCallback(function () {
+    var input = getInputElement();
+    return getInputSelection(input);
+  }, [getInputElement]);
+  var getLastSelection = React.useCallback(function () {
+    return selectionRef.current;
+  }, []);
+  var setSelection = React.useCallback(function (selection) {
+    var input = getInputElement(); // Don't change selection on unfocused input
+    // because Safari sets focus on selection change (#154)
+
+    if (!input || !isInputFocused(input)) {
+      return;
+    }
+
+    setInputSelection(input, selection.start, selection.end); // Use actual selection in case the requested one was out of range
+
+    selectionRef.current = getSelection();
+  }, [getInputElement, getSelection]);
+  var selectionLoop = React.useCallback(function () {
+    selectionRef.current = getSelection();
+  }, [getSelection]);
+
+  var _useDeferLoop = useDeferLoop(selectionLoop),
+      runSelectionLoop = _useDeferLoop[0],
+      stopSelectionLoop = _useDeferLoop[1];
+
+  React.useLayoutEffect(function () {
+    if (!isMasked) {
+      return;
+    }
+
+    var input = getInputElement();
+    input.addEventListener("focus", runSelectionLoop);
+    input.addEventListener("blur", stopSelectionLoop);
+
+    if (isInputFocused(input)) {
+      runSelectionLoop();
+    }
+
+    return function () {
+      input.removeEventListener("focus", runSelectionLoop);
+      input.removeEventListener("blur", stopSelectionLoop);
+      stopSelectionLoop();
+    };
+  });
+  return {
+    getSelection: getSelection,
+    getLastSelection: getLastSelection,
+    setSelection: setSelection
+  };
+}
+
+function useValue(inputRef, initialValue) {
+  var getInputElement = useInputElement(inputRef);
+  var valueRef = React.useRef(initialValue);
+  var getValue = React.useCallback(function () {
+    var input = getInputElement();
+    return input.value;
+  }, [getInputElement]);
+  var getLastValue = React.useCallback(function () {
+    return valueRef.current;
+  }, []);
+  var setValue = React.useCallback(function (newValue) {
+    valueRef.current = newValue;
+    var input = getInputElement();
+
+    if (input) {
+      input.value = newValue;
+    }
+  }, [getInputElement]);
+  return {
+    getValue: getValue,
+    getLastValue: getLastValue,
+    setValue: setValue
+  };
+}
+
+function useInputState(initialValue, isMasked) {
+  var inputRef = React.useRef();
+
+  var _useSelection = useSelection(inputRef, isMasked),
+      getSelection = _useSelection.getSelection,
+      getLastSelection = _useSelection.getLastSelection,
+      setSelection = _useSelection.setSelection;
+
+  var _useValue = useValue(inputRef, initialValue),
+      getValue = _useValue.getValue,
+      getLastValue = _useValue.getLastValue,
+      setValue = _useValue.setValue;
+
+  function getLastInputState() {
+    return {
+      value: getLastValue(),
+      selection: getLastSelection()
+    };
+  }
+
+  function getInputState() {
+    return {
+      value: getValue(),
+      selection: getSelection()
+    };
+  }
+
+  function setInputState(_ref) {
+    var value = _ref.value,
+        selection = _ref.selection;
+    setValue(value);
+    setSelection(selection);
+  }
+
+  return {
+    inputRef: inputRef,
+    getInputState: getInputState,
+    getLastInputState: getLastInputState,
+    setInputState: setInputState
+  };
+}
+function usePrevious(value) {
+  var ref = React.useRef();
+  React.useEffect(function () {
+    ref.current = value;
+  });
+  return ref.current;
+}
+
+var CONTROLLED_PROPS = ["disabled", "onBlur", "onChange", "onFocus", "onMouseDown", "readOnly", "value"];
+var defaultFormatChars = {
+  "9": /[0-9]/,
+  a: /[A-Za-z]/,
+  "*": /[A-Za-z0-9]/
+};
+
+function validateMaxLength(props) {
+   true ? warning(!props.maxLength || !props.mask, "react-input-mask: maxLength property shouldn't be passed to the masked input. It breaks masking and unnecessary because length is limited by the mask length.") : undefined;
+}
+function validateMaskPlaceholder(props) {
+  var mask = props.mask,
+      maskPlaceholder = props.maskPlaceholder;
+  !(!mask || !maskPlaceholder || maskPlaceholder.length === 1 || maskPlaceholder.length === mask.length) ?  true ? invariant(false, "react-input-mask: maskPlaceholder should either be a single character or have the same length as the mask:\n" + ("mask: " + mask + "\n") + ("maskPlaceholder: " + maskPlaceholder)) : undefined : void 0;
+}
+function validateChildren(props, inputElement) {
+  var conflictProps = CONTROLLED_PROPS.filter(function (propId) {
+    return inputElement.props[propId] != null && inputElement.props[propId] !== props[propId];
+  });
+  !!conflictProps.length ?  true ? invariant(false, "react-input-mask: the following props should be passed to the InputMask component, not to children: " + conflictProps.join(",")) : undefined : void 0;
+}
+
+function parseMask (_ref) {
+  var mask = _ref.mask,
+      maskPlaceholder = _ref.maskPlaceholder;
+  var permanents = [];
+
+  if (!mask) {
+    return {
+      maskPlaceholder: null,
+      mask: null,
+      prefix: null,
+      lastEditablePosition: null,
+      permanents: []
+    };
+  }
+
+  if (typeof mask === "string") {
+    var isPermanent = false;
+    var parsedMaskString = "";
+    mask.split("").forEach(function (character) {
+      if (!isPermanent && character === "\\") {
+        isPermanent = true;
+      } else {
+        if (isPermanent || !defaultFormatChars[character]) {
+          permanents.push(parsedMaskString.length);
+        }
+
+        parsedMaskString += character;
+        isPermanent = false;
+      }
+    });
+    mask = parsedMaskString.split("").map(function (character, index) {
+      if (permanents.indexOf(index) === -1) {
+        return defaultFormatChars[character];
+      }
+
+      return character;
+    });
+  } else {
+    mask.forEach(function (character, index) {
+      if (typeof character === "string") {
+        permanents.push(index);
+      }
+    });
+  }
+
+  if (maskPlaceholder) {
+    if (maskPlaceholder.length === 1) {
+      maskPlaceholder = mask.map(function (character, index) {
+        if (permanents.indexOf(index) !== -1) {
+          return character;
+        }
+
+        return maskPlaceholder;
+      });
+    } else {
+      maskPlaceholder = maskPlaceholder.split("");
+    }
+
+    permanents.forEach(function (position) {
+      maskPlaceholder[position] = mask[position];
+    });
+    maskPlaceholder = maskPlaceholder.join("");
+  }
+
+  var prefix = permanents.filter(function (position, index) {
+    return position === index;
+  }).map(function (position) {
+    return mask[position];
+  }).join("");
+  var lastEditablePosition = mask.length - 1;
+
+  while (permanents.indexOf(lastEditablePosition) !== -1) {
+    lastEditablePosition--;
+  }
+
+  return {
+    maskPlaceholder: maskPlaceholder,
+    prefix: prefix,
+    mask: mask,
+    lastEditablePosition: lastEditablePosition,
+    permanents: permanents
+  };
+}
+
+/* eslint no-use-before-define: ["error", { functions: false }] */
+
+var MaskUtils = function MaskUtils(options) {
+  var _this = this;
+
+  this.isCharacterAllowedAtPosition = function (character, position) {
+    var maskPlaceholder = _this.maskOptions.maskPlaceholder;
+
+    if (_this.isCharacterFillingPosition(character, position)) {
+      return true;
+    }
+
+    if (!maskPlaceholder) {
+      return false;
+    }
+
+    return maskPlaceholder[position] === character;
+  };
+
+  this.isCharacterFillingPosition = function (character, position) {
+    var mask = _this.maskOptions.mask;
+
+    if (!character || position >= mask.length) {
+      return false;
+    }
+
+    if (!_this.isPositionEditable(position)) {
+      return mask[position] === character;
+    }
+
+    var charRule = mask[position];
+    return new RegExp(charRule).test(character);
+  };
+
+  this.isPositionEditable = function (position) {
+    var _this$maskOptions = _this.maskOptions,
+        mask = _this$maskOptions.mask,
+        permanents = _this$maskOptions.permanents;
+    return position < mask.length && permanents.indexOf(position) === -1;
+  };
+
+  this.isValueEmpty = function (value) {
+    return value.split("").every(function (character, position) {
+      return !_this.isPositionEditable(position) || !_this.isCharacterFillingPosition(character, position);
+    });
+  };
+
+  this.isValueFilled = function (value) {
+    return _this.getFilledLength(value) === _this.maskOptions.lastEditablePosition + 1;
+  };
+
+  this.getDefaultSelectionForValue = function (value) {
+    var filledLength = _this.getFilledLength(value);
+
+    var cursorPosition = _this.getRightEditablePosition(filledLength);
+
+    return {
+      start: cursorPosition,
+      end: cursorPosition
+    };
+  };
+
+  this.getFilledLength = function (value) {
+    var characters = value.split("");
+    var lastFilledIndex = findLastIndex(characters, function (character, position) {
+      return _this.isPositionEditable(position) && _this.isCharacterFillingPosition(character, position);
+    });
+    return lastFilledIndex + 1;
+  };
+
+  this.getStringFillingLengthAtPosition = function (string, position) {
+    var characters = string.split("");
+    var insertedValue = characters.reduce(function (value, character) {
+      return _this.insertCharacterAtPosition(value, character, value.length);
+    }, repeat(" ", position));
+    return insertedValue.length - position;
+  };
+
+  this.getLeftEditablePosition = function (position) {
+    for (var i = position; i >= 0; i--) {
+      if (_this.isPositionEditable(i)) {
+        return i;
+      }
+    }
+
+    return null;
+  };
+
+  this.getRightEditablePosition = function (position) {
+    var mask = _this.maskOptions.mask;
+
+    for (var i = position; i < mask.length; i++) {
+      if (_this.isPositionEditable(i)) {
+        return i;
+      }
+    }
+
+    return null;
+  };
+
+  this.formatValue = function (value) {
+    var _this$maskOptions2 = _this.maskOptions,
+        maskPlaceholder = _this$maskOptions2.maskPlaceholder,
+        mask = _this$maskOptions2.mask;
+
+    if (!maskPlaceholder) {
+      value = _this.insertStringAtPosition("", value, 0);
+
+      while (value.length < mask.length && !_this.isPositionEditable(value.length)) {
+        value += mask[value.length];
+      }
+
+      return value;
+    }
+
+    return _this.insertStringAtPosition(maskPlaceholder, value, 0);
+  };
+
+  this.clearRange = function (value, start, len) {
+    if (!len) {
+      return value;
+    }
+
+    var end = start + len;
+    var _this$maskOptions3 = _this.maskOptions,
+        maskPlaceholder = _this$maskOptions3.maskPlaceholder,
+        mask = _this$maskOptions3.mask;
+    var clearedValue = value.split("").map(function (character, i) {
+      var isEditable = _this.isPositionEditable(i);
+
+      if (!maskPlaceholder && i >= end && !isEditable) {
+        return "";
+      }
+
+      if (i < start || i >= end) {
+        return character;
+      }
+
+      if (!isEditable) {
+        return mask[i];
+      }
+
+      if (maskPlaceholder) {
+        return maskPlaceholder[i];
+      }
+
+      return "";
+    }).join("");
+    return _this.formatValue(clearedValue);
+  };
+
+  this.insertCharacterAtPosition = function (value, character, position) {
+    var _this$maskOptions4 = _this.maskOptions,
+        mask = _this$maskOptions4.mask,
+        maskPlaceholder = _this$maskOptions4.maskPlaceholder;
+
+    if (position >= mask.length) {
+      return value;
+    }
+
+    var isAllowed = _this.isCharacterAllowedAtPosition(character, position);
+
+    var isEditable = _this.isPositionEditable(position);
+
+    var nextEditablePosition = _this.getRightEditablePosition(position);
+
+    var isNextPlaceholder = maskPlaceholder && nextEditablePosition ? character === maskPlaceholder[nextEditablePosition] : null;
+    var valueBefore = value.slice(0, position);
+
+    if (isAllowed || !isEditable) {
+      var insertedCharacter = isAllowed ? character : mask[position];
+      value = valueBefore + insertedCharacter;
+    }
+
+    if (!isAllowed && !isEditable && !isNextPlaceholder) {
+      value = _this.insertCharacterAtPosition(value, character, position + 1);
+    }
+
+    return value;
+  };
+
+  this.insertStringAtPosition = function (value, string, position) {
+    var _this$maskOptions5 = _this.maskOptions,
+        mask = _this$maskOptions5.mask,
+        maskPlaceholder = _this$maskOptions5.maskPlaceholder;
+
+    if (!string || position >= mask.length) {
+      return value;
+    }
+
+    var characters = string.split("");
+    var isFixedLength = _this.isValueFilled(value) || !!maskPlaceholder;
+    var valueAfter = value.slice(position);
+    value = characters.reduce(function (value, character) {
+      return _this.insertCharacterAtPosition(value, character, value.length);
+    }, value.slice(0, position));
+
+    if (isFixedLength) {
+      value += valueAfter.slice(value.length - position);
+    } else if (_this.isValueFilled(value)) {
+      value += mask.slice(value.length).join("");
+    } else {
+      var editableCharactersAfter = valueAfter.split("").filter(function (character, i) {
+        return _this.isPositionEditable(position + i);
+      });
+      value = editableCharactersAfter.reduce(function (value, character) {
+        var nextEditablePosition = _this.getRightEditablePosition(value.length);
+
+        if (nextEditablePosition === null) {
+          return value;
+        }
+
+        if (!_this.isPositionEditable(value.length)) {
+          value += mask.slice(value.length, nextEditablePosition).join("");
+        }
+
+        return _this.insertCharacterAtPosition(value, character, value.length);
+      }, value);
+    }
+
+    return value;
+  };
+
+  this.processChange = function (currentState, previousState) {
+    var _this$maskOptions6 = _this.maskOptions,
+        mask = _this$maskOptions6.mask,
+        prefix = _this$maskOptions6.prefix,
+        lastEditablePosition = _this$maskOptions6.lastEditablePosition;
+    var value = currentState.value,
+        selection = currentState.selection;
+    var previousValue = previousState.value;
+    var previousSelection = previousState.selection;
+    var newValue = value;
+    var enteredString = "";
+    var formattedEnteredStringLength = 0;
+    var removedLength = 0;
+    var cursorPosition = Math.min(previousSelection.start, selection.start);
+
+    if (selection.end > previousSelection.start) {
+      enteredString = newValue.slice(previousSelection.start, selection.end);
+      formattedEnteredStringLength = _this.getStringFillingLengthAtPosition(enteredString, cursorPosition);
+
+      if (!formattedEnteredStringLength) {
+        removedLength = 0;
+      } else {
+        removedLength = previousSelection.length;
+      }
+    } else if (newValue.length < previousValue.length) {
+      removedLength = previousValue.length - newValue.length;
+    }
+
+    newValue = previousValue;
+
+    if (removedLength) {
+      if (removedLength === 1 && !previousSelection.length) {
+        var deleteFromRight = previousSelection.start === selection.start;
+        cursorPosition = deleteFromRight ? _this.getRightEditablePosition(selection.start) : _this.getLeftEditablePosition(selection.start);
+      }
+
+      newValue = _this.clearRange(newValue, cursorPosition, removedLength);
+    }
+
+    newValue = _this.insertStringAtPosition(newValue, enteredString, cursorPosition);
+    cursorPosition += formattedEnteredStringLength;
+
+    if (cursorPosition >= mask.length) {
+      cursorPosition = mask.length;
+    } else if (cursorPosition < prefix.length && !formattedEnteredStringLength) {
+      cursorPosition = prefix.length;
+    } else if (cursorPosition >= prefix.length && cursorPosition < lastEditablePosition && formattedEnteredStringLength) {
+      cursorPosition = _this.getRightEditablePosition(cursorPosition);
+    }
+
+    newValue = _this.formatValue(newValue);
+    return {
+      value: newValue,
+      enteredString: enteredString,
+      selection: {
+        start: cursorPosition,
+        end: cursorPosition
+      }
+    };
+  };
+
+  this.maskOptions = parseMask(options);
+};
+
+var InputMaskChildrenWrapper =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(InputMaskChildrenWrapper, _React$Component);
+
+  function InputMaskChildrenWrapper() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = InputMaskChildrenWrapper.prototype;
+
+  _proto.render = function render() {
+    // eslint-disable-next-line react/prop-types
+    var _this$props = this.props,
+        children = _this$props.children,
+        props = _objectWithoutPropertiesLoose(_this$props, ["children"]);
+
+    return React__default.cloneElement(children, props);
+  };
+
+  return InputMaskChildrenWrapper;
+}(React__default.Component);
+
+var InputMask = React.forwardRef(function InputMask(props, forwardedRef) {
+  var alwaysShowMask = props.alwaysShowMask,
+      children = props.children,
+      mask = props.mask,
+      maskPlaceholder = props.maskPlaceholder,
+      beforeMaskedStateChange = props.beforeMaskedStateChange,
+      restProps = _objectWithoutPropertiesLoose(props, ["alwaysShowMask", "children", "mask", "maskPlaceholder", "beforeMaskedStateChange"]);
+
+  validateMaxLength(props);
+  validateMaskPlaceholder(props);
+  var maskUtils = new MaskUtils({
+    mask: mask,
+    maskPlaceholder: maskPlaceholder
+  });
+  var isMasked = !!mask;
+  var isEditable = !restProps.disabled && !restProps.readOnly;
+  var isControlled = props.value !== null && props.value !== undefined;
+  var previousIsMasked = usePrevious(isMasked);
+  var initialValue = toString((isControlled ? props.value : props.defaultValue) || "");
+
+  var _useInputState = useInputState(initialValue, isMasked),
+      inputRef = _useInputState.inputRef,
+      getInputState = _useInputState.getInputState,
+      setInputState = _useInputState.setInputState,
+      getLastInputState = _useInputState.getLastInputState;
+
+  var getInputElement = useInputElement(inputRef);
+
+  function onChange(event) {
+    var currentState = getInputState();
+    var previousState = getLastInputState();
+    var newInputState = maskUtils.processChange(currentState, previousState);
+
+    if (beforeMaskedStateChange) {
+      newInputState = beforeMaskedStateChange({
+        currentState: currentState,
+        previousState: previousState,
+        nextState: newInputState
+      });
+    }
+
+    setInputState(newInputState);
+
+    if (props.onChange) {
+      props.onChange(event);
+    }
+  }
+
+  function onFocus(event) {
+    // If autoFocus property is set, focus event fires before the ref handler gets called
+    inputRef.current = event.target;
+    var currentValue = getInputState().value;
+
+    if (isMasked && !maskUtils.isValueFilled(currentValue)) {
+      var newValue = maskUtils.formatValue(currentValue);
+      var newSelection = maskUtils.getDefaultSelectionForValue(newValue);
+      var newInputState = {
+        value: newValue,
+        selection: newSelection
+      };
+
+      if (beforeMaskedStateChange) {
+        newInputState = beforeMaskedStateChange({
+          currentState: getInputState(),
+          nextState: newInputState
+        });
+        newValue = newInputState.value;
+        newSelection = newInputState.selection;
+      }
+
+      setInputState(newInputState);
+
+      if (newValue !== currentValue && props.onChange) {
+        props.onChange(event);
+      } // Chrome resets selection after focus event,
+      // so we want to restore it later
+
+
+      defer(function () {
+        setInputState(getLastInputState());
+      });
+    }
+
+    if (props.onFocus) {
+      props.onFocus(event);
+    }
+  }
+
+  function onBlur(event) {
+    var currentValue = getInputState().value;
+    var lastValue = getLastInputState().value;
+
+    if (isMasked && !alwaysShowMask && maskUtils.isValueEmpty(lastValue)) {
+      var newValue = "";
+      var newInputState = {
+        value: newValue,
+        selection: {
+          start: null,
+          end: null
+        }
+      };
+
+      if (beforeMaskedStateChange) {
+        newInputState = beforeMaskedStateChange({
+          currentState: getInputState(),
+          nextState: newInputState
+        });
+        newValue = newInputState.value;
+      }
+
+      setInputState(newInputState);
+
+      if (newValue !== currentValue && props.onChange) {
+        props.onChange(event);
+      }
+    }
+
+    if (props.onBlur) {
+      props.onBlur(event);
+    }
+  } // Tiny unintentional mouse movements can break cursor
+  // position on focus, so we have to restore it in that case
+  //
+  // https://github.com/sanniassin/react-input-mask/issues/108
+
+
+  function onMouseDown(event) {
+    var input = getInputElement();
+
+    var _getInputState = getInputState(),
+        value = _getInputState.value;
+
+    var inputDocument = getElementDocument(input);
+
+    if (!isInputFocused(input) && !maskUtils.isValueFilled(value)) {
+      var mouseDownX = event.clientX;
+      var mouseDownY = event.clientY;
+      var mouseDownTime = new Date().getTime();
+
+      var mouseUpHandler = function mouseUpHandler(mouseUpEvent) {
+        inputDocument.removeEventListener("mouseup", mouseUpHandler);
+
+        if (!isInputFocused(input)) {
+          return;
+        }
+
+        var deltaX = Math.abs(mouseUpEvent.clientX - mouseDownX);
+        var deltaY = Math.abs(mouseUpEvent.clientY - mouseDownY);
+        var axisDelta = Math.max(deltaX, deltaY);
+        var timeDelta = new Date().getTime() - mouseDownTime;
+
+        if (axisDelta <= 10 && timeDelta <= 200 || axisDelta <= 5 && timeDelta <= 300) {
+          var _lastState = getLastInputState();
+
+          var newSelection = maskUtils.getDefaultSelectionForValue(_lastState.value);
+
+          var newState = _extends({}, _lastState, {
+            selection: newSelection
+          });
+
+          setInputState(newState);
+        }
+      };
+
+      inputDocument.addEventListener("mouseup", mouseUpHandler);
+    }
+
+    if (props.onMouseDown) {
+      props.onMouseDown(event);
+    }
+  } // For controlled inputs we want to provide properly formatted
+  // value prop
+
+
+  if (isMasked && isControlled) {
+    var input = getInputElement();
+    var isFocused = input && isInputFocused(input);
+    var newValue = isFocused || alwaysShowMask || props.value ? maskUtils.formatValue(props.value) : props.value;
+
+    if (beforeMaskedStateChange) {
+      newValue = beforeMaskedStateChange({
+        nextState: {
+          value: newValue,
+          selection: {
+            start: null,
+            end: null
+          }
+        }
+      }).value;
+    }
+
+    setInputState(_extends({}, getLastInputState(), {
+      value: newValue
+    }));
+  }
+
+  var lastState = getLastInputState();
+  var lastSelection = lastState.selection;
+  var lastValue = lastState.value;
+  React.useLayoutEffect(function () {
+    if (!isMasked) {
+      return;
+    }
+
+    var input = getInputElement();
+    var isFocused = isInputFocused(input);
+    var previousSelection = lastSelection;
+    var currentState = getInputState();
+
+    var newInputState = _extends({}, currentState); // Update value for uncontrolled inputs to make sure
+    // it's always in sync with mask props
+
+
+    if (!isControlled) {
+      var currentValue = currentState.value;
+      var formattedValue = maskUtils.formatValue(currentValue);
+      var isValueEmpty = maskUtils.isValueEmpty(formattedValue);
+      var shouldFormatValue = !isValueEmpty || isFocused || alwaysShowMask;
+
+      if (shouldFormatValue) {
+        newInputState.value = formattedValue;
+      } else if (isValueEmpty && !isFocused) {
+        newInputState.value = "";
+      }
+    }
+
+    if (isFocused && !previousIsMasked) {
+      // Adjust selection if input got masked while being focused
+      newInputState.selection = maskUtils.getDefaultSelectionForValue(newInputState.value);
+    } else if (isControlled && isFocused && previousSelection) {
+      // Restore cursor position if value has changed outside change event
+      if (previousSelection.start !== null && previousSelection.end !== null) {
+        newInputState.selection = previousSelection;
+      }
+    }
+
+    if (beforeMaskedStateChange) {
+      newInputState = beforeMaskedStateChange({
+        currentState: currentState,
+        nextState: newInputState
+      });
+    }
+
+    setInputState(newInputState);
+  });
+
+  var inputProps = _extends({}, restProps, {
+    onFocus: onFocus,
+    onBlur: onBlur,
+    onChange: isMasked && isEditable ? onChange : props.onChange,
+    onMouseDown: isMasked && isEditable ? onMouseDown : props.onMouseDown,
+    ref: function ref(_ref) {
+      inputRef.current = reactDom.findDOMNode(_ref);
+
+      if (isFunction(forwardedRef)) {
+        forwardedRef(_ref);
+      } else if (forwardedRef !== null && typeof forwardedRef === "object") {
+        forwardedRef.current = _ref;
+      }
+    },
+    value: isMasked && isControlled ? lastValue : props.value
+  });
+
+  if (children) {
+    validateChildren(props, children); // We wrap children into a class component to be able to find
+    // their input element using findDOMNode
+
+    return React__default.createElement(InputMaskChildrenWrapper, inputProps, children);
+  }
+
+  return React__default.createElement("input", inputProps);
+});
+InputMask.displayName = "InputMask";
+InputMask.defaultProps = {
+  alwaysShowMask: false,
+  maskPlaceholder: "_"
+};
+InputMask.propTypes = {
+  alwaysShowMask: PropTypes.bool,
+  beforeMaskedStateChange: PropTypes.func,
+  children: PropTypes.element,
+  mask: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(RegExp)]))]),
+  maskPlaceholder: PropTypes.string,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onMouseDown: PropTypes.func
+};
+
+module.exports = InputMask;
+
+
+/***/ }),
+
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -33761,6 +34899,80 @@ function warning(condition, message) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (warning);
+
+
+/***/ }),
+
+/***/ "./node_modules/warning/warning.js":
+/*!*****************************************!*\
+  !*** ./node_modules/warning/warning.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var __DEV__ = "development" !== 'production';
+
+var warning = function() {};
+
+if (__DEV__) {
+  var printWarning = function printWarning(format, args) {
+    var len = arguments.length;
+    args = new Array(len > 1 ? len - 1 : 0);
+    for (var key = 1; key < len; key++) {
+      args[key - 1] = arguments[key];
+    }
+    var argIndex = 0;
+    var message = 'Warning: ' +
+      format.replace(/%s/g, function() {
+        return args[argIndex++];
+      });
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  }
+
+  warning = function(condition, format, args) {
+    var len = arguments.length;
+    args = new Array(len > 2 ? len - 2 : 0);
+    for (var key = 2; key < len; key++) {
+      args[key - 2] = arguments[key];
+    }
+    if (format === undefined) {
+      throw new Error(
+          '`warning(condition, format, ...args)` requires a warning ' +
+          'message argument'
+      );
+    }
+    if (!condition) {
+      printWarning.apply(null, [format].concat(args));
+    }
+  };
+}
+
+module.exports = warning;
 
 
 /***/ }),

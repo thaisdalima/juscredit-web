@@ -13,10 +13,10 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Alert from '@material-ui/lab/Alert';
 import TextField from '@material-ui/core/TextField';
+import InputMask from 'react-input-mask';
 import MenuItem from '@material-ui/core/MenuItem';
 import Checkbox from '@material-ui/core/Checkbox';
 
-import NumberFormat from 'react-number-format';
 import API from './../api';
 
 <meta name="viewport" content="::-webkit=device-width"></meta>
@@ -31,13 +31,19 @@ const Index = (props) => {
     concordo_termos: '',
     investidor_qualificado: ''
   };
+
+  const INITIAL_FORM_PARCEIRO = {
+    full_name: '',
+    email: '',
+    assunto: '',
+  };
   const [state, setState] = React.useState({
     checkedModalAntecipe: false,
     checkedModalInvestirQualificado: false,
     checkedModalInvestirConcordo: false,
   });
   const [formValues, setFormValue] = React.useState(INITIAL_FORM);
-  const [parceiroValues, setParceiroValue] = React.useState({});
+  const [parceiroValues, setParceiroValue] = React.useState(INITIAL_FORM_PARCEIRO);
   const [modalIndicarState, setIndicarOpen] = React.useState(false);
   const [modalAnteciparState, setAnteciparOpen] = React.useState(false);
   const [modalInvestirState, setInvestirOpen] = React.useState(false);
@@ -102,11 +108,16 @@ const Index = (props) => {
   };
 
   const handleChangeCheckbox = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
+    setState({ ...state, [event.target.ariaLabel]: event.target.checked });
   };
 
-  const atualizaFormValues = (event, formItem) => {
-    setFormValue({ ...formValues, [formItem]: event });
+  const atualizaFormValues = (event) => {
+    if (event.target.type == "checkbox") {
+      setFormValue({ ...formValues, [event.target.name]: event.target.checked });
+      console.log(formValues);
+    } else {
+      setFormValue({ ...formValues, [event.target.name]: event.target.value });
+    }
   }
 
   const getParceiroValue = (event, formItem) => {
@@ -122,6 +133,15 @@ const Index = (props) => {
         formValues["title"] = null
       }
       if (formValues[key] != "") {
+      } else {
+        return true;
+      }
+    }
+  }
+
+  const isEnabledParceiro = () => {
+    for (var key in parceiroValues) {
+      if (parceiroValues[key] != "") {
       } else {
         return true;
       }
@@ -153,39 +173,6 @@ const Index = (props) => {
         handleClose();
       });
   }
-
-  function ProcessoFormat(props) {
-    const { inputRef, onChange, ...other } = props;
-
-    return (
-      <NumberFormat
-        {...other}
-        getInputRef={inputRef}
-        format="#######-##.####.#.##.########"
-        allowEmptyFormatting
-        allowLeadingZeros
-        isNumericString
-      />
-    );
-  }
-
-  function CelularFormat(props) {
-    const { inputRef, onChange, ...other } = props;
-
-    return (
-      <NumberFormat
-        {...other}
-        getInputRef={inputRef}
-        format="(##) #-####-####"
-        allowEmptyFormatting
-        isNumericString
-      />
-    );
-  }
-
-  ProcessoFormat.propTypes = {
-    inputRef: PropTypes.func.isRequired,
-  };
 
   useEffect(() => {
     setOriginPath(window.location.origin);
@@ -402,21 +389,36 @@ const Index = (props) => {
       <Dialog open={modalIndicarState} onClose={handleClose} aria-labelledby="parceiro-dialog-title">
         <DialogTitle id="parceiro-dialog-title">Seja parceiro!</DialogTitle>
         <DialogContent>
-          <TextField
-            autoFocus
-            id="name"
-            label="Email @"
-            type="mail"
-            variant="outlined"
-            onChange={e => { getParceiroValue(e.target.value, 'email') }}
-            fullWidth
-          />
+          <form className="modal-form" noValidate autoComplete="off">
+            <TextField
+              autoFocus
+              id="modalFieldAntecipar-0"
+              label="Nome completo"
+              variant="outlined"
+              name="full_name"
+              onChange={e => { getParceiroValue(e.target.value, 'full_name') }}
+              fullWidth />
+            <TextField
+              id="modalFieldIndicar-1"
+              label="Assunto"
+              variant="outlined"
+              name="assunto"
+              onChange={e => { getParceiroValue(e.target.value, 'assunto') }}
+              fullWidth />
+            <TextField
+              id="modalFieldIndicar-2"
+              label="Email"
+              type="mail"
+              variant="outlined"
+              onChange={e => { getParceiroValue(e.target.value, 'email') }}
+              fullWidth />
+          </form>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary small">
             Cancelar
           </Button>
-          <Button onClick={e => { handleSubmitParceiro(`https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/sendmailpartner`, parceiroValues) }} color="primary small">
+          <Button disabled={isEnabledParceiro()} onClick={e => { handleSubmitParceiro(`https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/sendmailpartner`, parceiroValues) }} color="primary small">
             Enviar
           </Button>
         </DialogActions>
@@ -430,7 +432,8 @@ const Index = (props) => {
               id="modalFieldAntecipar-0"
               label="Nome completo"
               variant="outlined"
-              onChange={e => { atualizaFormValues(e.target.value, 'full_name') }}
+              name="full_name"
+              onChange={e => { atualizaFormValues(e) }}
               fullWidth />
             <TextField
               id="modalFieldAntecipar-1"
@@ -438,7 +441,8 @@ const Index = (props) => {
               label="Tipo de Pessoa"
               variant="outlined"
               value={selectProfile}
-              onChange={e => { handleChangeSelect(e); atualizaFormValues(e.target.value, 'person_type') }}
+              name="person_type"
+              onChange={e => { handleChangeSelect(e); atualizaFormValues(e) }}
               fullWidth
             >
               {tipoPessoaArr.map((option) => (
@@ -447,39 +451,44 @@ const Index = (props) => {
                 </MenuItem>
               ))}
             </TextField>
-            <TextField
-              id="modalFieldAntecipar-2"
-              label="Número do processo"
-              helperText="Exemplo: 0000020-37.2010.5.15.0118"
-              variant="outlined"
-              InputProps={{
-                inputComponent: ProcessoFormat,
-              }}
-              onChange={e => { atualizaFormValues(e.target.value, 'title') }}
-              fullWidth />
+            <InputMask
+              onChange={e => { atualizaFormValues(e) }}
+              mask="9999999-99.9999.9.99.9999"
+              value={props.value}>
+              <TextField
+                id="modalFieldAntecipar-2"
+                label="Número do processo"
+                helperText="Exemplo: 0000020-37.2010.5.15.0118"
+                variant="outlined"
+                name="title"
+                fullWidth />
+            </InputMask>
             <TextField
               id="modalFieldAntecipar-3"
               label="Email"
               variant="outlined"
-              onChange={e => { atualizaFormValues(e.target.value, 'email') }}
+              name="email"
+              onChange={e => { atualizaFormValues(e) }}
               fullWidth />
-            <TextField
-              id="modalFieldAntecipar-4"
-              label="Celular"
-              variant="outlined"
-              InputProps={{
-                inputComponent: CelularFormat,
-              }}
-              onChange={e => { atualizaFormValues(e.target.value, 'phone') }}
-              fullWidth />
+            <InputMask
+              onChange={e => { atualizaFormValues(e) }}
+              mask="(99) 99999-9999"
+              value={props.value}>
+              <TextField
+                id="modalFieldAntecipar-4"
+                label="Celular"
+                variant="outlined"
+                name="phone"
+                fullWidth />
+            </InputMask>
             <div className="flex align-items-center">
               <Checkbox
                 id="modalFieldAntecipar-5"
                 checked={state.checkedModalAntecipe}
-                onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e.target.checked, 'concordo_termos') }}
-                name="checkedModalAntecipe"
+                onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e) }}
+                name="concordo_termos"
                 color="primary"
-                inputProps={{ 'aria-label': 'Checkbox Modal Antecipe' }}
+                inputProps={{ 'aria-label': 'checkedModalAntecipe' }}
               />
               <label className="modal-label" htmlFor="modalFieldAntecipar-5">Concordo com os Termos do JusCredit,</label>
               <Link href="/JusCredit_-_Temos_de_Uso_do_Cliente.pdf">
@@ -509,30 +518,35 @@ const Index = (props) => {
               id="modalFieldInvestir-0"
               label="Nome completo"
               variant="outlined"
-              onChange={e => { atualizaFormValues(e.target.value, 'full_name') }}
+              name="full_nameF"
+              onChange={e => { atualizaFormValues(e) }}
               fullWidth />
             <TextField
               id="modalFieldInvestir-1"
               label="Email"
               variant="outlined"
-              onChange={e => { atualizaFormValues(e.target.value, 'email') }}
+              name="email"
+              onChange={e => { atualizaFormValues(e) }}
               fullWidth />
-            <TextField
-              id="modalFieldInvestir-2"
-              label="Celular"
-              variant="outlined"
-              InputProps={{
-                inputComponent: CelularFormat,
-              }}
-              onChange={e => { atualizaFormValues(e.target.value, 'phone') }}
-              fullWidth />
+            <InputMask
+              onChange={e => { atualizaFormValues(e) }}
+              mask="(99) 99999-9999"
+              value={props.value}>
+              <TextField
+                id="modalFieldInvestir-2"
+                label="Celular"
+                variant="outlined"
+                name='phone'
+                fullWidth />
+            </InputMask>
             <TextField
               id="modalFieldInvestir-3"
               select
               label="Tipo de Pessoa"
               variant="outlined"
               value={selectProfile}
-              onChange={e => { handleChangeSelect(e); atualizaFormValues(e.target.value, 'person_type') }}
+              name="person_type"
+              onChange={e => { handleChangeSelect(e); atualizaFormValues(e) }}
               fullWidth
             >
               {tipoPessoaArr.map((option) => (
@@ -545,26 +559,25 @@ const Index = (props) => {
               <Checkbox
                 id="modalFieldInvestir-4"
                 checked={state.checkedModalInvestirQualificado}
-                onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e.target.checked, 'investidor_qualificado') }}
-                name="checkedModalInvestirQualificado"
+                onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e) }}
+                name="investidor_qualificado"
                 color="primary"
-                inputProps={{ 'aria-label': 'Checkbox Modal Investir' }}
+                inputProps={{
+                  'aria-label': 'checkedModalInvestirQualificado'
+                }}
               />
-              <label className="modal-label" htmlFor="modalFieldInvestir-4">Sou um investidor qualificado,</label>
-              {/* <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
-                <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
-                  Leia os termos
-                </a>
-              </Link> */}
+              <label className="modal-label" htmlFor="modalFieldInvestir-4">Sou um investidor qualificado</label>
             </div>
             <div className="flex align-items-center">
               <Checkbox
                 id="modalFieldInvestir-5"
                 checked={state.checkedModalInvestirConcordo}
-                onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e.target.checked, 'concordo_termos') }}
-                name="checkedModalInvestirConcordo"
+                onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e) }}
+                name="concordo_termos"
                 color="primary"
-                inputProps={{ 'aria-label': 'Checkbox Modal Investir' }}
+                inputProps={{
+                  'aria-label': 'checkedModalInvestirConcordo',
+                }}
               />
               <label className="modal-label" htmlFor="modalFieldInvestir-5">Concordo com os Termos do JusCredit,</label>
               <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">

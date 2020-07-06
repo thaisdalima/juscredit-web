@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1893,49 +1893,40 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.scss */ "./pages/styles.scss");
-/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Button_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Button/Button */ "./components/Button/Button.tsx");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Dialog */ "@material-ui/core/Dialog");
-/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/DialogActions */ "@material-ui/core/DialogActions");
-/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/DialogContent */ "@material-ui/core/DialogContent");
-/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "@material-ui/core/DialogTitle");
-/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/lab/Alert */ "@material-ui/lab/Alert");
-/* harmony import */ var _material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.scss */ "./pages/styles.scss");
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_Button_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Button/Button */ "./components/Button/Button.tsx");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Dialog */ "@material-ui/core/Dialog");
+/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/DialogActions */ "@material-ui/core/DialogActions");
+/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/DialogContent */ "@material-ui/core/DialogContent");
+/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "@material-ui/core/DialogTitle");
+/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/lab/Alert */ "@material-ui/lab/Alert");
+/* harmony import */ var _material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react_input_mask__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-input-mask */ "react-input-mask");
+/* harmony import */ var react_input_mask__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_input_mask__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "@material-ui/core/MenuItem");
 /* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/Checkbox */ "@material-ui/core/Checkbox");
 /* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var react_number_format__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-number-format */ "react-number-format");
-/* harmony import */ var react_number_format__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react_number_format__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../api */ "./api.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../api */ "./api.js");
 var _jsxFileName = "D:\\VS2017\\Juscredit\\juscredit-web\\pages\\index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -1976,13 +1967,18 @@ const Index = props => {
     concordo_termos: '',
     investidor_qualificado: ''
   };
+  const INITIAL_FORM_PARCEIRO = {
+    full_name: '',
+    email: '',
+    assunto: ''
+  };
   const [state, setState] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({
     checkedModalAntecipe: false,
     checkedModalInvestirQualificado: false,
     checkedModalInvestirConcordo: false
   });
   const [formValues, setFormValue] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(INITIAL_FORM);
-  const [parceiroValues, setParceiroValue] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({});
+  const [parceiroValues, setParceiroValue] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(INITIAL_FORM_PARCEIRO);
   const [modalIndicarState, setIndicarOpen] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false);
   const [modalAnteciparState, setAnteciparOpen] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false);
   const [modalInvestirState, setInvestirOpen] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false);
@@ -2048,14 +2044,21 @@ const Index = props => {
 
   const handleChangeCheckbox = event => {
     setState(_objectSpread({}, state, {
-      [event.target.name]: event.target.checked
+      [event.target.ariaLabel]: event.target.checked
     }));
   };
 
-  const atualizaFormValues = (event, formItem) => {
-    setFormValue(_objectSpread({}, formValues, {
-      [formItem]: event
-    }));
+  const atualizaFormValues = event => {
+    if (event.target.type == "checkbox") {
+      setFormValue(_objectSpread({}, formValues, {
+        [event.target.name]: event.target.checked
+      }));
+      console.log(formValues);
+    } else {
+      setFormValue(_objectSpread({}, formValues, {
+        [event.target.name]: event.target.value
+      }));
+    }
   };
 
   const getParceiroValue = (event, formItem) => {
@@ -2075,6 +2078,14 @@ const Index = props => {
       }
 
       if (formValues[key] != "") {} else {
+        return true;
+      }
+    }
+  };
+
+  const isEnabledParceiro = () => {
+    for (var key in parceiroValues) {
+      if (parceiroValues[key] != "") {} else {
         return true;
       }
     }
@@ -2102,52 +2113,6 @@ const Index = props => {
     });
   };
 
-  function ProcessoFormat(props) {
-    const {
-      inputRef,
-      onChange
-    } = props,
-          other = _objectWithoutProperties(props, ["inputRef", "onChange"]);
-
-    return __jsx(react_number_format__WEBPACK_IMPORTED_MODULE_14___default.a, _extends({}, other, {
-      getInputRef: inputRef,
-      format: "#######-##.####.#.##.########",
-      allowEmptyFormatting: true,
-      allowLeadingZeros: true,
-      isNumericString: true,
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 161,
-        columnNumber: 7
-      }
-    }));
-  }
-
-  function CelularFormat(props) {
-    const {
-      inputRef,
-      onChange
-    } = props,
-          other = _objectWithoutProperties(props, ["inputRef", "onChange"]);
-
-    return __jsx(react_number_format__WEBPACK_IMPORTED_MODULE_14___default.a, _extends({}, other, {
-      getInputRef: inputRef,
-      format: "(##) #-####-####",
-      allowEmptyFormatting: true,
-      isNumericString: true,
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 176,
-        columnNumber: 7
-      }
-    }));
-  }
-
-  ProcessoFormat.propTypes = {
-    inputRef: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired
-  };
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     setOriginPath(window.location.origin);
   });
@@ -2155,21 +2120,21 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195,
+      lineNumber: 182,
       columnNumber: 5
     }
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196,
+      lineNumber: 183,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197,
+      lineNumber: 184,
       columnNumber: 9
     }
   }, "JusCredit")), __jsx("main", {
@@ -2177,7 +2142,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199,
+      lineNumber: 186,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -2185,7 +2150,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200,
+      lineNumber: 187,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -2193,7 +2158,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201,
+      lineNumber: 188,
       columnNumber: 11
     }
   }), __jsx("div", {
@@ -2201,28 +2166,28 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203,
+      lineNumber: 190,
       columnNumber: 11
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204,
+      lineNumber: 191,
       columnNumber: 13
     }
   }, "Antecipe seu ", __jsx("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204,
+      lineNumber: 191,
       columnNumber: 30
     }
   }), "cr\xE9dito trabalhista"), __jsx("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205,
+      lineNumber: 192,
       columnNumber: 13
     }
   }, "T\xEAm um processo ganho? Receba agora"), __jsx("div", {
@@ -2230,25 +2195,25 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206,
+      lineNumber: 193,
       columnNumber: 13
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => handleModalAntecipar(),
     color: "primary",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207,
+      lineNumber: 194,
       columnNumber: 15
     }
-  }, "Quero antecipar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Quero antecipar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => handleModalInvestir(),
     color: "secondary",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208,
+      lineNumber: 195,
       columnNumber: 15
     }
   }, "Quero investir")), __jsx("div", {
@@ -2256,22 +2221,22 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210,
+      lineNumber: 197,
       columnNumber: 13
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
     href: "#conheca-vantagens",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211,
+      lineNumber: 198,
       columnNumber: 15
     }
   }, __jsx("a", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212,
+      lineNumber: 199,
       columnNumber: 17
     }
   }, __jsx("img", {
@@ -2279,14 +2244,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213,
+      lineNumber: 200,
       columnNumber: 19
     }
   }), __jsx("span", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214,
+      lineNumber: 201,
       columnNumber: 19
     }
   }, "Conhe\xE7a as vantagens")))))), __jsx("div", {
@@ -2295,14 +2260,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221,
+      lineNumber: 208,
       columnNumber: 9
     }
   }, profile == "cliente" && __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223,
+      lineNumber: 210,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -2310,35 +2275,35 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224,
+      lineNumber: 211,
       columnNumber: 15
     }
   }, __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225,
+      lineNumber: 212,
       columnNumber: 17
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226,
+      lineNumber: 213,
       columnNumber: 19
     }
   }, "Mais valor para quem investe.", __jsx("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226,
+      lineNumber: 213,
       columnNumber: 52
     }
   }), "R\xE1pido para quem antecipa."), __jsx("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227,
+      lineNumber: 214,
       columnNumber: 19
     }
   }, "Servi\xE7o de antecipa\xE7\xE3o dispon\xEDvel para Trabalhadores e Advogados.")), __jsx("div", {
@@ -2346,25 +2311,25 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229,
+      lineNumber: 216,
       columnNumber: 17
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => handleProfile("cliente"),
     color: profile == "cliente" ? "primary" : "secondary",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230,
+      lineNumber: 217,
       columnNumber: 19
     }
-  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => handleProfile("investidor"),
     color: profile != "cliente" ? "primary" : "secondary",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231,
+      lineNumber: 218,
       columnNumber: 19
     }
   }, "Investidor"))), __jsx("div", {
@@ -2372,7 +2337,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234,
+      lineNumber: 221,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -2380,7 +2345,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235,
+      lineNumber: 222,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -2388,7 +2353,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236,
+      lineNumber: 223,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -2400,14 +2365,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237,
+      lineNumber: 224,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238,
+      lineNumber: 225,
       columnNumber: 21
     }
   }, "Praticidade"), __jsx("ul", {
@@ -2415,14 +2380,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239,
+      lineNumber: 226,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 227,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2432,14 +2397,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 227,
       columnNumber: 27
     }
   }, "Processo de antecipa\xE7\xE3o 100% digital.")), __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241,
+      lineNumber: 228,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2449,7 +2414,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241,
+      lineNumber: 228,
       columnNumber: 27
     }
   }, "An\xE1lise r\xE1pida e sem custo."))))), __jsx("div", {
@@ -2457,7 +2422,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245,
+      lineNumber: 232,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -2465,7 +2430,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246,
+      lineNumber: 233,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -2477,14 +2442,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247,
+      lineNumber: 234,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248,
+      lineNumber: 235,
       columnNumber: 21
     }
   }, "Agilidade"), __jsx("ul", {
@@ -2492,14 +2457,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249,
+      lineNumber: 236,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250,
+      lineNumber: 237,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2509,7 +2474,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250,
+      lineNumber: 237,
       columnNumber: 27
     }
   }, "Liquidez imediata, n\xE3o espere mais para receber o seu direito."))))), __jsx("div", {
@@ -2517,7 +2482,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254,
+      lineNumber: 241,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -2525,7 +2490,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255,
+      lineNumber: 242,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -2537,14 +2502,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256,
+      lineNumber: 243,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257,
+      lineNumber: 244,
       columnNumber: 21
     }
   }, "Libera\xE7\xE3o"), __jsx("ul", {
@@ -2552,14 +2517,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258,
+      lineNumber: 245,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259,
+      lineNumber: 246,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2569,7 +2534,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259,
+      lineNumber: 246,
       columnNumber: 27
     }
   }, "Receba diretamente em sua conta JusCredit.")))))), __jsx("div", {
@@ -2577,23 +2542,23 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264,
+      lineNumber: 251,
       columnNumber: 15
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => handleModalAntecipar(),
     color: "sixty",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265,
+      lineNumber: 252,
       columnNumber: 17
     }
   }, "Quero antecipar"))), profile != "cliente" && __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 271,
+      lineNumber: 258,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -2601,35 +2566,35 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272,
+      lineNumber: 259,
       columnNumber: 15
     }
   }, __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273,
+      lineNumber: 260,
       columnNumber: 17
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274,
+      lineNumber: 261,
       columnNumber: 19
     }
   }, "Mais valor para quem investe.", __jsx("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274,
+      lineNumber: 261,
       columnNumber: 52
     }
   }), "R\xE1pido para quem antecipa."), __jsx("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275,
+      lineNumber: 262,
       columnNumber: 19
     }
   }, "Investimentos em cr\xE9ditos judiciais de forma r\xE1pida e descomplicada.")), __jsx("div", {
@@ -2637,25 +2602,25 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277,
+      lineNumber: 264,
       columnNumber: 17
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => handleProfile("cliente"),
     color: profile == "cliente" ? "primary" : "secondary",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278,
+      lineNumber: 265,
       columnNumber: 19
     }
-  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => handleProfile("investidor"),
     color: profile != "cliente" ? "primary" : "secondary",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 279,
+      lineNumber: 266,
       columnNumber: 19
     }
   }, "Investidor"))), __jsx("div", {
@@ -2663,7 +2628,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 282,
+      lineNumber: 269,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -2671,7 +2636,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 283,
+      lineNumber: 270,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -2679,7 +2644,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284,
+      lineNumber: 271,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -2691,14 +2656,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 285,
+      lineNumber: 272,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286,
+      lineNumber: 273,
       columnNumber: 21
     }
   }, "Rentabilidade"), __jsx("ul", {
@@ -2706,14 +2671,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287,
+      lineNumber: 274,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288,
+      lineNumber: 275,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2723,14 +2688,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288,
+      lineNumber: 275,
       columnNumber: 27
     }
   }, "Maior retorno que investimentos tradicionais.")), __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289,
+      lineNumber: 276,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2740,14 +2705,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289,
+      lineNumber: 276,
       columnNumber: 27
     }
   }, "Baixo valor inicial de investimento.")), __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290,
+      lineNumber: 277,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2757,7 +2722,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290,
+      lineNumber: 277,
       columnNumber: 27
     }
   }, "Dispon\xEDvel para PF e PJ."))))), __jsx("div", {
@@ -2765,7 +2730,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 294,
+      lineNumber: 281,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -2773,7 +2738,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 295,
+      lineNumber: 282,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -2785,14 +2750,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296,
+      lineNumber: 283,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297,
+      lineNumber: 284,
       columnNumber: 21
     }
   }, "Seguran\xE7a"), __jsx("ul", {
@@ -2800,14 +2765,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298,
+      lineNumber: 285,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 299,
+      lineNumber: 286,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2817,14 +2782,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 299,
+      lineNumber: 286,
       columnNumber: 27
     }
   }, "Modelo propriet\xE1rio de an\xE1lise.")), __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300,
+      lineNumber: 287,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2834,14 +2799,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300,
+      lineNumber: 287,
       columnNumber: 27
     }
   }, "Empresas saud\xE1veis, sem negativa\xE7\xE3o e inclusas no banco nacional de devedores trabalhistas.")), __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301,
+      lineNumber: 288,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2851,7 +2816,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301,
+      lineNumber: 288,
       columnNumber: 27
     }
   }, "Parceiro de escrit\xF3rio especializado em direito do trabalho."))))), __jsx("div", {
@@ -2859,7 +2824,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305,
+      lineNumber: 292,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -2867,7 +2832,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306,
+      lineNumber: 293,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -2879,14 +2844,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 307,
+      lineNumber: 294,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308,
+      lineNumber: 295,
       columnNumber: 21
     }
   }, "Recebimento"), __jsx("ul", {
@@ -2894,14 +2859,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309,
+      lineNumber: 296,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310,
+      lineNumber: 297,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -2911,7 +2876,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310,
+      lineNumber: 297,
       columnNumber: 27
     }
   }, "Receba os valores dos cr\xE9ditos judiciais adquiridos diretamente em sua conta JusCredit.")))))), __jsx("div", {
@@ -2919,16 +2884,16 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315,
+      lineNumber: 302,
       columnNumber: 15
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => handleModalInvestir(),
     color: "sixty",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316,
+      lineNumber: 303,
       columnNumber: 17
     }
   }, "Quero investir"))), __jsx("div", {
@@ -2937,35 +2902,35 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321,
+      lineNumber: 308,
       columnNumber: 11
     }
   }, __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322,
+      lineNumber: 309,
       columnNumber: 13
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 323,
+      lineNumber: 310,
       columnNumber: 15
     }
   }, "Como funciona a plataforma?"), __jsx("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 324,
+      lineNumber: 311,
       columnNumber: 15
     }
   }, "Conte com toda a seguran\xE7a, agilidade e ", __jsx("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 325,
+      lineNumber: 312,
       columnNumber: 57
     }
   }), "praticidade na libera\xE7\xE3o do seu processo ganho"))), __jsx("div", {
@@ -2973,7 +2938,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 330,
+      lineNumber: 317,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -2981,7 +2946,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331,
+      lineNumber: 318,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -2989,7 +2954,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332,
+      lineNumber: 319,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -2997,7 +2962,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 333,
+      lineNumber: 320,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -3005,7 +2970,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 334,
+      lineNumber: 321,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -3013,7 +2978,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 335,
+      lineNumber: 322,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -3025,14 +2990,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 336,
+      lineNumber: 323,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 337,
+      lineNumber: 324,
       columnNumber: 23
     }
   }, "Cliente solicita")), __jsx("h4", {
@@ -3040,14 +3005,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 339,
+      lineNumber: 326,
       columnNumber: 21
     }
   }, "1")), __jsx("p", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341,
+      lineNumber: 328,
       columnNumber: 19
     }
   }, "Cliente solicita antecipa\xE7\xE3o do cr\xE9dito trabalhista na plataforma."))), __jsx("div", {
@@ -3055,7 +3020,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 346,
+      lineNumber: 333,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -3063,7 +3028,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 347,
+      lineNumber: 334,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -3071,7 +3036,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 348,
+      lineNumber: 335,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -3079,7 +3044,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 349,
+      lineNumber: 336,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -3091,14 +3056,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 350,
+      lineNumber: 337,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 351,
+      lineNumber: 338,
       columnNumber: 23
     }
   }, "An\xE1lise avan\xE7ada")), __jsx("h4", {
@@ -3106,14 +3071,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 353,
+      lineNumber: 340,
       columnNumber: 21
     }
   }, "2")), __jsx("p", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 355,
+      lineNumber: 342,
       columnNumber: 19
     }
   }, "An\xE1lise com modelo propriet\xE1rio de cr\xE9dito, se aprovado \xE9 disponibilizado ao investidores.")))), __jsx("div", {
@@ -3121,7 +3086,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 361,
+      lineNumber: 348,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -3129,7 +3094,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 362,
+      lineNumber: 349,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -3137,7 +3102,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 363,
+      lineNumber: 350,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -3145,7 +3110,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364,
+      lineNumber: 351,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -3153,7 +3118,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 365,
+      lineNumber: 352,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -3165,14 +3130,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 366,
+      lineNumber: 353,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 367,
+      lineNumber: 354,
       columnNumber: 23
     }
   }, "Investidores")), __jsx("h4", {
@@ -3180,14 +3145,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 369,
+      lineNumber: 356,
       columnNumber: 21
     }
   }, "3")), __jsx("p", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 371,
+      lineNumber: 358,
       columnNumber: 19
     }
   }, "Os investidores escolhem quanto e em quais cr\xE9ditos trabalhistas querem investir."))), __jsx("div", {
@@ -3195,7 +3160,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 376,
+      lineNumber: 363,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -3203,7 +3168,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 377,
+      lineNumber: 364,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -3211,7 +3176,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 378,
+      lineNumber: 365,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -3219,7 +3184,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 379,
+      lineNumber: 366,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -3231,14 +3196,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 380,
+      lineNumber: 367,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 381,
+      lineNumber: 368,
       columnNumber: 23
     }
   }, "Receba")), __jsx("h4", {
@@ -3246,14 +3211,14 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 383,
+      lineNumber: 370,
       columnNumber: 21
     }
   }, "4")), __jsx("p", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 385,
+      lineNumber: 372,
       columnNumber: 19
     }
   }, "O trabalhador recebe a antecipa\xE7\xE3o e os investidores seus pagamentos."))))), __jsx("div", {
@@ -3262,7 +3227,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 392,
+      lineNumber: 379,
       columnNumber: 11
     }
   }, __jsx("h1", {
@@ -3270,7 +3235,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 393,
+      lineNumber: 380,
       columnNumber: 13
     }
   }, " Seja um parceiro JusCredit"), __jsx("h2", {
@@ -3278,7 +3243,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 394,
+      lineNumber: 381,
       columnNumber: 13
     }
   }, "Indique cr\xE9ditos trabalhistas eleg\xEDveis e ganhe conosco."), __jsx("div", {
@@ -3286,47 +3251,87 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 396,
+      lineNumber: 383,
       columnNumber: 13
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     color: "primary",
     onClick: handleModalIndicar,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 397,
+      lineNumber: 384,
       columnNumber: 15
     }
-  }, "Indicar"))))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, "Indicar"))))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_5___default.a, {
     open: modalIndicarState,
     onClose: handleClose,
     "aria-labelledby": "parceiro-dialog-title",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 402,
+      lineNumber: 389,
       columnNumber: 7
     }
-  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_9___default.a, {
+  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_8___default.a, {
     id: "parceiro-dialog-title",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 403,
+      lineNumber: 390,
       columnNumber: 9
     }
-  }, "Seja parceiro!"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8___default.a, {
+  }, "Seja parceiro!"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_7___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404,
+      lineNumber: 391,
       columnNumber: 9
     }
-  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default.a, {
+  }, __jsx("form", {
+    className: "modal-form",
+    noValidate: true,
+    autoComplete: "off",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 392,
+      columnNumber: 11
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
     autoFocus: true,
-    id: "name",
-    label: "Email @",
+    id: "modalFieldAntecipar-0",
+    label: "Nome completo",
+    variant: "outlined",
+    name: "full_name",
+    onChange: e => {
+      getParceiroValue(e.target.value, 'full_name');
+    },
+    fullWidth: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 393,
+      columnNumber: 13
+    }
+  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
+    id: "modalFieldIndicar-1",
+    label: "Assunto",
+    variant: "outlined",
+    name: "assunto",
+    onChange: e => {
+      getParceiroValue(e.target.value, 'assunto');
+    },
+    fullWidth: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 401,
+      columnNumber: 13
+    }
+  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
+    id: "modalFieldIndicar-2",
+    label: "Email",
     type: "mail",
     variant: "outlined",
     onChange: e => {
@@ -3336,26 +3341,27 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 405,
-      columnNumber: 11
+      lineNumber: 408,
+      columnNumber: 13
     }
-  })), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7___default.a, {
+  }))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_6___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 415,
+      lineNumber: 417,
       columnNumber: 9
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: handleClose,
     color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 416,
+      lineNumber: 418,
       columnNumber: 11
     }
-  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    disabled: isEnabledParceiro(),
     onClick: e => {
       handleSubmitParceiro(`https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/sendmailpartner`, parceiroValues);
     },
@@ -3363,32 +3369,32 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 419,
+      lineNumber: 421,
       columnNumber: 11
     }
-  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_5___default.a, {
     open: modalAnteciparState,
     onClose: handleClose,
     "aria-labelledby": "antecipar-dialog-title",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 425,
+      lineNumber: 427,
       columnNumber: 7
     }
-  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_9___default.a, {
+  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_8___default.a, {
     id: "antecipar-dialog-title",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 426,
+      lineNumber: 428,
       columnNumber: 9
     }
-  }, "Antecipe o seu cr\xE9dito"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8___default.a, {
+  }, "Antecipe o seu cr\xE9dito"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_7___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 427,
+      lineNumber: 429,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -3398,38 +3404,40 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 428,
+      lineNumber: 430,
       columnNumber: 11
     }
-  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default.a, {
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
     id: "modalFieldAntecipar-0",
     label: "Nome completo",
     variant: "outlined",
+    name: "full_name",
     onChange: e => {
-      atualizaFormValues(e.target.value, 'full_name');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 429,
+      lineNumber: 431,
       columnNumber: 13
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default.a, {
+  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
     id: "modalFieldAntecipar-1",
     select: true,
     label: "Tipo de Pessoa",
     variant: "outlined",
     value: selectProfile,
+    name: "person_type",
     onChange: e => {
       handleChangeSelect(e);
-      atualizaFormValues(e.target.value, 'person_type');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 435,
+      lineNumber: 438,
       columnNumber: 13
     }
   }, tipoPessoaArr.map(option => __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -3438,50 +3446,41 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 445,
+      lineNumber: 449,
       columnNumber: 17
     }
-  }, option.label))), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default.a, {
+  }, option.label))), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_11___default.a, {
+    onChange: e => {
+      atualizaFormValues(e);
+    },
+    mask: "9999999-99.9999.9.99.9999",
+    value: props.value,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 454,
+      columnNumber: 13
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
     id: "modalFieldAntecipar-2",
     label: "N\xFAmero do processo",
     helperText: "Exemplo: 0000020-37.2010.5.15.0118",
     variant: "outlined",
-    InputProps: {
-      inputComponent: ProcessoFormat
-    },
-    onChange: e => {
-      atualizaFormValues(e.target.value, 'title');
-    },
+    name: "title",
     fullWidth: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 450,
-      columnNumber: 13
+      lineNumber: 458,
+      columnNumber: 15
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default.a, {
+  })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
     id: "modalFieldAntecipar-3",
     label: "Email",
     variant: "outlined",
+    name: "email",
     onChange: e => {
-      atualizaFormValues(e.target.value, 'email');
-    },
-    fullWidth: true,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 460,
-      columnNumber: 13
-    }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default.a, {
-    id: "modalFieldAntecipar-4",
-    label: "Celular",
-    variant: "outlined",
-    InputProps: {
-      inputComponent: CelularFormat
-    },
-    onChange: e => {
-      atualizaFormValues(e.target.value, 'phone');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: undefined,
@@ -3490,12 +3489,36 @@ const Index = props => {
       lineNumber: 466,
       columnNumber: 13
     }
-  }), __jsx("div", {
+  }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_11___default.a, {
+    onChange: e => {
+      atualizaFormValues(e);
+    },
+    mask: "(99) 99999-9999",
+    value: props.value,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 473,
+      columnNumber: 13
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
+    id: "modalFieldAntecipar-4",
+    label: "Celular",
+    variant: "outlined",
+    name: "phone",
+    fullWidth: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 477,
+      columnNumber: 15
+    }
+  })), __jsx("div", {
     className: "flex align-items-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 475,
+      lineNumber: 484,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -3503,17 +3526,17 @@ const Index = props => {
     checked: state.checkedModalAntecipe,
     onChange: e => {
       handleChangeCheckbox(e);
-      atualizaFormValues(e.target.checked, 'concordo_termos');
+      atualizaFormValues(e);
     },
-    name: "checkedModalAntecipe",
+    name: "concordo_termos",
     color: "primary",
     inputProps: {
-      'aria-label': 'Checkbox Modal Antecipe'
+      'aria-label': 'checkedModalAntecipe'
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 476,
+      lineNumber: 485,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -3522,15 +3545,15 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 484,
+      lineNumber: 493,
       columnNumber: 15
     }
-  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
     href: "/JusCredit_-_Temos_de_Uso_do_Cliente.pdf",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 485,
+      lineNumber: 494,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -3542,60 +3565,60 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 486,
+      lineNumber: 495,
       columnNumber: 17
     }
-  }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7___default.a, {
+  }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_6___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 494,
+      lineNumber: 503,
       columnNumber: 9
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: handleClose,
     color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 495,
+      lineNumber: 504,
       columnNumber: 11
     }
-  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     disabled: isEnabled(),
     onClick: e => {
-      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_15__["default"]}user`, formValues);
+      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_14__["default"]}user`, formValues);
     },
     color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 498,
+      lineNumber: 507,
       columnNumber: 11
     }
-  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_5___default.a, {
     open: modalInvestirState,
     onClose: handleClose,
     "aria-labelledby": "investir-dialog-title",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 504,
+      lineNumber: 513,
       columnNumber: 7
     }
-  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_9___default.a, {
+  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_8___default.a, {
     id: "investir-dialog-title",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 505,
+      lineNumber: 514,
       columnNumber: 9
     }
-  }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8___default.a, {
+  }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_7___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 506,
+      lineNumber: 515,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -3605,69 +3628,79 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 507,
+      lineNumber: 516,
       columnNumber: 11
     }
-  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default.a, {
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
     id: "modalFieldInvestir-0",
     label: "Nome completo",
     variant: "outlined",
+    name: "full_nameF",
     onChange: e => {
-      atualizaFormValues(e.target.value, 'full_name');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 508,
+      lineNumber: 517,
       columnNumber: 13
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default.a, {
+  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
     id: "modalFieldInvestir-1",
     label: "Email",
     variant: "outlined",
+    name: "email",
     onChange: e => {
-      atualizaFormValues(e.target.value, 'email');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 514,
+      lineNumber: 524,
       columnNumber: 13
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default.a, {
+  }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_11___default.a, {
+    onChange: e => {
+      atualizaFormValues(e);
+    },
+    mask: "(99) 99999-9999",
+    value: props.value,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 531,
+      columnNumber: 13
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
     id: "modalFieldInvestir-2",
     label: "Celular",
     variant: "outlined",
-    InputProps: {
-      inputComponent: CelularFormat
-    },
-    onChange: e => {
-      atualizaFormValues(e.target.value, 'phone');
-    },
+    name: "phone",
     fullWidth: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 520,
-      columnNumber: 13
+      lineNumber: 535,
+      columnNumber: 15
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_11___default.a, {
+  })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
     id: "modalFieldInvestir-3",
     select: true,
     label: "Tipo de Pessoa",
     variant: "outlined",
     value: selectProfile,
+    name: "person_type",
     onChange: e => {
       handleChangeSelect(e);
-      atualizaFormValues(e.target.value, 'person_type');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 529,
+      lineNumber: 542,
       columnNumber: 13
     }
   }, tipoPessoaArr.map(option => __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -3676,7 +3709,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 539,
+      lineNumber: 553,
       columnNumber: 17
     }
   }, option.label))), __jsx("div", {
@@ -3684,7 +3717,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 544,
+      lineNumber: 558,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -3692,17 +3725,17 @@ const Index = props => {
     checked: state.checkedModalInvestirQualificado,
     onChange: e => {
       handleChangeCheckbox(e);
-      atualizaFormValues(e.target.checked, 'investidor_qualificado');
+      atualizaFormValues(e);
     },
-    name: "checkedModalInvestirQualificado",
+    name: "investidor_qualificado",
     color: "primary",
     inputProps: {
-      'aria-label': 'Checkbox Modal Investir'
+      'aria-label': 'checkedModalInvestirQualificado'
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 545,
+      lineNumber: 559,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -3711,15 +3744,15 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 553,
+      lineNumber: 569,
       columnNumber: 15
     }
-  }, "Sou um investidor qualificado,")), __jsx("div", {
+  }, "Sou um investidor qualificado")), __jsx("div", {
     className: "flex align-items-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 560,
+      lineNumber: 571,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -3727,17 +3760,17 @@ const Index = props => {
     checked: state.checkedModalInvestirConcordo,
     onChange: e => {
       handleChangeCheckbox(e);
-      atualizaFormValues(e.target.checked, 'concordo_termos');
+      atualizaFormValues(e);
     },
-    name: "checkedModalInvestirConcordo",
+    name: "concordo_termos",
     color: "primary",
     inputProps: {
-      'aria-label': 'Checkbox Modal Investir'
+      'aria-label': 'checkedModalInvestirConcordo'
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 561,
+      lineNumber: 572,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -3746,15 +3779,15 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 569,
+      lineNumber: 582,
       columnNumber: 15
     }
-  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
     href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 570,
+      lineNumber: 583,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -3766,94 +3799,94 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 571,
+      lineNumber: 584,
       columnNumber: 17
     }
-  }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7___default.a, {
+  }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_6___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 578,
+      lineNumber: 591,
       columnNumber: 9
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: handleClose,
     color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 579,
+      lineNumber: 592,
       columnNumber: 11
     }
-  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     disabled: isEnabled(),
     onClick: e => {
-      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_15__["default"]}user`, formValues);
+      handleSubmit(`${_api__WEBPACK_IMPORTED_MODULE_14__["default"]}user`, formValues);
     },
     color: "primary small",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 582,
+      lineNumber: 595,
       columnNumber: 11
     }
-  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_5___default.a, {
     open: modalEnviado,
     onClose: handleClose,
     "aria-labelledby": "investir-dialog-title",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 588,
+      lineNumber: 601,
       columnNumber: 7
     }
-  }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8___default.a, {
+  }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_7___default.a, {
     className: "remove-padding",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 589,
+      lineNumber: 602,
       columnNumber: 9
     }
-  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_10___default.a, {
+  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_9___default.a, {
     severity: "success",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 590,
+      lineNumber: 603,
       columnNumber: 11
     }
   }, "Seu cadastro foi iniciado, ", __jsx("strong", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 591,
+      lineNumber: 604,
       columnNumber: 40
     }
-  }, "verifique seu email"), " para conclui-lo e iniciar seus investimentos em nossa plataforma!"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, "verifique seu email"), " para conclui-lo e iniciar seus investimentos em nossa plataforma!"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_5___default.a, {
     open: modalErro,
     onClose: handleClose,
     "aria-labelledby": "investir-dialog-title",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 596,
+      lineNumber: 609,
       columnNumber: 7
     }
-  }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_8___default.a, {
+  }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_7___default.a, {
     className: "remove-padding",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 597,
+      lineNumber: 610,
       columnNumber: 9
     }
-  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_10___default.a, {
+  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_9___default.a, {
     severity: "error",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 598,
+      lineNumber: 611,
       columnNumber: 11
     }
   }, "Houve um problema, tente novamente mais tarde."))));
@@ -3874,7 +3907,7 @@ const Index = props => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/index.tsx ***!
   \*******************************/
@@ -4029,6 +4062,17 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ "react-input-mask":
+/*!***********************************!*\
+  !*** external "react-input-mask" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-input-mask");
+
+/***/ }),
+
 /***/ "react-is":
 /*!***************************!*\
   !*** external "react-is" ***!
@@ -4037,17 +4081,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
-
-/***/ }),
-
-/***/ "react-number-format":
-/*!**************************************!*\
-  !*** external "react-number-format" ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-number-format");
 
 /***/ }),
 

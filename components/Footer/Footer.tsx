@@ -28,7 +28,7 @@ const Footer = () => (
 
             <div>
                 <h3>Fale conosco</h3>
-                <a className="flex align-items-center" href="/contact">
+                <a className="flex align-items-center" target="top" href="mailto:oi@juscredit.com.br">
                     <img src="/ic-carta.svg" className="footer-logo" style={{ marginRight: '8px' }} />
                     <span>oi@juscredit.com.br</span>
                 </a>

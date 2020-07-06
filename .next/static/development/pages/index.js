@@ -22017,6 +22017,67 @@ function hyphenateStyleName(name) {
 
 /***/ }),
 
+/***/ "./node_modules/invariant/browser.js":
+/*!*******************************************!*\
+  !*** ./node_modules/invariant/browser.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var invariant = function(condition, format, a, b, c, d, e, f) {
+  if (true) {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  }
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error(
+        'Minified exception occurred; use the non-minified dev environment ' +
+        'for the full error message and additional helpful warnings.'
+      );
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(
+        format.replace(/%s/g, function() { return args[argIndex++]; })
+      );
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+};
+
+module.exports = invariant;
+
+
+/***/ }),
+
 /***/ "./node_modules/is-in-browser/dist/module.js":
 /*!***************************************************!*\
   !*** ./node_modules/is-in-browser/dist/module.js ***!
@@ -28528,6 +28589,1052 @@ module.exports = (__webpack_require__(/*! dll-reference dll_77a815f570ae38c2d683
 
 /***/ }),
 
+/***/ "./node_modules/react-input-mask/index.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-input-mask/index.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* eslint-disable import/no-unresolved */
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./lib/react-input-mask.development.js */ "./node_modules/react-input-mask/lib/react-input-mask.development.js");
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-input-mask/lib/react-input-mask.development.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/react-input-mask/lib/react-input-mask.development.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var React__default = _interopDefault(React);
+var reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+var PropTypes = _interopDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+var invariant = _interopDefault(__webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js"));
+var warning = _interopDefault(__webpack_require__(/*! warning */ "./node_modules/warning/warning.js"));
+
+function _defaults2(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+
+  _defaults2(subClass, superClass);
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function defer(fn) {
+  return requestAnimationFrame(fn);
+}
+function cancelDefer(deferId) {
+  cancelAnimationFrame(deferId);
+}
+
+function setInputSelection(input, start, end) {
+  if (end === undefined) {
+    end = start;
+  }
+
+  input.setSelectionRange(start, end);
+}
+function getInputSelection(input) {
+  var start = input.selectionStart;
+  var end = input.selectionEnd;
+  return {
+    start: start,
+    end: end,
+    length: end - start
+  };
+}
+function isInputFocused(input) {
+  var inputDocument = input.ownerDocument;
+  return inputDocument.hasFocus() && inputDocument.activeElement === input;
+}
+
+// Element's window may differ from the one within React instance
+// if element rendered within iframe.
+// See https://github.com/sanniassin/react-input-mask/issues/182
+function getElementDocument(element) {
+  return element == null ? void 0 : element.ownerDocument;
+}
+function getElementWindow(element) {
+  var _getElementDocument;
+
+  return (_getElementDocument = getElementDocument(element)) == null ? void 0 : _getElementDocument.defaultView;
+}
+function isDOMElement(element) {
+  var elementWindow = getElementWindow(element);
+  return !!elementWindow && element instanceof elementWindow.HTMLElement;
+}
+function isFunction(value) {
+  return typeof value === "function";
+}
+function findLastIndex(array, predicate) {
+  for (var i = array.length - 1; i >= 0; i--) {
+    var x = array[i];
+
+    if (predicate(x, i)) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+function repeat(string, n) {
+  if (n === void 0) {
+    n = 1;
+  }
+
+  var result = "";
+
+  for (var i = 0; i < n; i++) {
+    result += string;
+  }
+
+  return result;
+}
+function toString(value) {
+  return "" + value;
+}
+
+function useInputElement(inputRef) {
+  return React.useCallback(function () {
+    var input = inputRef.current;
+    var isDOMNode = typeof window !== "undefined" && isDOMElement(input); // workaround for react-test-renderer
+    // https://github.com/sanniassin/react-input-mask/issues/147
+
+    if (!input || !isDOMNode) {
+      return null;
+    }
+
+    if (input.nodeName !== "INPUT") {
+      input = input.querySelector("input");
+    }
+
+    if (!input) {
+      throw new Error("react-input-mask: inputComponent doesn't contain input node");
+    }
+
+    return input;
+  }, [inputRef]);
+}
+
+function useDeferLoop(callback) {
+  var deferIdRef = React.useRef(null);
+  var runLoop = React.useCallback(function () {
+    // If there are simulated focus events, runLoop could be
+    // called multiple times without blur or re-render
+    if (deferIdRef.current !== null) {
+      return;
+    }
+
+    function loop() {
+      callback();
+      deferIdRef.current = defer(loop);
+    }
+
+    loop();
+  }, [callback]);
+  var stopLoop = React.useCallback(function () {
+    cancelDefer(deferIdRef.current);
+    deferIdRef.current = null;
+  }, []);
+  React.useEffect(function () {
+    if (deferIdRef.current) {
+      stopLoop();
+      runLoop();
+    }
+  }, [runLoop, stopLoop]);
+  React.useEffect(cancelDefer, []);
+  return [runLoop, stopLoop];
+}
+
+function useSelection(inputRef, isMasked) {
+  var selectionRef = React.useRef({
+    start: null,
+    end: null
+  });
+  var getInputElement = useInputElement(inputRef);
+  var getSelection = React.useCallback(function () {
+    var input = getInputElement();
+    return getInputSelection(input);
+  }, [getInputElement]);
+  var getLastSelection = React.useCallback(function () {
+    return selectionRef.current;
+  }, []);
+  var setSelection = React.useCallback(function (selection) {
+    var input = getInputElement(); // Don't change selection on unfocused input
+    // because Safari sets focus on selection change (#154)
+
+    if (!input || !isInputFocused(input)) {
+      return;
+    }
+
+    setInputSelection(input, selection.start, selection.end); // Use actual selection in case the requested one was out of range
+
+    selectionRef.current = getSelection();
+  }, [getInputElement, getSelection]);
+  var selectionLoop = React.useCallback(function () {
+    selectionRef.current = getSelection();
+  }, [getSelection]);
+
+  var _useDeferLoop = useDeferLoop(selectionLoop),
+      runSelectionLoop = _useDeferLoop[0],
+      stopSelectionLoop = _useDeferLoop[1];
+
+  React.useLayoutEffect(function () {
+    if (!isMasked) {
+      return;
+    }
+
+    var input = getInputElement();
+    input.addEventListener("focus", runSelectionLoop);
+    input.addEventListener("blur", stopSelectionLoop);
+
+    if (isInputFocused(input)) {
+      runSelectionLoop();
+    }
+
+    return function () {
+      input.removeEventListener("focus", runSelectionLoop);
+      input.removeEventListener("blur", stopSelectionLoop);
+      stopSelectionLoop();
+    };
+  });
+  return {
+    getSelection: getSelection,
+    getLastSelection: getLastSelection,
+    setSelection: setSelection
+  };
+}
+
+function useValue(inputRef, initialValue) {
+  var getInputElement = useInputElement(inputRef);
+  var valueRef = React.useRef(initialValue);
+  var getValue = React.useCallback(function () {
+    var input = getInputElement();
+    return input.value;
+  }, [getInputElement]);
+  var getLastValue = React.useCallback(function () {
+    return valueRef.current;
+  }, []);
+  var setValue = React.useCallback(function (newValue) {
+    valueRef.current = newValue;
+    var input = getInputElement();
+
+    if (input) {
+      input.value = newValue;
+    }
+  }, [getInputElement]);
+  return {
+    getValue: getValue,
+    getLastValue: getLastValue,
+    setValue: setValue
+  };
+}
+
+function useInputState(initialValue, isMasked) {
+  var inputRef = React.useRef();
+
+  var _useSelection = useSelection(inputRef, isMasked),
+      getSelection = _useSelection.getSelection,
+      getLastSelection = _useSelection.getLastSelection,
+      setSelection = _useSelection.setSelection;
+
+  var _useValue = useValue(inputRef, initialValue),
+      getValue = _useValue.getValue,
+      getLastValue = _useValue.getLastValue,
+      setValue = _useValue.setValue;
+
+  function getLastInputState() {
+    return {
+      value: getLastValue(),
+      selection: getLastSelection()
+    };
+  }
+
+  function getInputState() {
+    return {
+      value: getValue(),
+      selection: getSelection()
+    };
+  }
+
+  function setInputState(_ref) {
+    var value = _ref.value,
+        selection = _ref.selection;
+    setValue(value);
+    setSelection(selection);
+  }
+
+  return {
+    inputRef: inputRef,
+    getInputState: getInputState,
+    getLastInputState: getLastInputState,
+    setInputState: setInputState
+  };
+}
+function usePrevious(value) {
+  var ref = React.useRef();
+  React.useEffect(function () {
+    ref.current = value;
+  });
+  return ref.current;
+}
+
+var CONTROLLED_PROPS = ["disabled", "onBlur", "onChange", "onFocus", "onMouseDown", "readOnly", "value"];
+var defaultFormatChars = {
+  "9": /[0-9]/,
+  a: /[A-Za-z]/,
+  "*": /[A-Za-z0-9]/
+};
+
+function validateMaxLength(props) {
+   true ? warning(!props.maxLength || !props.mask, "react-input-mask: maxLength property shouldn't be passed to the masked input. It breaks masking and unnecessary because length is limited by the mask length.") : undefined;
+}
+function validateMaskPlaceholder(props) {
+  var mask = props.mask,
+      maskPlaceholder = props.maskPlaceholder;
+  !(!mask || !maskPlaceholder || maskPlaceholder.length === 1 || maskPlaceholder.length === mask.length) ?  true ? invariant(false, "react-input-mask: maskPlaceholder should either be a single character or have the same length as the mask:\n" + ("mask: " + mask + "\n") + ("maskPlaceholder: " + maskPlaceholder)) : undefined : void 0;
+}
+function validateChildren(props, inputElement) {
+  var conflictProps = CONTROLLED_PROPS.filter(function (propId) {
+    return inputElement.props[propId] != null && inputElement.props[propId] !== props[propId];
+  });
+  !!conflictProps.length ?  true ? invariant(false, "react-input-mask: the following props should be passed to the InputMask component, not to children: " + conflictProps.join(",")) : undefined : void 0;
+}
+
+function parseMask (_ref) {
+  var mask = _ref.mask,
+      maskPlaceholder = _ref.maskPlaceholder;
+  var permanents = [];
+
+  if (!mask) {
+    return {
+      maskPlaceholder: null,
+      mask: null,
+      prefix: null,
+      lastEditablePosition: null,
+      permanents: []
+    };
+  }
+
+  if (typeof mask === "string") {
+    var isPermanent = false;
+    var parsedMaskString = "";
+    mask.split("").forEach(function (character) {
+      if (!isPermanent && character === "\\") {
+        isPermanent = true;
+      } else {
+        if (isPermanent || !defaultFormatChars[character]) {
+          permanents.push(parsedMaskString.length);
+        }
+
+        parsedMaskString += character;
+        isPermanent = false;
+      }
+    });
+    mask = parsedMaskString.split("").map(function (character, index) {
+      if (permanents.indexOf(index) === -1) {
+        return defaultFormatChars[character];
+      }
+
+      return character;
+    });
+  } else {
+    mask.forEach(function (character, index) {
+      if (typeof character === "string") {
+        permanents.push(index);
+      }
+    });
+  }
+
+  if (maskPlaceholder) {
+    if (maskPlaceholder.length === 1) {
+      maskPlaceholder = mask.map(function (character, index) {
+        if (permanents.indexOf(index) !== -1) {
+          return character;
+        }
+
+        return maskPlaceholder;
+      });
+    } else {
+      maskPlaceholder = maskPlaceholder.split("");
+    }
+
+    permanents.forEach(function (position) {
+      maskPlaceholder[position] = mask[position];
+    });
+    maskPlaceholder = maskPlaceholder.join("");
+  }
+
+  var prefix = permanents.filter(function (position, index) {
+    return position === index;
+  }).map(function (position) {
+    return mask[position];
+  }).join("");
+  var lastEditablePosition = mask.length - 1;
+
+  while (permanents.indexOf(lastEditablePosition) !== -1) {
+    lastEditablePosition--;
+  }
+
+  return {
+    maskPlaceholder: maskPlaceholder,
+    prefix: prefix,
+    mask: mask,
+    lastEditablePosition: lastEditablePosition,
+    permanents: permanents
+  };
+}
+
+/* eslint no-use-before-define: ["error", { functions: false }] */
+
+var MaskUtils = function MaskUtils(options) {
+  var _this = this;
+
+  this.isCharacterAllowedAtPosition = function (character, position) {
+    var maskPlaceholder = _this.maskOptions.maskPlaceholder;
+
+    if (_this.isCharacterFillingPosition(character, position)) {
+      return true;
+    }
+
+    if (!maskPlaceholder) {
+      return false;
+    }
+
+    return maskPlaceholder[position] === character;
+  };
+
+  this.isCharacterFillingPosition = function (character, position) {
+    var mask = _this.maskOptions.mask;
+
+    if (!character || position >= mask.length) {
+      return false;
+    }
+
+    if (!_this.isPositionEditable(position)) {
+      return mask[position] === character;
+    }
+
+    var charRule = mask[position];
+    return new RegExp(charRule).test(character);
+  };
+
+  this.isPositionEditable = function (position) {
+    var _this$maskOptions = _this.maskOptions,
+        mask = _this$maskOptions.mask,
+        permanents = _this$maskOptions.permanents;
+    return position < mask.length && permanents.indexOf(position) === -1;
+  };
+
+  this.isValueEmpty = function (value) {
+    return value.split("").every(function (character, position) {
+      return !_this.isPositionEditable(position) || !_this.isCharacterFillingPosition(character, position);
+    });
+  };
+
+  this.isValueFilled = function (value) {
+    return _this.getFilledLength(value) === _this.maskOptions.lastEditablePosition + 1;
+  };
+
+  this.getDefaultSelectionForValue = function (value) {
+    var filledLength = _this.getFilledLength(value);
+
+    var cursorPosition = _this.getRightEditablePosition(filledLength);
+
+    return {
+      start: cursorPosition,
+      end: cursorPosition
+    };
+  };
+
+  this.getFilledLength = function (value) {
+    var characters = value.split("");
+    var lastFilledIndex = findLastIndex(characters, function (character, position) {
+      return _this.isPositionEditable(position) && _this.isCharacterFillingPosition(character, position);
+    });
+    return lastFilledIndex + 1;
+  };
+
+  this.getStringFillingLengthAtPosition = function (string, position) {
+    var characters = string.split("");
+    var insertedValue = characters.reduce(function (value, character) {
+      return _this.insertCharacterAtPosition(value, character, value.length);
+    }, repeat(" ", position));
+    return insertedValue.length - position;
+  };
+
+  this.getLeftEditablePosition = function (position) {
+    for (var i = position; i >= 0; i--) {
+      if (_this.isPositionEditable(i)) {
+        return i;
+      }
+    }
+
+    return null;
+  };
+
+  this.getRightEditablePosition = function (position) {
+    var mask = _this.maskOptions.mask;
+
+    for (var i = position; i < mask.length; i++) {
+      if (_this.isPositionEditable(i)) {
+        return i;
+      }
+    }
+
+    return null;
+  };
+
+  this.formatValue = function (value) {
+    var _this$maskOptions2 = _this.maskOptions,
+        maskPlaceholder = _this$maskOptions2.maskPlaceholder,
+        mask = _this$maskOptions2.mask;
+
+    if (!maskPlaceholder) {
+      value = _this.insertStringAtPosition("", value, 0);
+
+      while (value.length < mask.length && !_this.isPositionEditable(value.length)) {
+        value += mask[value.length];
+      }
+
+      return value;
+    }
+
+    return _this.insertStringAtPosition(maskPlaceholder, value, 0);
+  };
+
+  this.clearRange = function (value, start, len) {
+    if (!len) {
+      return value;
+    }
+
+    var end = start + len;
+    var _this$maskOptions3 = _this.maskOptions,
+        maskPlaceholder = _this$maskOptions3.maskPlaceholder,
+        mask = _this$maskOptions3.mask;
+    var clearedValue = value.split("").map(function (character, i) {
+      var isEditable = _this.isPositionEditable(i);
+
+      if (!maskPlaceholder && i >= end && !isEditable) {
+        return "";
+      }
+
+      if (i < start || i >= end) {
+        return character;
+      }
+
+      if (!isEditable) {
+        return mask[i];
+      }
+
+      if (maskPlaceholder) {
+        return maskPlaceholder[i];
+      }
+
+      return "";
+    }).join("");
+    return _this.formatValue(clearedValue);
+  };
+
+  this.insertCharacterAtPosition = function (value, character, position) {
+    var _this$maskOptions4 = _this.maskOptions,
+        mask = _this$maskOptions4.mask,
+        maskPlaceholder = _this$maskOptions4.maskPlaceholder;
+
+    if (position >= mask.length) {
+      return value;
+    }
+
+    var isAllowed = _this.isCharacterAllowedAtPosition(character, position);
+
+    var isEditable = _this.isPositionEditable(position);
+
+    var nextEditablePosition = _this.getRightEditablePosition(position);
+
+    var isNextPlaceholder = maskPlaceholder && nextEditablePosition ? character === maskPlaceholder[nextEditablePosition] : null;
+    var valueBefore = value.slice(0, position);
+
+    if (isAllowed || !isEditable) {
+      var insertedCharacter = isAllowed ? character : mask[position];
+      value = valueBefore + insertedCharacter;
+    }
+
+    if (!isAllowed && !isEditable && !isNextPlaceholder) {
+      value = _this.insertCharacterAtPosition(value, character, position + 1);
+    }
+
+    return value;
+  };
+
+  this.insertStringAtPosition = function (value, string, position) {
+    var _this$maskOptions5 = _this.maskOptions,
+        mask = _this$maskOptions5.mask,
+        maskPlaceholder = _this$maskOptions5.maskPlaceholder;
+
+    if (!string || position >= mask.length) {
+      return value;
+    }
+
+    var characters = string.split("");
+    var isFixedLength = _this.isValueFilled(value) || !!maskPlaceholder;
+    var valueAfter = value.slice(position);
+    value = characters.reduce(function (value, character) {
+      return _this.insertCharacterAtPosition(value, character, value.length);
+    }, value.slice(0, position));
+
+    if (isFixedLength) {
+      value += valueAfter.slice(value.length - position);
+    } else if (_this.isValueFilled(value)) {
+      value += mask.slice(value.length).join("");
+    } else {
+      var editableCharactersAfter = valueAfter.split("").filter(function (character, i) {
+        return _this.isPositionEditable(position + i);
+      });
+      value = editableCharactersAfter.reduce(function (value, character) {
+        var nextEditablePosition = _this.getRightEditablePosition(value.length);
+
+        if (nextEditablePosition === null) {
+          return value;
+        }
+
+        if (!_this.isPositionEditable(value.length)) {
+          value += mask.slice(value.length, nextEditablePosition).join("");
+        }
+
+        return _this.insertCharacterAtPosition(value, character, value.length);
+      }, value);
+    }
+
+    return value;
+  };
+
+  this.processChange = function (currentState, previousState) {
+    var _this$maskOptions6 = _this.maskOptions,
+        mask = _this$maskOptions6.mask,
+        prefix = _this$maskOptions6.prefix,
+        lastEditablePosition = _this$maskOptions6.lastEditablePosition;
+    var value = currentState.value,
+        selection = currentState.selection;
+    var previousValue = previousState.value;
+    var previousSelection = previousState.selection;
+    var newValue = value;
+    var enteredString = "";
+    var formattedEnteredStringLength = 0;
+    var removedLength = 0;
+    var cursorPosition = Math.min(previousSelection.start, selection.start);
+
+    if (selection.end > previousSelection.start) {
+      enteredString = newValue.slice(previousSelection.start, selection.end);
+      formattedEnteredStringLength = _this.getStringFillingLengthAtPosition(enteredString, cursorPosition);
+
+      if (!formattedEnteredStringLength) {
+        removedLength = 0;
+      } else {
+        removedLength = previousSelection.length;
+      }
+    } else if (newValue.length < previousValue.length) {
+      removedLength = previousValue.length - newValue.length;
+    }
+
+    newValue = previousValue;
+
+    if (removedLength) {
+      if (removedLength === 1 && !previousSelection.length) {
+        var deleteFromRight = previousSelection.start === selection.start;
+        cursorPosition = deleteFromRight ? _this.getRightEditablePosition(selection.start) : _this.getLeftEditablePosition(selection.start);
+      }
+
+      newValue = _this.clearRange(newValue, cursorPosition, removedLength);
+    }
+
+    newValue = _this.insertStringAtPosition(newValue, enteredString, cursorPosition);
+    cursorPosition += formattedEnteredStringLength;
+
+    if (cursorPosition >= mask.length) {
+      cursorPosition = mask.length;
+    } else if (cursorPosition < prefix.length && !formattedEnteredStringLength) {
+      cursorPosition = prefix.length;
+    } else if (cursorPosition >= prefix.length && cursorPosition < lastEditablePosition && formattedEnteredStringLength) {
+      cursorPosition = _this.getRightEditablePosition(cursorPosition);
+    }
+
+    newValue = _this.formatValue(newValue);
+    return {
+      value: newValue,
+      enteredString: enteredString,
+      selection: {
+        start: cursorPosition,
+        end: cursorPosition
+      }
+    };
+  };
+
+  this.maskOptions = parseMask(options);
+};
+
+var InputMaskChildrenWrapper =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(InputMaskChildrenWrapper, _React$Component);
+
+  function InputMaskChildrenWrapper() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = InputMaskChildrenWrapper.prototype;
+
+  _proto.render = function render() {
+    // eslint-disable-next-line react/prop-types
+    var _this$props = this.props,
+        children = _this$props.children,
+        props = _objectWithoutPropertiesLoose(_this$props, ["children"]);
+
+    return React__default.cloneElement(children, props);
+  };
+
+  return InputMaskChildrenWrapper;
+}(React__default.Component);
+
+var InputMask = React.forwardRef(function InputMask(props, forwardedRef) {
+  var alwaysShowMask = props.alwaysShowMask,
+      children = props.children,
+      mask = props.mask,
+      maskPlaceholder = props.maskPlaceholder,
+      beforeMaskedStateChange = props.beforeMaskedStateChange,
+      restProps = _objectWithoutPropertiesLoose(props, ["alwaysShowMask", "children", "mask", "maskPlaceholder", "beforeMaskedStateChange"]);
+
+  validateMaxLength(props);
+  validateMaskPlaceholder(props);
+  var maskUtils = new MaskUtils({
+    mask: mask,
+    maskPlaceholder: maskPlaceholder
+  });
+  var isMasked = !!mask;
+  var isEditable = !restProps.disabled && !restProps.readOnly;
+  var isControlled = props.value !== null && props.value !== undefined;
+  var previousIsMasked = usePrevious(isMasked);
+  var initialValue = toString((isControlled ? props.value : props.defaultValue) || "");
+
+  var _useInputState = useInputState(initialValue, isMasked),
+      inputRef = _useInputState.inputRef,
+      getInputState = _useInputState.getInputState,
+      setInputState = _useInputState.setInputState,
+      getLastInputState = _useInputState.getLastInputState;
+
+  var getInputElement = useInputElement(inputRef);
+
+  function onChange(event) {
+    var currentState = getInputState();
+    var previousState = getLastInputState();
+    var newInputState = maskUtils.processChange(currentState, previousState);
+
+    if (beforeMaskedStateChange) {
+      newInputState = beforeMaskedStateChange({
+        currentState: currentState,
+        previousState: previousState,
+        nextState: newInputState
+      });
+    }
+
+    setInputState(newInputState);
+
+    if (props.onChange) {
+      props.onChange(event);
+    }
+  }
+
+  function onFocus(event) {
+    // If autoFocus property is set, focus event fires before the ref handler gets called
+    inputRef.current = event.target;
+    var currentValue = getInputState().value;
+
+    if (isMasked && !maskUtils.isValueFilled(currentValue)) {
+      var newValue = maskUtils.formatValue(currentValue);
+      var newSelection = maskUtils.getDefaultSelectionForValue(newValue);
+      var newInputState = {
+        value: newValue,
+        selection: newSelection
+      };
+
+      if (beforeMaskedStateChange) {
+        newInputState = beforeMaskedStateChange({
+          currentState: getInputState(),
+          nextState: newInputState
+        });
+        newValue = newInputState.value;
+        newSelection = newInputState.selection;
+      }
+
+      setInputState(newInputState);
+
+      if (newValue !== currentValue && props.onChange) {
+        props.onChange(event);
+      } // Chrome resets selection after focus event,
+      // so we want to restore it later
+
+
+      defer(function () {
+        setInputState(getLastInputState());
+      });
+    }
+
+    if (props.onFocus) {
+      props.onFocus(event);
+    }
+  }
+
+  function onBlur(event) {
+    var currentValue = getInputState().value;
+    var lastValue = getLastInputState().value;
+
+    if (isMasked && !alwaysShowMask && maskUtils.isValueEmpty(lastValue)) {
+      var newValue = "";
+      var newInputState = {
+        value: newValue,
+        selection: {
+          start: null,
+          end: null
+        }
+      };
+
+      if (beforeMaskedStateChange) {
+        newInputState = beforeMaskedStateChange({
+          currentState: getInputState(),
+          nextState: newInputState
+        });
+        newValue = newInputState.value;
+      }
+
+      setInputState(newInputState);
+
+      if (newValue !== currentValue && props.onChange) {
+        props.onChange(event);
+      }
+    }
+
+    if (props.onBlur) {
+      props.onBlur(event);
+    }
+  } // Tiny unintentional mouse movements can break cursor
+  // position on focus, so we have to restore it in that case
+  //
+  // https://github.com/sanniassin/react-input-mask/issues/108
+
+
+  function onMouseDown(event) {
+    var input = getInputElement();
+
+    var _getInputState = getInputState(),
+        value = _getInputState.value;
+
+    var inputDocument = getElementDocument(input);
+
+    if (!isInputFocused(input) && !maskUtils.isValueFilled(value)) {
+      var mouseDownX = event.clientX;
+      var mouseDownY = event.clientY;
+      var mouseDownTime = new Date().getTime();
+
+      var mouseUpHandler = function mouseUpHandler(mouseUpEvent) {
+        inputDocument.removeEventListener("mouseup", mouseUpHandler);
+
+        if (!isInputFocused(input)) {
+          return;
+        }
+
+        var deltaX = Math.abs(mouseUpEvent.clientX - mouseDownX);
+        var deltaY = Math.abs(mouseUpEvent.clientY - mouseDownY);
+        var axisDelta = Math.max(deltaX, deltaY);
+        var timeDelta = new Date().getTime() - mouseDownTime;
+
+        if (axisDelta <= 10 && timeDelta <= 200 || axisDelta <= 5 && timeDelta <= 300) {
+          var _lastState = getLastInputState();
+
+          var newSelection = maskUtils.getDefaultSelectionForValue(_lastState.value);
+
+          var newState = _extends({}, _lastState, {
+            selection: newSelection
+          });
+
+          setInputState(newState);
+        }
+      };
+
+      inputDocument.addEventListener("mouseup", mouseUpHandler);
+    }
+
+    if (props.onMouseDown) {
+      props.onMouseDown(event);
+    }
+  } // For controlled inputs we want to provide properly formatted
+  // value prop
+
+
+  if (isMasked && isControlled) {
+    var input = getInputElement();
+    var isFocused = input && isInputFocused(input);
+    var newValue = isFocused || alwaysShowMask || props.value ? maskUtils.formatValue(props.value) : props.value;
+
+    if (beforeMaskedStateChange) {
+      newValue = beforeMaskedStateChange({
+        nextState: {
+          value: newValue,
+          selection: {
+            start: null,
+            end: null
+          }
+        }
+      }).value;
+    }
+
+    setInputState(_extends({}, getLastInputState(), {
+      value: newValue
+    }));
+  }
+
+  var lastState = getLastInputState();
+  var lastSelection = lastState.selection;
+  var lastValue = lastState.value;
+  React.useLayoutEffect(function () {
+    if (!isMasked) {
+      return;
+    }
+
+    var input = getInputElement();
+    var isFocused = isInputFocused(input);
+    var previousSelection = lastSelection;
+    var currentState = getInputState();
+
+    var newInputState = _extends({}, currentState); // Update value for uncontrolled inputs to make sure
+    // it's always in sync with mask props
+
+
+    if (!isControlled) {
+      var currentValue = currentState.value;
+      var formattedValue = maskUtils.formatValue(currentValue);
+      var isValueEmpty = maskUtils.isValueEmpty(formattedValue);
+      var shouldFormatValue = !isValueEmpty || isFocused || alwaysShowMask;
+
+      if (shouldFormatValue) {
+        newInputState.value = formattedValue;
+      } else if (isValueEmpty && !isFocused) {
+        newInputState.value = "";
+      }
+    }
+
+    if (isFocused && !previousIsMasked) {
+      // Adjust selection if input got masked while being focused
+      newInputState.selection = maskUtils.getDefaultSelectionForValue(newInputState.value);
+    } else if (isControlled && isFocused && previousSelection) {
+      // Restore cursor position if value has changed outside change event
+      if (previousSelection.start !== null && previousSelection.end !== null) {
+        newInputState.selection = previousSelection;
+      }
+    }
+
+    if (beforeMaskedStateChange) {
+      newInputState = beforeMaskedStateChange({
+        currentState: currentState,
+        nextState: newInputState
+      });
+    }
+
+    setInputState(newInputState);
+  });
+
+  var inputProps = _extends({}, restProps, {
+    onFocus: onFocus,
+    onBlur: onBlur,
+    onChange: isMasked && isEditable ? onChange : props.onChange,
+    onMouseDown: isMasked && isEditable ? onMouseDown : props.onMouseDown,
+    ref: function ref(_ref) {
+      inputRef.current = reactDom.findDOMNode(_ref);
+
+      if (isFunction(forwardedRef)) {
+        forwardedRef(_ref);
+      } else if (forwardedRef !== null && typeof forwardedRef === "object") {
+        forwardedRef.current = _ref;
+      }
+    },
+    value: isMasked && isControlled ? lastValue : props.value
+  });
+
+  if (children) {
+    validateChildren(props, children); // We wrap children into a class component to be able to find
+    // their input element using findDOMNode
+
+    return React__default.createElement(InputMaskChildrenWrapper, inputProps, children);
+  }
+
+  return React__default.createElement("input", inputProps);
+});
+InputMask.displayName = "InputMask";
+InputMask.defaultProps = {
+  alwaysShowMask: false,
+  maskPlaceholder: "_"
+};
+InputMask.propTypes = {
+  alwaysShowMask: PropTypes.bool,
+  beforeMaskedStateChange: PropTypes.func,
+  children: PropTypes.element,
+  mask: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(RegExp)]))]),
+  maskPlaceholder: PropTypes.string,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onMouseDown: PropTypes.func
+};
+
+module.exports = InputMask;
+
+
+/***/ }),
+
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -28780,1374 +29887,6 @@ exports.isSuspense = isSuspense;
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
 }
-
-
-/***/ }),
-
-/***/ "./node_modules/react-number-format/dist/react-number-format.es.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/react-number-format/dist/react-number-format.es.js ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/**
- * react-number-format - 4.4.1
- * Author : Sudhanshu Yadav
- * Copyright (c) 2016, 2020 to Sudhanshu Yadav, released under the MIT license.
- * https://github.com/s-yadav/react-number-format
- */
-
-
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (typeof call === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function createCommonjsModule(fn, module) {
-	return module = { exports: {} }, fn(module, module.exports), module.exports;
-}
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-var ReactPropTypesSecret_1 = ReactPropTypesSecret;
-
-function emptyFunction() {}
-function emptyFunctionWithReset() {}
-emptyFunctionWithReset.resetWarningCache = emptyFunction;
-
-var factoryWithThrowingShims = function() {
-  function shim(props, propName, componentName, location, propFullName, secret) {
-    if (secret === ReactPropTypesSecret_1) {
-      // It is still safe when called from React.
-      return;
-    }
-    var err = new Error(
-      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-      'Use PropTypes.checkPropTypes() to call them. ' +
-      'Read more at http://fb.me/use-check-prop-types'
-    );
-    err.name = 'Invariant Violation';
-    throw err;
-  }  shim.isRequired = shim;
-  function getShim() {
-    return shim;
-  }  // Important!
-  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
-  var ReactPropTypes = {
-    array: shim,
-    bool: shim,
-    func: shim,
-    number: shim,
-    object: shim,
-    string: shim,
-    symbol: shim,
-
-    any: shim,
-    arrayOf: getShim,
-    element: shim,
-    elementType: shim,
-    instanceOf: getShim,
-    node: shim,
-    objectOf: getShim,
-    oneOf: getShim,
-    oneOfType: getShim,
-    shape: getShim,
-    exact: getShim,
-
-    checkPropTypes: emptyFunctionWithReset,
-    resetWarningCache: emptyFunction
-  };
-
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
-};
-
-var propTypes = createCommonjsModule(function (module) {
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-{
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = factoryWithThrowingShims();
-}
-});
-
-// basic noop function
-function noop() {}
-function returnTrue() {
-  return true;
-}
-function charIsNumber(_char) {
-  return !!(_char || '').match(/\d/);
-}
-function escapeRegExp(str) {
-  return str.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&");
-}
-function getThousandsGroupRegex(thousandsGroupStyle) {
-  switch (thousandsGroupStyle) {
-    case 'lakh':
-      return /(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/g;
-
-    case 'wan':
-      return /(\d)(?=(\d{4})+(?!\d))/g;
-
-    case 'thousand':
-    default:
-      return /(\d)(?=(\d{3})+(?!\d))/g;
-  }
-}
-function applyThousandSeparator(str, thousandSeparator, thousandsGroupStyle) {
-  var thousandsGroupRegex = getThousandsGroupRegex(thousandsGroupStyle);
-  var index = str.search(/[1-9]/);
-  index = index === -1 ? str.length : index;
-  return str.substring(0, index) + str.substring(index, str.length).replace(thousandsGroupRegex, '$1' + thousandSeparator);
-} //spilt a float number into different parts beforeDecimal, afterDecimal, and negation
-
-function splitDecimal(numStr) {
-  var allowNegative = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var hasNagation = numStr[0] === '-';
-  var addNegation = hasNagation && allowNegative;
-  numStr = numStr.replace('-', '');
-  var parts = numStr.split('.');
-  var beforeDecimal = parts[0];
-  var afterDecimal = parts[1] || '';
-  return {
-    beforeDecimal: beforeDecimal,
-    afterDecimal: afterDecimal,
-    hasNagation: hasNagation,
-    addNegation: addNegation
-  };
-}
-function fixLeadingZero(numStr) {
-  if (!numStr) return numStr;
-  var isNegative = numStr[0] === '-';
-  if (isNegative) numStr = numStr.substring(1, numStr.length);
-  var parts = numStr.split('.');
-  var beforeDecimal = parts[0].replace(/^0+/, '') || '0';
-  var afterDecimal = parts[1] || '';
-  return "".concat(isNegative ? '-' : '').concat(beforeDecimal).concat(afterDecimal ? ".".concat(afterDecimal) : '');
-}
-/**
- * limit decimal numbers to given scale
- * Not used .fixedTo because that will break with big numbers
- */
-
-function limitToScale(numStr, scale, fixedDecimalScale) {
-  var str = '';
-  var filler = fixedDecimalScale ? '0' : '';
-
-  for (var i = 0; i <= scale - 1; i++) {
-    str += numStr[i] || filler;
-  }
-
-  return str;
-}
-/**
- * This method is required to round prop value to given scale.
- * Not used .round or .fixedTo because that will break with big numbers
- */
-
-function roundToPrecision(numStr, scale, fixedDecimalScale) {
-  //if number is empty don't do anything return empty string
-  if (['', '-'].indexOf(numStr) !== -1) return numStr;
-  var shoudHaveDecimalSeparator = numStr.indexOf('.') !== -1 && scale;
-
-  var _splitDecimal = splitDecimal(numStr),
-      beforeDecimal = _splitDecimal.beforeDecimal,
-      afterDecimal = _splitDecimal.afterDecimal,
-      hasNagation = _splitDecimal.hasNagation;
-
-  var roundedDecimalParts = parseFloat("0.".concat(afterDecimal || '0')).toFixed(scale).split('.');
-  var intPart = beforeDecimal.split('').reverse().reduce(function (roundedStr, current, idx) {
-    if (roundedStr.length > idx) {
-      return (Number(roundedStr[0]) + Number(current)).toString() + roundedStr.substring(1, roundedStr.length);
-    }
-
-    return current + roundedStr;
-  }, roundedDecimalParts[0]);
-  var decimalPart = limitToScale(roundedDecimalParts[1] || '', Math.min(scale, afterDecimal.length), fixedDecimalScale);
-  var negation = hasNagation ? '-' : '';
-  var decimalSeparator = shoudHaveDecimalSeparator ? '.' : '';
-  return "".concat(negation).concat(intPart).concat(decimalSeparator).concat(decimalPart);
-}
-function omit(obj, keyMaps) {
-  var filteredObj = {};
-  Object.keys(obj).forEach(function (key) {
-    if (!keyMaps[key]) filteredObj[key] = obj[key];
-  });
-  return filteredObj;
-}
-/** set the caret positon in an input field **/
-
-function setCaretPosition(el, caretPos) {
-  el.value = el.value; // ^ this is used to not only get "focus", but
-  // to make sure we don't have it everything -selected-
-  // (it causes an issue in chrome, and having it doesn't hurt any other browser)
-
-  if (el !== null) {
-    if (el.createTextRange) {
-      var range = el.createTextRange();
-      range.move('character', caretPos);
-      range.select();
-      return true;
-    } // (el.selectionStart === 0 added for Firefox bug)
-
-
-    if (el.selectionStart || el.selectionStart === 0) {
-      el.focus();
-      el.setSelectionRange(caretPos, caretPos);
-      return true;
-    } // fail city, fortunately this never happens (as far as I've tested) :)
-
-
-    el.focus();
-    return false;
-  }
-}
-/**
-  Given previous value and newValue it returns the index
-  start - end to which values have changed.
-  This function makes assumption about only consecutive
-  characters are changed which is correct assumption for caret input.
-*/
-
-function findChangedIndex(prevValue, newValue) {
-  var i = 0,
-      j = 0;
-  var prevLength = prevValue.length;
-  var newLength = newValue.length;
-
-  while (prevValue[i] === newValue[i] && i < prevLength) {
-    i++;
-  } //check what has been changed from last
-
-
-  while (prevValue[prevLength - 1 - j] === newValue[newLength - 1 - j] && newLength - j > i && prevLength - j > i) {
-    j++;
-  }
-
-  return {
-    start: i,
-    end: prevLength - j
-  };
-}
-/*
-  Returns a number whose value is limited to the given range
-*/
-
-function clamp(num, min, max) {
-  return Math.min(Math.max(num, min), max);
-}
-function getCurrentCaretPosition(el) {
-  /*Max of selectionStart and selectionEnd is taken for the patch of pixel and other mobile device caret bug*/
-  return Math.max(el.selectionStart, el.selectionEnd);
-}
-
-var propTypes$1 = {
-  thousandSeparator: propTypes.oneOfType([propTypes.string, propTypes.oneOf([true])]),
-  decimalSeparator: propTypes.string,
-  allowedDecimalSeparators: propTypes.arrayOf(propTypes.string),
-  thousandsGroupStyle: propTypes.oneOf(['thousand', 'lakh', 'wan']),
-  decimalScale: propTypes.number,
-  fixedDecimalScale: propTypes.bool,
-  displayType: propTypes.oneOf(['input', 'text']),
-  prefix: propTypes.string,
-  suffix: propTypes.string,
-  format: propTypes.oneOfType([propTypes.string, propTypes.func]),
-  removeFormatting: propTypes.func,
-  mask: propTypes.oneOfType([propTypes.string, propTypes.arrayOf(propTypes.string)]),
-  value: propTypes.oneOfType([propTypes.number, propTypes.string]),
-  defaultValue: propTypes.oneOfType([propTypes.number, propTypes.string]),
-  isNumericString: propTypes.bool,
-  customInput: propTypes.elementType,
-  allowNegative: propTypes.bool,
-  allowEmptyFormatting: propTypes.bool,
-  allowLeadingZeros: propTypes.bool,
-  onValueChange: propTypes.func,
-  onKeyDown: propTypes.func,
-  onMouseUp: propTypes.func,
-  onChange: propTypes.func,
-  onFocus: propTypes.func,
-  onBlur: propTypes.func,
-  type: propTypes.oneOf(['text', 'tel', 'password']),
-  isAllowed: propTypes.func,
-  renderText: propTypes.func,
-  getInputRef: propTypes.oneOfType([propTypes.func, // for legacy refs
-  propTypes.shape({
-    current: propTypes.any
-  })])
-};
-var defaultProps = {
-  displayType: 'input',
-  decimalSeparator: '.',
-  thousandsGroupStyle: 'thousand',
-  fixedDecimalScale: false,
-  prefix: '',
-  suffix: '',
-  allowNegative: true,
-  allowEmptyFormatting: false,
-  allowLeadingZeros: false,
-  isNumericString: false,
-  type: 'text',
-  onValueChange: noop,
-  onChange: noop,
-  onKeyDown: noop,
-  onMouseUp: noop,
-  onFocus: noop,
-  onBlur: noop,
-  isAllowed: returnTrue
-};
-
-var NumberFormat =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(NumberFormat, _React$Component);
-
-  function NumberFormat(props) {
-    var _this;
-
-    _classCallCheck(this, NumberFormat);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(NumberFormat).call(this, props));
-    var defaultValue = props.defaultValue; //validate props
-
-    _this.validateProps();
-
-    var formattedValue = _this.formatValueProp(defaultValue);
-
-    _this.state = {
-      value: formattedValue,
-      numAsString: _this.removeFormatting(formattedValue)
-    };
-    _this.selectionBeforeInput = {
-      selectionStart: 0,
-      selectionEnd: 0
-    };
-    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
-    _this.onKeyDown = _this.onKeyDown.bind(_assertThisInitialized(_this));
-    _this.onMouseUp = _this.onMouseUp.bind(_assertThisInitialized(_this));
-    _this.onFocus = _this.onFocus.bind(_assertThisInitialized(_this));
-    _this.onBlur = _this.onBlur.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(NumberFormat, [{
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps) {
-      this.updateValueIfRequired(prevProps);
-    }
-  }, {
-    key: "updateValueIfRequired",
-    value: function updateValueIfRequired(prevProps) {
-      var props = this.props,
-          state = this.state,
-          focusedElm = this.focusedElm;
-      var stateValue = state.value,
-          _state$numAsString = state.numAsString,
-          lastNumStr = _state$numAsString === void 0 ? '' : _state$numAsString; // If only state changed no need to do any thing
-
-      if (prevProps !== props) {
-        //validate props
-        this.validateProps();
-        var lastValueWithNewFormat = this.formatNumString(lastNumStr);
-        var formattedValue = props.value === undefined ? lastValueWithNewFormat : this.formatValueProp();
-        var numAsString = this.removeFormatting(formattedValue);
-        var floatValue = parseFloat(numAsString);
-        var lastFloatValue = parseFloat(lastNumStr);
-
-        if ( //while typing set state only when float value changes
-        (!isNaN(floatValue) || !isNaN(lastFloatValue)) && floatValue !== lastFloatValue || //can also set state when float value is same and the format props changes
-        lastValueWithNewFormat !== stateValue || //set state always when not in focus and formatted value is changed
-        focusedElm === null && formattedValue !== stateValue) {
-          this.updateValue({
-            formattedValue: formattedValue,
-            numAsString: numAsString,
-            input: focusedElm
-          });
-        }
-      }
-    }
-    /** Misc methods **/
-
-  }, {
-    key: "getFloatString",
-    value: function getFloatString() {
-      var num = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-      var decimalScale = this.props.decimalScale;
-
-      var _this$getSeparators = this.getSeparators(),
-          decimalSeparator = _this$getSeparators.decimalSeparator;
-
-      var numRegex = this.getNumberRegex(true); //remove negation for regex check
-
-      var hasNegation = num[0] === '-';
-      if (hasNegation) num = num.replace('-', ''); //if decimal scale is zero remove decimal and number after decimalSeparator
-
-      if (decimalSeparator && decimalScale === 0) {
-        num = num.split(decimalSeparator)[0];
-      }
-
-      num = (num.match(numRegex) || []).join('').replace(decimalSeparator, '.'); //remove extra decimals
-
-      var firstDecimalIndex = num.indexOf('.');
-
-      if (firstDecimalIndex !== -1) {
-        num = "".concat(num.substring(0, firstDecimalIndex), ".").concat(num.substring(firstDecimalIndex + 1, num.length).replace(new RegExp(escapeRegExp(decimalSeparator), 'g'), ''));
-      } //add negation back
-
-
-      if (hasNegation) num = '-' + num;
-      return num;
-    } //returned regex assumes decimalSeparator is as per prop
-
-  }, {
-    key: "getNumberRegex",
-    value: function getNumberRegex(g, ignoreDecimalSeparator) {
-      var _this$props = this.props,
-          format = _this$props.format,
-          decimalScale = _this$props.decimalScale;
-
-      var _this$getSeparators2 = this.getSeparators(),
-          decimalSeparator = _this$getSeparators2.decimalSeparator;
-
-      return new RegExp('\\d' + (decimalSeparator && decimalScale !== 0 && !ignoreDecimalSeparator && !format ? '|' + escapeRegExp(decimalSeparator) : ''), g ? 'g' : undefined);
-    }
-  }, {
-    key: "getSeparators",
-    value: function getSeparators() {
-      var decimalSeparator = this.props.decimalSeparator;
-      var _this$props2 = this.props,
-          thousandSeparator = _this$props2.thousandSeparator,
-          allowedDecimalSeparators = _this$props2.allowedDecimalSeparators;
-
-      if (thousandSeparator === true) {
-        thousandSeparator = ',';
-      }
-
-      if (!allowedDecimalSeparators) {
-        allowedDecimalSeparators = [decimalSeparator, '.'];
-      }
-
-      return {
-        decimalSeparator: decimalSeparator,
-        thousandSeparator: thousandSeparator,
-        allowedDecimalSeparators: allowedDecimalSeparators
-      };
-    }
-  }, {
-    key: "getMaskAtIndex",
-    value: function getMaskAtIndex(index) {
-      var _this$props$mask = this.props.mask,
-          mask = _this$props$mask === void 0 ? ' ' : _this$props$mask;
-
-      if (typeof mask === 'string') {
-        return mask;
-      }
-
-      return mask[index] || ' ';
-    }
-  }, {
-    key: "getValueObject",
-    value: function getValueObject(formattedValue, numAsString) {
-      var floatValue = parseFloat(numAsString);
-      return {
-        formattedValue: formattedValue,
-        value: numAsString,
-        floatValue: isNaN(floatValue) ? undefined : floatValue
-      };
-    }
-  }, {
-    key: "validateProps",
-    value: function validateProps() {
-      var mask = this.props.mask; //validate decimalSeparator and thousandSeparator
-
-      var _this$getSeparators3 = this.getSeparators(),
-          decimalSeparator = _this$getSeparators3.decimalSeparator,
-          thousandSeparator = _this$getSeparators3.thousandSeparator;
-
-      if (decimalSeparator === thousandSeparator) {
-        throw new Error("\n          Decimal separator can't be same as thousand separator.\n          thousandSeparator: ".concat(thousandSeparator, " (thousandSeparator = {true} is same as thousandSeparator = \",\")\n          decimalSeparator: ").concat(decimalSeparator, " (default value for decimalSeparator is .)\n       "));
-      } //validate mask
-
-
-      if (mask) {
-        var maskAsStr = mask === 'string' ? mask : mask.toString();
-
-        if (maskAsStr.match(/\d/g)) {
-          throw new Error("\n          Mask ".concat(mask, " should not contain numeric character;\n        "));
-        }
-      }
-    }
-    /** Misc methods end **/
-
-    /** caret specific methods **/
-
-  }, {
-    key: "setPatchedCaretPosition",
-    value: function setPatchedCaretPosition(el, caretPos, currentValue) {
-      /* setting caret position within timeout of 0ms is required for mobile chrome,
-      otherwise browser resets the caret position after we set it
-      We are also setting it without timeout so that in normal browser we don't see the flickering */
-      setCaretPosition(el, caretPos);
-      setTimeout(function () {
-        if (el.value === currentValue) setCaretPosition(el, caretPos);
-      }, 0);
-    }
-    /* This keeps the caret within typing area so people can't type in between prefix or suffix */
-
-  }, {
-    key: "correctCaretPosition",
-    value: function correctCaretPosition(value, caretPos, direction) {
-      var _this$props3 = this.props,
-          prefix = _this$props3.prefix,
-          suffix = _this$props3.suffix,
-          format = _this$props3.format; //if value is empty return 0
-
-      if (value === '') return 0; //caret position should be between 0 and value length
-
-      caretPos = clamp(caretPos, 0, value.length); //in case of format as number limit between prefix and suffix
-
-      if (!format) {
-        var hasNegation = value[0] === '-';
-        return clamp(caretPos, prefix.length + (hasNegation ? 1 : 0), value.length - suffix.length);
-      } //in case if custom format method don't do anything
-
-
-      if (typeof format === 'function') return caretPos;
-      /* in case format is string find the closest # position from the caret position */
-      //in case the caretPos have input value on it don't do anything
-
-      if (format[caretPos] === '#' && charIsNumber(value[caretPos])) return caretPos; //if caretPos is just after input value don't do anything
-
-      if (format[caretPos - 1] === '#' && charIsNumber(value[caretPos - 1])) return caretPos; //find the nearest caret position
-
-      var firstHashPosition = format.indexOf('#');
-      var lastHashPosition = format.lastIndexOf('#'); //limit the cursor between the first # position and the last # position
-
-      caretPos = clamp(caretPos, firstHashPosition, lastHashPosition + 1);
-      var nextPos = format.substring(caretPos, format.length).indexOf('#');
-      var caretLeftBound = caretPos;
-      var caretRightBound = caretPos + (nextPos === -1 ? 0 : nextPos); //get the position where the last number is present
-
-      while (caretLeftBound > firstHashPosition && (format[caretLeftBound] !== '#' || !charIsNumber(value[caretLeftBound]))) {
-        caretLeftBound -= 1;
-      }
-
-      var goToLeft = !charIsNumber(value[caretRightBound]) || direction === 'left' && caretPos !== firstHashPosition || caretPos - caretLeftBound < caretRightBound - caretPos;
-
-      if (goToLeft) {
-        //check if number should be taken after the bound or after it
-        //if number preceding a valid number keep it after
-        return charIsNumber(value[caretLeftBound]) ? caretLeftBound + 1 : caretLeftBound;
-      }
-
-      return caretRightBound;
-    }
-  }, {
-    key: "getCaretPosition",
-    value: function getCaretPosition(inputValue, formattedValue, caretPos) {
-      var format = this.props.format;
-      var stateValue = this.state.value;
-      var numRegex = this.getNumberRegex(true);
-      var inputNumber = (inputValue.match(numRegex) || []).join('');
-      var formattedNumber = (formattedValue.match(numRegex) || []).join('');
-      var j, i;
-      j = 0;
-
-      for (i = 0; i < caretPos; i++) {
-        var currentInputChar = inputValue[i] || '';
-        var currentFormatChar = formattedValue[j] || ''; //no need to increase new cursor position if formatted value does not have those characters
-        //case inputValue = 1a23 and formattedValue =  123
-
-        if (!currentInputChar.match(numRegex) && currentInputChar !== currentFormatChar) continue; //When we are striping out leading zeros maintain the new cursor position
-        //Case inputValue = 00023 and formattedValue = 23;
-
-        if (currentInputChar === '0' && currentFormatChar.match(numRegex) && currentFormatChar !== '0' && inputNumber.length !== formattedNumber.length) continue; //we are not using currentFormatChar because j can change here
-
-        while (currentInputChar !== formattedValue[j] && j < formattedValue.length) {
-          j++;
-        }
-
-        j++;
-      }
-
-      if (typeof format === 'string' && !stateValue) {
-        //set it to the maximum value so it goes after the last number
-        j = formattedValue.length;
-      } //correct caret position if its outside of editable area
-
-
-      j = this.correctCaretPosition(formattedValue, j);
-      return j;
-    }
-    /** caret specific methods ends **/
-
-    /** methods to remove formattting **/
-
-  }, {
-    key: "removePrefixAndSuffix",
-    value: function removePrefixAndSuffix(val) {
-      var _this$props4 = this.props,
-          format = _this$props4.format,
-          prefix = _this$props4.prefix,
-          suffix = _this$props4.suffix; //remove prefix and suffix
-
-      if (!format && val) {
-        var isNegative = val[0] === '-'; //remove negation sign
-
-        if (isNegative) val = val.substring(1, val.length); //remove prefix
-
-        val = prefix && val.indexOf(prefix) === 0 ? val.substring(prefix.length, val.length) : val; //remove suffix
-
-        var suffixLastIndex = val.lastIndexOf(suffix);
-        val = suffix && suffixLastIndex !== -1 && suffixLastIndex === val.length - suffix.length ? val.substring(0, suffixLastIndex) : val; //add negation sign back
-
-        if (isNegative) val = '-' + val;
-      }
-
-      return val;
-    }
-  }, {
-    key: "removePatternFormatting",
-    value: function removePatternFormatting(val) {
-      var format = this.props.format;
-      var formatArray = format.split('#').filter(function (str) {
-        return str !== '';
-      });
-      var start = 0;
-      var numStr = '';
-
-      for (var i = 0, ln = formatArray.length; i <= ln; i++) {
-        var part = formatArray[i] || ''; //if i is the last fragment take the index of end of the value
-        //For case like +1 (911) 911 91 91 having pattern +1 (###) ### ## ##
-
-        var index = i === ln ? val.length : val.indexOf(part, start);
-        /* in any case if we don't find the pattern part in the value assume the val as numeric string
-        This will be also in case if user has started typing, in any other case it will not be -1
-        unless wrong prop value is provided */
-
-        if (index === -1) {
-          numStr = val;
-          break;
-        } else {
-          numStr += val.substring(start, index);
-          start = index + part.length;
-        }
-      }
-
-      return (numStr.match(/\d/g) || []).join('');
-    }
-  }, {
-    key: "removeFormatting",
-    value: function removeFormatting(val) {
-      var _this$props5 = this.props,
-          format = _this$props5.format,
-          removeFormatting = _this$props5.removeFormatting;
-      if (!val) return val;
-
-      if (!format) {
-        val = this.removePrefixAndSuffix(val);
-        val = this.getFloatString(val);
-      } else if (typeof format === 'string') {
-        val = this.removePatternFormatting(val);
-      } else if (typeof removeFormatting === 'function') {
-        //condition need to be handled if format method is provide,
-        val = removeFormatting(val);
-      } else {
-        val = (val.match(/\d/g) || []).join('');
-      }
-
-      return val;
-    }
-    /** methods to remove formattting end **/
-
-    /*** format specific methods start ***/
-
-    /**
-     * Format when # based string is provided
-     * @param  {string} numStr Numeric String
-     * @return {string}        formatted Value
-     */
-
-  }, {
-    key: "formatWithPattern",
-    value: function formatWithPattern(numStr) {
-      var format = this.props.format;
-      var hashCount = 0;
-      var formattedNumberAry = format.split('');
-
-      for (var i = 0, ln = format.length; i < ln; i++) {
-        if (format[i] === '#') {
-          formattedNumberAry[i] = numStr[hashCount] || this.getMaskAtIndex(hashCount);
-          hashCount += 1;
-        }
-      }
-
-      return formattedNumberAry.join('');
-    }
-    /**
-     * @param  {string} numStr Numeric string/floatString] It always have decimalSeparator as .
-     * @return {string} formatted Value
-     */
-
-  }, {
-    key: "formatAsNumber",
-    value: function formatAsNumber(numStr) {
-      var _this$props6 = this.props,
-          decimalScale = _this$props6.decimalScale,
-          fixedDecimalScale = _this$props6.fixedDecimalScale,
-          prefix = _this$props6.prefix,
-          suffix = _this$props6.suffix,
-          allowNegative = _this$props6.allowNegative,
-          thousandsGroupStyle = _this$props6.thousandsGroupStyle;
-
-      var _this$getSeparators4 = this.getSeparators(),
-          thousandSeparator = _this$getSeparators4.thousandSeparator,
-          decimalSeparator = _this$getSeparators4.decimalSeparator;
-
-      var hasDecimalSeparator = numStr.indexOf('.') !== -1 || decimalScale && fixedDecimalScale;
-
-      var _splitDecimal = splitDecimal(numStr, allowNegative),
-          beforeDecimal = _splitDecimal.beforeDecimal,
-          afterDecimal = _splitDecimal.afterDecimal,
-          addNegation = _splitDecimal.addNegation; // eslint-disable-line prefer-const
-      //apply decimal precision if its defined
-
-
-      if (decimalScale !== undefined) afterDecimal = limitToScale(afterDecimal, decimalScale, fixedDecimalScale);
-
-      if (thousandSeparator) {
-        beforeDecimal = applyThousandSeparator(beforeDecimal, thousandSeparator, thousandsGroupStyle);
-      } //add prefix and suffix
-
-
-      if (prefix) beforeDecimal = prefix + beforeDecimal;
-      if (suffix) afterDecimal = afterDecimal + suffix; //restore negation sign
-
-      if (addNegation) beforeDecimal = '-' + beforeDecimal;
-      numStr = beforeDecimal + (hasDecimalSeparator && decimalSeparator || '') + afterDecimal;
-      return numStr;
-    }
-  }, {
-    key: "formatNumString",
-    value: function formatNumString() {
-      var numStr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-      var _this$props7 = this.props,
-          format = _this$props7.format,
-          allowEmptyFormatting = _this$props7.allowEmptyFormatting;
-      var formattedValue = numStr;
-
-      if (numStr === '' && !allowEmptyFormatting) {
-        formattedValue = '';
-      } else if (numStr === '-' && !format) {
-        formattedValue = '-';
-      } else if (typeof format === 'string') {
-        formattedValue = this.formatWithPattern(formattedValue);
-      } else if (typeof format === 'function') {
-        formattedValue = format(formattedValue);
-      } else {
-        formattedValue = this.formatAsNumber(formattedValue);
-      }
-
-      return formattedValue;
-    }
-  }, {
-    key: "formatValueProp",
-    value: function formatValueProp(defaultValue) {
-      var _this$props8 = this.props,
-          format = _this$props8.format,
-          decimalScale = _this$props8.decimalScale,
-          fixedDecimalScale = _this$props8.fixedDecimalScale,
-          allowEmptyFormatting = _this$props8.allowEmptyFormatting;
-      var _this$props9 = this.props,
-          _this$props9$value = _this$props9.value,
-          value = _this$props9$value === void 0 ? defaultValue : _this$props9$value,
-          isNumericString = _this$props9.isNumericString;
-      var isNonNumericFalsy = !value && value !== 0;
-
-      if (isNonNumericFalsy && allowEmptyFormatting) {
-        value = '';
-      } // if value is not defined return empty string
-
-
-      if (isNonNumericFalsy && !allowEmptyFormatting) return '';
-
-      if (typeof value === 'number') {
-        value = value.toString();
-        isNumericString = true;
-      } //change infinity value to empty string
-
-
-      if (value === 'Infinity' && isNumericString) {
-        value = '';
-      } //round the number based on decimalScale
-      //format only if non formatted value is provided
-
-
-      if (isNumericString && !format && typeof decimalScale === 'number') {
-        value = roundToPrecision(value, decimalScale, fixedDecimalScale);
-      }
-
-      var formattedValue = isNumericString ? this.formatNumString(value) : this.formatInput(value);
-      return formattedValue;
-    }
-  }, {
-    key: "formatNegation",
-    value: function formatNegation() {
-      var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-      var allowNegative = this.props.allowNegative;
-      var negationRegex = new RegExp('(-)');
-      var doubleNegationRegex = new RegExp('(-)(.)*(-)'); // Check number has '-' value
-
-      var hasNegation = negationRegex.test(value); // Check number has 2 or more '-' values
-
-      var removeNegation = doubleNegationRegex.test(value); //remove negation
-
-      value = value.replace(/-/g, '');
-
-      if (hasNegation && !removeNegation && allowNegative) {
-        value = '-' + value;
-      }
-
-      return value;
-    }
-  }, {
-    key: "formatInput",
-    value: function formatInput() {
-      var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-      var format = this.props.format; //format negation only if we are formatting as number
-
-      if (!format) {
-        value = this.removePrefixAndSuffix(value);
-        value = this.formatNegation(value);
-      } //remove formatting from number
-
-
-      value = this.removeFormatting(value);
-      return this.formatNumString(value);
-    }
-    /*** format specific methods end ***/
-
-  }, {
-    key: "isCharacterAFormat",
-    value: function isCharacterAFormat(caretPos, value) {
-      var _this$props10 = this.props,
-          format = _this$props10.format,
-          prefix = _this$props10.prefix,
-          suffix = _this$props10.suffix,
-          decimalScale = _this$props10.decimalScale,
-          fixedDecimalScale = _this$props10.fixedDecimalScale;
-
-      var _this$getSeparators5 = this.getSeparators(),
-          decimalSeparator = _this$getSeparators5.decimalSeparator; //check within format pattern
-
-
-      if (typeof format === 'string' && format[caretPos] !== '#') return true; //check in number format
-
-      if (!format && (caretPos < prefix.length || caretPos >= value.length - suffix.length || decimalScale && fixedDecimalScale && value[caretPos] === decimalSeparator)) {
-        return true;
-      }
-
-      return false;
-    }
-  }, {
-    key: "checkIfFormatGotDeleted",
-    value: function checkIfFormatGotDeleted(start, end, value) {
-      for (var i = start; i < end; i++) {
-        if (this.isCharacterAFormat(i, value)) return true;
-      }
-
-      return false;
-    }
-    /**
-     * This will check if any formatting got removed by the delete or backspace and reset the value
-     * It will also work as fallback if android chome keyDown handler does not work
-     **/
-
-  }, {
-    key: "correctInputValue",
-    value: function correctInputValue(caretPos, lastValue, value) {
-      var _this$props11 = this.props,
-          format = _this$props11.format,
-          allowNegative = _this$props11.allowNegative,
-          prefix = _this$props11.prefix,
-          suffix = _this$props11.suffix,
-          decimalScale = _this$props11.decimalScale;
-
-      var _this$getSeparators6 = this.getSeparators(),
-          allowedDecimalSeparators = _this$getSeparators6.allowedDecimalSeparators,
-          decimalSeparator = _this$getSeparators6.decimalSeparator;
-
-      var lastNumStr = this.state.numAsString || '';
-      var _this$selectionBefore = this.selectionBeforeInput,
-          selectionStart = _this$selectionBefore.selectionStart,
-          selectionEnd = _this$selectionBefore.selectionEnd;
-
-      var _findChangedIndex = findChangedIndex(lastValue, value),
-          start = _findChangedIndex.start,
-          end = _findChangedIndex.end;
-      /** Check for any allowed decimal separator is added in the numeric format and replace it with decimal separator */
-
-
-      if (!format && start === end && allowedDecimalSeparators.indexOf(value[selectionStart]) !== -1) {
-        var separator = decimalScale === 0 ? '' : decimalSeparator;
-        return value.substr(0, selectionStart) + separator + value.substr(selectionStart + 1, value.length);
-      }
-      /* don't do anyhting if something got added,
-       or if value is empty string (when whole input is cleared)
-       or whole input is replace with a number
-      */
-
-
-      var leftBound = !!format ? 0 : prefix.length;
-      var rightBound = lastValue.length - (!!format ? 0 : suffix.length);
-
-      if (value.length > lastValue.length || !value.length || start === end || selectionStart === 0 && selectionEnd === lastValue.length || selectionStart === leftBound && selectionEnd === rightBound) {
-        return value;
-      } //if format got deleted reset the value to last value
-
-
-      if (this.checkIfFormatGotDeleted(start, end, lastValue)) {
-        value = lastValue;
-      } //for numbers check if beforeDecimal got deleted and there is nothing after decimal,
-      //clear all numbers in such case while keeping the - sign
-
-
-      if (!format) {
-        var numericString = this.removeFormatting(value);
-
-        var _splitDecimal2 = splitDecimal(numericString, allowNegative),
-            beforeDecimal = _splitDecimal2.beforeDecimal,
-            afterDecimal = _splitDecimal2.afterDecimal,
-            addNegation = _splitDecimal2.addNegation; // eslint-disable-line prefer-const
-        //clear only if something got deleted
-
-
-        var isBeforeDecimalPoint = caretPos < value.indexOf(decimalSeparator) + 1;
-
-        if (numericString.length < lastNumStr.length && isBeforeDecimalPoint && beforeDecimal === '' && !parseFloat(afterDecimal)) {
-          return addNegation ? '-' : '';
-        }
-      }
-
-      return value;
-    }
-    /** Update value and caret position */
-
-  }, {
-    key: "updateValue",
-    value: function updateValue(params) {
-      var formattedValue = params.formattedValue,
-          input = params.input,
-          _params$setCaretPosit = params.setCaretPosition,
-          setCaretPosition = _params$setCaretPosit === void 0 ? true : _params$setCaretPosit;
-      var numAsString = params.numAsString,
-          caretPos = params.caretPos;
-      var onValueChange = this.props.onValueChange;
-      var lastValue = this.state.value;
-
-      if (input) {
-        //set caret position, and value imperatively when element is provided
-        if (setCaretPosition) {
-          //calculate caret position if not defined
-          if (!caretPos) {
-            var inputValue = params.inputValue || input.value;
-            var currentCaretPosition = getCurrentCaretPosition(input);
-            /**
-             * set the value imperatively, this is required for IE fix
-             * This is also required as if new caret position is beyond the previous value.
-             * Caret position will not be set correctly
-             */
-
-            input.value = formattedValue; //get the caret position
-
-            caretPos = this.getCaretPosition(inputValue, formattedValue, currentCaretPosition);
-          } //set caret position
-
-
-          this.setPatchedCaretPosition(input, caretPos, formattedValue);
-        } else {
-          /**
-           * if we are not setting caret position set the value imperatively.
-           * This is required on onBlur method
-           */
-          input.value = formattedValue;
-        }
-      } //calculate numeric string if not passed
-
-
-      if (numAsString === undefined) {
-        numAsString = this.removeFormatting(formattedValue);
-      } //update state if value is changed
-
-
-      if (formattedValue !== lastValue) {
-        this.setState({
-          value: formattedValue,
-          numAsString: numAsString
-        }); // trigger onValueChange synchronously, so parent is updated along with the number format. Fix for #277, #287
-
-        onValueChange(this.getValueObject(formattedValue, numAsString));
-      }
-    }
-  }, {
-    key: "onChange",
-    value: function onChange(e) {
-      var el = e.target;
-      var inputValue = el.value;
-      var state = this.state,
-          props = this.props;
-      var isAllowed = props.isAllowed;
-      var lastValue = state.value || '';
-      var currentCaretPosition = getCurrentCaretPosition(el);
-      inputValue = this.correctInputValue(currentCaretPosition, lastValue, inputValue);
-      var formattedValue = this.formatInput(inputValue) || '';
-      var numAsString = this.removeFormatting(formattedValue);
-      var valueObj = this.getValueObject(formattedValue, numAsString);
-
-      if (!isAllowed(valueObj)) {
-        formattedValue = lastValue;
-      }
-
-      this.updateValue({
-        formattedValue: formattedValue,
-        numAsString: numAsString,
-        inputValue: inputValue,
-        input: el
-      });
-      props.onChange(e);
-    }
-  }, {
-    key: "onBlur",
-    value: function onBlur(e) {
-      var props = this.props,
-          state = this.state;
-      var format = props.format,
-          onBlur = props.onBlur,
-          allowLeadingZeros = props.allowLeadingZeros;
-      var numAsString = state.numAsString;
-      var lastValue = state.value;
-      this.focusedElm = null;
-
-      if (this.focusTimeout) {
-        clearTimeout(this.focusTimeout);
-      }
-
-      if (!format) {
-        // if the numAsString is not a valid number reset it to empty
-        if (isNaN(parseFloat(numAsString))) {
-          numAsString = '';
-        }
-
-        if (!allowLeadingZeros) {
-          numAsString = fixLeadingZero(numAsString);
-        }
-
-        var formattedValue = this.formatNumString(numAsString); //change the state
-
-        if (formattedValue !== lastValue) {
-          // the event needs to be persisted because its properties can be accessed in an asynchronous way
-          this.updateValue({
-            formattedValue: formattedValue,
-            numAsString: numAsString,
-            input: e.target,
-            setCaretPosition: false
-          });
-          onBlur(e);
-          return;
-        }
-      }
-
-      onBlur(e);
-    }
-  }, {
-    key: "onKeyDown",
-    value: function onKeyDown(e) {
-      var el = e.target;
-      var key = e.key;
-      var selectionStart = el.selectionStart,
-          selectionEnd = el.selectionEnd,
-          _el$value = el.value,
-          value = _el$value === void 0 ? '' : _el$value;
-      var expectedCaretPosition;
-      var _this$props12 = this.props,
-          decimalScale = _this$props12.decimalScale,
-          fixedDecimalScale = _this$props12.fixedDecimalScale,
-          prefix = _this$props12.prefix,
-          suffix = _this$props12.suffix,
-          format = _this$props12.format,
-          onKeyDown = _this$props12.onKeyDown;
-      var ignoreDecimalSeparator = decimalScale !== undefined && fixedDecimalScale;
-      var numRegex = this.getNumberRegex(false, ignoreDecimalSeparator);
-      var negativeRegex = new RegExp('-');
-      var isPatternFormat = typeof format === 'string';
-      this.selectionBeforeInput = {
-        selectionStart: selectionStart,
-        selectionEnd: selectionEnd
-      }; //Handle backspace and delete against non numerical/decimal characters or arrow keys
-
-      if (key === 'ArrowLeft' || key === 'Backspace') {
-        expectedCaretPosition = selectionStart - 1;
-      } else if (key === 'ArrowRight') {
-        expectedCaretPosition = selectionStart + 1;
-      } else if (key === 'Delete') {
-        expectedCaretPosition = selectionStart;
-      } //if expectedCaretPosition is not set it means we don't want to Handle keyDown
-      //also if multiple characters are selected don't handle
-
-
-      if (expectedCaretPosition === undefined || selectionStart !== selectionEnd) {
-        onKeyDown(e);
-        return;
-      }
-
-      var newCaretPosition = expectedCaretPosition;
-      var leftBound = isPatternFormat ? format.indexOf('#') : prefix.length;
-      var rightBound = isPatternFormat ? format.lastIndexOf('#') + 1 : value.length - suffix.length;
-
-      if (key === 'ArrowLeft' || key === 'ArrowRight') {
-        var direction = key === 'ArrowLeft' ? 'left' : 'right';
-        newCaretPosition = this.correctCaretPosition(value, expectedCaretPosition, direction);
-      } else if (key === 'Delete' && !numRegex.test(value[expectedCaretPosition]) && !negativeRegex.test(value[expectedCaretPosition])) {
-        while (!numRegex.test(value[newCaretPosition]) && newCaretPosition < rightBound) {
-          newCaretPosition++;
-        }
-      } else if (key === 'Backspace' && !numRegex.test(value[expectedCaretPosition])) {
-        /* NOTE: This is special case when backspace is pressed on a
-        negative value while the cursor position is after prefix. We can't handle it on onChange because
-        we will not have any information of keyPress
-        */
-        if (selectionStart <= leftBound + 1 && value[0] === '-' && typeof format === 'undefined') {
-          var newValue = value.substring(1);
-          this.updateValue({
-            formattedValue: newValue,
-            caretPos: newCaretPosition,
-            input: el
-          });
-        } else if (!negativeRegex.test(value[expectedCaretPosition])) {
-          while (!numRegex.test(value[newCaretPosition - 1]) && newCaretPosition > leftBound) {
-            newCaretPosition--;
-          }
-
-          newCaretPosition = this.correctCaretPosition(value, newCaretPosition, 'left');
-        }
-      }
-
-      if (newCaretPosition !== expectedCaretPosition || expectedCaretPosition < leftBound || expectedCaretPosition > rightBound) {
-        e.preventDefault();
-        this.setPatchedCaretPosition(el, newCaretPosition, value);
-      }
-      /* NOTE: this is just required for unit test as we need to get the newCaretPosition,
-              Remove this when you find different solution */
-
-
-      if (e.isUnitTestRun) {
-        this.setPatchedCaretPosition(el, newCaretPosition, value);
-      }
-
-      onKeyDown(e);
-    }
-    /** required to handle the caret position when click anywhere within the input **/
-
-  }, {
-    key: "onMouseUp",
-    value: function onMouseUp(e) {
-      var el = e.target;
-      /**
-       * NOTE: we have to give default value for value as in case when custom input is provided
-       * value can come as undefined when nothing is provided on value prop.
-      */
-
-      var selectionStart = el.selectionStart,
-          selectionEnd = el.selectionEnd,
-          _el$value2 = el.value,
-          value = _el$value2 === void 0 ? '' : _el$value2;
-
-      if (selectionStart === selectionEnd) {
-        var caretPosition = this.correctCaretPosition(value, selectionStart);
-
-        if (caretPosition !== selectionStart) {
-          this.setPatchedCaretPosition(el, caretPosition, value);
-        }
-      }
-
-      this.props.onMouseUp(e);
-    }
-  }, {
-    key: "onFocus",
-    value: function onFocus(e) {
-      var _this2 = this;
-
-      // Workaround Chrome and Safari bug https://bugs.chromium.org/p/chromium/issues/detail?id=779328
-      // (onFocus event target selectionStart is always 0 before setTimeout)
-      e.persist();
-      this.focusedElm = e.target;
-      this.focusTimeout = setTimeout(function () {
-        var el = e.target;
-        var selectionStart = el.selectionStart,
-            selectionEnd = el.selectionEnd,
-            _el$value3 = el.value,
-            value = _el$value3 === void 0 ? '' : _el$value3;
-
-        var caretPosition = _this2.correctCaretPosition(value, selectionStart); //setPatchedCaretPosition only when everything is not selected on focus (while tabbing into the field)
-
-
-        if (caretPosition !== selectionStart && !(selectionStart === 0 && selectionEnd === value.length)) {
-          _this2.setPatchedCaretPosition(el, caretPosition, value);
-        }
-
-        _this2.props.onFocus(e);
-      }, 0);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props13 = this.props,
-          type = _this$props13.type,
-          displayType = _this$props13.displayType,
-          customInput = _this$props13.customInput,
-          renderText = _this$props13.renderText,
-          getInputRef = _this$props13.getInputRef;
-      var value = this.state.value;
-      var otherProps = omit(this.props, propTypes$1);
-
-      var inputProps = _extends({
-        inputMode: 'numeric'
-      }, otherProps, {
-        type: type,
-        value: value,
-        onChange: this.onChange,
-        onKeyDown: this.onKeyDown,
-        onMouseUp: this.onMouseUp,
-        onFocus: this.onFocus,
-        onBlur: this.onBlur
-      });
-
-      if (displayType === 'text') {
-        return renderText ? renderText(value) || null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", _extends({}, otherProps, {
-          ref: getInputRef
-        }), value);
-      } else if (customInput) {
-        var CustomInput = customInput;
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CustomInput, _extends({}, inputProps, {
-          ref: getInputRef
-        }));
-      }
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", _extends({}, inputProps, {
-        ref: getInputRef
-      }));
-    }
-  }]);
-
-  return NumberFormat;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-NumberFormat.propTypes = propTypes$1;
-NumberFormat.defaultProps = defaultProps;
-
-/* harmony default export */ __webpack_exports__["default"] = (NumberFormat);
 
 
 /***/ }),
@@ -32808,6 +32547,80 @@ function warning(condition, message) {
 
 /***/ }),
 
+/***/ "./node_modules/warning/warning.js":
+/*!*****************************************!*\
+  !*** ./node_modules/warning/warning.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var __DEV__ = "development" !== 'production';
+
+var warning = function() {};
+
+if (__DEV__) {
+  var printWarning = function printWarning(format, args) {
+    var len = arguments.length;
+    args = new Array(len > 1 ? len - 1 : 0);
+    for (var key = 1; key < len; key++) {
+      args[key - 1] = arguments[key];
+    }
+    var argIndex = 0;
+    var message = 'Warning: ' +
+      format.replace(/%s/g, function() {
+        return args[argIndex++];
+      });
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  }
+
+  warning = function(condition, format, args) {
+    var len = arguments.length;
+    args = new Array(len > 2 ? len - 2 : 0);
+    for (var key = 2; key < len; key++) {
+      args[key - 2] = arguments[key];
+    }
+    if (format === undefined) {
+      throw new Error(
+          '`warning(condition, format, ...args)` requires a warning ' +
+          'message argument'
+      );
+    }
+    if (!condition) {
+      printWarning.apply(null, [format].concat(args));
+    }
+  };
+}
+
+module.exports = warning;
+
+
+/***/ }),
+
 /***/ "./pages/index.tsx":
 /*!*************************!*\
   !*** ./pages/index.tsx ***!
@@ -32817,45 +32630,39 @@ function warning(condition, message) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles.scss */ "./pages/styles.scss");
-/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_Button_Button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Button/Button */ "./components/Button/Button.tsx");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/Dialog */ "./node_modules/@material-ui/core/esm/Dialog/index.js");
-/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/DialogActions */ "./node_modules/@material-ui/core/esm/DialogActions/index.js");
-/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/DialogContent */ "./node_modules/@material-ui/core/esm/DialogContent/index.js");
-/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "./node_modules/@material-ui/core/esm/DialogTitle/index.js");
-/* harmony import */ var _material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/lab/Alert */ "./node_modules/@material-ui/lab/esm/Alert/index.js");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js");
-/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "./node_modules/@material-ui/core/esm/MenuItem/index.js");
-/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @material-ui/core/Checkbox */ "./node_modules/@material-ui/core/esm/Checkbox/index.js");
-/* harmony import */ var react_number_format__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-number-format */ "./node_modules/react-number-format/dist/react-number-format.es.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../api */ "./api.js");
-
-
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles.scss */ "./pages/styles.scss");
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_Button_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Button/Button */ "./components/Button/Button.tsx");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Dialog */ "./node_modules/@material-ui/core/esm/Dialog/index.js");
+/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/DialogActions */ "./node_modules/@material-ui/core/esm/DialogActions/index.js");
+/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/DialogContent */ "./node_modules/@material-ui/core/esm/DialogContent/index.js");
+/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "./node_modules/@material-ui/core/esm/DialogTitle/index.js");
+/* harmony import */ var _material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/lab/Alert */ "./node_modules/@material-ui/lab/esm/Alert/index.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js");
+/* harmony import */ var react_input_mask__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-input-mask */ "./node_modules/react-input-mask/index.js");
+/* harmony import */ var react_input_mask__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_input_mask__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "./node_modules/@material-ui/core/esm/MenuItem/index.js");
+/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material-ui/core/Checkbox */ "./node_modules/@material-ui/core/esm/Checkbox/index.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../api */ "./api.js");
 
 
 
 var _jsxFileName = "D:\\VS2017\\Juscredit\\juscredit-web\\pages\\index.tsx",
     _this = undefined;
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -32896,63 +32703,68 @@ var Index = function Index(props) {
     concordo_termos: '',
     investidor_qualificado: ''
   };
+  var INITIAL_FORM_PARCEIRO = {
+    full_name: '',
+    email: '',
+    assunto: ''
+  };
 
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState({
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState({
     checkedModalAntecipe: false,
     checkedModalInvestirQualificado: false,
     checkedModalInvestirConcordo: false
   }),
-      _React$useState2 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState, 2),
+      _React$useState2 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState, 2),
       state = _React$useState2[0],
       setState = _React$useState2[1];
 
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(INITIAL_FORM),
-      _React$useState4 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState3, 2),
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(INITIAL_FORM),
+      _React$useState4 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState3, 2),
       formValues = _React$useState4[0],
       setFormValue = _React$useState4[1];
 
-  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState({}),
-      _React$useState6 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState5, 2),
+  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(INITIAL_FORM_PARCEIRO),
+      _React$useState6 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState5, 2),
       parceiroValues = _React$useState6[0],
       setParceiroValue = _React$useState6[1];
 
-  var _React$useState7 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(false),
-      _React$useState8 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState7, 2),
+  var _React$useState7 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(false),
+      _React$useState8 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState7, 2),
       modalIndicarState = _React$useState8[0],
       setIndicarOpen = _React$useState8[1];
 
-  var _React$useState9 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(false),
-      _React$useState10 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState9, 2),
+  var _React$useState9 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(false),
+      _React$useState10 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState9, 2),
       modalAnteciparState = _React$useState10[0],
       setAnteciparOpen = _React$useState10[1];
 
-  var _React$useState11 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(false),
-      _React$useState12 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState11, 2),
+  var _React$useState11 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(false),
+      _React$useState12 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState11, 2),
       modalInvestirState = _React$useState12[0],
       setInvestirOpen = _React$useState12[1];
 
-  var _React$useState13 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(false),
-      _React$useState14 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState13, 2),
+  var _React$useState13 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(false),
+      _React$useState14 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState13, 2),
       modalEnviado = _React$useState14[0],
       setFeedbackEnviado = _React$useState14[1];
 
-  var _React$useState15 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(false),
-      _React$useState16 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState15, 2),
+  var _React$useState15 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(false),
+      _React$useState16 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState15, 2),
       modalErro = _React$useState16[0],
       setFeedbackErro = _React$useState16[1];
 
-  var _React$useState17 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState("cliente"),
-      _React$useState18 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState17, 2),
+  var _React$useState17 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState("cliente"),
+      _React$useState18 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState17, 2),
       profile = _React$useState18[0],
       setProfile = _React$useState18[1];
 
-  var _React$useState19 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(''),
-      _React$useState20 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState19, 2),
+  var _React$useState19 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(''),
+      _React$useState20 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState19, 2),
       selectProfile = _React$useState20[0],
       setSelectProfile = _React$useState20[1];
 
-  var _React$useState21 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(''),
-      _React$useState22 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_3__["default"])(_React$useState21, 2),
+  var _React$useState21 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(''),
+      _React$useState22 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState21, 2),
       originPath = _React$useState22[0],
       setOriginPath = _React$useState22[1];
 
@@ -33011,15 +32823,20 @@ var Index = function Index(props) {
   };
 
   var handleChangeCheckbox = function handleChangeCheckbox(event) {
-    setState(_objectSpread({}, state, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, event.target.name, event.target.checked)));
+    setState(_objectSpread({}, state, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, event.target.ariaLabel, event.target.checked)));
   };
 
-  var atualizaFormValues = function atualizaFormValues(event, formItem) {
-    setFormValue(_objectSpread({}, formValues, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, formItem, event)));
+  var atualizaFormValues = function atualizaFormValues(event) {
+    if (event.target.type == "checkbox") {
+      setFormValue(_objectSpread({}, formValues, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, event.target.name, event.target.checked)));
+      console.log(formValues);
+    } else {
+      setFormValue(_objectSpread({}, formValues, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, event.target.name, event.target.value)));
+    }
   };
 
   var getParceiroValue = function getParceiroValue(event, formItem) {
-    setParceiroValue(_objectSpread({}, parceiroValues, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, formItem, event)));
+    setParceiroValue(_objectSpread({}, parceiroValues, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, formItem, event)));
   };
 
   var isEnabled = function isEnabled() {
@@ -33033,6 +32850,14 @@ var Index = function Index(props) {
       }
 
       if (formValues[key] != "") {} else {
+        return true;
+      }
+    }
+  };
+
+  var isEnabledParceiro = function isEnabledParceiro() {
+    for (var key in parceiroValues) {
+      if (parceiroValues[key] != "") {} else {
         return true;
       }
     }
@@ -33060,70 +32885,28 @@ var Index = function Index(props) {
     });
   };
 
-  function ProcessoFormat(props) {
-    var inputRef = props.inputRef,
-        onChange = props.onChange,
-        other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["inputRef", "onChange"]);
-
-    return __jsx(react_number_format__WEBPACK_IMPORTED_MODULE_18__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, other, {
-      getInputRef: inputRef,
-      format: "#######-##.####.#.##.########",
-      allowEmptyFormatting: true,
-      allowLeadingZeros: true,
-      isNumericString: true,
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 161,
-        columnNumber: 7
-      }
-    }));
-  }
-
-  function CelularFormat(props) {
-    var inputRef = props.inputRef,
-        onChange = props.onChange,
-        other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["inputRef", "onChange"]);
-
-    return __jsx(react_number_format__WEBPACK_IMPORTED_MODULE_18__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, other, {
-      getInputRef: inputRef,
-      format: "(##) #-####-####",
-      allowEmptyFormatting: true,
-      isNumericString: true,
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 176,
-        columnNumber: 7
-      }
-    }));
-  }
-
-  ProcessoFormat.propTypes = {
-    inputRef: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func.isRequired
-  };
-  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
     setOriginPath(window.location.origin);
   });
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_4__["Fragment"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195,
+      lineNumber: 182,
       columnNumber: 5
     }
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_8___default.a, {
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196,
+      lineNumber: 183,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197,
+      lineNumber: 184,
       columnNumber: 9
     }
   }, "JusCredit")), __jsx("main", {
@@ -33131,7 +32914,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199,
+      lineNumber: 186,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -33139,7 +32922,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200,
+      lineNumber: 187,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -33147,7 +32930,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201,
+      lineNumber: 188,
       columnNumber: 11
     }
   }), __jsx("div", {
@@ -33155,28 +32938,28 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203,
+      lineNumber: 190,
       columnNumber: 11
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204,
+      lineNumber: 191,
       columnNumber: 13
     }
   }, "Antecipe seu ", __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204,
+      lineNumber: 191,
       columnNumber: 30
     }
   }), "cr\xE9dito trabalhista"), __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205,
+      lineNumber: 192,
       columnNumber: 13
     }
   }, "T\xEAm um processo ganho? Receba agora"), __jsx("div", {
@@ -33184,10 +32967,10 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206,
+      lineNumber: 193,
       columnNumber: 13
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return handleModalAntecipar();
     },
@@ -33195,10 +32978,10 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207,
+      lineNumber: 194,
       columnNumber: 15
     }
-  }, "Quero antecipar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Quero antecipar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return handleModalInvestir();
     },
@@ -33206,7 +32989,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208,
+      lineNumber: 195,
       columnNumber: 15
     }
   }, "Quero investir")), __jsx("div", {
@@ -33214,22 +32997,22 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210,
+      lineNumber: 197,
       columnNumber: 13
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: "#conheca-vantagens",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211,
+      lineNumber: 198,
       columnNumber: 15
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212,
+      lineNumber: 199,
       columnNumber: 17
     }
   }, __jsx("img", {
@@ -33237,14 +33020,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213,
+      lineNumber: 200,
       columnNumber: 19
     }
   }), __jsx("span", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214,
+      lineNumber: 201,
       columnNumber: 19
     }
   }, "Conhe\xE7a as vantagens")))))), __jsx("div", {
@@ -33253,14 +33036,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221,
+      lineNumber: 208,
       columnNumber: 9
     }
   }, profile == "cliente" && __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223,
+      lineNumber: 210,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -33268,35 +33051,35 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224,
+      lineNumber: 211,
       columnNumber: 15
     }
   }, __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225,
+      lineNumber: 212,
       columnNumber: 17
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226,
+      lineNumber: 213,
       columnNumber: 19
     }
   }, "Mais valor para quem investe.", __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226,
+      lineNumber: 213,
       columnNumber: 52
     }
   }), "R\xE1pido para quem antecipa."), __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227,
+      lineNumber: 214,
       columnNumber: 19
     }
   }, "Servi\xE7o de antecipa\xE7\xE3o dispon\xEDvel para Trabalhadores e Advogados.")), __jsx("div", {
@@ -33304,10 +33087,10 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229,
+      lineNumber: 216,
       columnNumber: 17
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return handleProfile("cliente");
     },
@@ -33315,10 +33098,10 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230,
+      lineNumber: 217,
       columnNumber: 19
     }
-  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return handleProfile("investidor");
     },
@@ -33326,7 +33109,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231,
+      lineNumber: 218,
       columnNumber: 19
     }
   }, "Investidor"))), __jsx("div", {
@@ -33334,7 +33117,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234,
+      lineNumber: 221,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -33342,7 +33125,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235,
+      lineNumber: 222,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33350,7 +33133,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236,
+      lineNumber: 223,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33362,14 +33145,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237,
+      lineNumber: 224,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238,
+      lineNumber: 225,
       columnNumber: 21
     }
   }, "Praticidade"), __jsx("ul", {
@@ -33377,14 +33160,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239,
+      lineNumber: 226,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 227,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33394,14 +33177,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 227,
       columnNumber: 27
     }
   }, "Processo de antecipa\xE7\xE3o 100% digital.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241,
+      lineNumber: 228,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33411,7 +33194,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241,
+      lineNumber: 228,
       columnNumber: 27
     }
   }, "An\xE1lise r\xE1pida e sem custo."))))), __jsx("div", {
@@ -33419,7 +33202,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245,
+      lineNumber: 232,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33427,7 +33210,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246,
+      lineNumber: 233,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33439,14 +33222,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247,
+      lineNumber: 234,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248,
+      lineNumber: 235,
       columnNumber: 21
     }
   }, "Agilidade"), __jsx("ul", {
@@ -33454,14 +33237,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249,
+      lineNumber: 236,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250,
+      lineNumber: 237,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33471,7 +33254,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250,
+      lineNumber: 237,
       columnNumber: 27
     }
   }, "Liquidez imediata, n\xE3o espere mais para receber o seu direito."))))), __jsx("div", {
@@ -33479,7 +33262,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254,
+      lineNumber: 241,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33487,7 +33270,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255,
+      lineNumber: 242,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33499,14 +33282,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256,
+      lineNumber: 243,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257,
+      lineNumber: 244,
       columnNumber: 21
     }
   }, "Libera\xE7\xE3o"), __jsx("ul", {
@@ -33514,14 +33297,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258,
+      lineNumber: 245,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259,
+      lineNumber: 246,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33531,7 +33314,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259,
+      lineNumber: 246,
       columnNumber: 27
     }
   }, "Receba diretamente em sua conta JusCredit.")))))), __jsx("div", {
@@ -33539,10 +33322,10 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264,
+      lineNumber: 251,
       columnNumber: 15
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return handleModalAntecipar();
     },
@@ -33550,14 +33333,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265,
+      lineNumber: 252,
       columnNumber: 17
     }
   }, "Quero antecipar"))), profile != "cliente" && __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 271,
+      lineNumber: 258,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -33565,35 +33348,35 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272,
+      lineNumber: 259,
       columnNumber: 15
     }
   }, __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273,
+      lineNumber: 260,
       columnNumber: 17
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274,
+      lineNumber: 261,
       columnNumber: 19
     }
   }, "Mais valor para quem investe.", __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274,
+      lineNumber: 261,
       columnNumber: 52
     }
   }), "R\xE1pido para quem antecipa."), __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275,
+      lineNumber: 262,
       columnNumber: 19
     }
   }, "Investimentos em cr\xE9ditos judiciais de forma r\xE1pida e descomplicada.")), __jsx("div", {
@@ -33601,10 +33384,10 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277,
+      lineNumber: 264,
       columnNumber: 17
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return handleProfile("cliente");
     },
@@ -33612,10 +33395,10 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278,
+      lineNumber: 265,
       columnNumber: 19
     }
-  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return handleProfile("investidor");
     },
@@ -33623,7 +33406,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 279,
+      lineNumber: 266,
       columnNumber: 19
     }
   }, "Investidor"))), __jsx("div", {
@@ -33631,7 +33414,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 282,
+      lineNumber: 269,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -33639,7 +33422,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 283,
+      lineNumber: 270,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33647,7 +33430,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284,
+      lineNumber: 271,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33659,14 +33442,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 285,
+      lineNumber: 272,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286,
+      lineNumber: 273,
       columnNumber: 21
     }
   }, "Rentabilidade"), __jsx("ul", {
@@ -33674,14 +33457,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287,
+      lineNumber: 274,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288,
+      lineNumber: 275,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33691,14 +33474,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288,
+      lineNumber: 275,
       columnNumber: 27
     }
   }, "Maior retorno que investimentos tradicionais.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289,
+      lineNumber: 276,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33708,14 +33491,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289,
+      lineNumber: 276,
       columnNumber: 27
     }
   }, "Baixo valor inicial de investimento.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290,
+      lineNumber: 277,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33725,7 +33508,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290,
+      lineNumber: 277,
       columnNumber: 27
     }
   }, "Dispon\xEDvel para PF e PJ."))))), __jsx("div", {
@@ -33733,7 +33516,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 294,
+      lineNumber: 281,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33741,7 +33524,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 295,
+      lineNumber: 282,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33753,14 +33536,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296,
+      lineNumber: 283,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297,
+      lineNumber: 284,
       columnNumber: 21
     }
   }, "Seguran\xE7a"), __jsx("ul", {
@@ -33768,14 +33551,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298,
+      lineNumber: 285,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 299,
+      lineNumber: 286,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33785,14 +33568,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 299,
+      lineNumber: 286,
       columnNumber: 27
     }
   }, "Modelo propriet\xE1rio de an\xE1lise.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300,
+      lineNumber: 287,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33802,14 +33585,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300,
+      lineNumber: 287,
       columnNumber: 27
     }
   }, "Empresas saud\xE1veis, sem negativa\xE7\xE3o e inclusas no banco nacional de devedores trabalhistas.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301,
+      lineNumber: 288,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33819,7 +33602,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301,
+      lineNumber: 288,
       columnNumber: 27
     }
   }, "Parceiro de escrit\xF3rio especializado em direito do trabalho."))))), __jsx("div", {
@@ -33827,7 +33610,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305,
+      lineNumber: 292,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33835,7 +33618,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306,
+      lineNumber: 293,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33847,14 +33630,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 307,
+      lineNumber: 294,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308,
+      lineNumber: 295,
       columnNumber: 21
     }
   }, "Recebimento"), __jsx("ul", {
@@ -33862,14 +33645,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309,
+      lineNumber: 296,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310,
+      lineNumber: 297,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33879,7 +33662,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310,
+      lineNumber: 297,
       columnNumber: 27
     }
   }, "Receba os valores dos cr\xE9ditos judiciais adquiridos diretamente em sua conta JusCredit.")))))), __jsx("div", {
@@ -33887,10 +33670,10 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315,
+      lineNumber: 302,
       columnNumber: 15
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return handleModalInvestir();
     },
@@ -33898,7 +33681,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316,
+      lineNumber: 303,
       columnNumber: 17
     }
   }, "Quero investir"))), __jsx("div", {
@@ -33907,35 +33690,35 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321,
+      lineNumber: 308,
       columnNumber: 11
     }
   }, __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322,
+      lineNumber: 309,
       columnNumber: 13
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 323,
+      lineNumber: 310,
       columnNumber: 15
     }
   }, "Como funciona a plataforma?"), __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 324,
+      lineNumber: 311,
       columnNumber: 15
     }
   }, "Conte com toda a seguran\xE7a, agilidade e ", __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 325,
+      lineNumber: 312,
       columnNumber: 57
     }
   }), "praticidade na libera\xE7\xE3o do seu processo ganho"))), __jsx("div", {
@@ -33943,7 +33726,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 330,
+      lineNumber: 317,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -33951,7 +33734,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331,
+      lineNumber: 318,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -33959,7 +33742,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332,
+      lineNumber: 319,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -33967,7 +33750,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 333,
+      lineNumber: 320,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33975,7 +33758,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 334,
+      lineNumber: 321,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -33983,7 +33766,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 335,
+      lineNumber: 322,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -33995,14 +33778,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 336,
+      lineNumber: 323,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 337,
+      lineNumber: 324,
       columnNumber: 23
     }
   }, "Cliente solicita")), __jsx("h4", {
@@ -34010,14 +33793,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 339,
+      lineNumber: 326,
       columnNumber: 21
     }
   }, "1")), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341,
+      lineNumber: 328,
       columnNumber: 19
     }
   }, "Cliente solicita antecipa\xE7\xE3o do cr\xE9dito trabalhista na plataforma."))), __jsx("div", {
@@ -34025,7 +33808,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 346,
+      lineNumber: 333,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -34033,7 +33816,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 347,
+      lineNumber: 334,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -34041,7 +33824,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 348,
+      lineNumber: 335,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -34049,7 +33832,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 349,
+      lineNumber: 336,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -34061,14 +33844,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 350,
+      lineNumber: 337,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 351,
+      lineNumber: 338,
       columnNumber: 23
     }
   }, "An\xE1lise avan\xE7ada")), __jsx("h4", {
@@ -34076,14 +33859,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 353,
+      lineNumber: 340,
       columnNumber: 21
     }
   }, "2")), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 355,
+      lineNumber: 342,
       columnNumber: 19
     }
   }, "An\xE1lise com modelo propriet\xE1rio de cr\xE9dito, se aprovado \xE9 disponibilizado ao investidores.")))), __jsx("div", {
@@ -34091,7 +33874,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 361,
+      lineNumber: 348,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -34099,7 +33882,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 362,
+      lineNumber: 349,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -34107,7 +33890,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 363,
+      lineNumber: 350,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -34115,7 +33898,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364,
+      lineNumber: 351,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -34123,7 +33906,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 365,
+      lineNumber: 352,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -34135,14 +33918,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 366,
+      lineNumber: 353,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 367,
+      lineNumber: 354,
       columnNumber: 23
     }
   }, "Investidores")), __jsx("h4", {
@@ -34150,14 +33933,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 369,
+      lineNumber: 356,
       columnNumber: 21
     }
   }, "3")), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 371,
+      lineNumber: 358,
       columnNumber: 19
     }
   }, "Os investidores escolhem quanto e em quais cr\xE9ditos trabalhistas querem investir."))), __jsx("div", {
@@ -34165,7 +33948,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 376,
+      lineNumber: 363,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -34173,7 +33956,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 377,
+      lineNumber: 364,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -34181,7 +33964,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 378,
+      lineNumber: 365,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -34189,7 +33972,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 379,
+      lineNumber: 366,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -34201,14 +33984,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 380,
+      lineNumber: 367,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 381,
+      lineNumber: 368,
       columnNumber: 23
     }
   }, "Receba")), __jsx("h4", {
@@ -34216,14 +33999,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 383,
+      lineNumber: 370,
       columnNumber: 21
     }
   }, "4")), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 385,
+      lineNumber: 372,
       columnNumber: 19
     }
   }, "O trabalhador recebe a antecipa\xE7\xE3o e os investidores seus pagamentos."))))), __jsx("div", {
@@ -34232,7 +34015,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 392,
+      lineNumber: 379,
       columnNumber: 11
     }
   }, __jsx("h1", {
@@ -34240,7 +34023,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 393,
+      lineNumber: 380,
       columnNumber: 13
     }
   }, " Seja um parceiro JusCredit"), __jsx("h2", {
@@ -34248,7 +34031,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 394,
+      lineNumber: 381,
       columnNumber: 13
     }
   }, "Indique cr\xE9ditos trabalhistas eleg\xEDveis e ganhe conosco."), __jsx("div", {
@@ -34256,47 +34039,87 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 396,
+      lineNumber: 383,
       columnNumber: 13
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     color: "primary",
     onClick: handleModalIndicar,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 397,
+      lineNumber: 384,
       columnNumber: 15
     }
-  }, "Indicar"))))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, "Indicar"))))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
     open: modalIndicarState,
     onClose: handleClose,
     "aria-labelledby": "parceiro-dialog-title",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 402,
+      lineNumber: 389,
       columnNumber: 7
     }
-  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
     id: "parceiro-dialog-title",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 403,
+      lineNumber: 390,
       columnNumber: 9
     }
-  }, "Seja parceiro!"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, "Seja parceiro!"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404,
+      lineNumber: 391,
       columnNumber: 9
     }
-  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }, __jsx("form", {
+    className: "modal-form",
+    noValidate: true,
+    autoComplete: "off",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 392,
+      columnNumber: 11
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
     autoFocus: true,
-    id: "name",
-    label: "Email @",
+    id: "modalFieldAntecipar-0",
+    label: "Nome completo",
+    variant: "outlined",
+    name: "full_name",
+    onChange: function onChange(e) {
+      getParceiroValue(e.target.value, 'full_name');
+    },
+    fullWidth: true,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 393,
+      columnNumber: 13
+    }
+  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    id: "modalFieldIndicar-1",
+    label: "Assunto",
+    variant: "outlined",
+    name: "assunto",
+    onChange: function onChange(e) {
+      getParceiroValue(e.target.value, 'assunto');
+    },
+    fullWidth: true,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 401,
+      columnNumber: 13
+    }
+  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    id: "modalFieldIndicar-2",
+    label: "Email",
     type: "mail",
     variant: "outlined",
     onChange: function onChange(e) {
@@ -34306,26 +34129,27 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 405,
-      columnNumber: 11
+      lineNumber: 408,
+      columnNumber: 13
     }
-  })), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 415,
+      lineNumber: 417,
       columnNumber: 9
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: handleClose,
     color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 416,
+      lineNumber: 418,
       columnNumber: 11
     }
-  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    disabled: isEnabledParceiro(),
     onClick: function onClick(e) {
       handleSubmitParceiro("https://api-dot-juscredit-hml.ue.r.appspot.com/api/v1/sendmailpartner", parceiroValues);
     },
@@ -34333,32 +34157,32 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 419,
+      lineNumber: 421,
       columnNumber: 11
     }
-  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
     open: modalAnteciparState,
     onClose: handleClose,
     "aria-labelledby": "antecipar-dialog-title",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 425,
+      lineNumber: 427,
       columnNumber: 7
     }
-  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
     id: "antecipar-dialog-title",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 426,
+      lineNumber: 428,
       columnNumber: 9
     }
-  }, "Antecipe o seu cr\xE9dito"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, "Antecipe o seu cr\xE9dito"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 427,
+      lineNumber: 429,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -34368,92 +34192,85 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 428,
+      lineNumber: 430,
       columnNumber: 11
     }
-  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
     id: "modalFieldAntecipar-0",
     label: "Nome completo",
     variant: "outlined",
+    name: "full_name",
     onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'full_name');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 429,
+      lineNumber: 431,
       columnNumber: 13
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
     id: "modalFieldAntecipar-1",
     select: true,
     label: "Tipo de Pessoa",
     variant: "outlined",
     value: selectProfile,
+    name: "person_type",
     onChange: function onChange(e) {
       handleChangeSelect(e);
-      atualizaFormValues(e.target.value, 'person_type');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 435,
+      lineNumber: 438,
       columnNumber: 13
     }
   }, tipoPessoaArr.map(function (option) {
-    return __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_16__["default"], {
+    return __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
       key: option.value,
       value: option.value,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 445,
+        lineNumber: 449,
         columnNumber: 17
       }
     }, option.label);
-  })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  })), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_13___default.a, {
+    onChange: function onChange(e) {
+      atualizaFormValues(e);
+    },
+    mask: "9999999-99.9999.9.99.9999",
+    value: props.value,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 454,
+      columnNumber: 13
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
     id: "modalFieldAntecipar-2",
     label: "N\xFAmero do processo",
     helperText: "Exemplo: 0000020-37.2010.5.15.0118",
     variant: "outlined",
-    InputProps: {
-      inputComponent: ProcessoFormat
-    },
-    onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'title');
-    },
+    name: "title",
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 450,
-      columnNumber: 13
+      lineNumber: 458,
+      columnNumber: 15
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
     id: "modalFieldAntecipar-3",
     label: "Email",
     variant: "outlined",
+    name: "email",
     onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'email');
-    },
-    fullWidth: true,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 460,
-      columnNumber: 13
-    }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__["default"], {
-    id: "modalFieldAntecipar-4",
-    label: "Celular",
-    variant: "outlined",
-    InputProps: {
-      inputComponent: CelularFormat
-    },
-    onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'phone');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
@@ -34462,30 +34279,54 @@ var Index = function Index(props) {
       lineNumber: 466,
       columnNumber: 13
     }
-  }), __jsx("div", {
+  }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_13___default.a, {
+    onChange: function onChange(e) {
+      atualizaFormValues(e);
+    },
+    mask: "(99) 99999-9999",
+    value: props.value,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 473,
+      columnNumber: 13
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    id: "modalFieldAntecipar-4",
+    label: "Celular",
+    variant: "outlined",
+    name: "phone",
+    fullWidth: true,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 477,
+      columnNumber: 15
+    }
+  })), __jsx("div", {
     className: "flex align-items-center",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 475,
+      lineNumber: 484,
       columnNumber: 13
     }
-  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_17__["default"], {
+  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
     id: "modalFieldAntecipar-5",
     checked: state.checkedModalAntecipe,
     onChange: function onChange(e) {
       handleChangeCheckbox(e);
-      atualizaFormValues(e.target.checked, 'concordo_termos');
+      atualizaFormValues(e);
     },
-    name: "checkedModalAntecipe",
+    name: "concordo_termos",
     color: "primary",
     inputProps: {
-      'aria-label': 'Checkbox Modal Antecipe'
+      'aria-label': 'checkedModalAntecipe'
     },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 476,
+      lineNumber: 485,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -34494,15 +34335,15 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 484,
+      lineNumber: 493,
       columnNumber: 15
     }
-  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: "/JusCredit_-_Temos_de_Uso_do_Cliente.pdf",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 485,
+      lineNumber: 494,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -34514,60 +34355,60 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 486,
+      lineNumber: 495,
       columnNumber: 17
     }
-  }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 494,
+      lineNumber: 503,
       columnNumber: 9
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: handleClose,
     color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 495,
+      lineNumber: 504,
       columnNumber: 11
     }
-  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     disabled: isEnabled(),
     onClick: function onClick(e) {
-      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_19__["default"], "user"), formValues);
+      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_16__["default"], "user"), formValues);
     },
     color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 498,
+      lineNumber: 507,
       columnNumber: 11
     }
-  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
     open: modalInvestirState,
     onClose: handleClose,
     "aria-labelledby": "investir-dialog-title",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 504,
+      lineNumber: 513,
       columnNumber: 7
     }
-  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
     id: "investir-dialog-title",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 505,
+      lineNumber: 514,
       columnNumber: 9
     }
-  }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 506,
+      lineNumber: 515,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -34577,79 +34418,89 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 507,
+      lineNumber: 516,
       columnNumber: 11
     }
-  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
     id: "modalFieldInvestir-0",
     label: "Nome completo",
     variant: "outlined",
+    name: "full_nameF",
     onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'full_name');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 508,
+      lineNumber: 517,
       columnNumber: 13
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
     id: "modalFieldInvestir-1",
     label: "Email",
     variant: "outlined",
+    name: "email",
     onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'email');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 514,
+      lineNumber: 524,
       columnNumber: 13
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_13___default.a, {
+    onChange: function onChange(e) {
+      atualizaFormValues(e);
+    },
+    mask: "(99) 99999-9999",
+    value: props.value,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 531,
+      columnNumber: 13
+    }
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
     id: "modalFieldInvestir-2",
     label: "Celular",
     variant: "outlined",
-    InputProps: {
-      inputComponent: CelularFormat
-    },
-    onChange: function onChange(e) {
-      atualizaFormValues(e.target.value, 'phone');
-    },
+    name: "phone",
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 520,
-      columnNumber: 13
+      lineNumber: 535,
+      columnNumber: 15
     }
-  }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
     id: "modalFieldInvestir-3",
     select: true,
     label: "Tipo de Pessoa",
     variant: "outlined",
     value: selectProfile,
+    name: "person_type",
     onChange: function onChange(e) {
       handleChangeSelect(e);
-      atualizaFormValues(e.target.value, 'person_type');
+      atualizaFormValues(e);
     },
     fullWidth: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 529,
+      lineNumber: 542,
       columnNumber: 13
     }
   }, tipoPessoaArr.map(function (option) {
-    return __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_16__["default"], {
+    return __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
       key: option.value,
       value: option.value,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 539,
+        lineNumber: 553,
         columnNumber: 17
       }
     }, option.label);
@@ -34658,25 +34509,25 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 544,
+      lineNumber: 558,
       columnNumber: 13
     }
-  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_17__["default"], {
+  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
     id: "modalFieldInvestir-4",
     checked: state.checkedModalInvestirQualificado,
     onChange: function onChange(e) {
       handleChangeCheckbox(e);
-      atualizaFormValues(e.target.checked, 'investidor_qualificado');
+      atualizaFormValues(e);
     },
-    name: "checkedModalInvestirQualificado",
+    name: "investidor_qualificado",
     color: "primary",
     inputProps: {
-      'aria-label': 'Checkbox Modal Investir'
+      'aria-label': 'checkedModalInvestirQualificado'
     },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 545,
+      lineNumber: 559,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -34685,33 +34536,33 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 553,
+      lineNumber: 569,
       columnNumber: 15
     }
-  }, "Sou um investidor qualificado,")), __jsx("div", {
+  }, "Sou um investidor qualificado")), __jsx("div", {
     className: "flex align-items-center",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 560,
+      lineNumber: 571,
       columnNumber: 13
     }
-  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_17__["default"], {
+  }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
     id: "modalFieldInvestir-5",
     checked: state.checkedModalInvestirConcordo,
     onChange: function onChange(e) {
       handleChangeCheckbox(e);
-      atualizaFormValues(e.target.checked, 'concordo_termos');
+      atualizaFormValues(e);
     },
-    name: "checkedModalInvestirConcordo",
+    name: "concordo_termos",
     color: "primary",
     inputProps: {
-      'aria-label': 'Checkbox Modal Investir'
+      'aria-label': 'checkedModalInvestirConcordo'
     },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 561,
+      lineNumber: 572,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -34720,15 +34571,15 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 569,
+      lineNumber: 582,
       columnNumber: 15
     }
-  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 570,
+      lineNumber: 583,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -34740,94 +34591,94 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 571,
+      lineNumber: 584,
       columnNumber: 17
     }
-  }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 578,
+      lineNumber: 591,
       columnNumber: 9
     }
-  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: handleClose,
     color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 579,
+      lineNumber: 592,
       columnNumber: 11
     }
-  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     disabled: isEnabled(),
     onClick: function onClick(e) {
-      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_19__["default"], "user"), formValues);
+      handleSubmit("".concat(_api__WEBPACK_IMPORTED_MODULE_16__["default"], "user"), formValues);
     },
     color: "primary small",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 582,
+      lineNumber: 595,
       columnNumber: 11
     }
-  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
     open: modalEnviado,
     onClose: handleClose,
     "aria-labelledby": "investir-dialog-title",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 588,
+      lineNumber: 601,
       columnNumber: 7
     }
-  }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     className: "remove-padding",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 589,
+      lineNumber: 602,
       columnNumber: 9
     }
-  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_14__["default"], {
+  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_11__["default"], {
     severity: "success",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 590,
+      lineNumber: 603,
       columnNumber: 11
     }
   }, "Seu cadastro foi iniciado, ", __jsx("strong", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 591,
+      lineNumber: 604,
       columnNumber: 40
     }
-  }, "verifique seu email"), " para conclui-lo e iniciar seus investimentos em nossa plataforma!"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, "verifique seu email"), " para conclui-lo e iniciar seus investimentos em nossa plataforma!"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
     open: modalErro,
     onClose: handleClose,
     "aria-labelledby": "investir-dialog-title",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 596,
+      lineNumber: 609,
       columnNumber: 7
     }
-  }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     className: "remove-padding",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 597,
+      lineNumber: 610,
       columnNumber: 9
     }
-  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_14__["default"], {
+  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_11__["default"], {
     severity: "error",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 598,
+      lineNumber: 611,
       columnNumber: 11
     }
   }, "Houve um problema, tente novamente mais tarde."))));
@@ -34837,7 +34688,7 @@ var Index = function Index(props) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CVS2017%5CJuscredit%5Cjuscredit-web%5Cpages%5Cindex.tsx&hotRouterUpdates=true ***!
   \****************************************************************************************************************************************************/
@@ -34860,5 +34711,5 @@ module.exports = dll_77a815f570ae38c2d683;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
