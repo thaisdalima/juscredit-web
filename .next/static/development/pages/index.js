@@ -34425,7 +34425,7 @@ var Index = function Index(props) {
     id: "modalFieldInvestir-0",
     label: "Nome completo",
     variant: "outlined",
-    name: "full_nameF",
+    name: "full_name",
     onChange: function onChange(e) {
       atualizaFormValues(e);
     },

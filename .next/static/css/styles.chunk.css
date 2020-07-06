@@ -178,7 +178,7 @@ a.modal-label:hover {
   flex-direction: column;
   padding: 4em 0 0;
   position: relative;
-  min-height: 80vh;
+  min-height: auto;
   width: 100%; }
   .map-container h1 {
     font-family: 'Overpass';
@@ -221,15 +221,16 @@ a.modal-label:hover {
   top: 0;
   bottom: 0;
   left: auto;
-  right: -60px;
-  background: url("/anteceba.svg") no-repeat;
-  background-size: 115%;
+  right: 0;
+  background: url("/img-abre-site.svg") no-repeat;
+  background-size: contain;
   background-position: center top;
   z-index: -1;
-  width: 100%; }
+  width: 50%; }
 
 .map-texts {
-  width: 50%; }
+  width: 50%;
+  margin-bottom: 7em; }
   .map-texts h1 {
     margin-bottom: .3em; }
   .map-texts h2 {
@@ -420,7 +421,8 @@ img {
     flex: 1;
     margin-left: 0;
     margin-right: 2em;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    margin-top: 0; }
     .cards-showcase-wrapper .card:last-child {
       margin-right: 0; }
 
@@ -567,7 +569,8 @@ li {
 
 @media (max-width: 1125px) {
   .map-texts {
-    width: 70%; } }
+    width: 70%;
+    margin-bottom: 3em; } }
 
 @media (max-width: 790px) {
   .main-page-wrapper {
@@ -577,7 +580,8 @@ li {
     right: 0;
     display: none; }
   .map-texts {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 0; }
   .duvidas-container p {
     padding: 0 24px; }
   .parceiros-container {

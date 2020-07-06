@@ -518,7 +518,7 @@ const Index = (props) => {
               id="modalFieldInvestir-0"
               label="Nome completo"
               variant="outlined"
-              name="full_nameF"
+              name="full_name"
               onChange={e => { atualizaFormValues(e) }}
               fullWidth />
             <TextField
