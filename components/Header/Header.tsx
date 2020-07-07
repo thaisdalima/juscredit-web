@@ -39,7 +39,7 @@ const Header = (props) => {
     const [modalInvestirState, setInvestirOpen] = React.useState(false);
     const [modalEnviado, setFeedbackEnviado] = React.useState(false);
     const [modalErro, setFeedbackErro] = React.useState(false);
-    const [profile, setProfile] = React.useState("cliente");
+    const [profile, setProfile] = React.useState("");
     const [selectProfile, setSelectProfile] = React.useState('');
     const [openedMenu, setOpenedMenu] = useState(false)
     const [loggedIn, setLoggedIn] = useState(false);
@@ -80,12 +80,12 @@ const Header = (props) => {
     }
 
     const handleModalAntecipar = () => {
-        setFormValue({ ...formValues, account_type: 'c' });
+        setFormValue({ ...formValues, account_type: 'c', person_type: '' });
         setAnteciparOpen(true);
     };
 
     const handleModalInvestir = () => {
-        setFormValue({ ...formValues, account_type: 'i' });
+        setFormValue({ ...formValues, account_type: 'i', person_type: '' });
         setInvestirOpen(true);
     };
 
@@ -117,7 +117,12 @@ const Header = (props) => {
     };
 
     const atualizaFormValues = (event) => {
-        setFormValue({ ...formValues, [event.target.name]: event.target.value });
+        if (event.target.type == "checkbox") {
+            setFormValue({ ...formValues, [event.target.name]: event.target.checked });
+        } else {
+            setFormValue({ ...formValues, [event.target.name]: event.target.value });
+        }
+        console.log(formValues);
     }
 
     const isEnabled = () => {
@@ -348,7 +353,7 @@ const Header = (props) => {
                             id="modalFieldInvestir-0"
                             label="Nome completo"
                             variant="outlined"
-                            name="full_nameF"
+                            name="full_name"
                             onChange={e => { atualizaFormValues(e) }}
                             fullWidth />
                         <TextField
