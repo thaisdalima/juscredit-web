@@ -41,6 +41,8 @@ const Index = (props) => {
     checkedModalAntecipe: false,
     checkedModalInvestirQualificado: false,
     checkedModalInvestirConcordo: false,
+    modalEnviadoMsg: '',
+    modalErroMsg: ''
   });
   const [formValues, setFormValue] = React.useState(INITIAL_FORM);
   const [parceiroValues, setParceiroValue] = React.useState(INITIAL_FORM_PARCEIRO);
@@ -151,12 +153,12 @@ const Index = (props) => {
   const handleSubmit = (reqURL, reqBody) => {
     axios.post(reqURL, reqBody)
       .then(function (response) {
-        console.log(response);
+        setState({ ...state, modalEnviadoMsg: "Seu cadastro foi iniciado, verifique seu email para conclui-lo e iniciar seus investimentos em nossa plataforma!" });
         handleClose();
         setFeedbackEnviado(true);
       })
       .catch(function (error) {
-        console.log(error);
+        setState({ ...state, modalErroMsg: "Houve um problema, tente novamente mais tarde." });
         handleClose();
         setFeedbackErro(true);
       });
@@ -165,12 +167,14 @@ const Index = (props) => {
   const handleSubmitParceiro = (reqURL, reqBody) => {
     axios.post(reqURL, reqBody)
       .then(function (response) {
-        console.log(response);
+        setState({ ...state, modalEnviadoMsg: "Obrigado por se interessar em ser nosso parceiro! Entraremos em contato em breve" });
         handleClose();
+        setFeedbackEnviado(true);
       })
       .catch(function (error) {
-        console.log(error);
+        setState({ ...state, modalEnviadoMsg: "Houve um problema, tente novamente mais tarde." });
         handleClose();
+        setFeedbackErro(true);
       });
   }
 
@@ -309,8 +313,8 @@ const Index = (props) => {
             <div>
               <h1>Como funciona a plataforma?</h1>
               <h2>
-                Conte com toda a segurança, agilidade e <br />
-                praticidade na liberação do seu processo ganho
+                Análise com modelo proprietário de crédito, <br />
+              se aprovado é disponibilizado aos investidores.
               </h2>
             </div>
           </div>
@@ -601,7 +605,7 @@ const Index = (props) => {
       <Dialog open={modalEnviado} onClose={handleClose} aria-labelledby="investir-dialog-title">
         <DialogContent className="remove-padding">
           <Alert severity="success">
-            Seu cadastro foi iniciado, <strong>verifique seu email</strong> para conclui-lo e iniciar seus investimentos em nossa plataforma!
+            {state.modalEnviadoMsg}
           </Alert>
         </DialogContent>
       </Dialog>
@@ -609,7 +613,7 @@ const Index = (props) => {
       <Dialog open={modalErro} onClose={handleClose} aria-labelledby="investir-dialog-title">
         <DialogContent className="remove-padding">
           <Alert severity="error">
-            Houve um problema, tente novamente mais tarde.
+            {state.modalErroMsg}
           </Alert>
         </DialogContent>
       </Dialog>

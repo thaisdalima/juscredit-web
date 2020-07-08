@@ -33,6 +33,8 @@ const Header = (props) => {
         checkedModalAntecipe: false,
         checkedModalInvestirQualificado: false,
         checkedModalInvestirConcordo: false,
+        modalEnviadoMsg: '',
+        modalErroMsg: ''
     });
     const [formValues, setFormValue] = React.useState(INITIAL_FORM);
     const [modalAnteciparState, setAnteciparOpen] = React.useState(false);
@@ -144,11 +146,13 @@ const Header = (props) => {
         axios.post(reqURL, reqBody)
             .then(function (response) {
                 console.log(response);
+                setState({ ...state, modalEnviadoMsg: "Seu cadastro foi iniciado, verifique seu email para conclui-lo e iniciar seus investimentos em nossa plataforma!" });
                 handleClose();
                 setFeedbackEnviado(true);
             })
             .catch(function (error) {
                 console.log(error);
+                setState({ ...state, modalErroMsg: "Houve um problema, tente novamente mais tarde." });
                 handleClose();
                 setFeedbackErro(true);
             });
