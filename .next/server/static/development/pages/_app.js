@@ -3362,6 +3362,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header/Header */ "./components/Header/Header.tsx");
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Footer/Footer */ "./components/Footer/Footer.tsx");
+/* harmony import */ var react_https_redirect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-https-redirect */ "react-https-redirect");
+/* harmony import */ var react_https_redirect__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_https_redirect__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "D:\\VS2017\\Juscredit\\juscredit-web\\pages\\_app.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -3371,32 +3373,40 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
+
 function Juscredit({
   Component,
   pageProps
 }) {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_Header_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_https_redirect__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7,
       columnNumber: 9
     }
-  }), __jsx(Component, _extends({}, pageProps, {
+  }, __jsx(_components_Header_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8,
-      columnNumber: 9
+      columnNumber: 13
+    }
+  }), __jsx(Component, _extends({}, pageProps, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 13
     }
   })), __jsx(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 9
+      lineNumber: 10,
+      columnNumber: 13
     }
-  }));
+  })));
 } // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to
 // perform automatic static optimization, causing every page in your app to
@@ -3566,6 +3576,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-https-redirect":
+/*!***************************************!*\
+  !*** external "react-https-redirect" ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-https-redirect");
 
 /***/ }),
 

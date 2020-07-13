@@ -29593,6 +29593,51 @@ module.exports = (__webpack_require__(/*! dll-reference dll_77a815f570ae38c2d683
 
 /***/ }),
 
+/***/ "./node_modules/react-https-redirect/lib/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-https-redirect/lib/index.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var isLocalHost = function isLocalHost(hostname) {
+  return !!(hostname === 'localhost' || hostname === '[::1]' || hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
+};
+
+var HttpsRedirect = function HttpsRedirect(_ref) {
+  var disabled = _ref.disabled,
+      children = _ref.children;
+
+  if (!disabled && typeof window !== 'undefined' && window.location && window.location.protocol === 'http:' && !isLocalHost(window.location.hostname)) {
+    window.location.href = window.location.href.replace(/^http(?!s)/, 'https');
+    return null;
+  }
+
+  return children;
+};
+
+HttpsRedirect.propTypes = {
+  children: _propTypes2.default.node,
+  disabled: _propTypes2.default.bool
+};
+
+exports.default = HttpsRedirect;
+
+/***/ }),
+
 /***/ "./node_modules/react-input-mask/index.js":
 /*!************************************************!*\
   !*** ./node_modules/react-input-mask/index.js ***!
@@ -35007,6 +35052,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Header/Header */ "./components/Header/Header.tsx");
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Footer/Footer */ "./components/Footer/Footer.tsx");
+/* harmony import */ var react_https_redirect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-https-redirect */ "./node_modules/react-https-redirect/lib/index.js");
+/* harmony import */ var react_https_redirect__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_https_redirect__WEBPACK_IMPORTED_MODULE_4__);
 
 var _jsxFileName = "D:\\VS2017\\Juscredit\\juscredit-web\\pages\\_app.tsx";
 
@@ -35014,31 +35061,39 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
 function Juscredit(_ref) {
   var Component = _ref.Component,
       pageProps = _ref.pageProps;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_components_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(react_https_redirect__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7,
       columnNumber: 9
     }
-  }), __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+  }, __jsx(_components_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8,
-      columnNumber: 9
+      columnNumber: 13
+    }
+  }), __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 13
     }
   })), __jsx(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 9
+      lineNumber: 10,
+      columnNumber: 13
     }
-  }));
+  })));
 } // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to
 // perform automatic static optimization, causing every page in your app to

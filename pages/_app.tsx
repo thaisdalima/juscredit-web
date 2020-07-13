@@ -1,12 +1,14 @@
-import Header from "../components/Header/Header"
-import Footer from "../components/Footer/Footer"
-
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import HttpsRedirect from 'react-https-redirect';
 
 function Juscredit({ Component, pageProps }) {
     return <>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+        <HttpsRedirect>
+            <Header />
+            <Component {...pageProps} />
+            <Footer />
+        </HttpsRedirect>
     </>
 
 }
