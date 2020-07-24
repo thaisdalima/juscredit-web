@@ -940,7 +940,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "D:\\VS2017\\Juscredit\\juscredit-web\\.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "E:\\VS2017\\Juscredit\\juscredit-web\\.next");
       return error;
     }
   };
