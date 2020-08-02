@@ -23,7 +23,7 @@ const Header = (props) => {
         full_name: '',
         account_type: '',
         person_type: '',
-        title: '',
+        number_proccess: '',
         email: '',
         phone: '',
         concordo_termos: '',
@@ -102,7 +102,7 @@ const Header = (props) => {
             full_name: '',
             account_type: '',
             person_type: '',
-            title: '',
+            number_proccess: '',
             email: '',
             phone: '',
             concordo_termos: '',
@@ -133,7 +133,7 @@ const Header = (props) => {
                 formValues["investidor_qualificado"] = null
             }
             if (formValues["account_type"] !== "c") {
-                formValues["title"] = null
+                formValues["number_proccess"] = null
             }
             if (formValues[key] != "") {
             } else {
@@ -299,7 +299,7 @@ const Header = (props) => {
                                 label="Número do processo"
                                 helperText="Exemplo: 0000020-37.2010.5.15.0118"
                                 variant="outlined"
-                                name="title"
+                                name="number_proccess"
                                 fullWidth />
                         </InputMask>
                         <TextField
