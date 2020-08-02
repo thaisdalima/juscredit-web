@@ -186,14 +186,6 @@ const Index = (props) => {
     <Fragment>
       <Head>
         <title>JusCredit</title>
-        <link rel="preload" href="/fonts/Muli-Light.woff" as="font" />
-        <link rel="preload" href="/fonts/Muli-Light.woff2" as="font" />
-        <link rel="preload" href="/fonts/Muli-Regular.woff" as="font" />
-        <link rel="preload" href="/fonts/Muli-Regular.woff2" as="font" />
-        <link rel="preload" href="/fonts/Overpass-Light.woff" as="font" />
-        <link rel="preload" href="/fonts/Overpass-Light.woff2" as="font" />
-        <link rel="preload" href="/fonts/Overpass-Regular.woff" as="font" />
-        <link rel="preload" href="/fonts/Overpass-Regular.woff2" as="font" />
       </Head>
       <main className="main-page-wrapper">
         <div className="map-container">
