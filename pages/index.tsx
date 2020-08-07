@@ -281,7 +281,7 @@ const Index = (props) => {
           </div>
           <div className="map-texts">
             <h1>Antecipe seu <br />crédito trabalhista</h1>
-            <h2>Têm um processo ganho? Receba agora</h2>
+            <h2>Têm um processo ganho? Receba agora!</h2>
             <div className="buttons-container">
               <Button onClick={() => handleModalAntecipar()} color="primary">Quero antecipar</Button>
               <Button onClick={() => handleModalInvestir()} color="secondary">Quero investir</Button>
