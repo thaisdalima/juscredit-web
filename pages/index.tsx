@@ -54,6 +54,7 @@ const Index = (props) => {
   const [profile, setProfile] = React.useState("cliente");
   const [selectProfile, setSelectProfile] = React.useState('');
   const [originPath, setOriginPath] = React.useState('');
+  const [isLoadingImgs, setLoadingImgs] = React.useState(true);
 
   const axios = require('axios');
 
@@ -178,8 +179,95 @@ const Index = (props) => {
       });
   }
 
+  // const loadImagesArray = () => {
+  //   var array = new Array(
+  //     "./assets/images/bagageiro/PM-CENA-01.jpg",
+  //     "./assets/images/bagageiro/PM-CENA-02.jpg",
+  //     "./assets/images/bagageiro/PM-CENA-03.jpg",
+  //   );
+
+  //   document.addEventListener("DOMContentLoaded", () => { preloadImages(array) }, true);
+  // }
+
+  // function preloadImages(params) {
+  //   console.log('chegou aqui');
+  //   var images = new Array();
+  //   var loadedImages = 0;
+
+  //   for (var i = 0; i < params.length; i++) {
+  //     images[i] = new Image();
+  //     images[i].src = params[i];
+  //     images[i].onload = function () {
+  //       document.getElementById('log').innerHTML = ((loadedImages / params.length) * 100).toFixed(0) + '%';
+  //       loadedImages++;
+
+  //       if (loadedImages === params.length) {
+  //         imagesLoaded();
+  //       }
+  //     }
+
+  //   }
+  // }
+
+  // function imagesLoaded() {
+  //   // Load total
+  //   console.log('imagens carregaram');
+  // }
+
+  const cacheImages = srcArray => {
+    var body = document.querySelector('body');
+    body.classList.add('no-scroll');
+    srcArray.forEach(src => {
+      new Promise(function (resolve, reject) {
+        const img = new Image();
+
+        img.src = src;
+        img.onload = function () {
+          resolve();
+        }
+        img.onerror = function () {
+          reject();
+        }
+        // img.onerror = reject();
+      });
+    });
+
+    setTimeout(() => {
+      body.classList.remove('no-scroll');
+      setLoadingImgs(false);
+    }, 2500);
+  }
+
   useEffect(() => {
     setOriginPath(window.location.origin);
+
+    const imgs = [
+      '/lawyer.jpg',
+      '/img-abre-site.svg',
+      '/Logo.png',
+      '/logo.svg',
+      '/android-chrome-192x192.png',
+      '/android-chrome-512x512.png',
+      '/loading.svg',
+      '/loading2.svg',
+      '/card-img-1.svg',
+      '/card-img-2.svg',
+      '/card-img-3.svg',
+      '/card-img-4.svg',
+      '/card-img-5.svg',
+      '/card-img-6.svg',
+      '/card-img-7.svg',
+      '/card-img-8.svg',
+      '/card-img-9.svg',
+      '/facebook_icon.png',
+      '/anteceba.svg',
+      '/ic-carta.svg',
+      '/ic-facebook.svg',
+      '/ic-instagram.svg',
+      '/ic-linkedin.svg'
+    ];
+
+    cacheImages(imgs);
   });
 
   return (
@@ -390,6 +478,20 @@ const Index = (props) => {
           </div>
         </div>
       </main>
+
+      {isLoadingImgs && (
+        <div className="backdrop-loading">
+          <div className="backdrop-wrapper">
+            <img src="/logo.svg" className="header-logo" />
+            <img height="32" width="32" src="/loading2.svg" />
+            <h4 className="backdrop-title">
+              Carregando...
+          </h4>
+          </div>
+        </div>
+      )}
+
+
       <Dialog open={modalIndicarState} onClose={handleClose} aria-labelledby="parceiro-dialog-title">
         <DialogTitle id="parceiro-dialog-title">Seja parceiro!</DialogTitle>
         <DialogContent>

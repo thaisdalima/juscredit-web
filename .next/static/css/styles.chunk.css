@@ -138,6 +138,9 @@ body {
   padding-block-end: initial;
   flex-direction: row; }
 
+.no-scroll {
+  overflow: hidden; }
+
 .modal-label {
   text-align: left;
   text-decoration: none;
@@ -647,6 +650,24 @@ li {
     flex-direction: column; }
   .MuiDialog-paperScrollPaper {
     min-width: 95%; } }
+
+.backdrop-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: white; }
+  .backdrop-loading .backdrop-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column; }
+  .backdrop-loading .backdrop-title {
+    color: #395e66; }
 
 .button {
   border: none;

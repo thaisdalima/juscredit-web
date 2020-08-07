@@ -55,6 +55,10 @@ body {
   flex-direction: row;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .modal-label {
   text-align: left;
   text-decoration: none;
@@ -751,3 +755,26 @@ li {
 //     min-height: 560px;
 //   }
 // }
+
+.backdrop-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #FFFFFF, $alpha: 1);
+
+  .backdrop-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .backdrop-title {
+    color: rgba($color: #395E66, $alpha: 1);
+  }
+}
