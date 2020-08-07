@@ -33033,7 +33033,7 @@ var Index = function Index(props) {
       lineNumber: 284,
       columnNumber: 13
     }
-  }, "T\xEAm um processo ganho? Receba agora"), __jsx("div", {
+  }, "T\xEAm um processo ganho? Receba agora!"), __jsx("div", {
     className: "buttons-container",
     __self: _this,
     __source: {
@@ -34122,21 +34122,21 @@ var Index = function Index(props) {
       lineNumber: 476,
       columnNumber: 15
     }
-  }, "Indicar"))))), isLoadingImgs && __jsx("div", {
-    className: "backdrop-loading",
+  }, "Indicar"))))), __jsx("div", {
+    className: "backdrop-loading ".concat(isLoadingImgs ? '' : 'hidden'),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 483,
-      columnNumber: 9
+      lineNumber: 482,
+      columnNumber: 7
     }
   }, __jsx("div", {
     className: "backdrop-wrapper",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 484,
-      columnNumber: 11
+      lineNumber: 483,
+      columnNumber: 9
     }
   }, __jsx("img", {
     src: "/logo.svg",
@@ -34144,8 +34144,8 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 485,
-      columnNumber: 13
+      lineNumber: 484,
+      columnNumber: 11
     }
   }), __jsx("img", {
     height: "32",
@@ -34154,16 +34154,16 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 486,
-      columnNumber: 13
+      lineNumber: 485,
+      columnNumber: 11
     }
   }), __jsx("h4", {
     className: "backdrop-title",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 487,
-      columnNumber: 13
+      lineNumber: 486,
+      columnNumber: 11
     }
   }, "Carregando..."))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
     open: modalIndicarState,
@@ -34172,7 +34172,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 495,
+      lineNumber: 492,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -34180,14 +34180,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 496,
+      lineNumber: 493,
       columnNumber: 9
     }
   }, "Seja parceiro!"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 497,
+      lineNumber: 494,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -34197,7 +34197,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 498,
+      lineNumber: 495,
       columnNumber: 11
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34213,7 +34213,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 499,
+      lineNumber: 496,
       columnNumber: 13
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34228,7 +34228,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 507,
+      lineNumber: 504,
       columnNumber: 13
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34243,14 +34243,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 514,
+      lineNumber: 511,
       columnNumber: 13
     }
   }))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 523,
+      lineNumber: 520,
       columnNumber: 9
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34259,7 +34259,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 524,
+      lineNumber: 521,
       columnNumber: 11
     }
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34271,7 +34271,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 527,
+      lineNumber: 524,
       columnNumber: 11
     }
   }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -34281,7 +34281,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 533,
+      lineNumber: 530,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -34289,14 +34289,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 534,
+      lineNumber: 531,
       columnNumber: 9
     }
   }, "Antecipe o seu cr\xE9dito"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 535,
+      lineNumber: 532,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -34306,7 +34306,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 536,
+      lineNumber: 533,
       columnNumber: 11
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34321,7 +34321,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 537,
+      lineNumber: 534,
       columnNumber: 13
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34339,7 +34339,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 544,
+      lineNumber: 541,
       columnNumber: 13
     }
   }, tipoPessoaArr.map(function (option) {
@@ -34349,7 +34349,7 @@ var Index = function Index(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 555,
+        lineNumber: 552,
         columnNumber: 17
       }
     }, option.label);
@@ -34362,7 +34362,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 560,
+      lineNumber: 557,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34375,7 +34375,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 564,
+      lineNumber: 561,
       columnNumber: 15
     }
   })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34390,7 +34390,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 572,
+      lineNumber: 569,
       columnNumber: 13
     }
   }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -34402,7 +34402,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 579,
+      lineNumber: 576,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34414,7 +34414,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 583,
+      lineNumber: 580,
       columnNumber: 15
     }
   })), __jsx("div", {
@@ -34422,7 +34422,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 590,
+      lineNumber: 587,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -34440,7 +34440,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 591,
+      lineNumber: 588,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -34449,7 +34449,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 599,
+      lineNumber: 596,
       columnNumber: 15
     }
   }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -34457,7 +34457,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 600,
+      lineNumber: 597,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -34469,14 +34469,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 601,
+      lineNumber: 598,
       columnNumber: 17
     }
   }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 609,
+      lineNumber: 606,
       columnNumber: 9
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34485,7 +34485,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 610,
+      lineNumber: 607,
       columnNumber: 11
     }
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34497,7 +34497,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 613,
+      lineNumber: 610,
       columnNumber: 11
     }
   }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -34507,7 +34507,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 619,
+      lineNumber: 616,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -34515,14 +34515,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 620,
+      lineNumber: 617,
       columnNumber: 9
     }
   }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 621,
+      lineNumber: 618,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -34532,7 +34532,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 622,
+      lineNumber: 619,
       columnNumber: 11
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34547,7 +34547,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 623,
+      lineNumber: 620,
       columnNumber: 13
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34562,7 +34562,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 630,
+      lineNumber: 627,
       columnNumber: 13
     }
   }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -34574,7 +34574,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 637,
+      lineNumber: 634,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34586,7 +34586,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 641,
+      lineNumber: 638,
       columnNumber: 15
     }
   })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34604,7 +34604,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 648,
+      lineNumber: 645,
       columnNumber: 13
     }
   }, tipoPessoaArr.map(function (option) {
@@ -34614,7 +34614,7 @@ var Index = function Index(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 659,
+        lineNumber: 656,
         columnNumber: 17
       }
     }, option.label);
@@ -34623,7 +34623,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 664,
+      lineNumber: 661,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -34641,7 +34641,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 665,
+      lineNumber: 662,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -34650,7 +34650,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 675,
+      lineNumber: 672,
       columnNumber: 15
     }
   }, "Sou um investidor qualificado")), __jsx("div", {
@@ -34658,7 +34658,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 677,
+      lineNumber: 674,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -34676,7 +34676,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 678,
+      lineNumber: 675,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -34685,7 +34685,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 688,
+      lineNumber: 685,
       columnNumber: 15
     }
   }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -34693,7 +34693,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 689,
+      lineNumber: 686,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -34705,14 +34705,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 690,
+      lineNumber: 687,
       columnNumber: 17
     }
   }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 697,
+      lineNumber: 694,
       columnNumber: 9
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34721,7 +34721,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 698,
+      lineNumber: 695,
       columnNumber: 11
     }
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34733,7 +34733,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 701,
+      lineNumber: 698,
       columnNumber: 11
     }
   }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -34743,7 +34743,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 707,
+      lineNumber: 704,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -34751,7 +34751,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 708,
+      lineNumber: 705,
       columnNumber: 9
     }
   }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -34759,7 +34759,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 709,
+      lineNumber: 706,
       columnNumber: 11
     }
   }, state.modalEnviadoMsg))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -34769,7 +34769,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 715,
+      lineNumber: 712,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -34777,7 +34777,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 716,
+      lineNumber: 713,
       columnNumber: 9
     }
   }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -34785,7 +34785,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 717,
+      lineNumber: 714,
       columnNumber: 11
     }
   }, state.modalErroMsg))));
@@ -34795,7 +34795,7 @@ var Index = function Index(props) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=E%3A%5CVS2017%5CJuscredit%5Cjuscredit-web%5Cpages%5Cindex.tsx&hotRouterUpdates=true ***!
   \****************************************************************************************************************************************************/
@@ -34818,5 +34818,5 @@ module.exports = dll_77a815f570ae38c2d683;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

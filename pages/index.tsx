@@ -479,18 +479,15 @@ const Index = (props) => {
         </div>
       </main>
 
-      {isLoadingImgs && (
-        <div className="backdrop-loading">
-          <div className="backdrop-wrapper">
-            <img src="/logo.svg" className="header-logo" />
-            <img height="32" width="32" src="/loading2.svg" />
-            <h4 className="backdrop-title">
-              Carregando...
+      <div className={`backdrop-loading ${isLoadingImgs ? '' : 'hidden'}`}>
+        <div className="backdrop-wrapper">
+          <img src="/logo.svg" className="header-logo" />
+          <img height="32" width="32" src="/loading2.svg" />
+          <h4 className="backdrop-title">
+            Carregando...
           </h4>
-          </div>
         </div>
-      )}
-
+      </div>
 
       <Dialog open={modalIndicarState} onClose={handleClose} aria-labelledby="parceiro-dialog-title">
         <DialogTitle id="parceiro-dialog-title">Seja parceiro!</DialogTitle>

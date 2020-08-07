@@ -669,6 +669,9 @@ li {
   .backdrop-loading .backdrop-title {
     color: #395e66; }
 
+.hidden {
+  display: none !important; }
+
 .button {
   border: none;
   padding: 0 16px;
