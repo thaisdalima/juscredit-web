@@ -146,7 +146,7 @@ const Header = (props) => {
         axios.post(reqURL, reqBody)
             .then(function (response) {
                 console.log(response);
-                setState({ ...state, modalEnviadoMsg: "Seu cadastro foi iniciado, verifique seu email para conclui-lo e iniciar seus investimentos em nossa plataforma!" });
+                setState({ ...state, modalEnviadoMsg: "Seu cadastro foi iniciado, verique seu e-mail para continuar (se não achar olhe a pasta de Spam)." });
                 handleClose();
                 setFeedbackEnviado(true);
             })
@@ -329,7 +329,7 @@ const Header = (props) => {
                                 color="primary"
                                 inputProps={{ 'aria-label': 'checkedModalAntecipe' }}
                             />
-                            <label className="modal-label" htmlFor="modalFieldAntecipar-5">Concordo com os Termos do JusCredit,</label>
+                            <label className="modal-label" htmlFor="modalFieldAntecipar-5">Concordo com os Termos da JusCredit,</label>
                             <Link href="/JusCredit_-_Temos_de_Uso_do_Cliente.pdf">
                                 <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
                                     Clique para ler
@@ -414,7 +414,7 @@ const Header = (props) => {
                                 color="primary"
                                 inputProps={{ 'aria-label': 'checkedModalInvestirConcordo' }}
                             />
-                            <label className="modal-label" htmlFor="modalFieldInvestir-5">Concordo com os Termos do JusCredit,</label>
+                            <label className="modal-label" htmlFor="modalFieldInvestir-5">Concordo com os Termos da JusCredit,</label>
                             <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
                                 <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
                                     Clique para ler
@@ -436,7 +436,7 @@ const Header = (props) => {
             <Dialog open={modalEnviado} onClose={handleClose} aria-labelledby="investir-dialog-title">
                 <DialogContent className="remove-padding">
                     <Alert severity="success">
-                        Seu cadastro foi iniciado, <strong>verifique seu email</strong> para conclui-lo e iniciar seus investimentos em nossa plataforma!
+                        Seu cadastro foi iniciado, <strong>verique seu e-mail</strong> para continuar (se não achar olhe a pasta de Spam).
                     </Alert>
                 </DialogContent>
             </Dialog>

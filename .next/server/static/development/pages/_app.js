@@ -777,7 +777,7 @@ const Header = props => {
     axios.post(reqURL, reqBody).then(function (response) {
       console.log(response);
       setState(_objectSpread({}, state, {
-        modalEnviadoMsg: "Seu cadastro foi iniciado, verifique seu email para conclui-lo e iniciar seus investimentos em nossa plataforma!"
+        modalEnviadoMsg: "Seu cadastro foi iniciado, verique seu e-mail para continuar (se não achar olhe a pasta de Spam)."
       }));
       handleClose();
       setFeedbackEnviado(true);
@@ -1311,7 +1311,7 @@ const Header = props => {
       lineNumber: 332,
       columnNumber: 29
     }
-  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
+  }, "Concordo com os Termos da JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
     href: "/JusCredit_-_Temos_de_Uso_do_Cliente.pdf",
     __self: undefined,
     __source: {
@@ -1545,7 +1545,7 @@ const Header = props => {
       lineNumber: 417,
       columnNumber: 29
     }
-  }, "Concordo com os Termos do JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
+  }, "Concordo com os Termos da JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
     href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
     __self: undefined,
     __source: {
@@ -1626,7 +1626,7 @@ const Header = props => {
       lineNumber: 439,
       columnNumber: 52
     }
-  }, "verifique seu email"), " para conclui-lo e iniciar seus investimentos em nossa plataforma!"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, "verique seu e-mail"), " para continuar (se n\xE3o achar olhe a pasta de Spam)."))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_5___default.a, {
     open: modalErro,
     onClose: handleClose,
     "aria-labelledby": "investir-dialog-title",

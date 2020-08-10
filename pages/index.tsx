@@ -28,8 +28,8 @@ const Index = (props) => {
     number_proccess: '',
     email: '',
     phone: '',
-    concordo_termos: '',
-    investidor_qualificado: ''
+    concordo_termos: false,
+    investidor_qualificado: false
   };
 
   const INITIAL_FORM_PARCEIRO = {
@@ -97,10 +97,13 @@ const Index = (props) => {
       number_proccess: '',
       email: '',
       phone: '',
-      concordo_termos: '',
-      investidor_qualificado: ''
+      concordo_termos: false,
+      investidor_qualificado: false
     });
-  };
+    setTimeout(() => {
+      console.log(formValues);
+    }, 1000);
+  }
 
   const handleProfile = (_profile) => {
     setProfile(_profile);
@@ -117,7 +120,6 @@ const Index = (props) => {
   const atualizaFormValues = (event) => {
     if (event.target.type == "checkbox") {
       setFormValue({ ...formValues, [event.target.name]: event.target.checked });
-      console.log(formValues);
     } else {
       setFormValue({ ...formValues, [event.target.name]: event.target.value });
     }
@@ -130,7 +132,7 @@ const Index = (props) => {
   const isEnabled = () => {
     for (var key in formValues) {
       if (formValues["account_type"] !== "i") {
-        formValues["investidor_qualificado"] = null
+        formValues["investidor_qualificado"] = false
       }
       if (formValues["account_type"] !== "c") {
         formValues["number_proccess"] = null
@@ -154,7 +156,7 @@ const Index = (props) => {
   const handleSubmit = (reqURL, reqBody) => {
     axios.post(reqURL, reqBody)
       .then(function (response) {
-        setState({ ...state, modalEnviadoMsg: "Seu cadastro foi iniciado, verifique seu email para conclui-lo e iniciar seus investimentos em nossa plataforma!" });
+        setState({ ...state, modalEnviadoMsg: "Seu cadastro foi iniciado, verique seu e-mail para continuar (se não achar olhe a pasta de Spam)." });
         handleClose();
         setFeedbackEnviado(true);
       })
@@ -593,7 +595,7 @@ const Index = (props) => {
                 color="primary"
                 inputProps={{ 'aria-label': 'checkedModalAntecipe' }}
               />
-              <label className="modal-label" htmlFor="modalFieldAntecipar-5">Concordo com os Termos do JusCredit,</label>
+              <label className="modal-label" htmlFor="modalFieldAntecipar-5">Concordo com os Termos da JusCredit,</label>
               <Link href="/JusCredit_-_Temos_de_Uso_do_Cliente.pdf">
                 <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
                   Clique para ler
@@ -682,7 +684,7 @@ const Index = (props) => {
                   'aria-label': 'checkedModalInvestirConcordo',
                 }}
               />
-              <label className="modal-label" htmlFor="modalFieldInvestir-5">Concordo com os Termos do JusCredit,</label>
+              <label className="modal-label" htmlFor="modalFieldInvestir-5">Concordo com os Termos da JusCredit,</label>
               <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
                 <a className="modal-label" target="_blank" style={{ marginLeft: "6px" }}>
                   Clique para ler
