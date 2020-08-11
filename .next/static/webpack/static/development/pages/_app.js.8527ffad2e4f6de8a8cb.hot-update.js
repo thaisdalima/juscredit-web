@@ -205,6 +205,10 @@ var Header = function Header(props) {
   };
 
   var handleClose = function handleClose() {
+    setCheckMdlAntecipe(false);
+    setCheckMdlInvestirQualificado(false);
+    setCheckMdlInvestirConcordo(false);
+    setSelectProfile('');
     setAnteciparOpen(false);
     setInvestirOpen(false);
     setOpenedMenu(false);
@@ -298,7 +302,7 @@ var Header = function Header(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 173,
+        lineNumber: 177,
         columnNumber: 13
       }
     }));
@@ -317,7 +321,7 @@ var Header = function Header(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 188,
+        lineNumber: 192,
         columnNumber: 13
       }
     }));
@@ -334,7 +338,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208,
+      lineNumber: 212,
       columnNumber: 13
     }
   }, __jsx("a", {
@@ -343,7 +347,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209,
+      lineNumber: 213,
       columnNumber: 17
     }
   }, __jsx("img", {
@@ -352,7 +356,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210,
+      lineNumber: 214,
       columnNumber: 21
     }
   })), __jsx("ul", {
@@ -360,7 +364,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213,
+      lineNumber: 217,
       columnNumber: 17
     }
   }, __jsx("li", {
@@ -368,7 +372,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214,
+      lineNumber: 218,
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -376,14 +380,14 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215,
+      lineNumber: 219,
       columnNumber: 25
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216,
+      lineNumber: 220,
       columnNumber: 29
     }
   }, "Como Funciona"))), __jsx("li", {
@@ -391,7 +395,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219,
+      lineNumber: 223,
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -399,7 +403,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220,
+      lineNumber: 224,
       columnNumber: 25
     }
   }, __jsx("a", {
@@ -407,7 +411,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221,
+      lineNumber: 225,
       columnNumber: 29
     }
   }, "Antecipar"))), __jsx("li", {
@@ -415,7 +419,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224,
+      lineNumber: 228,
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -423,7 +427,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225,
+      lineNumber: 229,
       columnNumber: 25
     }
   }, __jsx("a", {
@@ -431,7 +435,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226,
+      lineNumber: 230,
       columnNumber: 29
     }
   }, "Investir"))), __jsx("li", {
@@ -439,7 +443,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229,
+      lineNumber: 233,
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -447,14 +451,14 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230,
+      lineNumber: 234,
       columnNumber: 25
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231,
+      lineNumber: 235,
       columnNumber: 29
     }
   }, "Parceiros"))), __jsx("li", {
@@ -462,7 +466,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234,
+      lineNumber: 238,
       columnNumber: 21
     }
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -474,7 +478,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235,
+      lineNumber: 239,
       columnNumber: 25
     }
   }, "Entrar"))), __jsx("div", {
@@ -483,7 +487,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239,
+      lineNumber: 243,
       columnNumber: 17
     }
   }, __jsx("svg", {
@@ -494,7 +498,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 244,
       columnNumber: 21
     }
   }, __jsx("path", {
@@ -503,7 +507,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241,
+      lineNumber: 245,
       columnNumber: 25
     }
   })))), openedMenu && __jsx("ul", {
@@ -511,7 +515,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246,
+      lineNumber: 250,
       columnNumber: 17
     }
   }, __jsx("li", {
@@ -519,7 +523,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247,
+      lineNumber: 251,
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -527,14 +531,14 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248,
+      lineNumber: 252,
       columnNumber: 25
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249,
+      lineNumber: 253,
       columnNumber: 29
     }
   }, "Como Funciona"))), __jsx("li", {
@@ -542,7 +546,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252,
+      lineNumber: 256,
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -550,7 +554,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253,
+      lineNumber: 257,
       columnNumber: 25
     }
   }, __jsx("a", {
@@ -558,7 +562,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254,
+      lineNumber: 258,
       columnNumber: 29
     }
   }, "Antecipar"))), __jsx("li", {
@@ -566,7 +570,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257,
+      lineNumber: 261,
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -574,7 +578,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258,
+      lineNumber: 262,
       columnNumber: 25
     }
   }, __jsx("a", {
@@ -582,7 +586,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259,
+      lineNumber: 263,
       columnNumber: 29
     }
   }, "Investir"))), __jsx("li", {
@@ -590,7 +594,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262,
+      lineNumber: 266,
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -598,14 +602,14 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263,
+      lineNumber: 267,
       columnNumber: 25
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264,
+      lineNumber: 268,
       columnNumber: 29
     }
   }, "Parceiros"))), __jsx("li", {
@@ -613,7 +617,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 267,
+      lineNumber: 271,
       columnNumber: 21
     }
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -625,7 +629,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 268,
+      lineNumber: 272,
       columnNumber: 25
     }
   }, "Entrar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -635,7 +639,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274,
+      lineNumber: 278,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -643,14 +647,14 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275,
+      lineNumber: 279,
       columnNumber: 17
     }
   }, "Antecipe o seu cr\xE9dito"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276,
+      lineNumber: 280,
       columnNumber: 17
     }
   }, __jsx("form", {
@@ -660,7 +664,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277,
+      lineNumber: 281,
       columnNumber: 21
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -675,7 +679,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278,
+      lineNumber: 282,
       columnNumber: 25
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -693,7 +697,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 285,
+      lineNumber: 289,
       columnNumber: 25
     }
   }, tipoPessoaArr.map(function (option) {
@@ -703,7 +707,7 @@ var Header = function Header(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 296,
+        lineNumber: 300,
         columnNumber: 33
       }
     }, option.label);
@@ -716,7 +720,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301,
+      lineNumber: 305,
       columnNumber: 25
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -729,7 +733,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305,
+      lineNumber: 309,
       columnNumber: 29
     }
   })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -744,7 +748,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313,
+      lineNumber: 317,
       columnNumber: 25
     }
   }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_14___default.a, {
@@ -756,7 +760,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320,
+      lineNumber: 324,
       columnNumber: 25
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -768,7 +772,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 324,
+      lineNumber: 328,
       columnNumber: 29
     }
   })), __jsx("div", {
@@ -776,12 +780,12 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331,
+      lineNumber: 335,
       columnNumber: 25
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_16__["default"], {
     id: "modalFieldAntecipar-5",
-    checked: state.checkedModalAntecipe,
+    checked: checkedModalAntecipe,
     onChange: function onChange(e) {
       handleChangeCheckbox(e);
       atualizaFormValues(e);
@@ -794,7 +798,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332,
+      lineNumber: 336,
       columnNumber: 29
     }
   }), __jsx("label", {
@@ -803,7 +807,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 340,
+      lineNumber: 344,
       columnNumber: 29
     }
   }, "Concordo com os Termos da JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -811,7 +815,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341,
+      lineNumber: 345,
       columnNumber: 29
     }
   }, __jsx("a", {
@@ -823,14 +827,14 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 342,
+      lineNumber: 346,
       columnNumber: 33
     }
   }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 350,
+      lineNumber: 354,
       columnNumber: 17
     }
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -839,7 +843,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 351,
+      lineNumber: 355,
       columnNumber: 21
     }
   }, "Cancelar"), __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -851,7 +855,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 354,
+      lineNumber: 358,
       columnNumber: 21
     }
   }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -861,7 +865,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 360,
+      lineNumber: 364,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -869,14 +873,14 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 361,
+      lineNumber: 365,
       columnNumber: 17
     }
   }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 362,
+      lineNumber: 366,
       columnNumber: 17
     }
   }, __jsx("form", {
@@ -886,7 +890,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 363,
+      lineNumber: 367,
       columnNumber: 21
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -901,7 +905,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364,
+      lineNumber: 368,
       columnNumber: 25
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -916,7 +920,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 371,
+      lineNumber: 375,
       columnNumber: 25
     }
   }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_14___default.a, {
@@ -928,7 +932,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 378,
+      lineNumber: 382,
       columnNumber: 25
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -940,7 +944,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 382,
+      lineNumber: 386,
       columnNumber: 29
     }
   })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -958,7 +962,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 389,
+      lineNumber: 393,
       columnNumber: 25
     }
   }, tipoPessoaArr.map(function (option) {
@@ -968,7 +972,7 @@ var Header = function Header(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 400,
+        lineNumber: 404,
         columnNumber: 33
       }
     }, option.label);
@@ -977,12 +981,12 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 405,
+      lineNumber: 409,
       columnNumber: 25
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_16__["default"], {
     id: "modalFieldInvestir-4",
-    checked: state.checkedModalInvestirQualificado,
+    checked: checkedModalInvestirQualificado,
     onChange: function onChange(e) {
       handleChangeCheckbox(e);
       atualizaFormValues(e);
@@ -995,7 +999,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 406,
+      lineNumber: 410,
       columnNumber: 29
     }
   }), __jsx("label", {
@@ -1004,7 +1008,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 414,
+      lineNumber: 420,
       columnNumber: 29
     }
   }, "Sou um investidor qualificado")), __jsx("div", {
@@ -1012,12 +1016,12 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 416,
+      lineNumber: 422,
       columnNumber: 25
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_16__["default"], {
     id: "modalFieldInvestir-5",
-    checked: state.checkedModalInvestirConcordo,
+    checked: checkedModalInvestirConcordo,
     onChange: function onChange(e) {
       handleChangeCheckbox(e);
       atualizaFormValues(e);
@@ -1030,7 +1034,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 417,
+      lineNumber: 423,
       columnNumber: 29
     }
   }), __jsx("label", {
@@ -1039,7 +1043,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 425,
+      lineNumber: 433,
       columnNumber: 29
     }
   }, "Concordo com os Termos da JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -1047,7 +1051,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 426,
+      lineNumber: 434,
       columnNumber: 29
     }
   }, __jsx("a", {
@@ -1059,14 +1063,14 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 427,
+      lineNumber: 435,
       columnNumber: 33
     }
   }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 434,
+      lineNumber: 442,
       columnNumber: 17
     }
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -1075,7 +1079,7 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 435,
+      lineNumber: 443,
       columnNumber: 21
     }
   }, "Cancelar"), __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -1087,44 +1091,11 @@ var Header = function Header(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 438,
+      lineNumber: 446,
       columnNumber: 21
     }
   }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_9__["default"], {
     open: modalEnviado,
-    onClose: handleClose,
-    "aria-labelledby": "investir-dialog-title",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 444,
-      columnNumber: 13
-    }
-  }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    className: "remove-padding",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 445,
-      columnNumber: 17
-    }
-  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_17__["default"], {
-    severity: "success",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 446,
-      columnNumber: 21
-    }
-  }, "Seu cadastro foi iniciado, ", __jsx("strong", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 447,
-      columnNumber: 52
-    }
-  }, "verique seu e-mail"), " para continuar (se n\xE3o achar olhe a pasta de Spam)."))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    open: modalErro,
     onClose: handleClose,
     "aria-labelledby": "investir-dialog-title",
     __self: _this,
@@ -1142,11 +1113,44 @@ var Header = function Header(props) {
       columnNumber: 17
     }
   }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_17__["default"], {
-    severity: "error",
+    severity: "success",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 454,
+      columnNumber: 21
+    }
+  }, "Seu cadastro foi iniciado, ", __jsx("strong", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 455,
+      columnNumber: 52
+    }
+  }, "verique seu e-mail"), " para continuar (se n\xE3o achar olhe a pasta de Spam)."))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    open: modalErro,
+    onClose: handleClose,
+    "aria-labelledby": "investir-dialog-title",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 460,
+      columnNumber: 13
+    }
+  }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    className: "remove-padding",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 461,
+      columnNumber: 17
+    }
+  }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_17__["default"], {
+    severity: "error",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 462,
       columnNumber: 21
     }
   }, "Houve um problema, tente novamente mais tarde."))));
@@ -1157,4 +1161,4 @@ var Header = function Header(props) {
 /***/ })
 
 })
-//# sourceMappingURL=_app.js.d7c91c6d54d0ff678126.hot-update.js.map
+//# sourceMappingURL=_app.js.8527ffad2e4f6de8a8cb.hot-update.js.map

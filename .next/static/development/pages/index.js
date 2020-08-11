@@ -32822,6 +32822,7 @@ var Index = function Index(props) {
     setCheckMdlAntecipe(false);
     setCheckMdlInvestirQualificado(false);
     setCheckMdlInvestirConcordo(false);
+    setSelectProfile('');
     setIndicarOpen(false);
     setAnteciparOpen(false);
     setInvestirOpen(false);
@@ -32963,21 +32964,21 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252,
+      lineNumber: 253,
       columnNumber: 5
     }
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253,
+      lineNumber: 254,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254,
+      lineNumber: 255,
       columnNumber: 9
     }
   }, "JusCredit")), __jsx("main", {
@@ -32985,7 +32986,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256,
+      lineNumber: 257,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -32993,7 +32994,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257,
+      lineNumber: 258,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -33001,7 +33002,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258,
+      lineNumber: 259,
       columnNumber: 11
     }
   }), __jsx("div", {
@@ -33009,28 +33010,28 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260,
+      lineNumber: 261,
       columnNumber: 11
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261,
+      lineNumber: 262,
       columnNumber: 13
     }
   }, "Antecipe seu ", __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261,
+      lineNumber: 262,
       columnNumber: 30
     }
   }), "cr\xE9dito trabalhista"), __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262,
+      lineNumber: 263,
       columnNumber: 13
     }
   }, "T\xEAm um processo ganho? Receba agora!"), __jsx("div", {
@@ -33038,7 +33039,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263,
+      lineNumber: 264,
       columnNumber: 13
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -33049,7 +33050,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264,
+      lineNumber: 265,
       columnNumber: 15
     }
   }, "Quero antecipar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -33060,7 +33061,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265,
+      lineNumber: 266,
       columnNumber: 15
     }
   }, "Quero investir")), __jsx("div", {
@@ -33068,7 +33069,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 267,
+      lineNumber: 268,
       columnNumber: 13
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -33076,14 +33077,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 268,
+      lineNumber: 269,
       columnNumber: 15
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269,
+      lineNumber: 270,
       columnNumber: 17
     }
   }, __jsx("img", {
@@ -33091,14 +33092,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270,
+      lineNumber: 271,
       columnNumber: 19
     }
   }), __jsx("span", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 271,
+      lineNumber: 272,
       columnNumber: 19
     }
   }, "Conhe\xE7a as vantagens")))))), __jsx("div", {
@@ -33107,14 +33108,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278,
+      lineNumber: 279,
       columnNumber: 9
     }
   }, profile == "cliente" && __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 280,
+      lineNumber: 281,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -33122,35 +33123,35 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 281,
+      lineNumber: 282,
       columnNumber: 15
     }
   }, __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 282,
+      lineNumber: 283,
       columnNumber: 17
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 283,
+      lineNumber: 284,
       columnNumber: 19
     }
   }, "Mais valor para quem investe.", __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 283,
+      lineNumber: 284,
       columnNumber: 52
     }
   }), "R\xE1pido para quem antecipa."), __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284,
+      lineNumber: 285,
       columnNumber: 19
     }
   }, "Servi\xE7o de antecipa\xE7\xE3o dispon\xEDvel para Trabalhadores e Advogados.")), __jsx("div", {
@@ -33158,7 +33159,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286,
+      lineNumber: 287,
       columnNumber: 17
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -33169,7 +33170,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287,
+      lineNumber: 288,
       columnNumber: 19
     }
   }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -33180,7 +33181,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288,
+      lineNumber: 289,
       columnNumber: 19
     }
   }, "Investidor"))), __jsx("div", {
@@ -33188,7 +33189,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291,
+      lineNumber: 292,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -33196,7 +33197,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292,
+      lineNumber: 293,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33204,7 +33205,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 293,
+      lineNumber: 294,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33216,14 +33217,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 294,
+      lineNumber: 295,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 295,
+      lineNumber: 296,
       columnNumber: 21
     }
   }, "Praticidade"), __jsx("ul", {
@@ -33231,14 +33232,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296,
+      lineNumber: 297,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297,
+      lineNumber: 298,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33248,14 +33249,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297,
+      lineNumber: 298,
       columnNumber: 27
     }
   }, "Processo de antecipa\xE7\xE3o 100% digital.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298,
+      lineNumber: 299,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33265,7 +33266,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298,
+      lineNumber: 299,
       columnNumber: 27
     }
   }, "An\xE1lise r\xE1pida e sem custo."))))), __jsx("div", {
@@ -33273,7 +33274,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302,
+      lineNumber: 303,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33281,7 +33282,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 303,
+      lineNumber: 304,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33293,14 +33294,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304,
+      lineNumber: 305,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305,
+      lineNumber: 306,
       columnNumber: 21
     }
   }, "Agilidade"), __jsx("ul", {
@@ -33308,14 +33309,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306,
+      lineNumber: 307,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 307,
+      lineNumber: 308,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33325,7 +33326,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 307,
+      lineNumber: 308,
       columnNumber: 27
     }
   }, "Liquidez imediata, n\xE3o espere mais para receber o seu direito."))))), __jsx("div", {
@@ -33333,7 +33334,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 311,
+      lineNumber: 312,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33341,7 +33342,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 312,
+      lineNumber: 313,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33353,14 +33354,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313,
+      lineNumber: 314,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314,
+      lineNumber: 315,
       columnNumber: 21
     }
   }, "Libera\xE7\xE3o"), __jsx("ul", {
@@ -33368,14 +33369,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315,
+      lineNumber: 316,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316,
+      lineNumber: 317,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33385,7 +33386,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316,
+      lineNumber: 317,
       columnNumber: 27
     }
   }, "Receba diretamente em sua conta JusCredit.")))))), __jsx("div", {
@@ -33393,7 +33394,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321,
+      lineNumber: 322,
       columnNumber: 15
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -33404,14 +33405,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322,
+      lineNumber: 323,
       columnNumber: 17
     }
   }, "Quero antecipar"))), profile != "cliente" && __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328,
+      lineNumber: 329,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -33419,35 +33420,35 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329,
+      lineNumber: 330,
       columnNumber: 15
     }
   }, __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 330,
+      lineNumber: 331,
       columnNumber: 17
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331,
+      lineNumber: 332,
       columnNumber: 19
     }
   }, "Mais valor para quem investe.", __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331,
+      lineNumber: 332,
       columnNumber: 52
     }
   }), "R\xE1pido para quem antecipa."), __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332,
+      lineNumber: 333,
       columnNumber: 19
     }
   }, "Investimentos em cr\xE9ditos judiciais de forma r\xE1pida e descomplicada.")), __jsx("div", {
@@ -33455,7 +33456,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 334,
+      lineNumber: 335,
       columnNumber: 17
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -33466,7 +33467,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 335,
+      lineNumber: 336,
       columnNumber: 19
     }
   }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -33477,7 +33478,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 336,
+      lineNumber: 337,
       columnNumber: 19
     }
   }, "Investidor"))), __jsx("div", {
@@ -33485,7 +33486,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 339,
+      lineNumber: 340,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -33493,7 +33494,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 340,
+      lineNumber: 341,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33501,7 +33502,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341,
+      lineNumber: 342,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33513,14 +33514,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 342,
+      lineNumber: 343,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 343,
+      lineNumber: 344,
       columnNumber: 21
     }
   }, "Rentabilidade"), __jsx("ul", {
@@ -33528,14 +33529,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 344,
+      lineNumber: 345,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 345,
+      lineNumber: 346,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33545,14 +33546,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 345,
+      lineNumber: 346,
       columnNumber: 27
     }
   }, "Maior retorno que investimentos tradicionais.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 346,
+      lineNumber: 347,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33562,14 +33563,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 346,
+      lineNumber: 347,
       columnNumber: 27
     }
   }, "Baixo valor inicial de investimento.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 347,
+      lineNumber: 348,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33579,7 +33580,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 347,
+      lineNumber: 348,
       columnNumber: 27
     }
   }, "Dispon\xEDvel para PF e PJ."))))), __jsx("div", {
@@ -33587,7 +33588,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 351,
+      lineNumber: 352,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33595,7 +33596,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 352,
+      lineNumber: 353,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33607,14 +33608,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 353,
+      lineNumber: 354,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 354,
+      lineNumber: 355,
       columnNumber: 21
     }
   }, "Seguran\xE7a"), __jsx("ul", {
@@ -33622,14 +33623,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 355,
+      lineNumber: 356,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 356,
+      lineNumber: 357,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33639,14 +33640,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 356,
+      lineNumber: 357,
       columnNumber: 27
     }
   }, "Modelo propriet\xE1rio de an\xE1lise.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 357,
+      lineNumber: 358,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33656,14 +33657,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 357,
+      lineNumber: 358,
       columnNumber: 27
     }
   }, "Empresas saud\xE1veis, sem negativa\xE7\xE3o e inclusas no banco nacional de devedores trabalhistas.")), __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 358,
+      lineNumber: 359,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33673,7 +33674,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 358,
+      lineNumber: 359,
       columnNumber: 27
     }
   }, "Parceiro de escrit\xF3rio especializado em direito do trabalho."))))), __jsx("div", {
@@ -33681,7 +33682,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 362,
+      lineNumber: 363,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33689,7 +33690,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 363,
+      lineNumber: 364,
       columnNumber: 19
     }
   }, __jsx("img", {
@@ -33701,14 +33702,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364,
+      lineNumber: 365,
       columnNumber: 21
     }
   }), __jsx("h3", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 365,
+      lineNumber: 366,
       columnNumber: 21
     }
   }, "Recebimento"), __jsx("ul", {
@@ -33716,14 +33717,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 366,
+      lineNumber: 367,
       columnNumber: 21
     }
   }, __jsx("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 367,
+      lineNumber: 368,
       columnNumber: 23
     }
   }, __jsx("p", {
@@ -33733,7 +33734,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 367,
+      lineNumber: 368,
       columnNumber: 27
     }
   }, "Receba os valores dos cr\xE9ditos judiciais adquiridos diretamente em sua conta JusCredit.")))))), __jsx("div", {
@@ -33741,7 +33742,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 372,
+      lineNumber: 373,
       columnNumber: 15
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -33752,7 +33753,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 373,
+      lineNumber: 374,
       columnNumber: 17
     }
   }, "Quero investir"))), __jsx("div", {
@@ -33761,35 +33762,35 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 378,
+      lineNumber: 379,
       columnNumber: 11
     }
   }, __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 379,
+      lineNumber: 380,
       columnNumber: 13
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 380,
+      lineNumber: 381,
       columnNumber: 15
     }
   }, "Como funciona a plataforma?"), __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 381,
+      lineNumber: 382,
       columnNumber: 15
     }
   }, "An\xE1lise com modelo propriet\xE1rio de cr\xE9dito, ", __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 382,
+      lineNumber: 383,
       columnNumber: 61
     }
   }), "se aprovado \xE9 disponibilizado aos investidores."))), __jsx("div", {
@@ -33797,7 +33798,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 387,
+      lineNumber: 388,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -33805,7 +33806,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 388,
+      lineNumber: 389,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -33813,7 +33814,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 389,
+      lineNumber: 390,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -33821,7 +33822,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 390,
+      lineNumber: 391,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33829,7 +33830,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 391,
+      lineNumber: 392,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -33837,7 +33838,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 392,
+      lineNumber: 393,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -33849,14 +33850,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 393,
+      lineNumber: 394,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 394,
+      lineNumber: 395,
       columnNumber: 23
     }
   }, "Cliente solicita")), __jsx("h4", {
@@ -33864,14 +33865,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 396,
+      lineNumber: 397,
       columnNumber: 21
     }
   }, "1")), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 398,
+      lineNumber: 399,
       columnNumber: 19
     }
   }, "Cliente solicita antecipa\xE7\xE3o do cr\xE9dito trabalhista na plataforma."))), __jsx("div", {
@@ -33879,7 +33880,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 403,
+      lineNumber: 404,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -33887,7 +33888,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404,
+      lineNumber: 405,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33895,7 +33896,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 405,
+      lineNumber: 406,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -33903,7 +33904,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 406,
+      lineNumber: 407,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -33915,14 +33916,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 407,
+      lineNumber: 408,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 408,
+      lineNumber: 409,
       columnNumber: 23
     }
   }, "An\xE1lise avan\xE7ada")), __jsx("h4", {
@@ -33930,14 +33931,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 410,
+      lineNumber: 411,
       columnNumber: 21
     }
   }, "2")), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 412,
+      lineNumber: 413,
       columnNumber: 19
     }
   }, "An\xE1lise com modelo propriet\xE1rio de cr\xE9dito, se aprovado \xE9 disponibilizado ao investidores.")))), __jsx("div", {
@@ -33945,7 +33946,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 418,
+      lineNumber: 419,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -33953,7 +33954,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 419,
+      lineNumber: 420,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -33961,7 +33962,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 420,
+      lineNumber: 421,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -33969,7 +33970,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 421,
+      lineNumber: 422,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -33977,7 +33978,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 422,
+      lineNumber: 423,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -33989,14 +33990,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 423,
+      lineNumber: 424,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 424,
+      lineNumber: 425,
       columnNumber: 23
     }
   }, "Investidores")), __jsx("h4", {
@@ -34004,14 +34005,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 426,
+      lineNumber: 427,
       columnNumber: 21
     }
   }, "3")), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 428,
+      lineNumber: 429,
       columnNumber: 19
     }
   }, "Os investidores escolhem quanto e em quais cr\xE9ditos trabalhistas querem investir."))), __jsx("div", {
@@ -34019,7 +34020,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 433,
+      lineNumber: 434,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -34027,7 +34028,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 434,
+      lineNumber: 435,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -34035,7 +34036,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 435,
+      lineNumber: 436,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -34043,7 +34044,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 436,
+      lineNumber: 437,
       columnNumber: 21
     }
   }, __jsx("img", {
@@ -34055,14 +34056,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 437,
+      lineNumber: 438,
       columnNumber: 23
     }
   }), __jsx("h4", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 438,
+      lineNumber: 439,
       columnNumber: 23
     }
   }, "Receba")), __jsx("h4", {
@@ -34070,14 +34071,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 440,
+      lineNumber: 441,
       columnNumber: 21
     }
   }, "4")), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 442,
+      lineNumber: 443,
       columnNumber: 19
     }
   }, "O trabalhador recebe a antecipa\xE7\xE3o e os investidores seus pagamentos."))))), __jsx("div", {
@@ -34086,7 +34087,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 449,
+      lineNumber: 450,
       columnNumber: 11
     }
   }, __jsx("h1", {
@@ -34094,7 +34095,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 450,
+      lineNumber: 451,
       columnNumber: 13
     }
   }, " Seja um parceiro JusCredit"), __jsx("h2", {
@@ -34102,7 +34103,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 451,
+      lineNumber: 452,
       columnNumber: 13
     }
   }, "Indique cr\xE9ditos trabalhistas eleg\xEDveis e ganhe conosco."), __jsx("div", {
@@ -34110,7 +34111,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 453,
+      lineNumber: 454,
       columnNumber: 13
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34119,7 +34120,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 454,
+      lineNumber: 455,
       columnNumber: 15
     }
   }, "Indicar"))))), __jsx("div", {
@@ -34127,7 +34128,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 460,
+      lineNumber: 461,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -34135,7 +34136,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 461,
+      lineNumber: 462,
       columnNumber: 9
     }
   }, __jsx("img", {
@@ -34144,7 +34145,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 462,
+      lineNumber: 463,
       columnNumber: 11
     }
   }), __jsx("img", {
@@ -34154,7 +34155,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 463,
+      lineNumber: 464,
       columnNumber: 11
     }
   }), __jsx("h4", {
@@ -34162,7 +34163,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 464,
+      lineNumber: 465,
       columnNumber: 11
     }
   }, "Carregando..."))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -34172,7 +34173,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 470,
+      lineNumber: 471,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -34180,14 +34181,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 471,
+      lineNumber: 472,
       columnNumber: 9
     }
   }, "Seja parceiro!"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 472,
+      lineNumber: 473,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -34197,7 +34198,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 473,
+      lineNumber: 474,
       columnNumber: 11
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34213,7 +34214,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 474,
+      lineNumber: 475,
       columnNumber: 13
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34228,7 +34229,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 482,
+      lineNumber: 483,
       columnNumber: 13
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34243,14 +34244,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 489,
+      lineNumber: 490,
       columnNumber: 13
     }
   }))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 498,
+      lineNumber: 499,
       columnNumber: 9
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34259,7 +34260,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 499,
+      lineNumber: 500,
       columnNumber: 11
     }
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34271,7 +34272,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 502,
+      lineNumber: 503,
       columnNumber: 11
     }
   }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -34281,7 +34282,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 508,
+      lineNumber: 509,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -34289,14 +34290,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 509,
+      lineNumber: 510,
       columnNumber: 9
     }
   }, "Antecipe o seu cr\xE9dito"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 510,
+      lineNumber: 511,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -34306,7 +34307,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 511,
+      lineNumber: 512,
       columnNumber: 11
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34321,7 +34322,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 512,
+      lineNumber: 513,
       columnNumber: 13
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34339,7 +34340,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 519,
+      lineNumber: 520,
       columnNumber: 13
     }
   }, tipoPessoaArr.map(function (option) {
@@ -34349,7 +34350,7 @@ var Index = function Index(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 530,
+        lineNumber: 531,
         columnNumber: 17
       }
     }, option.label);
@@ -34362,7 +34363,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 535,
+      lineNumber: 536,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34375,7 +34376,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 539,
+      lineNumber: 540,
       columnNumber: 15
     }
   })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34390,7 +34391,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 547,
+      lineNumber: 548,
       columnNumber: 13
     }
   }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -34402,7 +34403,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 554,
+      lineNumber: 555,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34414,7 +34415,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 558,
+      lineNumber: 559,
       columnNumber: 15
     }
   })), __jsx("div", {
@@ -34422,7 +34423,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 565,
+      lineNumber: 566,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -34440,7 +34441,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 566,
+      lineNumber: 567,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -34449,7 +34450,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 574,
+      lineNumber: 575,
       columnNumber: 15
     }
   }, "Concordo com os Termos da JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -34457,7 +34458,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 575,
+      lineNumber: 576,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -34469,14 +34470,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 576,
+      lineNumber: 577,
       columnNumber: 17
     }
   }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 584,
+      lineNumber: 585,
       columnNumber: 9
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34485,7 +34486,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 585,
+      lineNumber: 586,
       columnNumber: 11
     }
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34497,7 +34498,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 588,
+      lineNumber: 589,
       columnNumber: 11
     }
   }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -34507,7 +34508,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 594,
+      lineNumber: 595,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -34515,14 +34516,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 595,
+      lineNumber: 596,
       columnNumber: 9
     }
   }, "Invista em cr\xE9ditos trabalhistas"), __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 596,
+      lineNumber: 597,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -34532,7 +34533,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 597,
+      lineNumber: 598,
       columnNumber: 11
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34547,7 +34548,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 598,
+      lineNumber: 599,
       columnNumber: 13
     }
   }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34562,7 +34563,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 605,
+      lineNumber: 606,
       columnNumber: 13
     }
   }), __jsx(react_input_mask__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -34574,7 +34575,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 612,
+      lineNumber: 613,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34586,7 +34587,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 616,
+      lineNumber: 617,
       columnNumber: 15
     }
   })), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -34604,7 +34605,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 623,
+      lineNumber: 624,
       columnNumber: 13
     }
   }, tipoPessoaArr.map(function (option) {
@@ -34614,7 +34615,7 @@ var Index = function Index(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 634,
+        lineNumber: 635,
         columnNumber: 17
       }
     }, option.label);
@@ -34623,7 +34624,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 639,
+      lineNumber: 640,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -34641,7 +34642,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 640,
+      lineNumber: 641,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -34650,7 +34651,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 650,
+      lineNumber: 651,
       columnNumber: 15
     }
   }, "Sou um investidor qualificado")), __jsx("div", {
@@ -34658,7 +34659,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 652,
+      lineNumber: 653,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -34676,7 +34677,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 653,
+      lineNumber: 654,
       columnNumber: 15
     }
   }), __jsx("label", {
@@ -34685,7 +34686,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 663,
+      lineNumber: 664,
       columnNumber: 15
     }
   }, "Concordo com os Termos da JusCredit,"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -34693,7 +34694,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 664,
+      lineNumber: 665,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -34705,14 +34706,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 665,
+      lineNumber: 666,
       columnNumber: 17
     }
   }, "Clique para ler"))))), __jsx(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 672,
+      lineNumber: 673,
       columnNumber: 9
     }
   }, __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34721,7 +34722,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 673,
+      lineNumber: 674,
       columnNumber: 11
     }
   }, "Cancelar"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -34733,7 +34734,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 676,
+      lineNumber: 677,
       columnNumber: 11
     }
   }, "Enviar"))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -34743,7 +34744,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 682,
+      lineNumber: 683,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -34751,7 +34752,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 683,
+      lineNumber: 684,
       columnNumber: 9
     }
   }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -34759,7 +34760,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 684,
+      lineNumber: 685,
       columnNumber: 11
     }
   }, state.modalEnviadoMsg))), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -34769,7 +34770,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 690,
+      lineNumber: 691,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -34777,7 +34778,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 691,
+      lineNumber: 692,
       columnNumber: 9
     }
   }, __jsx(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -34785,7 +34786,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 692,
+      lineNumber: 693,
       columnNumber: 11
     }
   }, state.modalErroMsg))));

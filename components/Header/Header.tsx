@@ -95,6 +95,7 @@ const Header = (props) => {
         setCheckMdlAntecipe(false);
         setCheckMdlInvestirQualificado(false);
         setCheckMdlInvestirConcordo(false);
+        setSelectProfile('');
         setAnteciparOpen(false);
         setInvestirOpen(false);
         setOpenedMenu(false);

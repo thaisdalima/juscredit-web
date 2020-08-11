@@ -90,6 +90,7 @@ const Index = (props) => {
     setCheckMdlAntecipe(false);
     setCheckMdlInvestirQualificado(false);
     setCheckMdlInvestirConcordo(false);
+    setSelectProfile('');
     setIndicarOpen(false);
     setAnteciparOpen(false);
     setInvestirOpen(false);
