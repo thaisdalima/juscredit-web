@@ -30,12 +30,12 @@ const Header = (props) => {
         investidor_qualificado: ''
     };
     const [state, setState] = React.useState({
-        checkedModalAntecipe: false,
-        checkedModalInvestirQualificado: false,
-        checkedModalInvestirConcordo: false,
         modalEnviadoMsg: '',
         modalErroMsg: ''
     });
+    const [checkedModalAntecipe, setCheckMdlAntecipe] = React.useState(false);
+    const [checkedModalInvestirQualificado, setCheckMdlInvestirQualificado] = React.useState(false);
+    const [checkedModalInvestirConcordo, setCheckMdlInvestirConcordo] = React.useState(false);
     const [formValues, setFormValue] = React.useState(INITIAL_FORM);
     const [modalAnteciparState, setAnteciparOpen] = React.useState(false);
     const [modalInvestirState, setInvestirOpen] = React.useState(false);
@@ -92,6 +92,9 @@ const Header = (props) => {
     };
 
     const handleClose = () => {
+        setCheckMdlAntecipe(false);
+        setCheckMdlInvestirQualificado(false);
+        setCheckMdlInvestirConcordo(false);
         setAnteciparOpen(false);
         setInvestirOpen(false);
         setOpenedMenu(false);
@@ -115,7 +118,15 @@ const Header = (props) => {
     };
 
     const handleChangeCheckbox = (event) => {
-        setState({ ...state, [event.target.ariaLabel]: event.target.checked });
+        if (event.target.id === 'modalFieldAntecipar-5') {
+            setCheckMdlAntecipe(event.target.checked);
+        }
+        if (event.target.id === 'modalFieldInvestir-4') {
+            setCheckMdlInvestirQualificado(event.target.checked);
+        }
+        if (event.target.id === 'modalFieldInvestir-5') {
+            setCheckMdlInvestirConcordo(event.target.checked);
+        }
     };
 
     const atualizaFormValues = (event) => {
@@ -323,7 +334,7 @@ const Header = (props) => {
                         <div className="flex align-items-center">
                             <Checkbox
                                 id="modalFieldAntecipar-5"
-                                checked={state.checkedModalAntecipe}
+                                checked={checkedModalAntecipe}
                                 onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e) }}
                                 name="concordo_termos"
                                 color="primary"
@@ -397,22 +408,26 @@ const Header = (props) => {
                         <div className="flex align-items-center">
                             <Checkbox
                                 id="modalFieldInvestir-4"
-                                checked={state.checkedModalInvestirQualificado}
+                                checked={checkedModalInvestirQualificado}
                                 onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e) }}
                                 name="investidor_qualificado"
                                 color="primary"
-                                inputProps={{ 'aria-label': 'checkedModalInvestirQualificado' }}
+                                inputProps={{
+                                    'aria-label': 'checkedModalInvestirQualificado'
+                                }}
                             />
                             <label className="modal-label" htmlFor="modalFieldInvestir-4">Sou um investidor qualificado</label>
                         </div>
                         <div className="flex align-items-center">
                             <Checkbox
                                 id="modalFieldInvestir-5"
-                                checked={state.checkedModalInvestirConcordo}
+                                checked={checkedModalInvestirConcordo}
                                 onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e) }}
                                 name="concordo_termos"
                                 color="primary"
-                                inputProps={{ 'aria-label': 'checkedModalInvestirConcordo' }}
+                                inputProps={{
+                                    'aria-label': 'checkedModalInvestirConcordo',
+                                }}
                             />
                             <label className="modal-label" htmlFor="modalFieldInvestir-5">Concordo com os Termos da JusCredit,</label>
                             <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
