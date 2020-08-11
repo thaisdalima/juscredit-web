@@ -38,12 +38,15 @@ const Index = (props) => {
     assunto: '',
   };
   const [state, setState] = React.useState({
-    checkedModalAntecipe: false,
-    checkedModalInvestirQualificado: false,
-    checkedModalInvestirConcordo: false,
     modalEnviadoMsg: '',
     modalErroMsg: ''
   });
+  // checkedModalAntecipe: false,
+  //   checkedModalInvestirQualificado: false,
+  //   checkedModalInvestirConcordo: false,
+  const [checkedModalAntecipe, setCheckMdlAntecipe] = React.useState(false);
+  const [checkedModalInvestirQualificado, setCheckMdlInvestirQualificado] = React.useState(false);
+  const [checkedModalInvestirConcordo, setCheckMdlInvestirConcordo] = React.useState(false);
   const [formValues, setFormValue] = React.useState(INITIAL_FORM);
   const [parceiroValues, setParceiroValue] = React.useState(INITIAL_FORM_PARCEIRO);
   const [modalIndicarState, setIndicarOpen] = React.useState(false);
@@ -84,6 +87,9 @@ const Index = (props) => {
   };
 
   const handleClose = () => {
+    setCheckMdlAntecipe(false);
+    setCheckMdlInvestirQualificado(false);
+    setCheckMdlInvestirConcordo(false);
     setIndicarOpen(false);
     setAnteciparOpen(false);
     setInvestirOpen(false);
@@ -100,9 +106,6 @@ const Index = (props) => {
       concordo_termos: false,
       investidor_qualificado: false
     });
-    setTimeout(() => {
-      console.log(formValues);
-    }, 1000);
   }
 
   const handleProfile = (_profile) => {
@@ -114,7 +117,15 @@ const Index = (props) => {
   };
 
   const handleChangeCheckbox = (event) => {
-    setState({ ...state, [event.target.ariaLabel]: event.target.checked });
+    if (event.target.id === 'modalFieldAntecipar-5') {
+      setCheckMdlAntecipe(event.target.checked);
+    }
+    if (event.target.id === 'modalFieldInvestir-4') {
+      setCheckMdlInvestirQualificado(event.target.checked);
+    }
+    if (event.target.id === 'modalFieldInvestir-5') {
+      setCheckMdlInvestirConcordo(event.target.checked);
+    }
   };
 
   const atualizaFormValues = (event) => {
@@ -123,6 +134,7 @@ const Index = (props) => {
     } else {
       setFormValue({ ...formValues, [event.target.name]: event.target.value });
     }
+    console.log(formValues);
   }
 
   const getParceiroValue = (event, formItem) => {
@@ -181,41 +193,6 @@ const Index = (props) => {
       });
   }
 
-  // const loadImagesArray = () => {
-  //   var array = new Array(
-  //     "./assets/images/bagageiro/PM-CENA-01.jpg",
-  //     "./assets/images/bagageiro/PM-CENA-02.jpg",
-  //     "./assets/images/bagageiro/PM-CENA-03.jpg",
-  //   );
-
-  //   document.addEventListener("DOMContentLoaded", () => { preloadImages(array) }, true);
-  // }
-
-  // function preloadImages(params) {
-  //   console.log('chegou aqui');
-  //   var images = new Array();
-  //   var loadedImages = 0;
-
-  //   for (var i = 0; i < params.length; i++) {
-  //     images[i] = new Image();
-  //     images[i].src = params[i];
-  //     images[i].onload = function () {
-  //       document.getElementById('log').innerHTML = ((loadedImages / params.length) * 100).toFixed(0) + '%';
-  //       loadedImages++;
-
-  //       if (loadedImages === params.length) {
-  //         imagesLoaded();
-  //       }
-  //     }
-
-  //   }
-  // }
-
-  // function imagesLoaded() {
-  //   // Load total
-  //   console.log('imagens carregaram');
-  // }
-
   const cacheImages = srcArray => {
     var body = document.querySelector('body');
     body.classList.add('no-scroll');
@@ -230,7 +207,6 @@ const Index = (props) => {
         img.onerror = function () {
           reject();
         }
-        // img.onerror = reject();
       });
     });
 
@@ -589,7 +565,7 @@ const Index = (props) => {
             <div className="flex align-items-center">
               <Checkbox
                 id="modalFieldAntecipar-5"
-                checked={state.checkedModalAntecipe}
+                checked={checkedModalAntecipe}
                 onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e) }}
                 name="concordo_termos"
                 color="primary"
@@ -663,7 +639,7 @@ const Index = (props) => {
             <div className="flex align-items-center">
               <Checkbox
                 id="modalFieldInvestir-4"
-                checked={state.checkedModalInvestirQualificado}
+                checked={checkedModalInvestirQualificado}
                 onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e) }}
                 name="investidor_qualificado"
                 color="primary"
@@ -676,7 +652,7 @@ const Index = (props) => {
             <div className="flex align-items-center">
               <Checkbox
                 id="modalFieldInvestir-5"
-                checked={state.checkedModalInvestirConcordo}
+                checked={checkedModalInvestirConcordo}
                 onChange={e => { handleChangeCheckbox(e); atualizaFormValues(e) }}
                 name="concordo_termos"
                 color="primary"
