@@ -29,7 +29,7 @@ const Index = (props) => {
     email: '',
     phone: '',
     concordo_termos: false,
-    investidor_qualificado: false
+    investidor_qualificado: null
   };
 
   const INITIAL_FORM_PARCEIRO = {
@@ -132,7 +132,7 @@ const Index = (props) => {
   const isEnabled = () => {
     for (var key in formValues) {
       if (formValues["account_type"] !== "i") {
-        formValues["investidor_qualificado"] = false
+        formValues["investidor_qualificado"] = null
       }
       if (formValues["account_type"] !== "c") {
         formValues["number_proccess"] = null

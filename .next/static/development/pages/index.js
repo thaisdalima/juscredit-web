@@ -32701,7 +32701,7 @@ var Index = function Index(props) {
     email: '',
     phone: '',
     concordo_termos: false,
-    investidor_qualificado: false
+    investidor_qualificado: null
   };
   var INITIAL_FORM_PARCEIRO = {
     full_name: '',
@@ -32851,7 +32851,7 @@ var Index = function Index(props) {
   var isEnabled = function isEnabled() {
     for (var key in formValues) {
       if (formValues["account_type"] !== "i") {
-        formValues["investidor_qualificado"] = false;
+        formValues["investidor_qualificado"] = null;
       }
 
       if (formValues["account_type"] !== "c") {
