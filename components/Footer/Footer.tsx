@@ -12,7 +12,7 @@ const Footer = () => (
                     <a target="_blank">Política de privacidade</a>
                 </Link>
                 <Link href="/JusCredit_-_Temos_de_Uso_do_Cliente.pdf">
-                    <a target="_blank">Termos de uso Cliente</a>
+                    <a target="_blank">Termos de uso Trabalhador</a>
                 </Link>
                 <Link href="/JusCredit_-_Temos_de_Uso_do_Investidor.pdf">
                     <a target="_blank">Termos de uso Investidor</a>

@@ -285,7 +285,7 @@ const Index = (props) => {
                   <h2>Serviço de antecipação disponível para Trabalhadores e Advogados.</h2>
                 </div>
                 <div className="buttons-container">
-                  <Button onClick={() => handleProfile("cliente")} color={profile == "cliente" ? "primary" : "secondary"}>Cliente</Button>
+                  <Button onClick={() => handleProfile("cliente")} color={profile == "cliente" ? "primary" : "secondary"}>Trabalhador</Button>
                   <Button onClick={() => handleProfile("investidor")} color={profile != "cliente" ? "primary" : "secondary"}>Investidor</Button>
                 </div>
               </div>
@@ -333,7 +333,7 @@ const Index = (props) => {
                   <h2>Investimentos em créditos judiciais de forma rápida e descomplicada.</h2>
                 </div>
                 <div className="buttons-container">
-                  <Button onClick={() => handleProfile("cliente")} color={profile == "cliente" ? "primary" : "secondary"}>Cliente</Button>
+                  <Button onClick={() => handleProfile("cliente")} color={profile == "cliente" ? "primary" : "secondary"}>Trabalhador</Button>
                   <Button onClick={() => handleProfile("investidor")} color={profile != "cliente" ? "primary" : "secondary"}>Investidor</Button>
                 </div>
               </div>
@@ -392,12 +392,12 @@ const Index = (props) => {
                   <div className="flex align-items-center">
                     <div className="flex align-items-center">
                       <img style={{ maxWidth: "70px", marginRight: "10px" }} src="/card-img-6.svg" />
-                      <h4>Cliente solicita</h4>
+                      <h4>Trabalhador solicita</h4>
                     </div>
                     <h4 className="card-number">1</h4>
                   </div>
                   <p>
-                    Cliente solicita antecipação do crédito trabalhista na plataforma.
+                    Trabalhador solicita antecipação do crédito trabalhista na plataforma.
                   </p>
                 </div>
               </div>
