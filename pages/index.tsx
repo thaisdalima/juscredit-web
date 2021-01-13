@@ -214,15 +214,15 @@ const Index = (props) => {
     setTimeout(() => {
       body.classList.remove('no-scroll');
       setLoadingImgs(false);
-    }, 2500);
+    }, 300);
   }
 
   useEffect(() => {
     setOriginPath(window.location.origin);
 
     const imgs = [
-      '/lawyer.jpg',
       '/img-abre-site.svg',
+      '/lawyer.jpg',
       '/Logo.png',
       '/logo.svg',
       '/android-chrome-192x192.png',

@@ -32952,12 +32952,12 @@ var Index = function Index(props) {
     setTimeout(function () {
       body.classList.remove('no-scroll');
       setLoadingImgs(false);
-    }, 2500);
+    }, 300);
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
     setOriginPath(window.location.origin);
-    var imgs = ['/lawyer.jpg', '/img-abre-site.svg', '/Logo.png', '/logo.svg', '/android-chrome-192x192.png', '/android-chrome-512x512.png', '/loading.svg', '/loading2.svg', '/card-img-1.svg', '/card-img-2.svg', '/card-img-3.svg', '/card-img-4.svg', '/card-img-5.svg', '/card-img-6.svg', '/card-img-7.svg', '/card-img-8.svg', '/card-img-9.svg', '/facebook_icon.png', '/anteceba.svg', '/ic-carta.svg', '/ic-facebook.svg', '/ic-instagram.svg', '/ic-linkedin.svg'];
+    var imgs = ['/img-abre-site.svg', '/lawyer.jpg', '/Logo.png', '/logo.svg', '/android-chrome-192x192.png', '/android-chrome-512x512.png', '/loading.svg', '/loading2.svg', '/card-img-1.svg', '/card-img-2.svg', '/card-img-3.svg', '/card-img-4.svg', '/card-img-5.svg', '/card-img-6.svg', '/card-img-7.svg', '/card-img-8.svg', '/card-img-9.svg', '/facebook_icon.png', '/anteceba.svg', '/ic-carta.svg', '/ic-facebook.svg', '/ic-instagram.svg', '/ic-linkedin.svg'];
     cacheImages(imgs);
   });
   return __jsx(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], {
