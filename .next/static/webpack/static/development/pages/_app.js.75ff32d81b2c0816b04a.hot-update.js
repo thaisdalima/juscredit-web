@@ -473,7 +473,7 @@ var Header = function Header(props) {
     className: "entrar",
     color: "seven",
     onClick: function onClick() {
-      return window.open('https://app.juscredit.com.br');
+      return window.location.href = 'https://app.juscredit.com.br';
     },
     __self: _this,
     __source: {
@@ -1161,4 +1161,4 @@ var Header = function Header(props) {
 /***/ })
 
 })
-//# sourceMappingURL=_app.js.8527ffad2e4f6de8a8cb.hot-update.js.map
+//# sourceMappingURL=_app.js.75ff32d81b2c0816b04a.hot-update.js.map

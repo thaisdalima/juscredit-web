@@ -33173,7 +33173,7 @@ var Index = function Index(props) {
       lineNumber: 288,
       columnNumber: 19
     }
-  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, "Trabalhador"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return handleProfile("investidor");
     },
@@ -33470,7 +33470,7 @@ var Index = function Index(props) {
       lineNumber: 336,
       columnNumber: 19
     }
-  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, "Trabalhador"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
       return handleProfile("investidor");
     },
@@ -33860,7 +33860,7 @@ var Index = function Index(props) {
       lineNumber: 395,
       columnNumber: 23
     }
-  }, "Cliente solicita")), __jsx("h4", {
+  }, "Trabalhador solicita")), __jsx("h4", {
     className: "card-number",
     __self: _this,
     __source: {
@@ -33875,7 +33875,7 @@ var Index = function Index(props) {
       lineNumber: 399,
       columnNumber: 19
     }
-  }, "Cliente solicita antecipa\xE7\xE3o do cr\xE9dito trabalhista na plataforma."))), __jsx("div", {
+  }, "Trabalhador solicita antecipa\xE7\xE3o do cr\xE9dito trabalhista na plataforma."))), __jsx("div", {
     className: "card",
     __self: _this,
     __source: {

@@ -286,7 +286,7 @@ const Footer = () => __jsx("footer", {
     lineNumber: 15,
     columnNumber: 21
   }
-}, "Termos de uso Cliente")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+}, "Termos de uso Trabalhador")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
   href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
   __self: undefined,
   __source: {
@@ -991,7 +991,7 @@ const Header = props => {
   }, __jsx(_Button_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "entrar",
     color: "seven",
-    onClick: () => window.open('https://app.juscredit.com.br'),
+    onClick: () => window.location.href = 'https://app.juscredit.com.br',
     __self: undefined,
     __source: {
       fileName: _jsxFileName,

@@ -236,7 +236,7 @@ const Header = (props) => {
                         </Link>
                     </li>
                     <li className="link">
-                        <Button className="entrar" color="seven" onClick={() => window.open('https://app.juscredit.com.br')}>
+                        <Button className="entrar" color="seven" onClick={() => window.location.href = 'https://app.juscredit.com.br'}>
                             Entrar</Button>
                     </li>
                 </ul>

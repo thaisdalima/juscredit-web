@@ -2377,7 +2377,7 @@ const Index = props => {
       lineNumber: 288,
       columnNumber: 19
     }
-  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "Trabalhador"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => handleProfile("investidor"),
     color: profile != "cliente" ? "primary" : "secondary",
     __self: undefined,
@@ -2668,7 +2668,7 @@ const Index = props => {
       lineNumber: 336,
       columnNumber: 19
     }
-  }, "Cliente"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "Trabalhador"), __jsx(_components_Button_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     onClick: () => handleProfile("investidor"),
     color: profile != "cliente" ? "primary" : "secondary",
     __self: undefined,
@@ -3054,7 +3054,7 @@ const Index = props => {
       lineNumber: 395,
       columnNumber: 23
     }
-  }, "Cliente solicita")), __jsx("h4", {
+  }, "Trabalhador solicita")), __jsx("h4", {
     className: "card-number",
     __self: undefined,
     __source: {
@@ -3069,7 +3069,7 @@ const Index = props => {
       lineNumber: 399,
       columnNumber: 19
     }
-  }, "Cliente solicita antecipa\xE7\xE3o do cr\xE9dito trabalhista na plataforma."))), __jsx("div", {
+  }, "Trabalhador solicita antecipa\xE7\xE3o do cr\xE9dito trabalhista na plataforma."))), __jsx("div", {
     className: "card",
     __self: undefined,
     __source: {

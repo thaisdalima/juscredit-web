@@ -152,7 +152,7 @@ var Footer = function Footer() {
       lineNumber: 15,
       columnNumber: 21
     }
-  }, "Termos de uso Cliente")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  }, "Termos de uso Trabalhador")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/JusCredit_-_Temos_de_Uso_do_Investidor.pdf",
     __self: _this,
     __source: {
@@ -883,7 +883,7 @@ var Header = function Header(props) {
     className: "entrar",
     color: "seven",
     onClick: function onClick() {
-      return window.open('https://app.juscredit.com.br');
+      return window.location.href = 'https://app.juscredit.com.br';
     },
     __self: _this,
     __source: {
