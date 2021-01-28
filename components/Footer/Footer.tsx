@@ -60,7 +60,7 @@ const Footer = () => (
         </div>
         <div style={{ paddingTop: '0' }}>
             <p className="disclaimer">
-                A JusCredit Tecnologia e Serviços LTDA. “JusCredit”, pessoa jurídica de direito privado, inscrita no Cadastro Nacional de Pessoas Jurídicas do Ministério da Fazenda “CNPJ/MF” sob o nº 35.604.390/0001-93, com sede à Rua Marcos Lopes 272, Vila Nova Conceição, na cidade de São Paulo, Estado de São Paulo, CEP 04513-080, não é uma instituição financeira e não realiza operações de financiamento, investimentos ou quaisquer outras operações privativas de instituições financeiras. Tampouco solicitamos o pagamento de valores prévios para a análise de antecipação de direitos creditórios judiciais. Em caso de dúvidas, por favor, entre em contato conosco por meio do e-mail <span>oi@juscredit.com.br</span> .
+                A JusCredit Tecnologia e Serviços LTDA. “JusCredit”, pessoa jurídica de direito privado, inscrita no Cadastro Nacional de Pessoas Jurídicas do Ministério da Fazenda “CNPJ/MF” sob o nº 35.604.390/0001-93, com sede à Rua Bento da Rocha, 408, Sala 1, na cidade de Itapira, Estado de São Paulo, CEP 13970-030, não é uma instituição financeira e não realiza operações de financiamento, investimentos ou quaisquer outras operações privativas de instituições financeiras. Tampouco solicitamos o pagamento de valores prévios para a análise de antecipação de direitos creditórios judiciais. Em caso de dúvidas, por favor, entre em contato conosco por meio do e-mail <span>oi@juscredit.com.br</span> .
             </p>
         </div>
     </footer>
